@@ -23,4 +23,5 @@ public class CircleFragment extends Fragment {
         textView.setText(R.string.circle);
         return view;
     }
+   111111
 }
