@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NvWaBao</string>
+
+    <string name="home">主页</string>
+    <string name="information">咨询</string>
+    <string name="find">发现</string>
+    <string name="circle">圈子</string>
+    <string name="mine">我的</string>
+
+    <string name="share">分享</string>
+</resources>
