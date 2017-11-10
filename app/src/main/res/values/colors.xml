@@ -321,4 +321,8 @@
     <color name="login_button">#ff775025</color>
 
     <color name="huise">#F0F0F0</color>
+
+    <color name="tip">#9c9c9c</color>
+    <color name="bg_focus">#DDDDDD</color>
+    <color name="red_500">#ef4836</color>
 </resources>
