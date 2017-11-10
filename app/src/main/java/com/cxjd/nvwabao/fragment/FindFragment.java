@@ -15,6 +15,7 @@ import com.cxjd.nvwabao.bean.FindFunctionAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Created by 李超 on 2017/10/29.
@@ -61,7 +62,10 @@ public class FindFragment extends Fragment {
         functionList.add(weight);
         FindFunction tableware   = new FindFunction(R.drawable.icon_find_tableware);
         functionList.add(tableware);
-
+        FindFunction seven       = new FindFunction(R.drawable.icon_find_qi);
+        functionList.add(seven);
+        FindFunction baibing     = new FindFunction(R.drawable.icon_find_sick);
+        functionList.add(baibing);
 
     }
 }
