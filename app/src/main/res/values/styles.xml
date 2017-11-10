@@ -1,8 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionBar" tools:ignore="NewApi">false</item>
         <item name="android:windowNoTitle">true</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
