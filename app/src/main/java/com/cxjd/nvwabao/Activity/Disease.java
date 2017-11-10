@@ -8,10 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cxjd.nvwabao.R;
+import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 public class Disease extends AppCompatActivity {
-    private TextView zhengzhuang,bingyin,yufang,zhiliao;
-    private TextView zhengzhuangbtn,bingyinbtn,yufangbtn,zhiliaobtn;
+   // private TextView zhengzhuang,bingyin,yufang,zhiliao;
+  //  private TextView zhengzhuangbtn,bingyinbtn,yufangbtn,zhiliaobtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,25 +24,24 @@ public class Disease extends AppCompatActivity {
                 finish();
             }
         });
-
         init();
-    zhengzhuangbtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            zhengzhuangbtn.setTextColor(Color.RED);
 
-        }
-    });
     }
 
     private void init() {
-        zhengzhuang = (TextView) findViewById(R.id.zhengzhuang);
-        bingyin = (TextView) findViewById(R.id.bingyin);
-        yufang = (TextView) findViewById(R.id.yufang);
-        zhiliao = (TextView) findViewById(R.id.zhiliao);
-        zhengzhuangbtn = (TextView) findViewById(R.id.zhengzhuangbtn);
-        bingyinbtn = (TextView) findViewById(R.id.bingyinbtn);
-        yufangbtn = (TextView) findViewById(R.id.yufangbtn);
-        zhiliaobtn = (TextView) findViewById(R.id.zhiliaobtn);
+        ExpandableTextView ZZexpTv1 = (ExpandableTextView) findViewById(R.id.zhengzhuang)
+                .findViewById(R.id.expand_text_view);
+        ExpandableTextView BYexpTv2 = (ExpandableTextView) findViewById(R.id.bingyin)
+                .findViewById(R.id.expand_text_view);
+        ExpandableTextView YFexpTv1 = (ExpandableTextView) findViewById(R.id.yufang)
+                .findViewById(R.id.expand_text_view);
+        ExpandableTextView ZLexpTv2 = (ExpandableTextView) findViewById(R.id.zhiliao)
+                .findViewById(R.id.expand_text_view);
+
+        ZZexpTv1.setText(getString(R.string.dummy_text1));
+        BYexpTv2.setText(getString(R.string.dummy_text2));
+        YFexpTv1.setText(getString(R.string.dummy_text1));
+        ZLexpTv2.setText(getString(R.string.dummy_text2));
+
     }
 }

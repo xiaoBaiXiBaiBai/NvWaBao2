@@ -42,7 +42,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="症状"
-        android:textColor="#000"/>
+        android:textSize="22sp"
+
+        android:textColor="@color/black"/>
     <View
         android:layout_width="fill_parent"
         android:layout_marginTop="10dp"
@@ -50,25 +52,16 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@color/huise" />
-   <TextView
-       android:id="@+id/zhengzhuang"
-       android:layout_width="match_parent"
-       android:layout_height="70dp"
-        />
-    <TextView
-        android:id="@+id/zhengzhuangbtn"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="展开全部"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:background="@color/huise"/>
+        <include
+            android:id="@+id/zhengzhuang"
+            layout="@layout/text_item" />
 
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="病因"
+            android:textSize="22sp"
             android:textColor="#000"/>
         <View
             android:layout_width="fill_parent"
@@ -77,25 +70,15 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:background="@color/huise" />
-        <TextView
+        <include
             android:id="@+id/bingyin"
-
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            />
-        <TextView
-            android:id="@+id/bingyinbtn"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="展开全部"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:background="@color/huise"/>
+            layout="@layout/text_item" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="预防"
+            android:textSize="22sp"
             android:textColor="#000"/>
         <View
             android:layout_width="fill_parent"
@@ -104,24 +87,15 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:background="@color/huise" />
-        <TextView
+        <include
             android:id="@+id/yufang"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            />
-        <TextView
-            android:id="@+id/yufangbtn"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="展开全部"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:background="@color/huise"/>
+            layout="@layout/text_item" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="治疗"
+            android:textSize="22sp"
             android:textColor="#000"/>
         <View
             android:layout_width="fill_parent"
@@ -130,19 +104,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:background="@color/huise" />
-        <TextView
+        <include
             android:id="@+id/zhiliao"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            />
-        <TextView
-            android:id="@+id/zhiliaobtn"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="展开全部"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:background="@color/huise"/>
+            layout="@layout/text_item" />
 
     </LinearLayout>
 </ScrollView>
