@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".mainActivity.MainActivity" />
+
+        <activity android:name=".Activity.Classify" android:theme="@style/zhou"/>
+        <activity android:name=".Activity.Room" android:theme="@style/zhou"/>
+        <activity android:name=".Activity.Disease" android:theme="@style/zhou"/>
+        <activity android:name=".Activity.SearchMain" android:theme="@style/zhou"></activity>
     </application>
 
 </manifest>
