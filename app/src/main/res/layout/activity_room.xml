@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#1C86EE"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/nav_button"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="疾病列表"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+         <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:textColor="@color/black"
+                 android:id="@+id/neike"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="内科"
+                 android:gravity="center"/>
+
+             <ListView
+                android:background="#DEDEDE"
+                android:id="@+id/neikels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                android:visibility="gone">
+
+            </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/waike"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="外科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/waikels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/fuchanke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="妇产科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/fuchankels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/xiaoerke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="小儿科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/xiaoerkels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/wuguanke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="五官科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/wuguankels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/nanke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="男科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/nankels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/chuanranke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="传染科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/chuanrankels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/pifuke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="皮肤科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/pifukels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/xingbingke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="性病科"
+                 android:gravity="center"/>
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/xingbingkels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/jingshenxinlike"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="精神心理科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/jingshenxinlikels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/zhongliuke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="肿瘤科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/zhongliukels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/buyunbuyuke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="不孕不育科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/buyunbuyukels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+
+</LinearLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:background="#fff"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/min_itemRoom"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </FrameLayout>
+</LinearLayout>
+</LinearLayout>

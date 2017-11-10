@@ -31,5 +31,8 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.ms-square:expandableTextView:0.1.4'
     testCompile 'junit:junit:4.12'
 }

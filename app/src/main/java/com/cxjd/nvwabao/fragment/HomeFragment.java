@@ -1,5 +1,6 @@
 package com.cxjd.nvwabao.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cxjd.nvwabao.Activity.SearchMain;
 import com.cxjd.nvwabao.R;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
@@ -69,6 +71,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(),"寻找健康 ",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),SearchMain.class);
+                startActivity(intent);
             }
         });
 
