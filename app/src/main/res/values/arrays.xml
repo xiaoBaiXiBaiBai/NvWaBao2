@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="focusTitle">
+        <item>一年四季</item>
+        <item>春</item>
+        <item>夏</item>
+        <item>秋</item>
+        <item>冬</item>
+        <item>特殊人群</item>
+        <item>禁忌</item>
+        <item>心得</item>
+        <item>名人</item>
+        <item>常识</item>
+        <item>老年人</item>
+        <item>儿童</item>
+        <item>学生</item>
+        <item>孕妇</item>
+        <item>高血压</item>
+        <item>女性</item>
+        <item>男性</item>
+        <item>高血糖</item>
+        <item>高血脂</item>
+        <item>壮阳</item>
+        <item>月经</item>
+        <item>糖尿病</item>
+        <item>运动</item>
+        <item>减肥</item>
+        <item>更年期</item>
+        <item>美容</item>
+        <item>经络</item>
+    </string-array>
+</resources>
