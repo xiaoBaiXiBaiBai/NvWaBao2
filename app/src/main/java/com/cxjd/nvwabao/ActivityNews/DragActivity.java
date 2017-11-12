@@ -3,20 +3,9 @@ package com.cxjd.nvwabao.ActivityNews;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.SupportMenuInflater;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.DragAdapter;
 import com.cxjd.nvwabao.bean.FocusTitle;
@@ -37,13 +26,15 @@ import java.util.List;
 public class DragActivity extends AppCompatActivity{
     private RecyclerView mRecy;
     List<String> titlelist;
-    List<FocusTitle> items;
+    List<FocusTitle> items,tempList;
+    private DragAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         mRecy = (RecyclerView) findViewById(R.id.recy);
         titlelist=new ArrayList<>();
+        tempList=new ArrayList<>();
         init();
     }
 
@@ -62,7 +53,7 @@ public class DragActivity extends AppCompatActivity{
         ItemTouchHelper helper = new ItemTouchHelper(callback);
         helper.attachToRecyclerView(mRecy);
 
-        final DragAdapter adapter = new DragAdapter(this, items);
+        adapter = new DragAdapter(this, items);
         //adapter.setGiveback(giveback);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
@@ -71,29 +62,26 @@ public class DragActivity extends AppCompatActivity{
                 return viewType == DragAdapter.TYPE_TITLE ? 5 : 1;
             }
         });
-       /* adapter.ItemClick(this, new DragAdapter.OnItemClickCallback() {
-            @Override
-            public void onClick(View view, Object info) {
-                Intent intent=new Intent(DragActivity.this,TitleStateActivity.class);
-                startActivity(intent);
-              Log.i("TAG",view.getContext().toString());
-            }
-        });*/
         mRecy.setAdapter(adapter);
     }
-    public List<FocusTitle> getTitleList(){
-        initTitle();
-        return items;
-    }
-
     private void initTitle() {
-        items = new ArrayList<>();
-        List<FocusTitle> list= TitleListManagr.readTitleList(this);
-        Log.i("TAG",list.toString()+"hjnk");
-        for (int i = 0; i <list.size(); i++) {
-            items.add(list.get(i));
-            Log.i("TAG1",items.get(i).getTitleName());
-        }
+         items = new ArrayList<>();
+         tempList= TitleListManagr.readTitleList(this,TitleListManagr.str_show);
+         if (tempList!=null){
+             for (int i = 0; i <tempList.size(); i++) {
+              items.add(i,tempList.get(i));
+             }
+         }else{
+             tempList= TitleListManagr.readTitleList(this,TitleListManagr.str_all);
+             for (int i = 0; i <tempList.size(); i++) {
+                 items.add(i,tempList.get(i));
+             }
+         }
     }
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        initTitle();
+        adapter.notifyDataSetChanged();
+    }
 }

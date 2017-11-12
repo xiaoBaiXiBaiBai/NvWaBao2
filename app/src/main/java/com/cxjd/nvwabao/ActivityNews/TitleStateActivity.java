@@ -9,26 +9,19 @@ import android.util.Log;
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.SpecialRecyclerAdapter;
 import com.cxjd.nvwabao.bean.FocusTitle;
+import com.cxjd.nvwabao.utils.TitleListManagr;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TitleStateActivity extends AppCompatActivity {
-    private static final int TITLE_SELECTED=1;
-    private static final int TITLE_DISSELECT=0;
-    private List<FocusTitle> seansonlist;
-    String[] arrayTitle;
+    private List<FocusTitle> originList,temList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i("GH","FDIFURFNRIFJRIFROF");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title_state);
-        seansonlist=new ArrayList<>();
-
-
-        arrayTitle=getResources().getStringArray(R.array.focusTitle);
-
-        init();
+        originList=new ArrayList<>();
+        originList= TitleListManagr.readTitleList(TitleStateActivity.this,TitleListManagr.str_all);
 
         RecyclerView recycler= (RecyclerView) findViewById(R.id.seasion_recycler_recycler);
 
@@ -36,30 +29,15 @@ public class TitleStateActivity extends AppCompatActivity {
 
         recycler.setLayoutManager(manager);
 
-        SpecialRecyclerAdapter adapter=new SpecialRecyclerAdapter(seansonlist);
-
-        recycler.setAdapter(adapter);
-       // recycler.addItemDecoration(new TitleItemDecoration(this,seansonlist));
-        //recycler.addItemDecoration(new MydecorationPading(this));
-    }
-    public void init(){
-        for (int i=0;i<20;i++){
-            FocusTitle focusTitle=new FocusTitle();
-            if (i==0){
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("GROUP_NAME");
-            }else if (i>=1&&i<=4){
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("DATA");
-            }else if (i==5){
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("GROUP_NAME");
-            }else {
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("DATA");
+        final SpecialRecyclerAdapter adapter=new SpecialRecyclerAdapter(originList,this);
+        manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                int viewtype=adapter.getItemViewType(position);
+                return viewtype== SpecialRecyclerAdapter.IS_TITLE.TITLE_IS.ordinal()? 2:1;
             }
-            seansonlist.add(focusTitle);
-        }
-
+        });
+        recycler.setAdapter(adapter);
     }
+
 }

@@ -42,7 +42,7 @@ public class InformationFragment extends Fragment {
     /*
      *定义存放标题对象的集合
      **/
-    private List<FocusTitle> seansonlist;
+    private List<FocusTitle> seansonlist =new ArrayList<>();
     /*
      *arrayTitle用于获取arrays.xml中定义的标题
      * */
@@ -67,25 +67,29 @@ public class InformationFragment extends Fragment {
         arrayTitle=getResources().getStringArray(R.array.focusTitle);
         mViewPager = (ViewPager) view.findViewById(R.id.news_view_paper);
         mTabLayout = (TabLayout) view.findViewById(R.id.news_tab_layout);
-        seansonlist=new ArrayList<>();
+        if (mTabNameItem!=null){
+            mTabNameItem.clear();
+        }
+        mTabNameItem = TitleListManagr.readTitleList(getContext(),TitleListManagr.str_show);
+        if (mTabNameItem==null) {
         /*
         * 给频道集合填充数据（包含分类item）
         * */
-        initTiTle();
+            initTiTle();
         /*
         * 将初始化后的频道集合数据保存至文件，便于以后和其他活动读取
         * */
-        TitleListManagr.saveTitleList(seansonlist,getContext());
+            TitleListManagr.saveTitleList(seansonlist, getContext(), TitleListManagr.str_all);
         /*
         * 从文件中读取频道数据
         * */
-        mTabNameItem = TitleListManagr.readTitleList(getContext());
-
+            mTabNameItem = TitleListManagr.readTitleList(getContext(), TitleListManagr.str_all);
+        }
         /*
         * 过滤出干净的频道item
         * */
         for (int i=0;i<mTabNameItem.size();i++){
-            if (mTabNameItem.get(i).getTitleState().equals("DATA")){
+            if (mTabNameItem.get(i).getTitleState()==FocusTitle.TITLE_STATE_NO){
                 mTabNameList.add(mTabNameItem.get(i));
             }
         }
@@ -105,15 +109,17 @@ public class InformationFragment extends Fragment {
     public void initTiTle(){
         for (int i=0;i<arrayTitle.length;i++){
             FocusTitle focusTitle=new FocusTitle();
+            focusTitle.setTitleName(arrayTitle[i]);
             if (i==0||i==5){
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("GROUP_NAME");
-                focusTitle.setTitle_check(TITLE_SELECTED);
+                focusTitle.setTitleState(FocusTitle.TITLE_STATE_IS);
+                focusTitle.setTitle_check(FocusTitle.TITLE_NOCHECKED);
             }else {
-                focusTitle.setTitleName(arrayTitle[i]);
-                focusTitle.setTitleState("DATA");
-                focusTitle.setTitle_check(TITLE_SELECTED);
+                focusTitle.setTitleState(FocusTitle.TITLE_STATE_NO);
+                if (i<6){
+                    focusTitle.setTitle_check(FocusTitle.TITLE_CHECKED);
+                }
             }
+
             seansonlist.add(focusTitle);
         }
     }

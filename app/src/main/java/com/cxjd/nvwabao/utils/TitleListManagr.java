@@ -18,20 +18,23 @@ import java.util.List;
  */
 
 public class TitleListManagr {
+    public static final String str_all="title";
+    public static final String str_show="titleshow";
     static List<FocusTitle> mList=new ArrayList<>();
-    public static void saveTitleList(List<FocusTitle> mlist, Context context){
+
+
+    public static void saveTitleList(List<FocusTitle> mlist, Context context,String path){
         String str= (String) JsonUtil.toJson(mlist);
-        (new FileOutandIn()).saveFile(str,"title",context);
+        (new FileOutandIn()).saveFile(str,path,context);
     }
-    public static List<FocusTitle> readTitleList(Context context){
+    public static List<FocusTitle> readTitleList(Context context,String path){
         mList.clear();
         try {
-            String stt=(new FileOutandIn()).readFile("title",context);
+            String stt=(new FileOutandIn()).readFile(path,context);
             JSONArray jsonArray=new JSONArray(stt);
-            Log.i("WWW",jsonArray.length()+"");
             for (int i=0;i<jsonArray.length();i++){
                 JSONObject jsonObject=jsonArray.getJSONObject(i);
-                FocusTitle jsonMy=new FocusTitle(jsonObject.getString("titleName"),jsonObject.getString("titleState"),jsonObject.getInt("title_check"));
+                FocusTitle jsonMy=new FocusTitle(jsonObject.getString("titleName"),jsonObject.getInt("titleState"),jsonObject.getInt("title_check"));
                 mList.add(jsonMy);
             }
         } catch (JSONException e) {

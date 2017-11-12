@@ -5,11 +5,13 @@ package com.cxjd.nvwabao.bean;
  */
 
 public class FocusTitle {
-    private String titleName;
-    private String titleState;
-    private int title_check;
-    public static final int TITLE_ISCHECKED=1;
+    public static final int TITLE_STATE_IS=1;
+    public static final int TITLE_STATE_NO=0;
+    public static final int TITLE_CHECKED=1;
     public static final int TITLE_NOCHECKED=0;
+    private String titleName;
+    private int titleState;
+    private int title_check;
 
     public String getTitleName() {
         return titleName;
@@ -19,11 +21,11 @@ public class FocusTitle {
         this.titleName = titleName;
     }
 
-    public String getTitleState() {
+    public int getTitleState() {
         return titleState;
     }
 
-    public void setTitleState(String titleTag) {
+    public void setTitleState(int titleTag) {
         this.titleState = titleTag;
     }
 
@@ -35,7 +37,7 @@ public class FocusTitle {
         this.title_check = title_check;
     }
 
-    public FocusTitle(String titleName, String titleState, int title_check) {
+    public FocusTitle(String titleName, int titleState, int title_check) {
         this.titleName = titleName;
         this.titleState = titleState;
         this.title_check=title_check;

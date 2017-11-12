@@ -24,13 +24,19 @@ import java.util.List;
  * Created by YoKeyword on 16/1/4.
  */
 public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements OnItemMoveListener {
-    enum SS {
-        TYPE_TITLE,
-        TYPR_ITEM
-    };
+    /**
+     * 定义常量TYPR_ITEM=1表示item为数据项
+     * 定义常量TYPE_TITLE=0表示item为分组标题
+     */
     public static final int TYPR_ITEM=1;
     public static final int TYPE_TITLE=0;
+    /**
+     * isEditmode表拖拽item是否为可编辑状态
+     */
     private boolean isEditMode;
+    /**
+     * mItem适配数据
+     */
     private List<FocusTitle> mItems;
     private LayoutInflater mInflater;
     private Context context;
@@ -40,6 +46,11 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         this.mItems = items;
     }
 
+    /**
+     * item数据项的类型为那一类
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
         if (position==0)
@@ -48,6 +59,12 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             return TYPR_ITEM;
     }
 
+    /**
+     * 根据不同item项加载不同视图
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         final View view;
@@ -70,7 +87,6 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                titleViewHolder.add_more.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //callback.onClick(view,holder.getAdapterPosition());
                         Intent intent=new Intent(view.getContext(),TitleStateActivity.class);
                         view.getContext().startActivity(intent);
                     }
@@ -89,15 +105,6 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         }
         return null;
     }
-   /* public interface OnItemClickCallback<T> {
-        // 点击事件
-        void onClick(View view , T info);
-    }
-    // 申明一个点击事件接口变量
-    private OnItemClickCallback callback = null;
-    public void ItemClick(Context ctx, OnItemClickCallback clickCallback){
-        this.callback = clickCallback;
-    }*/
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof TitleViewHolder){
@@ -107,7 +114,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
                 ((TitleViewHolder) holder).btn_edt.setText(R.string.edit);
             }
         }if (holder instanceof DragViewHolder){
-            ((DragViewHolder) holder).tv.setText(mItems.get(position).getTitleName());
+            ((DragViewHolder) holder).tv.setText(mItems.get(position-1).getTitleName());
             if (isEditMode) {
                 ((DragViewHolder) holder).imageView.setVisibility(View.VISIBLE);
             } else {
@@ -118,22 +125,31 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     @Override
     public int getItemCount() {
-        return mItems.size();
+        return mItems.size()+1;
     }
 
+    /**
+     * 编辑模式下点击删除
+     * @param fromPosition
+     * @param toPosition
+     */
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
-       FocusTitle item = mItems.get(fromPosition);
-        mItems.remove(fromPosition);
-        mItems.add(toPosition, item);
+       FocusTitle item = mItems.get(fromPosition-1);
+        mItems.remove(fromPosition-1);
+        mItems.add(toPosition-1, item);
         notifyItemMoved(fromPosition, toPosition);
     }
 
+    /**
+     * 开启编辑模式
+     * @param parent
+     */
     private void startEditMode(RecyclerView parent) {
         isEditMode = true;
 
         int visibleChildCount = parent.getChildCount();
-        for (int i = 0; i < visibleChildCount; i++) {
+        for (int i = 0; i <visibleChildCount; i++) {
             View view = parent.getChildAt(i);
             ImageView imgEdit = (ImageView) view.findViewById(R.id.img_edit);
             if (imgEdit != null) {
@@ -151,7 +167,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         isEditMode = false;
 
         int visibleChildCount = parent.getChildCount();
-        for (int i = 0; i < visibleChildCount; i++) {
+        for (int i = 0; i <visibleChildCount; i++) {
             View view = parent.getChildAt(i);
             ImageView imgEdit = (ImageView) view.findViewById(R.id.img_edit);
             if (imgEdit != null) {
