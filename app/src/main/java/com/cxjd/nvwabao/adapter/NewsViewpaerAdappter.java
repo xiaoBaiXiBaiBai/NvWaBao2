@@ -2,11 +2,10 @@ package com.cxjd.nvwabao.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 
-import com.cxjd.nvwabao.bean.FocusTitle;
+import com.cxjd.nvwabao.bean.TitleLable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +17,13 @@ import java.util.List;
 public class NewsViewpaerAdappter extends FragmentStatePagerAdapter {
     private List<Fragment> mFragmentList = new ArrayList<>();
 
-    private List<FocusTitle> mTabNameList = new ArrayList<>();
+    private List<TitleLable> mTabNameList = new ArrayList<>();
 
     public NewsViewpaerAdappter(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
-    public NewsViewpaerAdappter(FragmentManager fm, List<FocusTitle> tabNameList) {
+    public NewsViewpaerAdappter(FragmentManager fm, List<TitleLable> tabNameList) {
         super(fm);
         mTabNameList = tabNameList;
     }

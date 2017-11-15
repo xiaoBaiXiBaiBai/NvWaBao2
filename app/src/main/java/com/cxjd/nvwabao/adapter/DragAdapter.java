@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.ActivityNews.TitleStateActivity;
-import com.cxjd.nvwabao.bean.FocusTitle;
+import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.bean.TitleLable;
 import com.cxjd.nvwabao.helper.OnDragVHListener;
 import com.cxjd.nvwabao.helper.OnItemMoveListener;
 
@@ -37,10 +37,10 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     /**
      * mItem适配数据
      */
-    private List<FocusTitle> mItems;
+    private List<TitleLable> mItems;
     private LayoutInflater mInflater;
     private Context context;
-    public DragAdapter(Context context, List<FocusTitle> items) {
+    public DragAdapter(Context context, List<TitleLable> items) {
         this.context=context;
         mInflater = LayoutInflater.from(context);
         this.mItems = items;
@@ -135,7 +135,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
      */
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
-       FocusTitle item = mItems.get(fromPosition-1);
+       TitleLable item = mItems.get(fromPosition-1);
         mItems.remove(fromPosition-1);
         mItems.add(toPosition-1, item);
         notifyItemMoved(fromPosition, toPosition);

@@ -1,28 +1,25 @@
 package com.cxjd.nvwabao.ActivityNews;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.SpecialRecyclerAdapter;
-import com.cxjd.nvwabao.bean.FocusTitle;
-import com.cxjd.nvwabao.utils.TitleListManagr;
+import com.cxjd.nvwabao.bean.TitleBean;
 
-import java.util.ArrayList;
+import org.litepal.crud.DataSupport;
+
 import java.util.List;
 
 public class TitleStateActivity extends AppCompatActivity {
-    private List<FocusTitle> originList,temList;
+    private List<TitleBean> originList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title_state);
-        originList=new ArrayList<>();
-        originList= TitleListManagr.readTitleList(TitleStateActivity.this,TitleListManagr.str_all);
-
+        originList= DataSupport.findAll(TitleBean.class);
         RecyclerView recycler= (RecyclerView) findViewById(R.id.seasion_recycler_recycler);
 
         GridLayoutManager manager=new GridLayoutManager(this,2);

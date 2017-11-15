@@ -1,45 +1,43 @@
 package com.cxjd.nvwabao.ActivityNews;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.DragAdapter;
-import com.cxjd.nvwabao.bean.FocusTitle;
+import com.cxjd.nvwabao.bean.TitleLable;
 import com.cxjd.nvwabao.helper.ItemDragHelperCallback;
-import com.cxjd.nvwabao.utils.TitleListManagr;
 
-import java.util.ArrayList;
+import org.litepal.crud.DataSupport;
+
 import java.util.List;
 
 /**
  * 拖拽
  * Created by YoKeyword on 16/1/4.
  */
+
 /**
  * 拖拽
  * Created by YoKeyword on 16/1/4.
  */
 public class DragActivity extends AppCompatActivity{
     private RecyclerView mRecy;
-    List<String> titlelist;
-    List<FocusTitle> items,tempList;
     private DragAdapter adapter;
+    List<TitleLable> items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         mRecy = (RecyclerView) findViewById(R.id.recy);
-        titlelist=new ArrayList<>();
-        tempList=new ArrayList<>();
+        items= DataSupport.findAll(TitleLable.class);
         init();
     }
 
     private void init() {
-        initTitle();
         GridLayoutManager manager = new GridLayoutManager(this, 5);
         mRecy.setLayoutManager(manager);
 
@@ -63,25 +61,5 @@ public class DragActivity extends AppCompatActivity{
             }
         });
         mRecy.setAdapter(adapter);
-    }
-    private void initTitle() {
-         items = new ArrayList<>();
-         tempList= TitleListManagr.readTitleList(this,TitleListManagr.str_show);
-         if (tempList!=null){
-             for (int i = 0; i <tempList.size(); i++) {
-              items.add(i,tempList.get(i));
-             }
-         }else{
-             tempList= TitleListManagr.readTitleList(this,TitleListManagr.str_all);
-             for (int i = 0; i <tempList.size(); i++) {
-                 items.add(i,tempList.get(i));
-             }
-         }
-    }
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        initTitle();
-        adapter.notifyDataSetChanged();
     }
 }

@@ -29,4 +29,33 @@
         <item>美容</item>
         <item>经络</item>
     </string-array>
+    <string-array name="TitleLable">
+        <item>ynsi</item>
+        <item>chun</item>
+        <item>xia</item>
+        <item>qiu</item>
+        <item>dong</item>
+        <item>tsrq</item>
+        <item>jj</item>
+        <item>xd</item>
+        <item>mr</item>
+        <item>cs</item>
+        <item>lnr</item>
+        <item>xs</item>
+        <item>rt</item>
+        <item>yf</item>
+        <item>gxy</item>
+        <item>men</item>
+        <item>man</item>
+        <item>gxt</item>
+        <item>gxz</item>
+        <item>zy</item>
+        <item>yj</item>
+        <item>tnb</item>
+        <item>yd</item>
+        <item>jf</item>
+        <item>gnq</item>
+        <item>mr</item>
+        <item>jn</item>
+    </string-array>
 </resources>
