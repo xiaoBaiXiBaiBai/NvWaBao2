@@ -26,15 +26,16 @@ import java.util.function.Function;
 
 public class FindFragment extends Fragment {
 
-    private List<FindFunction> functionList = new ArrayList<>();
+    private List<FindFunction> functionList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_find,container,false);
         TextView textView = view.findViewById(R.id.fragment_title);
         textView.setText(R.string.find);
-
-        initFindFunction();
+        if (functionList==null){
+            initFindFunction();
+        }
         RecyclerView recyclerView = view.findViewById(R.id.find_recycler_view);
         GridLayoutManager layoutManager = new GridLayoutManager(this.getActivity(),3);
         recyclerView.setLayoutManager(layoutManager);
@@ -48,6 +49,7 @@ public class FindFragment extends Fragment {
      *   初始化发现列表功能
      */
     private void initFindFunction() {
+        functionList = new ArrayList<>();
         FindFunction twentyFour  = new FindFunction(R.drawable.icon_find_24);
         functionList.add(twentyFour);
         FindFunction fourAndFive = new FindFunction(R.drawable.icon_find_fiveandfour);
@@ -68,6 +70,10 @@ public class FindFragment extends Fragment {
         functionList.add(baibing);
 
     }
+
+
+
+
 }
 
 
