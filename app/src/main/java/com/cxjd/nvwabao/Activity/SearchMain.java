@@ -21,6 +21,13 @@ public class SearchMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_main);
+        Button back = (Button) findViewById(R.id.nav_button);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         Button button = (Button) findViewById(R.id.bt_go);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
