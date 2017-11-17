@@ -4,15 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context="com.cxjd.nvwabao.mainActivity.MainActivity">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#1C86EE"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/nav_button"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="查询方式"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
     <Button
+        android:layout_margin="10dp"
         android:id="@+id/bt_go"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转"/>
+        android:layout_weight="1"
+        android:background="@drawable/btn"
+        android:textSize="30sp"
+        android:text="按人体图查询->"/>
+
     <Button
+        android:layout_margin="10dp"
         android:id="@+id/bt_goRoom"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转Room"/>
+        android:layout_weight="1"
+        android:background="@drawable/btn"
+        android:textSize="30sp"
+        android:text="按科室查询->"/>
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/bt_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/btn"
+        android:textSize="30sp"
+        android:text="按人群查询->"/>
 </LinearLayout>
