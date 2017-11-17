@@ -1,7 +1,9 @@
 package com.cxjd.nvwabao.adapter;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,9 @@ import android.widget.TextView;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.TitleBean;
+import com.cxjd.nvwabao.bean.TitleLable;
+
+import org.litepal.crud.DataSupport;
 
 import java.util.List;
 
@@ -59,24 +64,38 @@ public class SpecialRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         return null;
     }
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        list=DataSupport.findAll(TitleBean.class);
         if (holder instanceof ViewHolderTitle){
             TitleBean focusTitle=list.get(position);
             ((ViewHolderTitle) holder).textTitle.setText(focusTitle.getTitleName());
         }
-        if (holder instanceof ViewHolderDate){
+        else if (holder instanceof ViewHolderDate){
             TitleBean focusTitle=list.get(position);
             ((ViewHolderDate) holder).textView.setText(focusTitle.getTitleName());
-            if (focusTitle.getTitle_check()==1) {
-                ((ViewHolderDate) holder).box.setChecked(true);
-            }
-            else {
+            if (focusTitle.getTitle_check()==0) {
                 ((ViewHolderDate) holder).box.setChecked(false);
             }
-            ((ViewHolderDate) holder).box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            else {
+                ((ViewHolderDate) holder).box.setChecked(true);
+            }
+            ((ViewHolderDate) holder).box.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
+                public void onClick(View view) {
+                    if (((ViewHolderDate) holder).box.isChecked()) {
+                        ContentValues values=new ContentValues();
+                        values.put("title_check",1);
+                        DataSupport.updateAll(TitleBean.class,values,"titlename = ?",list.get(position).getTitleName());
+                        TitleLable titleLable=new TitleLable(list.get(position).getTitleName(),
+                                list.get(position).getTitleCategery(),1,
+                                list.get(position).getTitleLable());
+                        titleLable.save();
+                    }else {
+                        ContentValues values = new ContentValues();
+                        values.put("title_check", 0);
+                        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", list.get(position).getTitleName());
+                        DataSupport.deleteAll(TitleLable.class, "titlename=?", list.get(position).getTitleName());
+                    }
                 }
             });
         }

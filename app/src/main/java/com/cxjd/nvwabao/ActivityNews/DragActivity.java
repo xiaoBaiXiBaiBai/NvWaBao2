@@ -28,16 +28,17 @@ public class DragActivity extends AppCompatActivity{
     private RecyclerView mRecy;
     private DragAdapter adapter;
     List<TitleLable> items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
         mRecy = (RecyclerView) findViewById(R.id.recy);
-        items= DataSupport.findAll(TitleLable.class);
         init();
     }
 
     private void init() {
+        items= DataSupport.findAll(TitleLable.class);
         GridLayoutManager manager = new GridLayoutManager(this, 5);
         mRecy.setLayoutManager(manager);
 
@@ -61,5 +62,23 @@ public class DragActivity extends AppCompatActivity{
             }
         });
         mRecy.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        init();
+        adapter.notifyDataSetChanged();
     }
 }

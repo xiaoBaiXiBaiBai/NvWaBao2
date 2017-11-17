@@ -9,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,13 +75,7 @@ public class InformationFragment extends Fragment {
         /**
          * 获取tabLayout标题，若为空则初始化
          */
-        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
-        if (titleLableList.size()<=0){
-            initTabName();
-            TabNameList=DataSupport.findAll(TitleLable.class);
-        }else {
-            TabNameList=titleLableList;
-        }
+        addTabName();
         /**
          * 给Tablayout中item间添加分割线
          */
@@ -93,6 +86,16 @@ public class InformationFragment extends Fragment {
 
         starttitleLayout();
         return view;
+    }
+
+    private void addTabName() {
+        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
+        if (titleLableList.size()<=0){
+            initTabName();
+            TabNameList=DataSupport.findAll(TitleLable.class);
+        }else {
+            TabNameList=titleLableList;
+        }
     }
 
     private void initTabName() {
@@ -175,5 +178,14 @@ public class InformationFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+       addTabName();
+       if (viewpaerAdappter!=null)
+       viewpaerAdappter.notifyDataSetChanged();
+       starttitleLayout();
     }
 }

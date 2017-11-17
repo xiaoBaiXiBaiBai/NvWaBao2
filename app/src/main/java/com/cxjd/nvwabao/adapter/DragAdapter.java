@@ -1,9 +1,11 @@
 package com.cxjd.nvwabao.adapter;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,12 @@ import android.widget.TextView;
 
 import com.cxjd.nvwabao.ActivityNews.TitleStateActivity;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.bean.TitleBean;
 import com.cxjd.nvwabao.bean.TitleLable;
 import com.cxjd.nvwabao.helper.OnDragVHListener;
 import com.cxjd.nvwabao.helper.OnItemMoveListener;
+
+import org.litepal.crud.DataSupport;
 
 import java.util.List;
 
@@ -38,6 +43,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
      * mItem适配数据
      */
     private List<TitleLable> mItems;
+
     private LayoutInflater mInflater;
     private Context context;
     public DragAdapter(Context context, List<TitleLable> items) {
@@ -135,10 +141,19 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
      */
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
-       TitleLable item = mItems.get(fromPosition-1);
+        TitleLable item1= mItems.get(fromPosition-1);
+        TitleLable item2=mItems.get(toPosition-1);
+        String firstName=item1.getTitleName();
+        String lastName= item2.getTitleName();
         mItems.remove(fromPosition-1);
-        mItems.add(toPosition-1, item);
+        mItems.add(toPosition-1, item1);
         notifyItemMoved(fromPosition, toPosition);
+        ContentValues values=new ContentValues();
+        values.put("titlename",item1.getTitleName());
+        values.put("titlecategery",item1.getTitleCategery());
+        values.put("title_check",item1.getTitle_check());
+        values.put("titlelable",item1.getTitleLable());
+        DataSupport.updateAll(TitleLable.class,values,"titlelable",item2.getTitleLable());
     }
 
     /**
@@ -206,7 +221,11 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     }
     private void moveMyToOther(DragViewHolder myHolder) {
         int position = myHolder.getAdapterPosition();
-        mItems.remove(position);
+        DataSupport.deleteAll(TitleLable.class,"titlename=?", mItems.get(position-1).getTitleName());
+        ContentValues values = new ContentValues();
+        values.put("title_check", 0);
+        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", mItems.get(position-1).getTitleName());
+        mItems.remove(position-1);
         notifyDataSetChanged();
     }
 }

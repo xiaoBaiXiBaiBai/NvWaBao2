@@ -15,18 +15,23 @@ import java.util.List;
 
 public class TitleStateActivity extends AppCompatActivity {
     private List<TitleBean> originList;
+    private SpecialRecyclerAdapter adapter;
+    RecyclerView recycler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title_state);
-        originList= DataSupport.findAll(TitleBean.class);
-        RecyclerView recycler= (RecyclerView) findViewById(R.id.seasion_recycler_recycler);
+        recycler= (RecyclerView) findViewById(R.id.seasion_recycler_recycler);
+        initTiti();
+        originList=DataSupport.findAll(TitleBean.class);
+    }
 
+    private void initTiti() {
+        originList= DataSupport.findAll(TitleBean.class);
         GridLayoutManager manager=new GridLayoutManager(this,2);
 
         recycler.setLayoutManager(manager);
-
-        final SpecialRecyclerAdapter adapter=new SpecialRecyclerAdapter(originList,this);
+        adapter=new SpecialRecyclerAdapter(originList,this);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -37,4 +42,10 @@ public class TitleStateActivity extends AppCompatActivity {
         recycler.setAdapter(adapter);
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        initTiti();
+        adapter.notifyDataSetChanged();
+    }
 }
