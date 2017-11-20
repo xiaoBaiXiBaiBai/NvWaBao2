@@ -33,8 +33,9 @@ public class FindFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_find,container,false);
         TextView textView = view.findViewById(R.id.fragment_title);
         textView.setText(R.string.find);
-
-        initFindFunction();
+        if(functionList.isEmpty()==true){
+            initFindFunction();
+        }
         RecyclerView recyclerView = view.findViewById(R.id.find_recycler_view);
         GridLayoutManager layoutManager = new GridLayoutManager(this.getActivity(),3);
         recyclerView.setLayoutManager(layoutManager);
