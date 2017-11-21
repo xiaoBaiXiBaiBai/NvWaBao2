@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 
 import com.cxjd.nvwabao.ActivityNews.DragActivity;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.ListDataSave;
 import com.cxjd.nvwabao.adapter.NewsViewpaerAdappter;
 import com.cxjd.nvwabao.bean.TitleBean;
 import com.cxjd.nvwabao.bean.TitleLable;
@@ -36,6 +37,7 @@ public class InformationFragment extends Fragment {
     /*
      * 定义控件
      **/
+    private ListDataSave listDataSave;
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private NewsViewpaerAdappter viewpaerAdappter;
@@ -56,7 +58,7 @@ public class InformationFragment extends Fragment {
         titleBtn = (ImageButton) view.findViewById(R.id.titleManager);
         mViewPager = (ViewPager) view.findViewById(R.id.news_view_paper);
         mTabLayout = (TabLayout) view.findViewById(R.id.news_tab_layout);
-
+        listDataSave=new ListDataSave(getActivity(),"MyItem");
         seansonlist=new ArrayList<>();
         TabNameList=new ArrayList<>();
         /**
@@ -89,10 +91,10 @@ public class InformationFragment extends Fragment {
     }
 
     private void addTabName() {
-        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
+        List<TitleLable> titleLableList=listDataSave.getDataList("TitleLable",TitleLable.class);//DataSupport.findAll(TitleLable.class);
         if (titleLableList.size()<=0){
             initTabName();
-            TabNameList=DataSupport.findAll(TitleLable.class);
+            TabNameList=listDataSave.getDataList("TitleLable",TitleLable.class);//DataSupport.findAll(TitleLable.class);
         }else {
             TabNameList=titleLableList;
         }
@@ -112,6 +114,7 @@ public class InformationFragment extends Fragment {
                 }
             }
         }
+        listDataSave.setDataList("TitleLable",seansonlist);
         for (TitleLable titleLable:seansonlist){
             titleLable.save();
         }

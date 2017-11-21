@@ -5,14 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.DragAdapter;
+import com.cxjd.nvwabao.adapter.ListDataSave;
 import com.cxjd.nvwabao.bean.TitleLable;
 import com.cxjd.nvwabao.helper.ItemDragHelperCallback;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -28,17 +31,19 @@ public class DragActivity extends AppCompatActivity{
     private RecyclerView mRecy;
     private DragAdapter adapter;
     List<TitleLable> items;
+    private ListDataSave listDataSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        listDataSave=new ListDataSave(this,"MyItem");
         setContentView(R.layout.activity_demo);
         mRecy = (RecyclerView) findViewById(R.id.recy);
         init();
     }
 
     private void init() {
-        items= DataSupport.findAll(TitleLable.class);
+        items=listDataSave.getDataList("TitleLable",TitleLable.class);// DataSupport.findAll(TitleLable.class);
         GridLayoutManager manager = new GridLayoutManager(this, 5);
         mRecy.setLayoutManager(manager);
 
@@ -62,6 +67,12 @@ public class DragActivity extends AppCompatActivity{
             }
         });
         mRecy.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        listDataSave.setDataList("TitleLable",items);
     }
 
     @Override

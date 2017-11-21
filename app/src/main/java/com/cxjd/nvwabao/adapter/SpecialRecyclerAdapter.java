@@ -25,6 +25,7 @@ import java.util.List;
 
 public class SpecialRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<TitleBean> list;
+    private ListDataSave listDataSave;
     Context context;
     public enum IS_TITLE{
         TITLE_IS,
@@ -33,6 +34,7 @@ public class SpecialRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public SpecialRecyclerAdapter(List<TitleBean> list, Context context) {
         this.list = list;
         this.context=context;
+        listDataSave=new ListDataSave(context,"MyItem");
     }
 
     public class ViewHolderTitle extends RecyclerView.ViewHolder{
@@ -90,11 +92,15 @@ public class SpecialRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                                 list.get(position).getTitleCategery(),1,
                                 list.get(position).getTitleLable());
                         titleLable.save();
+                        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
+                        listDataSave.setDataList("TitleLable",titleLableList);
                     }else {
                         ContentValues values = new ContentValues();
                         values.put("title_check", 0);
                         DataSupport.updateAll(TitleBean.class, values, "titlename = ?", list.get(position).getTitleName());
                         DataSupport.deleteAll(TitleLable.class, "titlename=?", list.get(position).getTitleName());
+                        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
+                        listDataSave.setDataList("TitleLable",titleLableList);
                     }
                 }
             });

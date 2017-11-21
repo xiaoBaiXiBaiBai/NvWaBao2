@@ -46,9 +46,11 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
 
     private LayoutInflater mInflater;
     private Context context;
+    private ListDataSave listDataSave;
     public DragAdapter(Context context, List<TitleLable> items) {
         this.context=context;
         mInflater = LayoutInflater.from(context);
+        listDataSave=new ListDataSave(context,"MyItem");
         this.mItems = items;
     }
 
@@ -142,18 +144,9 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
         TitleLable item1= mItems.get(fromPosition-1);
-        TitleLable item2=mItems.get(toPosition-1);
-        String firstName=item1.getTitleName();
-        String lastName= item2.getTitleName();
         mItems.remove(fromPosition-1);
         mItems.add(toPosition-1, item1);
         notifyItemMoved(fromPosition, toPosition);
-        ContentValues values=new ContentValues();
-        values.put("titlename",item1.getTitleName());
-        values.put("titlecategery",item1.getTitleCategery());
-        values.put("title_check",item1.getTitle_check());
-        values.put("titlelable",item1.getTitleLable());
-        DataSupport.updateAll(TitleLable.class,values,"titlelable",item2.getTitleLable());
     }
 
     /**
@@ -221,11 +214,12 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     }
     private void moveMyToOther(DragViewHolder myHolder) {
         int position = myHolder.getAdapterPosition();
-        DataSupport.deleteAll(TitleLable.class,"titlename=?", mItems.get(position-1).getTitleName());
+        /*DataSupport.deleteAll(TitleLable.class,"titlename=?", mItems.get(position-1).getTitleName());
         ContentValues values = new ContentValues();
         values.put("title_check", 0);
-        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", mItems.get(position-1).getTitleName());
+        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", mItems.get(position-1).getTitleName());*/
         mItems.remove(position-1);
         notifyDataSetChanged();
+
     }
 }
