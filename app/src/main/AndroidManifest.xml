@@ -25,16 +25,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mainActivity.MainActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.TitleStateActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.DragActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.DetailActivity"
-            android:theme="@style/zhou"/>
         <activity
-            android:name=".Activity.Classify"
+            android:name=".mainActivity.MainActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.TitleStateActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.DragActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.DetailActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.People"
             android:theme="@style/zhou" />
         <activity
             android:name=".Activity.Room"
@@ -45,6 +49,7 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
+        <activity android:name=".Activity.AgePo"></activity>
     </application>
 
 </manifest>

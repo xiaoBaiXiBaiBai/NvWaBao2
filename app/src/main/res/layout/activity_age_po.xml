@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#1C86EE"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/nav_button"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="疾病列表"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+        android:background="#F0F0F0"
+            >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:listSelector="@color/white"
+                android:id="@+id/zzz">
+
+            </ListView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:background="#fff"
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/min_item"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

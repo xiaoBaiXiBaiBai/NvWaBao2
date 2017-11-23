@@ -2,6 +2,8 @@ package com.cxjd.nvwabao.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,12 +26,14 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class Classify extends AppCompatActivity {
+public class People extends AppCompatActivity {
 
     private ListView maxlv,minlv,neikeSonlv;
     private List<String> maxList,minList,neikeSonList;
     private ArrayAdapter<String> maxAdapter,minAdapter,neikeSonAdapter;
-
+    private  String UrlBase = "http://192.168.31.227/user/getParts/";
+    //private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
+    private int fPosition;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,67 +49,51 @@ public class Classify extends AppCompatActivity {
         maxList = new ArrayList<>();
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
-        maxAdapter = new ArrayAdapter<String>(Classify.this, R.layout.list_item, maxList);
+        maxAdapter = new ArrayAdapter<String>(People.this, R.layout.list_item, maxList);
         maxlv.setAdapter(maxAdapter);
 
 
 
         minList = new ArrayList<>();
-        Min0();
+        minList = minlistData(UrlBase+0,minList);
         minlv = (ListView) findViewById(R.id.min_item);
 
-        minAdapter = new ArrayAdapter<String>(Classify.this,android.R.layout.simple_list_item_1, minList);
+        minAdapter = new ArrayAdapter<String>(People.this,android.R.layout.simple_list_item_1, minList);
         minlv.setAdapter(minAdapter);
 
         maxlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                switch (position){
-                    case 0:
-
-                        minList.clear();
-                        Min0();
-                        minAdapter.notifyDataSetChanged();
-                        break;
-                    case 1:
-
-                        minList.clear();
-                        Min1();
-                        minAdapter.notifyDataSetChanged();
-                        break;
-                }
+                fPosition = position;
+                minList = minlistData(UrlBase+position,minList);
+                Message message = new Message();
+                handler.sendMessage(message);
             }
         });
+
         minlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intentDis = new Intent(Classify.this, Disease.class);
-                intentDis.putExtra("xq", position);
+                Intent intentDis = new Intent(People.this, Disease.class);
+                intentDis.putExtra("xq", UrlBase+fPosition+"/"+position);
+                intentDis.putExtra("what","1");
                 startActivity(intentDis);
             }
         });
     }
 
-
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            minAdapter.notifyDataSetChanged();
+        }
+    };
     public void MaxData(){
-        maxList.add("内科");
-        maxList.add("外科");
+        maxList = listData(UrlBase,maxList);
     }
-    public void Min0(){
-        for (int i = 0; i <20 ; i++) {
-            minList.add("000000000");
-            minList.add("000000000");
-        }
 
-    }
-    public void Min1() {
-        for (int i = 0; i <20 ; i++) {
-            minList.add("1111111");
-            minList.add("1111111");
-        }
 
-    }
+
     private List<String> listData(String url, final List<String> list) {
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override
@@ -114,7 +102,42 @@ public class Classify extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(Classify.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(People.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                try {
+                    list.clear();
+
+                    String responseData = response.body().string();
+                    JSONArray jsonArray = new JSONArray(responseData);
+
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        list.add(jsonArray.getString(i));
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        return list;
+    }
+    private List<String> minlistData(String url, final List<String> list) {
+        HttpUtil.sendOkHttpRequest(url, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(People.this, "获取数据失败", Toast.LENGTH_SHORT).show();
 
                     }
                 });
