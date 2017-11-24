@@ -96,7 +96,7 @@ public class Disease extends AppCompatActivity {
 
     }
     private void listData(String url) {
-
+        Log.e("Url",url);
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

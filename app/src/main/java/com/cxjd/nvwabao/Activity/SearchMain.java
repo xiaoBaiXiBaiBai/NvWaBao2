@@ -48,7 +48,7 @@ public class SearchMain extends AppCompatActivity {
         btnAge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SearchMain.this,AgePo.class);
+                Intent intent = new Intent(SearchMain.this,People2.class);
                 startActivity(intent);
             }
         });

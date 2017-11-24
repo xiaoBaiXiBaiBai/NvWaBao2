@@ -1,9 +1,11 @@
 package com.cxjd.nvwabao.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,7 +27,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class AgePo extends AppCompatActivity {
+public class People2 extends AppCompatActivity {
 
     private ListView maxlv,minlv,neikeSonlv;
     private List<String> maxList,minList,neikeSonList;
@@ -36,7 +38,7 @@ public class AgePo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_age_po);
+        setContentView(R.layout.activity_classify);
         Button back = (Button) findViewById(R.id.nav_button);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,9 +49,8 @@ public class AgePo extends AppCompatActivity {
 
         maxList = new ArrayList<>();
         MaxData();
-        maxlv = (ListView) findViewById(R.id.zzz);
-
-        maxAdapter = new ArrayAdapter<String>(AgePo.this, R.layout.list_item, maxList);
+        maxlv = (ListView) findViewById(R.id.max_item);
+        maxAdapter = new ArrayAdapter<String>(People2.this, R.layout.list_item, maxList);
         maxlv.setAdapter(maxAdapter);
 
 
@@ -58,7 +59,7 @@ public class AgePo extends AppCompatActivity {
         minList = minlistData(UrlBase+0,minList);
         minlv = (ListView) findViewById(R.id.min_item);
 
-        minAdapter = new ArrayAdapter<String>(AgePo.this,android.R.layout.simple_list_item_1, minList);
+        minAdapter = new ArrayAdapter<String>(People2.this,android.R.layout.simple_list_item_1, minList);
         minlv.setAdapter(minAdapter);
 
         maxlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -74,7 +75,7 @@ public class AgePo extends AppCompatActivity {
         minlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intentDis = new Intent(AgePo.this, Disease.class);
+                Intent intentDis = new Intent(People2.this, Disease.class);
                 intentDis.putExtra("xq", UrlBase+fPosition+"/"+position);
                 intentDis.putExtra("what","1");
                 startActivity(intentDis);
@@ -95,6 +96,7 @@ public class AgePo extends AppCompatActivity {
 
 
     private List<String> listData(String url, final List<String> list) {
+        Log.e("Url",url);
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -102,7 +104,7 @@ public class AgePo extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(AgePo.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(People2.this, "获取数据失败", Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -137,7 +139,7 @@ public class AgePo extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(AgePo.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(People2.this, "获取数据失败", Toast.LENGTH_SHORT).show();
 
                     }
                 });

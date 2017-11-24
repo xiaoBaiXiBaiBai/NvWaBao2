@@ -41,6 +41,9 @@
             android:name=".Activity.People"
             android:theme="@style/zhou" />
         <activity
+            android:name=".Activity.People2"
+            android:theme="@style/zhou" />
+        <activity
             android:name=".Activity.Room"
             android:theme="@style/zhou" />
         <activity
@@ -49,7 +52,6 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
-        <activity android:name=".Activity.AgePo"></activity>
     </application>
 
 </manifest>
