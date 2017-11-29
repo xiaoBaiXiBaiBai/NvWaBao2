@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -21,8 +23,12 @@ public class DetailActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_detail);
+            WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+            int width = windowManager.getDefaultDisplay().getWidth();
+            Log.i("TAG",width+"");
             webView = findViewById(R.id.webview);
-            webView.setInitialScale(200);
+            chooseScale(width);
+           // webView.setInitialScale(200);
             Intent intent=getIntent();
             String url="http://"+intent.getStringExtra("content");
             initWebview();
@@ -52,7 +58,26 @@ public class DetailActivity extends AppCompatActivity {
             });
         }
 
-        private void initWebview() {
+    private void chooseScale(int width) {
+        if(width > 650)
+        {
+            this.webView.setInitialScale(200);
+        }else if(width > 520)
+        {
+            this.webView.setInitialScale(180);
+        }else if(width > 450)
+        {
+            this.webView.setInitialScale(160);
+        }else if(width > 300)
+        {
+            this.webView.setInitialScale(140);
+        }else
+        {
+            this.webView.setInitialScale(100);
+        }
+    }
+
+    private void initWebview() {
             webView.setWebViewClient(new MyWebViewClient());
             webView.addJavascriptInterface(new JavaScriptInterface(this), "imagelistner");//这个是给图片设置点击监听的，如果
             webView.getSettings().setTextSize(WebSettings.TextSize.LARGER);
