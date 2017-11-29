@@ -32,7 +32,7 @@ public class SearchMain extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SearchMain.this,Classify.class);
+                Intent intent = new Intent(SearchMain.this,People.class);
                 startActivity(intent);
             }
         });
@@ -41,6 +41,14 @@ public class SearchMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SearchMain.this,Room.class);
+                startActivity(intent);
+            }
+        });
+        Button btnAge = (Button) findViewById(R.id.bt_people);
+        btnAge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchMain.this,People2.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +63,29 @@ public class SearchMain extends AppCompatActivity {
 
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/1", new Callback() {
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/0", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
