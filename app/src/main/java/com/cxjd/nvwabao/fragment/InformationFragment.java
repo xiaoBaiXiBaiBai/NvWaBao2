@@ -153,7 +153,7 @@ public class InformationFragment extends Fragment {
         FragmentManager fragmentManager = getChildFragmentManager();
         viewpaerAdappter= new NewsViewpaerAdappter(fragmentManager, TabNameList);
         for (int i = 0; i < TabNameList.size(); i++){
-            viewpaerAdappter.addFragment(new NewsItemFragment(TabNameList.get(i).getTitleCategery()));
+            viewpaerAdappter.addFragment(new NewsItemFragment(TabNameList.get(i)));
         }
         mViewPager.setAdapter(viewpaerAdappter);
 

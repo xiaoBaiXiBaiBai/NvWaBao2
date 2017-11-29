@@ -18,6 +18,7 @@ import com.cxjd.nvwabao.adapter.HttpTitleUtil;
 import com.cxjd.nvwabao.adapter.ListDataSave;
 import com.cxjd.nvwabao.adapter.NewsItemAdapter;
 import com.cxjd.nvwabao.bean.TitleContentBean;
+import com.cxjd.nvwabao.bean.TitleLable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +39,10 @@ public class NewsItemFragment extends Fragment {
     }
 
     @SuppressLint("ValidFragment")
-    public NewsItemFragment(String string) {
-
-        this.rqTitle="nanxing";
+    public NewsItemFragment(TitleLable titleLable) {
+       //this.rqTitle="nanxing";
+        this.rqTitle=titleLable.getTitleCategery();
+        Log.i("TAG",titleLable.getTitleCategery());
     }
 
     @Nullable
