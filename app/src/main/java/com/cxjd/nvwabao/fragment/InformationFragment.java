@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.cxjd.nvwabao.ActivityNews.DragActivity;
 import com.cxjd.nvwabao.R;
@@ -58,6 +59,7 @@ public class InformationFragment extends Fragment {
         titleBtn = (ImageButton) view.findViewById(R.id.titleManager);
         mViewPager = (ViewPager) view.findViewById(R.id.news_view_paper);
         mTabLayout = (TabLayout) view.findViewById(R.id.news_tab_layout);
+        //创建从SharedPreferences中提取数据对象
         listDataSave=new ListDataSave(getActivity(),"MyItem");
         seansonlist=new ArrayList<>();
         TabNameList=new ArrayList<>();
@@ -89,7 +91,7 @@ public class InformationFragment extends Fragment {
         starttitleLayout();
         return view;
     }
-
+    //获取TabName数据集合
     private void addTabName() {
         List<TitleLable> titleLableList=listDataSave.getDataList("TitleLable",TitleLable.class);//DataSupport.findAll(TitleLable.class);
         if (titleLableList.size()<=0){
@@ -99,7 +101,7 @@ public class InformationFragment extends Fragment {
             TabNameList=titleLableList;
         }
     }
-
+    //若第一次安装则将TabName数据添加至文件
     private void initTabName() {
         List<TitleBean> list= DataSupport.findAll(TitleBean.class);
         if (list!=null) {
@@ -114,12 +116,14 @@ public class InformationFragment extends Fragment {
                 }
             }
         }
+        //将关注的标题存储至文件
         listDataSave.setDataList("TitleLable",seansonlist);
+        //将关注的标题存储至数据库
         for (TitleLable titleLable:seansonlist){
             titleLable.save();
         }
     }
-
+    //第一次安装将所有标题信息存储至数据库
     public void initTiTle(){
         for (int i=0;i<arrayTitle.length;i++){
             TitleBean focusTitle=new TitleBean();
@@ -148,7 +152,7 @@ public class InformationFragment extends Fragment {
         FragmentManager fragmentManager = getChildFragmentManager();
         viewpaerAdappter= new NewsViewpaerAdappter(fragmentManager, TabNameList);
         for (int i = 0; i < TabNameList.size(); i++){
-            viewpaerAdappter.addFragment(new NewsItemFragment());
+            viewpaerAdappter.addFragment(new NewsItemFragment(TabNameList.get(i).getTitleCategery()));
         }
         mViewPager.setAdapter(viewpaerAdappter);
 
@@ -157,22 +161,8 @@ public class InformationFragment extends Fragment {
         }
 
         mTabLayout.setupWithViewPager(mViewPager);
-        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
 
-            }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
         //为管理频道按钮添加监听启动频道管理界面
         titleBtn.setOnClickListener(new View.OnClickListener() {
             @Override

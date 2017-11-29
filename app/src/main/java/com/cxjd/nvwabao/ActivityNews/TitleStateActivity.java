@@ -23,7 +23,6 @@ public class TitleStateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_title_state);
         recycler= (RecyclerView) findViewById(R.id.seasion_recycler_recycler);
         initTiti();
-        originList=DataSupport.findAll(TitleBean.class);
     }
 
     private void initTiti() {

@@ -214,10 +214,10 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
     }
     private void moveMyToOther(DragViewHolder myHolder) {
         int position = myHolder.getAdapterPosition();
-        /*DataSupport.deleteAll(TitleLable.class,"titlename=?", mItems.get(position-1).getTitleName());
+        DataSupport.deleteAll(TitleLable.class,"titlename=?", mItems.get(position-1).getTitleName());
         ContentValues values = new ContentValues();
         values.put("title_check", 0);
-        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", mItems.get(position-1).getTitleName());*/
+        DataSupport.updateAll(TitleBean.class, values, "titlename = ?", mItems.get(position-1).getTitleName());
         mItems.remove(position-1);
         notifyDataSetChanged();
 

@@ -92,16 +92,14 @@ public class SpecialRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                                 list.get(position).getTitleCategery(),1,
                                 list.get(position).getTitleLable());
                         titleLable.save();
-                        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
-                        listDataSave.setDataList("TitleLable",titleLableList);
                     }else {
                         ContentValues values = new ContentValues();
                         values.put("title_check", 0);
                         DataSupport.updateAll(TitleBean.class, values, "titlename = ?", list.get(position).getTitleName());
                         DataSupport.deleteAll(TitleLable.class, "titlename=?", list.get(position).getTitleName());
-                        List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
-                        listDataSave.setDataList("TitleLable",titleLableList);
                     }
+                    List<TitleLable> titleLableList=DataSupport.findAll(TitleLable.class);
+                    listDataSave.setDataList("TitleLable",titleLableList);
                 }
             });
         }
