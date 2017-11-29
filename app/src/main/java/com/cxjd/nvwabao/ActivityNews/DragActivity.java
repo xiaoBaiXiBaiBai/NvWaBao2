@@ -73,6 +73,7 @@ public class DragActivity extends AppCompatActivity{
     protected void onPause() {
         super.onPause();
         listDataSave.setDataList("TitleLable",items);
+        finish();
     }
 
     @Override
@@ -89,7 +90,7 @@ public class DragActivity extends AppCompatActivity{
     @Override
     protected void onRestart() {
         super.onRestart();
-        init();
-        adapter.notifyDataSetChanged();
+       // init();
+       // adapter.notifyDataSetChanged();
     }
 }

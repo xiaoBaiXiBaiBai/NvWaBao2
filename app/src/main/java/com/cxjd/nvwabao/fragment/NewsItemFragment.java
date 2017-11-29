@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 
 import com.cxjd.nvwabao.R;
-import com.cxjd.nvwabao.adapter.HttpUtil;
+import com.cxjd.nvwabao.adapter.HttpTitleUtil;
 import com.cxjd.nvwabao.adapter.ListDataSave;
 import com.cxjd.nvwabao.adapter.NewsItemAdapter;
 import com.cxjd.nvwabao.bean.TitleContentBean;
@@ -39,7 +39,8 @@ public class NewsItemFragment extends Fragment {
 
     @SuppressLint("ValidFragment")
     public NewsItemFragment(String string) {
-        this.rqTitle=string;
+
+        this.rqTitle="nanxing";
     }
 
     @Nullable
@@ -49,10 +50,10 @@ public class NewsItemFragment extends Fragment {
        listDataSave=new ListDataSave(getContext(),"Titlecontent");
        imageView=view.findViewById(R.id.icon);
        String address="http://192.168.31.227/user/getPosts/"+rqTitle;
-       HttpUtil.sendHttpRequest(address, new HttpUtil.HttpCallbackListener() {
+       HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
            @Override
            public void onFinish(String response) {
-               listDataSave.setDataList("Simplecontent",HttpUtil.parseJsonWithGSON(response.toString()));
+               listDataSave.setDataList("Simplecontent"+rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
            }
 
            @Override
@@ -61,8 +62,7 @@ public class NewsItemFragment extends Fragment {
            }
        });
        titleContentBeans=new ArrayList<>();
-       titleContentBeans=listDataSave.getDataList("Simplecontent",TitleContentBean.class);
-
+       titleContentBeans=listDataSave.getDataList("Simplecontent"+rqTitle,TitleContentBean.class);
        mRecyclerView = (RecyclerView)view.findViewById(R.id.news_item_recycle_view);
        NewsItemAdapter adapter=new NewsItemAdapter(titleContentBeans,getContext());
        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

@@ -1,5 +1,6 @@
 package com.cxjd.nvwabao.ActivityNews;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -46,5 +47,12 @@ public class TitleStateActivity extends AppCompatActivity {
         super.onRestart();
         initTiti();
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(this,DragActivity.class);
+        startActivity(intent);
     }
 }
