@@ -42,21 +42,26 @@ public class FindFunctionAdapter extends RecyclerView.Adapter <FindFunctionAdapt
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.find_function_item,parent,false);
         final ViewHolder holder = new ViewHolder(view);
-        holder.functionView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                int position = holder.getAdapterPosition();
-                FindFunction findFunction = mFunctionList.get(position);
-                Toast.makeText(view.getContext(),"you clicked view",Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        //备用，当图片和功能简介分离时使用
+//        holder.functionView.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                int position = holder.getAdapterPosition();
+//                FindFunction findFunction = mFunctionList.get(position);
+//                Toast.makeText(view.getContext(),"you clicked view",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
         holder.functionImage.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
                 FindFunction findFunction = mFunctionList.get(position);
-                Toast.makeText(view.getContext(),"you clicked image",Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(view.getContext(),"you clicked image"+ position,Toast.LENGTH_SHORT).show();
             }
         });
         return holder;

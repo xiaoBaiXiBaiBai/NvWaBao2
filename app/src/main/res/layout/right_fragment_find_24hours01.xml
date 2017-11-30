@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                 android:layout_marginTop="50dp"
+                 android:textStyle="bold"
+                 android:textSize="25dp"
+                 android:gravity="center"
+                 android:text="胆经当令"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+
+            <TextView
+                 android:layout_marginTop="25dp"
+                 android:textSize="20dp"
+                 android:text="         胆经是足少阳胆经的简称。深夜23:00到次日凌晨1:00即子时这个时候是胆经当令。就是当班的意思。"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+
+            <TextView
+                 android:textSize="20dp"
+                 android:text="         在子时保持良好的睡眠，对人体的一天至关重要，子时，人的胆经最旺。从理论上讲，此时用柔力敲打胆经可使胆经收到刺激，促使胆汁分泌，提升人体的吸收能力，进而为人体造血系统提供充足的原料。但人体需要在熟睡中进行胆的排毒和新陈代谢。此时如果不睡觉，对胆汁的新陈代谢不利，胆汁浓度过高容易结晶成石。为防止胆结石、胆囊炎等疾病的发生，此时人体最好处于睡眠状态，让身体在睡眠中自我调整、补充能量。美国学者的一份报告表明，纽约布朗克斯区的婴幼儿因为经常在23:00到凌晨1:00被那里异常热闹的夜生活吵醒，他们的生长速度明显比其他婴幼儿缓慢。"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+
+         </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

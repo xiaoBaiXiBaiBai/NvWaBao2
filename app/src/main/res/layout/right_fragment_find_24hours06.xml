@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="脾经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         脾经是是太阴脾经的简称。9:00-11-00即辰时。脾经在此时反应最灵敏。    "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         脾主运化，早上吃的饭在这个时候开始运化。我们的胃就像一口锅，吃了饭怎么消化？那就要靠火，把脾胃里的东西一点点消化掉。在五脏六腑里，脾就像个忙碌的小丫鬟，烧火、点柴帮助消化。但如果她病了，我们五脏六腑这个“大宅门”就都不舒服了，就会得所谓的富贵病，比如说糖尿病等。如果人体出现消瘦、流口水、湿肿等症状，都属于脾病。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
