@@ -1,5 +1,8 @@
 package com.cxjd.nvwabao.bean;
 
+import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cxjd.nvwabao.Activity.Find24Hours;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.fragment.FindFragment;
 
 import java.util.List;
 
@@ -61,7 +66,14 @@ public class FindFunctionAdapter extends RecyclerView.Adapter <FindFunctionAdapt
                 int position = holder.getAdapterPosition();
                 FindFunction findFunction = mFunctionList.get(position);
 
-                Toast.makeText(view.getContext(),"you clicked image"+ position,Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0 :
+                        Intent intent = new Intent(view.getContext(), Find24Hours.class);
+                        view.getContext().startActivity(intent);
+                }
+
+
+
             }
         });
         return holder;
@@ -77,6 +89,7 @@ public class FindFunctionAdapter extends RecyclerView.Adapter <FindFunctionAdapt
     public int getItemCount() {
         return mFunctionList.size();
     }
+
 
 }
 

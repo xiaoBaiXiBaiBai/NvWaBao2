@@ -52,6 +52,11 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
+
+        <!-- find中的24小时养生 -->
+        <activity
+            android:name=".Activity.Find24Hours"
+            />
     </application>
 
 </manifest>
