@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="肝经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         肝经是足厥阴肝经的简称。凌晨1:00~3:00即丑时。在丑时人的肝经最为旺盛。这个时候一定要有好的睡眠，否则你的肝就养不起来。如在这个时间喝酒，将会对肝造成极大的损伤。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         中医认为，肝经和肝、胆、胃、肾、目、头、咽喉都有联系。在这一时间段长期不睡眠者，肝经就容易出现问题，并造成人体气血两虚，如果进一步损耗就会导致贫血、面色晦暗、目倦神疲、咽干、呕吐、腹泻、腰膝酸软、胸闷、腹部两侧疼痛以及女性月经失调、痛经等症状。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         如果患者患有与肝相关的疾病，尤其要注意在丑时好好休息。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

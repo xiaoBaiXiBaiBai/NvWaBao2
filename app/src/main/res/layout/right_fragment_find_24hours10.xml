@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="肾经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         肾经是足少阴肾经的简称。17:00~19:OO 即酉时。此时人的肾经最旺。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+            android:textSize="20dp"
+            android:text="         肾主藏精。人的精，就像家里的“钱”，什么都可以买，什么都可以变。人体气血津液哪里出现问题，“精”就会变成它或帮助它。精是人体中最具有创造力的原始力量。当你需要什么的时候，把精调出来就可以得到这个东西。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         “肾通脑，肾丰骨”。西时是人体的体力发挥或身体的适应与协调能力发样的黄金时段，人的味觉、视觉、听觉等感觉也最敏感，尤其是人的心率与血压也比较平稳，适宜进行健身锻炼，或静下心来做些有意义的事情，不宜把精力耗费在玩牌、打麻将、玩电脑游戏等方面。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

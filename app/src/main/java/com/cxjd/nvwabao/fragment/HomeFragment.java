@@ -56,7 +56,6 @@ public class HomeFragment extends Fragment {
         //食品疾病查询方法
         serchFoodAndHealthy();
 
-
         return view;
     }
 
@@ -137,4 +136,6 @@ public class HomeFragment extends Fragment {
         mSliderLayout.stopAutoCycle();
         super.onStop();
     }
+
+
 }

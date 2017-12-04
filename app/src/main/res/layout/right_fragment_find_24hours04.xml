@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="大肠经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         大肠经是手阳明大肠经的简称。早晨5.00~7.00即卵时。此时大愿经当令。这个时候，天也基本亮了，因此，5:00醒是正常的。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         早上不要贪睡，晨起应活动四肢筋骨，打打太极拳，叩齿摩面或双手扣后脑，即“鸣天”。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         鉴于大肠经在卯时最旺，此时刺激大肠经，对治疗与大肠经有密切联系的疾病，如咽喉肿痛、声音嘶哑、座疮、牙痛等效果最好。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         卯时应该正常的排便，把垃圾毒素排出来，所以要养成早上排便的习惯。中医认为肺与大肠相表里，肺气足了才能排便顺畅。因此，患心脏病的老人应避免用力排便，以免发生意外，可适当选用通便药物。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
