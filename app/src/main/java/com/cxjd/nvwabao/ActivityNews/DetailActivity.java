@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
@@ -76,7 +77,6 @@ public class DetailActivity extends AppCompatActivity {
             this.webView.setInitialScale(100);
         }
     }
-
     private void initWebview() {
             webView.setWebViewClient(new MyWebViewClient());
             webView.addJavascriptInterface(new JavaScriptInterface(this), "imagelistner");//这个是给图片设置点击监听的，如果
