@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.SelectAdapter;
 import com.cxjd.nvwabao.utils.HttpUtil;
 
 import org.json.JSONArray;
@@ -35,6 +36,7 @@ public class People2 extends AppCompatActivity {
    // private  String UrlBase = "http://192.168.31.227/user/getParts/";
     private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
     private int fPosition;
+    private SelectAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +52,11 @@ public class People2 extends AppCompatActivity {
         maxList = new ArrayList<>();
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
-        maxAdapter = new ArrayAdapter<String>(People2.this, R.layout.list_item, maxList);
-        maxlv.setAdapter(maxAdapter);
-
-
+    //    maxAdapter = new ArrayAdapter<String>(People2.this, R.layout.list_item, maxList);
+       // maxlv.setAdapter(maxAdapter);
+        adapter = new SelectAdapter(this,maxList);
+        maxlv.setAdapter(adapter);
+        adapter.setDefSelect(0);
 
         minList = new ArrayList<>();
         minList = minlistData(UrlBase+0,minList);
@@ -65,6 +68,7 @@ public class People2 extends AppCompatActivity {
         maxlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                adapter.setDefSelect(position);
                 fPosition = position;
                 minList = minlistData(UrlBase+position,minList);
                 Message message = new Message();
@@ -86,7 +90,13 @@ public class People2 extends AppCompatActivity {
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            minAdapter.notifyDataSetChanged();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    minAdapter.notifyDataSetChanged();
+                }
+            });
+
         }
     };
     public void MaxData(){

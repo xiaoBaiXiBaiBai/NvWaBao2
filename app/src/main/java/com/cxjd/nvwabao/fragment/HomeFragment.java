@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cxjd.nvwabao.Activity.ProtectActivity;
 import com.cxjd.nvwabao.Activity.SearchMain;
 import com.cxjd.nvwabao.R;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -64,6 +65,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(),"寻找食物",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),ProtectActivity.class);
+                startActivity(intent);
             }
         });
 

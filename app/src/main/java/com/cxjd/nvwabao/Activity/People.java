@@ -1,6 +1,7 @@
 package com.cxjd.nvwabao.Activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.SelectAdapter;
 import com.cxjd.nvwabao.utils.HttpUtil;
 
 import org.json.JSONArray;
@@ -29,12 +31,14 @@ import okhttp3.Response;
 
 public class People extends AppCompatActivity {
 
-    private ListView maxlv,minlv,neikeSonlv;
-    private List<String> maxList,minList,neikeSonList;
-    private ArrayAdapter<String> maxAdapter,minAdapter,neikeSonAdapter;
+    private ListView maxlv,minlv;
+    private List<String> maxList,minList;
+    private ArrayAdapter<String> maxAdapter,minAdapter;
     private  String UrlBase = "http://192.168.31.227/user/getParts/";
     //private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
     private int fPosition;
+    private SelectAdapter adapter;
+    private int buwei;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,25 +50,28 @@ public class People extends AppCompatActivity {
                 finish();
             }
         });
-
+        buwei = getIntent().getIntExtra("buwei",0);
         maxList = new ArrayList<>();
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
-        maxAdapter = new ArrayAdapter<String>(People.this, R.layout.list_item, maxList);
-        maxlv.setAdapter(maxAdapter);
 
-
+        adapter = new SelectAdapter(this,maxList);
+        maxlv.setAdapter(adapter);
+        adapter.setDefSelect(buwei);//设置默认选中第一项
+        maxlv.setSelection(buwei);
 
         minList = new ArrayList<>();
-        minList = minlistData(UrlBase+0,minList);
+        minList = minlistData(UrlBase+buwei,minList);
         minlv = (ListView) findViewById(R.id.min_item);
 
         minAdapter = new ArrayAdapter<String>(People.this,android.R.layout.simple_list_item_1, minList);
         minlv.setAdapter(minAdapter);
 
+
         maxlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                adapter.setDefSelect(position);
                 fPosition = position;
                 minList = minlistData(UrlBase+position,minList);
                 Message message = new Message();
@@ -81,12 +88,23 @@ public class People extends AppCompatActivity {
                 startActivity(intentDis);
             }
         });
+
+
+       // maxlv.getChildAt(buwei).setBackgroundColor(Color.parseColor("#FFFFFF"));
+        //maxAdapter.notifyDataSetChanged();
     }
 
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            minAdapter.notifyDataSetChanged();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    minAdapter.notifyDataSetChanged();
+                }
+            });
+
         }
     };
     public void MaxData(){

@@ -33,9 +33,10 @@ public class Room extends AppCompatActivity {
     private TextView neike, waike, fuchanke, xiaoerke, wuguanke, nanke, chuanranke, pifuke, xingbingke, jingshenxinlike, zhongliuke, buyunbuyuke;
     private ListView neikelv,waikelv,fuchankelv, xiaoerkelv, wuguankelv, nankelv, chuanrankelv, pifukelv, xingbingkelv, jingshenxinlikelv, zhongliukelv, buyunbuyukelv, minlv;
     private List<String> leftList, minList,neikeList,waikeList,fuchankeList, xiaoerkeList, wuguankeList, nankeList, chuanrankeList, pifukeList, xingbingkeList, jingshenxinlikeList, zhongliukeList, buyunbuyukeList;
-    private ArrayAdapter<String> arr_adapter,arr_adapter1, minAdapter;
+    private ArrayAdapter<String> arr_adapter,arr_adapter1,arr_adapter2,arr_adapter3,arr_adapter4,arr_adapter5,arr_adapter6,arr_adapter7,arr_adapter8,arr_adapter9,arr_adapter10,arr_adapter11, minAdapter;
     private  String UrlBase = "http://192.168.31.227/user/getDepartments/";
-private String Url;
+    private Handler handl=null;
+    private String Url="http://192.168.31.227/user/getDepartments/0/0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,12 +49,13 @@ private String Url;
             }
         });
 
-        leftList = new ArrayList<>();
+        //leftList = new ArrayList<>();
         //listData(UrlBase+"0",leftList);
         init();
 
         minList = new ArrayList<>();
-        listData(UrlBase+"0/0");
+       // listData(UrlBase+"0/0");
+        minList =listData(UrlBase+"0/0",minList);
         minlv = (ListView) findViewById(R.id.min_itemRoom);
         minAdapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, minList);
         minlv.setAdapter(minAdapter);
@@ -81,106 +83,108 @@ private String Url;
         listData0(UrlBase+"0");
         arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, neikeList);
         neikelv.setAdapter(arr_adapter);
-        listSet(neike,neikelv,0);
+        listSet(neike,neikelv,neikeList,0);
 
         waikelv = (ListView) findViewById(R.id.waikels);
         waike = (TextView) findViewById(R.id.waike);
        // waikeList =  listData(UrlBase+"1", leftList);
         waikeList = new ArrayList<>();
         listData1(UrlBase+"1");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, waikeList);
-        waikelv.setAdapter(arr_adapter);
-        listSet(waike,waikelv,1);
+        arr_adapter1 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, waikeList);
+        waikelv.setAdapter(arr_adapter1);
+        listSet(waike,waikelv,waikeList,1);
 
         fuchankelv = (ListView) findViewById(R.id.fuchankels);
         fuchanke = (TextView) findViewById(R.id.fuchanke);
         //fuchankeList =  listData(UrlBase+"2", leftList);
         fuchankeList = new ArrayList<>();
         listData2(UrlBase+"2");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, fuchankeList);
-        fuchankelv.setAdapter(arr_adapter);
-        listSet(fuchanke,fuchankelv,2);
+        arr_adapter2 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, fuchankeList);
+        fuchankelv.setAdapter(arr_adapter2);
+        listSet(fuchanke,fuchankelv,fuchankeList,2);
 
         xiaoerkelv = (ListView) findViewById(R.id.xiaoerkels);
         xiaoerke = (TextView) findViewById(R.id.xiaoerke);
         //xiaoerkeList =  listData(UrlBase+"3", leftList);
         xiaoerkeList = new ArrayList<>();
         listData3(UrlBase+"3");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, xiaoerkeList);
-        xiaoerkelv.setAdapter(arr_adapter);
-        listSet(xiaoerke,xiaoerkelv,3);
+        arr_adapter3 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, xiaoerkeList);
+        xiaoerkelv.setAdapter(arr_adapter3);
+        listSet(xiaoerke,xiaoerkelv,xiaoerkeList,3);
 
         wuguankelv = (ListView) findViewById(R.id.wuguankels);
         wuguanke = (TextView) findViewById(R.id.wuguanke);
        // wuguankeList =  listData(UrlBase+"4", leftList);
         wuguankeList = new ArrayList<>();
         listData4(UrlBase+"4");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, wuguankeList);
-        wuguankelv.setAdapter(arr_adapter);
-        listSet(wuguanke,wuguankelv,4);
+        arr_adapter4 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, wuguankeList);
+        wuguankelv.setAdapter(arr_adapter4);
+        listSet(wuguanke,wuguankelv,wuguankeList,4);
 
         nankelv = (ListView) findViewById(R.id.nankels);
         nanke = (TextView) findViewById(R.id.nanke);
         //nankeList =  listData(UrlBase+"5", leftList);
         nankeList = new ArrayList<>();
         listData5(UrlBase+"5");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, nankeList);
-        nankelv.setAdapter(arr_adapter);
-        listSet(nanke,nankelv,5);
+        arr_adapter5 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, nankeList);
+        nankelv.setAdapter(arr_adapter5);
+        listSet(nanke,nankelv,nankeList,5);
 
         chuanrankelv = (ListView) findViewById(R.id.chuanrankels);
         chuanranke = (TextView) findViewById(R.id.chuanranke);
        // chuanrankeList =  listData(UrlBase+"6", leftList);
         chuanrankeList = new ArrayList<>();
         listData6(UrlBase+"6");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, chuanrankeList);
-        chuanrankelv.setAdapter(arr_adapter);
-        listSet(chuanranke,chuanrankelv,6);
+        arr_adapter6 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, chuanrankeList);
+        chuanrankelv.setAdapter(arr_adapter6);
+        listSet(chuanranke,chuanrankelv,chuanrankeList,6);
 
         pifukelv = (ListView) findViewById(R.id.pifukels);
         pifuke = (TextView) findViewById(R.id.pifuke);
         //pifukeList =  listData(UrlBase+"7", leftList);
         pifukeList = new ArrayList<>();
         listData7(UrlBase+"7");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, pifukeList);
-        pifukelv.setAdapter(arr_adapter);
-        listSet(pifuke,pifukelv,7);
+        arr_adapter7 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, pifukeList);
+        pifukelv.setAdapter(arr_adapter7);
+        listSet(pifuke,pifukelv,pifukeList,7);
 
         xingbingkelv = (ListView) findViewById(R.id.xingbingkels);
         xingbingke = (TextView) findViewById(R.id.xingbingke);
        // xingbingkeList =  listData(UrlBase+"8", leftList);
         xingbingkeList = new ArrayList<>();
         listData8(UrlBase+"8");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, xingbingkeList);
-        xingbingkelv.setAdapter(arr_adapter);
-        listSet(xingbingke,xingbingkelv,8);
+        arr_adapter8 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, xingbingkeList);
+        xingbingkelv.setAdapter(arr_adapter8);
+        listSet(xingbingke,xingbingkelv,xingbingkeList,8);
 
         jingshenxinlikelv = (ListView) findViewById(R.id.jingshenxinlikels);
         jingshenxinlike = (TextView) findViewById(R.id.jingshenxinlike);
        // jingshenxinlikeList =  listData(UrlBase+"9", leftList);
         jingshenxinlikeList = new ArrayList<>();
         listData9(UrlBase+"9");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, jingshenxinlikeList);
-        jingshenxinlikelv.setAdapter(arr_adapter);
-        listSet(jingshenxinlike,jingshenxinlikelv,9);
+        arr_adapter9 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, jingshenxinlikeList);
+        jingshenxinlikelv.setAdapter(arr_adapter9);
+        listSet(jingshenxinlike,jingshenxinlikelv,jingshenxinlikeList,9);
 
         zhongliukelv = (ListView) findViewById(R.id.zhongliukels);
         zhongliuke = (TextView) findViewById(R.id.zhongliuke);
        // zhongliukeList =  listData(UrlBase+"10", leftList);
         zhongliukeList = new ArrayList<>();
         listData10(UrlBase+"10");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, zhongliukeList);
-        zhongliukelv.setAdapter(arr_adapter);
-        listSet(zhongliuke,zhongliukelv,10);
+        arr_adapter10 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, zhongliukeList);
+        zhongliukelv.setAdapter(arr_adapter10);
+        listSet(zhongliuke,zhongliukelv,zhongliukeList,10);
 
         buyunbuyukelv = (ListView) findViewById(R.id.buyunbuyukels);
         buyunbuyuke = (TextView) findViewById(R.id.buyunbuyuke);
        // buyunbuyukeList =  listData(UrlBase+"11", leftList);
         buyunbuyukeList = new ArrayList<>();
         listData11(UrlBase+"11");
-        arr_adapter = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, buyunbuyukeList);
-        buyunbuyukelv.setAdapter(arr_adapter);
-        listSet(buyunbuyuke,buyunbuyukelv,11);
+        arr_adapter11 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, buyunbuyukeList);
+        buyunbuyukelv.setAdapter(arr_adapter11);
+        listSet(buyunbuyuke,buyunbuyukelv,buyunbuyukeList,11);
+
+
     }
     private void initChange() {
         listSetChange(neikelv,0);
@@ -196,10 +200,7 @@ private String Url;
         listSetChange(zhongliukelv,10);
         listSetChange(buyunbuyukelv,11);
     }
-    private void listSet(TextView textView,ListView listView ,int id) {
-
-
-
+    private void listSet(TextView textView, final ListView listView , final List<String> list, final int id) {
         final ListView finalListView = listView;
         final TextView finalTextView = textView;
         textView.setOnClickListener(new View.OnClickListener() {
@@ -225,60 +226,46 @@ private String Url;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 
-
-                listData(UrlBase+Fp+"/" + position);
                 Url = UrlBase+Fp+"/" + position;
+                minList =  listData(UrlBase+Fp+"/" + position,minList);
                 Log.e("URL",Url);
-
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Log.e("URL",Url+"change111111111");
                         minAdapter.notifyDataSetChanged();
                     }
                 });
-
-               //system.out.print(position);
-                    Message message = new Message();
-                handler.sendMessage(message);
-                //minAdapter.notifyDataSetChanged();
-            }
-        });
-    }
-/*private void listSetChange1(final String Fxx) {
-
-
-        waikelv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                listData(UrlBase+1+"/" + position);
-                minAdapter.notifyDataSetChanged();
                 Message message = new Message();
                 handler.sendMessage(message);
             }
         });
     }
-    private void listSetChange2(final ListView listView, final int Fp) {
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-
-
-                listData(UrlBase+Fp+"/" + position);
-                Message message = new Message();
-                handler.sendMessage(message);
-                //minAdapter.notifyDataSetChanged();
-            }
-        });
-    }*/
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            minAdapter.notifyDataSetChanged();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Log.e("URL",Url+"change");
+                    minAdapter.notifyDataSetChanged();
+                }
+            });
+
         }
     };
-    private void listData(String url) {
+    // 构建Runnable对象，在runnable中更新界面
+ /*   Runnable   runnableUi=new  Runnable(){
+        @Override
+        public void run() {
+            //更新界面
+            minAdapter.notifyDataSetChanged();
+        }
+
+    };*/
+
+
+    private List<String> listData(String url, final List<String> list) {
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -296,14 +283,13 @@ private String Url;
             public void onResponse(Call call, Response response) throws IOException {
 
                 try {
-                    if (minList!=null){
-                        minList.clear();
-                    }
+                    list.clear();
+
                     String responseData = response.body().string();
                     JSONArray jsonArray = new JSONArray(responseData);
 
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        minList.add(jsonArray.getString(i));
+                        list.add(jsonArray.getString(i));
 
                     }
 
@@ -312,7 +298,7 @@ private String Url;
                 }
             }
         });
-
+        return list;
     }
     private void listData0(String url) {
         HttpUtil.sendOkHttpRequest(url, new Callback() {
@@ -733,4 +719,39 @@ private String Url;
         });
 
     }
+  /*  private List<String> listData12(String url, final List<String> list) {
+        HttpUtil.sendOkHttpRequest(url, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(Room.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                try {
+                    list.clear();
+
+                    String responseData = response.body().string();
+                    JSONArray jsonArray = new JSONArray(responseData);
+
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        list.add(jsonArray.getString(i));
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        return list;
+    }*/
 }
