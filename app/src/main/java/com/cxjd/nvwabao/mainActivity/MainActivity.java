@@ -3,11 +3,13 @@ package com.cxjd.nvwabao.mainActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.Tab;
@@ -22,6 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private long exitTime = 0;
     //读取布局layout文件
     private LayoutInflater mInflater;
     //底部导航栏
@@ -98,5 +101,18 @@ public class MainActivity extends AppCompatActivity {
         return view;
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis() - exitTime) > 2000){
+                Toast.makeText(this, "再按一次退出应用程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            }else{
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return true;
+    }
 }
