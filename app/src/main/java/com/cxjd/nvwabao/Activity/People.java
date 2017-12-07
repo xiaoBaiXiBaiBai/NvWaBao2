@@ -50,6 +50,30 @@ public class People extends AppCompatActivity {
                 finish();
             }
         });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getParts/", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getParts/0", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+
+
         buwei = getIntent().getIntExtra("buwei",0);
         maxList = new ArrayList<>();
         MaxData();

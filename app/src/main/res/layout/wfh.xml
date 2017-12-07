@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:gravity="center_vertical"
     android:background="@drawable/rentibeijing"
     >
 
@@ -78,8 +78,7 @@
         android:id="@+id/zuoshoubi_fan_qian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jingbu_fan_qian"
-        android:layout_marginTop="7dp"
+        android:layout_alignBottom="@+id/youshoubi_fan_qian"
         android:layout_toStartOf="@+id/jian_fan_qian"
         android:background="@drawable/zuoshoubi_fan_qian" />
 
@@ -87,8 +86,8 @@
         android:id="@+id/youshoubi_fan_qian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jingbu_fan_qian"
-        android:layout_marginTop="8dp"
+        android:layout_alignTop="@+id/jian_fan_qian"
+        android:layout_marginTop="7dp"
         android:layout_toEndOf="@+id/jian_fan_qian"
         android:background="@drawable/youshoubi_fan_qian" />
 
@@ -185,17 +184,15 @@
         android:id="@+id/zuoshoubi_fan_hou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jingbu_fan_qian"
-        android:layout_marginTop="7dp"
-        android:layout_toStartOf="@+id/jian_fan_qian"
+        android:layout_alignBottom="@+id/youshoubi_fan_qian"
+        android:layout_alignStart="@+id/zuoshoubi_fan_qian"
         android:background="@drawable/zuoshoubi_fan_hou" />
 
     <ImageView
         android:id="@+id/youshoubi_hou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jingbu_fan_qian"
-        android:layout_marginTop="8dp"
+        android:layout_alignBottom="@+id/zuoshoubi_fan_qian"
         android:layout_toEndOf="@+id/jian_fan_qian"
         android:background="@drawable/youshoubi_hou" />
 

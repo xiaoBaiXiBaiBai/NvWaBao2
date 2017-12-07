@@ -49,6 +49,32 @@ public class Room extends AppCompatActivity {
             }
         });
 
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/0/0", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+
+
+
+
         //leftList = new ArrayList<>();
         //listData(UrlBase+"0",leftList);
         init();
@@ -225,19 +251,35 @@ public class Room extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-
-                Url = UrlBase+Fp+"/" + position;
-                minList =  listData(UrlBase+Fp+"/" + position,minList);
-                Log.e("URL",Url);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    Url = UrlBase+Fp+"/" + position;
+                    minList =  listData(UrlBase+Fp+"/" + position,minList);
+                //    minList =  listData(UrlBase+Fp+"/" + position,minList);
                 runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        minAdapter.notifyDataSetChanged();
+                    }
+                });
+
+                }
+
+            }).start();
+                //minAdapter.notifyDataSetChanged();
+                Log.e("URL",Url);
+           /*     runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         Log.e("URL",Url+"change111111111");
                         minAdapter.notifyDataSetChanged();
                     }
-                });
+                });*/
                 Message message = new Message();
                 handler.sendMessage(message);
+
+
             }
         });
     }
@@ -249,6 +291,7 @@ public class Room extends AppCompatActivity {
                 public void run() {
                     Log.e("URL",Url+"change");
                     minAdapter.notifyDataSetChanged();
+                    Log.e("URL",Url+"change2222222222222");
                 }
             });
 
@@ -284,10 +327,8 @@ public class Room extends AppCompatActivity {
 
                 try {
                     list.clear();
-
                     String responseData = response.body().string();
                     JSONArray jsonArray = new JSONArray(responseData);
-
                     for (int i = 0; i < jsonArray.length(); i++) {
                         list.add(jsonArray.getString(i));
 

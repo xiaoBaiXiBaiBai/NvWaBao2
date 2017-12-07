@@ -1,111 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:background="@drawable/rentibeijing"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:gravity="center_vertical"
+android:background="@drawable/rentibeijing"
     >
-    <ImageView
-        android:id="@+id/allshenti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/tou" />
+<ImageView
+    android:id="@+id/allshenti"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/tou" />
 
-    <ImageView
-        android:id="@+id/bozi1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/allshenti"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/jingbu" />
+<ImageView
+    android:id="@+id/bozi1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/allshenti"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/jingbu" />
 
-    <ImageView
-        android:id="@+id/xiong1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/yaobu1bu"
-        android:layout_below="@+id/jian1bu"
-        android:background="@drawable/xiongbu" />
+<ImageView
+    android:id="@+id/xiong1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/yaobu1bu"
+    android:layout_below="@+id/jian1bu"
+    android:background="@drawable/xiongbu" />
 
-    <ImageView
-        android:id="@+id/shoubi2bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/jian1bu"
-        android:layout_toStartOf="@+id/xiong1bu"
-        android:background="@drawable/shoubi2" />
+<ImageView
+    android:id="@+id/shoubi2bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/jian1bu"
+    android:layout_toStartOf="@+id/xiong1bu"
+    android:background="@drawable/shoubi2" />
 
-    <ImageView
-        android:id="@+id/jian1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bozi1bu"
-        android:layout_toEndOf="@+id/shoubi2bu"
-        android:background="@drawable/jian" />
+<ImageView
+    android:id="@+id/jian1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/bozi1bu"
+    android:layout_toEndOf="@+id/shoubi2bu"
+    android:background="@drawable/jian" />
 
-    <ImageView
-        android:id="@+id/shoubi1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/jian1bu"
-        android:layout_toEndOf="@+id/xiong1bu"
-        android:background="@drawable/shoubi1" />
+<ImageView
+    android:id="@+id/shoubi1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/jian1bu"
+    android:layout_toEndOf="@+id/xiong1bu"
+    android:background="@drawable/shoubi1" />
 
-    <ImageView
-        android:id="@+id/yaobu1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/xiong1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/yao" />
+<ImageView
+    android:id="@+id/yaobu1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/xiong1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/yao" />
 
-    <ImageView
-        android:id="@+id/fubu1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/yaobu1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/fubu" />
+<ImageView
+    android:id="@+id/fubu1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/yaobu1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/fubu" />
 
-    <ImageView
-        android:id="@+id/shengzhiqi1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fubu1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shengzhi" />
+<ImageView
+    android:id="@+id/shengzhiqi1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/fubu1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/shengzhi" />
 
-    <ImageView
-        android:id="@+id/tuibu1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/shengzhiqi1bu"
-        android:layout_below="@+id/shengzhiqi1bu"
-        android:background="@drawable/tui" />
+<ImageView
+    android:id="@+id/tuibu1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/shengzhiqi1bu"
+    android:layout_below="@+id/shengzhiqi1bu"
+    android:background="@drawable/tui" />
 
-    <ImageView
-        android:id="@+id/shouzuo1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/shouyou1bu"
-        android:layout_marginEnd="21dp"
-        android:layout_toStartOf="@+id/shengzhiqi1bu"
-        android:background="@drawable/shou2" />
+<ImageView
+    android:id="@+id/shouzuo1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/shouyou1bu"
+    android:layout_marginEnd="21dp"
+    android:layout_toStartOf="@+id/shengzhiqi1bu"
+    android:background="@drawable/shou2" />
 
-    <ImageView
-        android:id="@+id/shouyou1bu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/shoubi1bu"
-        android:layout_below="@+id/fubu1bu"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/shou1" />
-
-
+<ImageView
+    android:id="@+id/shouyou1bu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/shoubi1bu"
+    android:layout_below="@+id/fubu1bu"
+    android:layout_marginTop="11dp"
+    android:background="@drawable/shou1" />
 
 
 
@@ -113,102 +111,104 @@
 
 
 
-    <ImageView
-        android:id="@+id/head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/tou_nanhou" />
 
-    <ImageView
-        android:id="@+id/jingbu_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/allshenti"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/jingbu_nanhou" />
 
-    <ImageView
-        android:id="@+id/xiongbu_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/yaobu1bu"
-        android:layout_below="@+id/jian1bu"
-        android:background="@drawable/xiong_nanhou" />
+<ImageView
+    android:id="@+id/head"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/tou_nanhou" />
 
-    <ImageView
-        android:id="@+id/zuoshoubi_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/jian1bu"
-        android:layout_toStartOf="@+id/xiong1bu"
-        android:background="@drawable/shoubi2_nanhou" />
+<ImageView
+    android:id="@+id/jingbu_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/allshenti"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/jingbu_nanhou" />
 
-    <ImageView
-        android:id="@+id/jian_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bozi1bu"
-        android:layout_toEndOf="@+id/shoubi2bu"
-        android:background="@drawable/jian_nanhou" />
+<ImageView
+    android:id="@+id/xiongbu_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/yaobu1bu"
+    android:layout_below="@+id/jian1bu"
+    android:background="@drawable/xiong_nanhou" />
 
-    <ImageView
-        android:id="@+id/youshoubi_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/jian1bu"
-        android:layout_toEndOf="@+id/xiong1bu"
-        android:background="@drawable/shoubi1_nanhou" />
+<ImageView
+    android:id="@+id/zuoshoubi_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/jian1bu"
+    android:layout_toStartOf="@+id/xiong1bu"
+    android:background="@drawable/shoubi2_nanhou" />
 
-    <ImageView
-        android:id="@+id/yaobu_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/xiong1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/yao_nanhou" />
+<ImageView
+    android:id="@+id/jian_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/bozi1bu"
+    android:layout_toEndOf="@+id/shoubi2bu"
+    android:background="@drawable/jian_nanhou" />
 
-    <ImageView
-        android:id="@+id/fubu_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/yaobu1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/fubu_nanhou" />
+<ImageView
+    android:id="@+id/youshoubi_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/jian1bu"
+    android:layout_toEndOf="@+id/xiong1bu"
+    android:background="@drawable/shoubi1_nanhou" />
 
-    <ImageView
-        android:id="@+id/shengzhiqi_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fubu1bu"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shengzhi_nanhou" />
+<ImageView
+    android:id="@+id/yaobu_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/xiong1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/yao_nanhou" />
 
-    <ImageView
-        android:id="@+id/tuibu_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/shengzhiqi1bu"
-        android:layout_below="@+id/shengzhiqi1bu"
-        android:background="@drawable/tui_nanhou" />
+<ImageView
+    android:id="@+id/fubu_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/yaobu1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/fubu_nanhou" />
 
-    <ImageView
-        android:id="@+id/zuoshou_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/shouyou1bu"
-        android:layout_marginEnd="21dp"
-        android:layout_toStartOf="@+id/shengzhiqi1bu"
-        android:background="@drawable/shou2_nanhou" />
+<ImageView
+    android:id="@+id/shengzhiqi_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/fubu1bu"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/shengzhi_nanhou" />
 
-    <ImageView
-        android:id="@+id/youshou_hou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/shoubi1bu"
-        android:layout_below="@+id/fubu1bu"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/shou1_nanhou" />
+<ImageView
+    android:id="@+id/tuibu_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/shengzhiqi1bu"
+    android:layout_below="@+id/shengzhiqi1bu"
+    android:background="@drawable/tui_nanhou" />
+
+<ImageView
+    android:id="@+id/zuoshou_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/shouyou1bu"
+    android:layout_marginEnd="21dp"
+    android:layout_toStartOf="@+id/shengzhiqi1bu"
+    android:background="@drawable/shou2_nanhou" />
+
+<ImageView
+    android:id="@+id/youshou_hou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/shoubi1bu"
+    android:layout_below="@+id/fubu1bu"
+    android:layout_marginTop="11dp"
+    android:background="@drawable/shou1_nanhou" />
 
 </RelativeLayout>

@@ -63,7 +63,7 @@ public class ManFHFragment extends Fragment {
                 if (xiongbu_hou.getVisibility()==View.INVISIBLE){
                     xiongbu_hou.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",8);
+                    intent.putExtra("buwei",15);
                     startActivity(intent);
                 }else {
                     xiongbu_hou.setVisibility(View.INVISIBLE);
@@ -147,7 +147,7 @@ public class ManFHFragment extends Fragment {
                 if (shengzhiqi_hou.getVisibility()==View.INVISIBLE){
                     shengzhiqi_hou.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",21);
+                    intent.putExtra("buwei",16);
                     startActivity(intent);
                 }else {
                     shengzhiqi_hou.setVisibility(View.INVISIBLE);

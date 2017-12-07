@@ -147,7 +147,7 @@ public class ManFFFragment extends Fragment {
                 if (shengzhiqi_hou.getVisibility()==View.INVISIBLE){
                     shengzhiqi_hou.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",21);
+                    intent.putExtra("buwei",20);
                     startActivity(intent);
                 }else {
                     shengzhiqi_hou.setVisibility(View.INVISIBLE);

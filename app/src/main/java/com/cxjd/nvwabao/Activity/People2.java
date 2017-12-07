@@ -48,6 +48,31 @@ public class People2 extends AppCompatActivity {
                 finish();
             }
         });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/0", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+
+
+
 
         maxList = new ArrayList<>();
         MaxData();

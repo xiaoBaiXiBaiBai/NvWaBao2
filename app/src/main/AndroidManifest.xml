@@ -52,6 +52,15 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.ProtectActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.FoodInfoActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.FoodListActivity"
+            android:theme="@style/zhou" />
     </application>
 
 </manifest>
