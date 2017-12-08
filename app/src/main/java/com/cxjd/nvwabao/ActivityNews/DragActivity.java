@@ -43,7 +43,7 @@ public class DragActivity extends AppCompatActivity{
     }
 
     private void init() {
-        items=listDataSave.getDataList("TitleLable",TitleLable.class);// DataSupport.findAll(TitleLable.class);
+        items=listDataSave.getDataList("TitleLable",TitleLable.class);
         GridLayoutManager manager = new GridLayoutManager(this, 5);
         mRecy.setLayoutManager(manager);
 

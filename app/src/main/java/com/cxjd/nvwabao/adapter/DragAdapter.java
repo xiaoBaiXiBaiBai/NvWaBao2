@@ -114,7 +114,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
         return null;
     }
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof TitleViewHolder){
             if (isEditMode) {
                 ((TitleViewHolder) holder).btn_edt.setText(R.string.finish);
@@ -128,6 +128,12 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             } else {
                 ((DragViewHolder) holder).imageView.setVisibility(View.INVISIBLE);
             }
+            ((DragViewHolder) holder).tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.i("TAG",position+"");
+                }
+            });
         }
     }
 
