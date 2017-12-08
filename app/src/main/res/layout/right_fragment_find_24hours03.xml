@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="肺经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="         肺经是手太阴肺经的简称。凌晨3:00~500即寅时。此时人的肺经最旺。肺经与肺、大肠、喉咙等器官联系密切。故此经异常，则容易出现胸闷气短、咳嗽气喘、烦躁不安。因肺与口鼻相通，因此还容易出现感冒流涕、伤风怕冷等症状。"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="         肺在寅时排毒，故咳嗽的人在这段时间咳得最厉害，此时慎用止咳药，以免抑制废积物的排除。此时可轻揉肺经上的中府穴（两手又腰立正，锁骨外侧端下缘的三角窝中心是云门穴，由此窝正中垂直往下推一条肋骨，即是中府穴）以缓解咳嗽，这个穴位对气喘、胸痛、腹胀、肩膀以及背部疼痛也非常有效。"
+                android:textSize="20dp" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         肺经与皮肤密切相关，故肺经经气异常也会导致人体出现一些皮肤病，如色斑、面无光泽。寅时刺激肺经，最能激发身体对肺经循行部位的一些症状的调节和愈疗功能，疏通肺经经气，既可治已病，又可防未病。因此，建议可经常刺激肺经。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         人睡意最浓的时间应该是在零晨3:00~5:00，这个时候恰恰是人体气血由静转动的过程，它是通过深度睡眠来完成的。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         清晨易醒多是肺气不足。清晨易醒多见于老年人，与肺气不足、气血精液亏虚有关。这个过程中，肺气亏虚在导致卫气不足和循行失度中扮演着重要角色。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

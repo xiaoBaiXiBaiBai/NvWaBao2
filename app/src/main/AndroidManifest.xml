@@ -8,11 +8,6 @@
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
@@ -57,9 +52,11 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
-        <activity android:name=".ActivityNews.RegisterActivity"
-            android:label="用户注册"
-            android:theme="@style/zhou" />
+
+        <!-- find中的24小时养生 -->
+        <activity
+            android:name=".Activity.Find24Hours"
+            />
     </application>
 
 </manifest>

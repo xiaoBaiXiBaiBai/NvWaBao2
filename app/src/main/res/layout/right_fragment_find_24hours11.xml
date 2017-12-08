@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="心包经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         心包经是手厥阴心包经的简称。19:00~21:OO 即戌时。此时心包经最昨心包是心脏外膜组织，主要是保护心脏正常工作的。很多人出现的心脏问题都可以归纳为心包经的问题。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         在戌时这个心包经最旺的时间段，调节与心包经密切相关的疾病，身体的自我修复效果更好。鉴于此时往往是吃晚饭后身体消化的时间，尤其是在昼短夜长的冬日更是如此，所以，刺激心包经上的穴位时，最好在饭后半小时进行。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         心包经又主喜乐。所以人体在这个时候应该有些娱乐活动，但不宜过于狂欢，因为此时应为下一步的入睡做准备了。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         心包经不通的人往往会抑郁，这时喝点玫瑰花茶会非常有效。玫瑰花茶的药性非常温和，能够温养人的心肝血脉，舒发体内郁气，有镇静、安抚、抗抑郁的功效。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

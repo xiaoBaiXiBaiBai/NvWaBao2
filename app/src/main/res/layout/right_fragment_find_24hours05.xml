@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胃经当令"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="20dp"
+                android:text="         胃经是足阳明胃经的简称。早晨7：00-9:00即辰时。此时人的胃经经气最旺。胃经是人体前面最长的一条经脉，它主要分布在头面、胸腹第二侧线及腿的外侧前缘。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         胃痛是胃经的问题，其实服盖痛、脚面痛也有可能属于胃经病，这些地方都是胃经循行路过的地方。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="20dp"
+                android:text="         这时吃早饭，就是要补充营养。而且，此时吃早饭最容易消化，吃多了也不会发胖。人在辰时如果不吃食物，胃中空空，加上此时胃的消化功能最强，消化液分泌增多，有可能腐蚀胃黏膜，所以，早餐一定要按时吃，否则容易引起消化系统疾病。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
