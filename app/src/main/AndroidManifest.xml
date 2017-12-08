@@ -37,6 +37,8 @@
         <activity
             android:name=".ActivityNews.DetailActivity"
             android:theme="@style/zhou" />
+        <activity android:name=".ActivityNews.RegisterActivity"
+            android:theme="@style/zhou"/>
         <activity
             android:name=".Activity.People"
             android:theme="@style/zhou" />
