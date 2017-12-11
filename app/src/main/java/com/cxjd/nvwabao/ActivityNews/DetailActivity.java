@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
@@ -25,43 +26,50 @@ public class DetailActivity extends AppCompatActivity {
             setContentView(R.layout.activity_detail);
             WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
             int width = windowManager.getDefaultDisplay().getWidth();
-            Log.i("TAG",width+"");
             webView = findViewById(R.id.webview);
             chooseScale(width);
-           // webView.setInitialScale(200);
             Intent intent=getIntent();
             String url="http://"+intent.getStringExtra("content");
             initWebview();
-            HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
-                @Override
-                public void onFinish(String response) {
-                       str=response.toString();
-                    try {
-                        JSONObject jsonObject=new JSONObject(str);
-                        string= (String) jsonObject.get("content");
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
-                            }
-                        });
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+            sendRequest(url);
 
-                }
-
-                @Override
-                public void onError(Exception e) {
-
-                }
-            });
         }
+
+    /**
+     * webview初始化
+     * @param url
+     */
+    private void sendRequest(String url) {
+        HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+                str=response.toString();
+                try {
+                    JSONObject jsonObject=new JSONObject(str);
+                    string= (String) jsonObject.get("content");
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
+    }
 
     private void chooseScale(int width) {
         if(width > 650)
         {
-            this.webView.setInitialScale(200);
+            this.webView.setInitialScale(300);
         }else if(width > 520)
         {
             this.webView.setInitialScale(180);
@@ -76,19 +84,21 @@ public class DetailActivity extends AppCompatActivity {
             this.webView.setInitialScale(100);
         }
     }
-
     private void initWebview() {
             webView.setWebViewClient(new MyWebViewClient());
             webView.addJavascriptInterface(new JavaScriptInterface(this), "imagelistner");//这个是给图片设置点击监听的，如果
-            webView.getSettings().setTextSize(WebSettings.TextSize.LARGER);
+            webView.getSettings().setTextSize(WebSettings.TextSize.NORMAL);
             WebSettings webSettings = webView.getSettings();//获取webview设置属性
             webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);//把html中的内容放大webview等宽的一列中
             webSettings.setJavaScriptEnabled(true);//支持js
             webSettings.setBuiltInZoomControls(true); // 显示放大缩小
             webSettings.setSupportZoom(true); // 可以缩放
             webSettings.setJavaScriptEnabled(true);//支持js
+            webSettings.setDisplayZoomControls(false);
+            webSettings.setJavaScriptEnabled(true);
+            webSettings.setBlockNetworkImage(false);
         }
-        private class MyWebViewClient extends WebViewClient {
+    private class MyWebViewClient extends WebViewClient {
 
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -105,7 +115,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         }
 
-        public static class JavaScriptInterface {
+    public static class JavaScriptInterface {
 
             private Context context;
 
@@ -121,10 +131,10 @@ public class DetailActivity extends AppCompatActivity {
             }
         }
 
-        /**
-         * 对图片进行重置大小，宽度就是手机屏幕宽度，高度根据宽度比便自动缩放
-         **/
-        private void imgReset() {
+    /**
+     * 对图片进行重置大小，宽度就是手机屏幕宽度，高度根据宽度比便自动缩放
+     **/
+    private void imgReset() {
             webView.loadUrl("javascript:(function(){" +
                     "var objs = document.getElementsByTagName('img'); " +
                     "for(var i=0;i<objs.length;i++)  " +
@@ -135,7 +145,7 @@ public class DetailActivity extends AppCompatActivity {
                     "})()");
         }
 
-        private void addImageClickListner() {
+    private void addImageClickListner() {
             // 这段js函数的功能就是，遍历所有的img节点，并添加onclick函数，函数的功能是在图片点击的时候调用本地java接口并传递url过去
             webView.loadUrl("javascript:(function(){" +
                     "var objs = document.getElementsByTagName(\"img\"); " +
@@ -148,5 +158,8 @@ public class DetailActivity extends AppCompatActivity {
                     "}" +
                     "})()");
         }
+    /**
+     *
+     */
 
 }

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cxjd.nvwabao.ActivityNews.DetailActivity;
+import com.cxjd.nvwabao.ActivityNews.NewsDetailActivity;
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.TitleContentBean;
 import com.squareup.picasso.Picasso;
@@ -61,7 +62,7 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
            holder.imageView.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent intent=new Intent(context, DetailActivity.class);
+                   Intent intent=new Intent(context, NewsDetailActivity.class);
                    intent.putExtra("content",titleBean.getUrl());
                    context.startActivity(intent);
                }
