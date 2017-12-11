@@ -49,28 +49,6 @@ public class Room extends AppCompatActivity {
             }
         });
 
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/0/0", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
 
 
 
@@ -251,7 +229,7 @@ public class Room extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-            new Thread(new Runnable() {
+            /*new Thread(new Runnable() {
                 @Override
                 public void run() {
                     Url = UrlBase+Fp+"/" + position;
@@ -266,7 +244,10 @@ public class Room extends AppCompatActivity {
 
                 }
 
-            }).start();
+            }).start();*/
+                Url = UrlBase+Fp+"/" + position;
+                minList =  listData(UrlBase+Fp+"/" + position,minList);
+
                 //minAdapter.notifyDataSetChanged();
                 Log.e("URL",Url);
            /*     runOnUiThread(new Runnable() {
@@ -276,8 +257,8 @@ public class Room extends AppCompatActivity {
                         minAdapter.notifyDataSetChanged();
                     }
                 });*/
-                Message message = new Message();
-                handler.sendMessage(message);
+              /*  Message message = new Message();
+                handler.sendMessage(message);*/
 
 
             }
@@ -334,6 +315,15 @@ public class Room extends AppCompatActivity {
 
                     }
 
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Log.e("URL",Url+"change");
+                            minAdapter.notifyDataSetChanged();
+                            Log.e("URL",Url+"change2222222222222");
+                        }
+                    });
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -341,6 +331,54 @@ public class Room extends AppCompatActivity {
         });
         return list;
     }
+    private void listDatanull(String url) {
+        HttpUtil.sendOkHttpRequest(url, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(Room.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                try {
+                    minList.clear();
+                    String responseData = response.body().string();
+                    JSONArray jsonArray = new JSONArray(responseData);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        minList.add(jsonArray.getString(i));
+
+                    }
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Log.e("URL",Url+"change");
+                            minAdapter.notifyDataSetChanged();
+                            Log.e("URL",Url+"change2222222222222");
+                        }
+                    });
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
+
+
+
+
+
     private void listData0(String url) {
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override

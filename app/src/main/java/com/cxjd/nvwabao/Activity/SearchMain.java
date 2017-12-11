@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.fragment.ManFFFragment;
+import com.cxjd.nvwabao.fragment.ManFHFragment;
+import com.cxjd.nvwabao.fragment.womenFHFragment;
+import com.cxjd.nvwabao.fragment.womenFrontFragment;
 import com.cxjd.nvwabao.utils.HttpUtil;
 import java.io.IOException;
 import okhttp3.Call;
@@ -20,8 +24,8 @@ import okhttp3.Response;
 public class SearchMain extends AppCompatActivity {
     private Button button,btnRoom,btnAge;
     private ImageView   zhengmianbtn,beimianbtn,nanqianbtn,nanhoubtn,nvqianbtn,nvhoubtn;
-    private womenFrontFragment womenFrontFragment = new womenFrontFragment();
-    private womenFHFragment womenFHFragment = new womenFHFragment();
+    private com.cxjd.nvwabao.fragment.womenFrontFragment womenFrontFragment = new womenFrontFragment();
+    private com.cxjd.nvwabao.fragment.womenFHFragment womenFHFragment = new womenFHFragment();
     private ManFFFragment manFFFragment = new ManFFFragment();
     private ManFHFragment manFHFragment = new ManFHFragment();
 

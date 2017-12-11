@@ -1,4 +1,4 @@
-package com.cxjd.nvwabao.Activity;
+package com.cxjd.nvwabao.fragment;
 
 
 
@@ -13,36 +13,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.cxjd.nvwabao.Activity.People;
 import com.cxjd.nvwabao.R;
 
 /**
  * Created by Administrator on 2017/11/27.
  */
 
-public class womenFrontFragment extends Fragment {
-    private ImageView allshenti,bozi1bu,xiong1bu,shoubi2bu,jian1bu,shoubi1bu,yaobu1bu,fubu1bu,shengzhiqi1bu,tuibu1bu,shouzuo1bu,shouyou1bu;
-    private ImageView head,jingbu_hou,xiongbu_hou,zuoshoubi_hou,jian_hou,youshoubi_hou,yaobu_hou,fubu_hou,shengzhiqi_hou,tuibu_hou,zuoshou_hou,youshou_hou;
+public class ManFHFragment extends Fragment {
+    private ImageView allshenti,bozi1bu,xiong1bu,shoubi2bu,jian1bu,shoubi1bu,yaobu1bu,shengzhiqi1bu,tuibu1bu,shouzuo1bu,shouyou1bu;
+    private ImageView head,jingbu_hou,xiongbu_hou,zuoshoubi_hou,jian_hou,youshoubi_hou,yaobu_hou,shengzhiqi_hou,tuibu_hou,zuoshou_hou,youshou_hou;
     private  View view;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.wff, container, false);
+        view = inflater.inflate(R.layout.mfh, container, false);
         init();
 
         allshenti.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               if (head.getVisibility()==View.INVISIBLE){
-                   head.setVisibility(View.VISIBLE);
-                   Intent intent = new Intent(getActivity(),People.class);
-                   intent.putExtra("buwei",0);
-                   startActivity(intent);
-               }else {
-                   head.setVisibility(View.INVISIBLE);
-               }
-               //head.setVisibility(View.INVISIBLE);
-           }
-       });
+            @Override
+            public void onClick(View v) {
+                if (head.getVisibility()==View.INVISIBLE){
+                    head.setVisibility(View.VISIBLE);
+                    Intent intent = new Intent(getActivity(),People.class);
+                    intent.putExtra("buwei",0);
+                    startActivity(intent);
+                }else {
+                    head.setVisibility(View.INVISIBLE);
+                }
+                //head.setVisibility(View.INVISIBLE);
+            }
+        });
         bozi1bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +64,7 @@ public class womenFrontFragment extends Fragment {
                 if (xiongbu_hou.getVisibility()==View.INVISIBLE){
                     xiongbu_hou.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",8);
+                    intent.putExtra("buwei",15);
                     startActivity(intent);
                 }else {
                     xiongbu_hou.setVisibility(View.INVISIBLE);
@@ -127,7 +128,7 @@ public class womenFrontFragment extends Fragment {
                 //head.setVisibility(View.INVISIBLE);
             }
         });
-        fubu1bu.setOnClickListener(new View.OnClickListener() {
+       /* fubu1bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (fubu_hou.getVisibility()==View.INVISIBLE){
@@ -140,14 +141,14 @@ public class womenFrontFragment extends Fragment {
                 }
                 //head.setVisibility(View.INVISIBLE);
             }
-        });
+        });*/
         shengzhiqi1bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (shengzhiqi_hou.getVisibility()==View.INVISIBLE){
                     shengzhiqi_hou.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",21);
+                    intent.putExtra("buwei",16);
                     startActivity(intent);
                 }else {
                     shengzhiqi_hou.setVisibility(View.INVISIBLE);
@@ -208,7 +209,7 @@ public class womenFrontFragment extends Fragment {
         jian1bu  = (ImageView) view.findViewById(R.id.jian1bu);
         shoubi1bu  = (ImageView) view.findViewById(R.id.shoubi1bu);
         yaobu1bu = (ImageView) view.findViewById(R.id.yaobu1bu);
-        fubu1bu  = (ImageView) view.findViewById(R.id.fubu1bu);
+    //    fubu1bu  = (ImageView) view.findViewById(R.id.fubu1bu);
         shengzhiqi1bu = (ImageView) view.findViewById(R.id.shengzhiqi1bu);
         tuibu1bu = (ImageView) view.findViewById(R.id.tuibu1bu);
         shouzuo1bu = (ImageView) view.findViewById(R.id.shouzuo1bu);
@@ -222,7 +223,7 @@ public class womenFrontFragment extends Fragment {
         jian_hou= (ImageView) view.findViewById(R.id.jian_hou);
         youshoubi_hou= (ImageView) view.findViewById(R.id.youshoubi_hou);
         yaobu_hou= (ImageView) view.findViewById(R.id.yaobu_hou);
-        fubu_hou= (ImageView) view.findViewById(R.id.fubu_hou);
+     //   fubu_hou= (ImageView) view.findViewById(R.id.fubu_hou);
         shengzhiqi_hou= (ImageView) view.findViewById(R.id.shengzhiqi_hou);
         tuibu_hou= (ImageView) view.findViewById(R.id.tuibu_hou);
         zuoshou_hou= (ImageView) view.findViewById(R.id.zuoshou_hou);
@@ -235,7 +236,7 @@ public class womenFrontFragment extends Fragment {
         jian_hou.setVisibility(View.INVISIBLE);
         youshoubi_hou.setVisibility(View.INVISIBLE);
         yaobu_hou.setVisibility(View.INVISIBLE);
-        fubu_hou.setVisibility(View.INVISIBLE);
+     //   fubu_hou.setVisibility(View.INVISIBLE);
         shengzhiqi_hou.setVisibility(View.INVISIBLE);
         tuibu_hou.setVisibility(View.INVISIBLE);
         zuoshou_hou.setVisibility(View.INVISIBLE);
@@ -253,7 +254,7 @@ public class womenFrontFragment extends Fragment {
         jian_hou.setVisibility(View.INVISIBLE);
         youshoubi_hou.setVisibility(View.INVISIBLE);
         yaobu_hou.setVisibility(View.INVISIBLE);
-        fubu_hou.setVisibility(View.INVISIBLE);
+     //   fubu_hou.setVisibility(View.INVISIBLE);
         shengzhiqi_hou.setVisibility(View.INVISIBLE);
         tuibu_hou.setVisibility(View.INVISIBLE);
         zuoshou_hou.setVisibility(View.INVISIBLE);

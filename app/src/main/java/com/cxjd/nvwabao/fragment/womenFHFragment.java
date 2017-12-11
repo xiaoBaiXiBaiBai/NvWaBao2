@@ -1,4 +1,4 @@
-package com.cxjd.nvwabao.Activity;
+package com.cxjd.nvwabao.fragment;
 
 
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.cxjd.nvwabao.Activity.People;
 import com.cxjd.nvwabao.R;
 
 /**

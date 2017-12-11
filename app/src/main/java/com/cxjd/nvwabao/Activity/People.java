@@ -50,37 +50,19 @@ public class People extends AppCompatActivity {
                 finish();
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getParts/", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
 
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getParts/0", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
 
 
         buwei = getIntent().getIntExtra("buwei",0);
         maxList = new ArrayList<>();
+
+        //listData(UrlBase);
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
 
         adapter = new SelectAdapter(this,maxList);
         maxlv.setAdapter(adapter);
+//        maxAdapter.notifyDataSetChanged();
         adapter.setDefSelect(buwei);//设置默认选中第一项
         maxlv.setSelection(buwei);
 
@@ -132,12 +114,35 @@ public class People extends AppCompatActivity {
         }
     };
     public void MaxData(){
-        maxList = listData(UrlBase,maxList);
+      //  listData(UrlBase);
+        maxList.add("头部");
+        maxList.add("头");
+        maxList.add("眼");
+        maxList.add("耳");
+        maxList.add("鼻");
+        maxList.add("口");
+        maxList.add("眉");
+        maxList.add("牙");
+        maxList.add("胸部");
+        maxList.add("腹部");
+        maxList.add("四肢");
+        maxList.add("上肢");
+        maxList.add("下肢");
+        maxList.add("颈部");
+        maxList.add("腰部");
+        maxList.add("背部");
+        maxList.add("臀部");
+        maxList.add("皮肤");
+        maxList.add("全身");
+        maxList.add("生殖部位");
+        maxList.add("男性生殖部位");
+        maxList.add("女性生殖部位");
+
     }
 
 
 
-    private List<String> listData(String url, final List<String> list) {
+    private void listData(String url) {
         Log.e("Url",url);
         HttpUtil.sendOkHttpRequest(url, new Callback() {
             @Override
@@ -156,22 +161,30 @@ public class People extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
 
                 try {
-                    list.clear();
+
 
                     String responseData = response.body().string();
                     JSONArray jsonArray = new JSONArray(responseData);
 
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        list.add(jsonArray.getString(i));
+                        maxList.add(jsonArray.getString(i));
 
                     }
+                /*    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            maxAdapter.notifyDataSetChanged();
+                        }
+                    });*/
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         });
-        return list;
+
     }
     private List<String> minlistData(String url, final List<String> list) {
         HttpUtil.sendOkHttpRequest(url, new Callback() {
@@ -200,6 +213,13 @@ public class People extends AppCompatActivity {
                         list.add(jsonArray.getString(i));
 
                     }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            minAdapter.notifyDataSetChanged();
+                        }
+                    });
 
                 } catch (JSONException e) {
                     e.printStackTrace();

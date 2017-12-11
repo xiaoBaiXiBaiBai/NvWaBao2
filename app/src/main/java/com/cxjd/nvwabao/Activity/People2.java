@@ -48,28 +48,7 @@ public class People2 extends AppCompatActivity {
                 finish();
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
 
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/0", new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
-        });
 
 
 
@@ -125,7 +104,11 @@ public class People2 extends AppCompatActivity {
         }
     };
     public void MaxData(){
-        maxList = listData(UrlBase,maxList);
+       // maxList = listData(UrlBase,maxList);
+        maxList.add("男人");
+        maxList.add("女人");
+        maxList.add("老人");
+        maxList.add("小孩");
     }
 
 
@@ -193,6 +176,13 @@ public class People2 extends AppCompatActivity {
                         list.add(jsonArray.getString(i));
 
                     }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            minAdapter.notifyDataSetChanged();
+                        }
+                    });
 
                 } catch (JSONException e) {
                     e.printStackTrace();
