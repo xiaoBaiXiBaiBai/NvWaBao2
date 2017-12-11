@@ -26,38 +26,45 @@ public class DetailActivity extends AppCompatActivity {
             setContentView(R.layout.activity_detail);
             WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
             int width = windowManager.getDefaultDisplay().getWidth();
-            webView = (WebView) findViewById(R.id.webview);
+            webView = findViewById(R.id.webview);
             chooseScale(width);
-           // webView.setInitialScale(200);
             Intent intent=getIntent();
             String url="http://"+intent.getStringExtra("content");
             initWebview();
-            HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
-                @Override
-                public void onFinish(String response) {
-                       str=response.toString();
-                    try {
-                        JSONObject jsonObject=new JSONObject(str);
-                        string= (String) jsonObject.get("content");
-                        Log.i("TAG",string);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
-                            }
-                        });
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+            sendRequest(url);
 
-                }
-
-                @Override
-                public void onError(Exception e) {
-
-                }
-            });
         }
+
+    /**
+     * webview初始化
+     * @param url
+     */
+    private void sendRequest(String url) {
+        HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+                str=response.toString();
+                try {
+                    JSONObject jsonObject=new JSONObject(str);
+                    string= (String) jsonObject.get("content");
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
+    }
 
     private void chooseScale(int width) {
         if(width > 650)
@@ -151,5 +158,8 @@ public class DetailActivity extends AppCompatActivity {
                     "}" +
                     "})()");
         }
+    /**
+     *
+     */
 
 }
