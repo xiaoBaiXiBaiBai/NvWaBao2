@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowActionBar" tools:ignore="NewApi">false</item>
         <item name="android:windowNoTitle">true</item>
         <!-- Customize your theme here. -->
@@ -25,5 +25,9 @@
     </style>
     <style name="Comment" parent="android:TextAppearance">
         <item name="android:textSize">14dp</item>
+    </style>
+    <style name="ButtonTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorButtonNormal">#b7e46f</item><!--正常状态下的颜色  -->
+        <item name="colorControlHighlight">#22a7e614</item><!--覆盖色，按下的颜色  -->
     </style>
 </resources>

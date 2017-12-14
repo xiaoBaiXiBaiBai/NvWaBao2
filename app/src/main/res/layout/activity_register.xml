@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e9d2d2"
     tools:context="com.cxjd.nvwabao.ActivityNews.RegisterActivity">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#14bfea"
+        android:background="#0bbbe7"
         android:id="@+id/registe_toobar">
         <TextView
             android:layout_width="wrap_content"
@@ -28,7 +27,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
         android:text="女娲宝"
-        android:textColor="@color/red_500"
+        android:textColor="#1AAEE1"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -74,7 +73,7 @@
             android:inputType="textPassword"
             android:background="@drawable/selector_edit_frame"
             android:hint="用户密码：请输入密码"
-            android:paddingLeft="10dp"
+            android:padding="10dp"
             />
     </LinearLayout>
     <RelativeLayout
@@ -87,9 +86,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:background="#8fe464"
+        android:background="#9fd2f2"
         android:text="注册"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:onClick="registCommit"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

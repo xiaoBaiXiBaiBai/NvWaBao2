@@ -1,171 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#14bfea"
+        android:background="#1AAEE1"
         android:id="@+id/login_toobar">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="用户注册"
+            android:text="个人中心"
             android:textSize="16dp"
             android:textColor="@color/white"/>
     </android.support.v7.widget.Toolbar>
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/head_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@id/registe_toobar"
-            android:layout_marginTop="100dp"
-            android:src="@drawable/icon_test" />
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:gravity="center"
-        android:id="@+id/login_layout">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:foregroundGravity="center"
-            android:id="@+id/username_layout">
-          <EditText
-              android:id="@+id/user_name"
-             android:layout_width="match_parent"
-             android:layout_height="48dp"
-             android:layout_marginTop="5dp"
-             android:hint="手机号"
-             android:inputType="number"
-             android:maxLength="20"
-             android:paddingLeft="55dp"
-             android:paddingRight="60dp" />
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="21dp"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/icon_test"
-                android:visibility="visible"/>
-            <TextView
-                android:id="@+id/tv_account"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginTop="4dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:visibility="visible"/>
-
-            <Button
-                android:id="@+id/clear_btn1"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="10dp"
-                android:background="@android:drawable/ic_delete"
-                android:visibility="invisible"/>
-        </FrameLayout>
-        <FrameLayout
-            android:id="@+id/usercode_layut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/username_layout"
-            android:layout_marginTop="6dp"
-            android:gravity="center"
-            >
-            <EditText
-                android:id="@+id/user_password"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:inputType="textPassword"
-                android:maxLength="20"
-                android:hint="密码"
-                android:paddingLeft="55dp"
-                android:paddingRight="60dp"/>
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="22dp"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="8dp"
-                android:background="@android:drawable/ic_lock_lock" />
-            <Button
-                android:id="@+id/clear_btn2"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_test"/>
-        </FrameLayout>
-        <Button
-            android:id="@+id/commit_btn"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_below="@id/usercode_layut"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            android:gravity="center"
-            android:text="登陆"/>
-        </RelativeLayout>
-    <RelativeLayout
-        android:layout_below="@id/login_layout"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/wjmm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
-            android:text="忘记密码？"
-            android:textColor="@color/blue" />
-        <TextView
-            android:id="@+id/tv_newuser"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/blue"
-            android:layout_alignRight="@id/wjmm"
-            android:layout_marginTop="10dp"
-            android:text="新用户注册"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="16dp"
-        android:id="@+id/remember_layout"
+        android:layout_height="250dp"
+        android:layout_margin="2dp"
         >
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我已阅读并同意服务条款"
-            android:textColor="@color/blue"
-            android:layout_centerHorizontal="true"
-            />
-    </RelativeLayout>
-
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@mipmap/iconbg"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/head_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_test"
+                />
+                <TextView
+                    android:id="@+id/user_names"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#0a0909"/>
+            <TextView
+                android:id="@+id/user_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#0a0909"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去登陆>>>>"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="26dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp">
+    <ListView
+        android:id="@+id/myCenterlistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f7f4f4"
+        android:dividerHeight="10dp">
+    </ListView>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -80,7 +80,7 @@ public class MomentAdapter extends BaseAdapter {
         } else {
             int index = position - 1;
             ViewHolder holder = (ViewHolder) convertView.getTag();
-//            holder.mContent.setText(mList.get(index).mContent);
+            holder.mContent.setText(mList.get(index).mContent);
             CommentFun.parseCommentList(mContext, mList.get(index).mComment,
                     holder.mCommentList, holder.mBtnInput, mTagHandler);
         }

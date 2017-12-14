@@ -43,6 +43,7 @@ public class HttpTitleUtil {
                       while((line=reader.readLine())!=null){
                           response.append(line);
                       }
+                      Thread.sleep(2000);
                       if (listener!=null){
                           listener.onFinish(response.toString());
                       }
@@ -62,9 +63,7 @@ public class HttpTitleUtil {
 
     public static void sendOkHttpRequest(String address,okhttp3.Callback callback){
           OkHttpClient client=new OkHttpClient();
-          Request request=new Request.Builder()
-                  .url(address)
-                  .build();
+          Request request=new Request.Builder().url(address).build();
           client.newCall(request).enqueue(callback);
     }
      public static List<TitleContentBean> parseJsonWithGSON(String jsonData){
@@ -72,5 +71,6 @@ public class HttpTitleUtil {
          List<TitleContentBean> titleContentBeanList=gson.fromJson(jsonData,new TypeToken<List<TitleContentBean>>(){}.getType());
          return titleContentBeanList;
      }
+
 }
 

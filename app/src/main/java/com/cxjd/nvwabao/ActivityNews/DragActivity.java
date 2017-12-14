@@ -20,12 +20,12 @@ import java.util.List;
 
 /**
  * 拖拽
- * Created by YoKeyword on 16/1/4.
+ * Created by abu on 16/1/4.
  */
 
 /**
  * 拖拽
- * Created by YoKeyword on 16/1/4.
+ * Created by abu on 16/1/4.
  */
 public class DragActivity extends AppCompatActivity{
     private RecyclerView mRecy;
@@ -44,7 +44,7 @@ public class DragActivity extends AppCompatActivity{
 
     private void init() {
         items=listDataSave.getDataList("TitleLable",TitleLable.class);
-        GridLayoutManager manager = new GridLayoutManager(this, 5);
+        GridLayoutManager manager = new GridLayoutManager(this, 3);
         mRecy.setLayoutManager(manager);
 
         ItemDragHelperCallback callback = new ItemDragHelperCallback(){
@@ -58,12 +58,11 @@ public class DragActivity extends AppCompatActivity{
         helper.attachToRecyclerView(mRecy);
 
         adapter = new DragAdapter(this, items);
-        //adapter.setGiveback(giveback);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
                 int viewType = adapter.getItemViewType(position);
-                return viewType == DragAdapter.TYPE_TITLE ? 5 : 1;
+                return viewType == DragAdapter.TYPE_TITLE ? 3 : 1;
             }
         });
         mRecy.setAdapter(adapter);
@@ -90,7 +89,5 @@ public class DragActivity extends AppCompatActivity{
     @Override
     protected void onRestart() {
         super.onRestart();
-       // init();
-       // adapter.notifyDataSetChanged();
     }
 }

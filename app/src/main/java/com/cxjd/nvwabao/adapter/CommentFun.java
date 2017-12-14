@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -120,7 +121,7 @@ public class CommentFun {
                 Comment comment = new Comment(NewsDetailActivity.sUser, content, receiver);
                 commentList.add(comment);
                 if (listener != null) {
-                    listener.onCommitComment();
+                    listener.onCommitComment(content);
                 }
                 dialog.dismiss();
                 Toast.makeText(activity, "评论成功", Toast.LENGTH_SHORT).show();
@@ -145,8 +146,7 @@ public class CommentFun {
 
     public static class InputCommentListener {
         //　评论成功时调用
-        public void onCommitComment() {
-
+        public void onCommitComment(String content) {
         }
     }
 
@@ -200,5 +200,6 @@ public class CommentFun {
 
         void onDismiss();
     }
+
 
 }

@@ -38,7 +38,7 @@
                 android:background="@android:drawable/ic_input_add"
                 android:scaleType="center"
                 android:layout_weight="1"
-
+                android:theme="@style/ButtonTheme"
                 />
         </LinearLayout>
     </android.support.design.widget.AppBarLayout>
