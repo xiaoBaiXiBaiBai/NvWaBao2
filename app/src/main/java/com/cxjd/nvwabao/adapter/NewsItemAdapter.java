@@ -62,6 +62,7 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
                public void onClick(View view) {
                    Intent intent=new Intent(context, NewsDetailActivity.class);
                    intent.putExtra("content",titleBean.getUrl());
+                   intent.putExtra("pageId",titleBean.getId());
                    context.startActivity(intent);
                }
            });

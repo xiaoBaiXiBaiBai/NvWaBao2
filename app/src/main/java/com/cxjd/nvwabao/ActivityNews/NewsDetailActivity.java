@@ -34,7 +34,12 @@ import com.cxjd.nvwabao.bean.User;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class NewsDetailActivity extends Activity {
     String str;
@@ -47,6 +52,7 @@ public class NewsDetailActivity extends Activity {
     ImageView shares,lovasave,commenmy;
     final ArrayList<Moment> moments = new ArrayList<Moment>();
     EditText commen;
+    private String commentUrl = null;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,13 +66,39 @@ public class NewsDetailActivity extends Activity {
         chooseScale(width);
         Intent intent=getIntent();
         String url=intent.getStringExtra("content");
+        String pageId=intent.getStringExtra("pageId");
+        commentUrl="http://192.168.31.227/user/getComments/"+901;
         initWebview();
         sendRequest(url);
+        requestComment(commentUrl);
         mListView = (ListView) findViewById(R.id.list_moment);
         init();
 
 
     }
+   // [{"id":4,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":-1,"reply_obj_id":901,"comments":[{"id":5,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":4,"reply_obj_id":-1,"comments":null,"replyPerson":null},{"id":6,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":4,"reply_obj_id":5,"comments":null,"replyPerson":null}],"replyPerson":null}]
+
+    private void requestComment(String commentUrl) {
+
+        HttpTitleUtil.sendOkHttpRequest(commentUrl, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String comments=response.body().string();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Log.i("TAG",comments);
+                        }
+                    });
+            }
+        });
+    }
+
 
     private void initMycommen() {
         shares=findViewById(R.id.shares);
@@ -151,7 +183,7 @@ public class NewsDetailActivity extends Activity {
      * webview
      */
     private void sendRequest(String url) {
-        showProgressDialog();
+      //  showProgressDialog();
         HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
@@ -163,7 +195,7 @@ public class NewsDetailActivity extends Activity {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
-                        closeProgressDialog();
+                    //    closeProgressDialog();
                         }
                     });
                 } catch (JSONException e) {
