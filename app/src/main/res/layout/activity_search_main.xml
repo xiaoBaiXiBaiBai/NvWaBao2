@@ -7,53 +7,102 @@
     android:orientation="vertical"
     android:background="@color/white"
     tools:context="com.cxjd.nvwabao.mainActivity.MainActivity">
-    <RelativeLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:background="#1C86EE"
-        android:layout_height="?attr/actionBarSize">
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/nav_button"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_back"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="查询方式"
-            android:textColor="#fff"
-            android:textSize="20sp"/>
-    </RelativeLayout>
-    <Button
-        android:layout_margin="10dp"
-        android:id="@+id/bt_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/btn"
-        android:textSize="30sp"
-        android:text="按人体图查询->"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <Button
+           android:id="@+id/bt_go"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:background="@color/white"
+           android:textColor="#000"
+           android:text="按人体图查询"/>
 
-    <Button
-        android:layout_margin="10dp"
-        android:id="@+id/bt_goRoom"
+       <Button
+           android:id="@+id/bt_goRoom"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:background="@color/white"
+           android:text="按科室查询"/>
+       <Button
+           android:id="@+id/bt_people"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:background="@color/white"
+           android:text="按人群查询"/>
+   </LinearLayout>
+ <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/women1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/btn"
-        android:textSize="30sp"
-        android:text="按科室查询->"/>
-    <Button
-        android:layout_margin="10dp"
-        android:id="@+id/bt_people"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/btn"
-        android:textSize="30sp"
-        android:text="按人群查询->"/>
+        android:layout_height="match_parent"
+
+        />
+
+
+     <LinearLayout
+         android:gravity="bottom"
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:layout_gravity="right"
+         android:layout_height="match_parent">
+         <ImageView
+             android:id="@+id/zhengmianbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:visibility="gone"
+             android:background="@drawable/zhengmianbtn"
+             />
+         <ImageView
+
+             android:id="@+id/beimianbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/fanmianbtn"
+
+         />
+     </LinearLayout>
+     <RelativeLayout
+
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/nanhoubtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/nanhoubtn"
+             android:visibility="invisible"
+             />
+         <ImageView
+             android:id="@+id/nanqianbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/nanqianbtn"
+             />
+         <ImageView
+             android:id="@+id/nvhoubtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/nanhoubtn"
+             android:layout_centerHorizontal="true"
+             android:background="@drawable/nvhoubtn" />
+         <ImageView
+             android:id="@+id/nvqianbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/nanhoubtn"
+             android:layout_centerHorizontal="true"
+             android:background="@drawable/nvqianbtn"
+             android:visibility="gone"/>
+
+     </RelativeLayout>
+
+ </FrameLayout>
 </LinearLayout>

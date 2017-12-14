@@ -35,12 +35,12 @@
             android:name=".ActivityNews.DragActivity"
             android:theme="@style/zhou" />
         <activity
-            android:name=".ActivityNews.RegisterActivity"
-            android:theme="@style/zhou"
-            />
-        <activity
-            android:name=".ActivityNews.NewsDetailActivity"
+            android:name=".ActivityNews.DetailActivity"
             android:theme="@style/zhou" />
+        <activity android:name=".ActivityNews.RegisterActivity"
+            android:theme="@style/zhou"/>
+        <activity android:name=".ActivityNews.NewsDetailActivity"
+            android:theme="@style/zhou"/>
         <activity
             android:name=".Activity.People"
             android:theme="@style/zhou" />
@@ -56,11 +56,15 @@
         <activity
             android:name=".Activity.SearchMain"
             android:theme="@style/zhou" />
-
-        <!-- find中的24小时养生 -->
-        <activity android:name=".Activity.Find24Hours" />
-        <activity android:name=".ActivityNews.LoginActivity"
-            android:theme="@style/zhou"></activity>
+        <activity
+            android:name=".Activity.ProtectActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.FoodInfoActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".Activity.FoodListActivity"
+            android:theme="@style/zhou" />
     </application>
 
 </manifest>

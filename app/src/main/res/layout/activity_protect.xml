@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.cxjd.nvwabao.Activity.ProtectActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/proback">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="食物库"
+           android:layout_centerHorizontal="true"
+           android:textColor="@color/white"
+           android:textSize="27sp"
+           android:id="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="43dp"
+            android:text="查 询 食 物 信 息"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <SearchView
+         android:iconifiedByDefault="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:queryHint="请输入食品名称"
+            android:id="@+id/searchView">
+        </SearchView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="食物分类"
+            android:textColor="@color/viewfinder_mask"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/guwu"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/yaocai"
+            android:layout_alignTop="@+id/shuichan"
+            android:background="@drawable/guwu" />
+
+        <ImageView
+            android:id="@+id/dounairu"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/shuiguoganguo"
+            android:layout_alignTop="@+id/guwu"
+            android:background="@drawable/dounairu" />
+
+        <ImageView
+            android:id="@+id/gandou"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+
+            android:layout_alignStart="@+id/shuichan"
+            android:layout_alignTop="@+id/qinshou"
+            android:background="@drawable/gandou" />
+
+        <ImageView
+            android:id="@+id/qinshou"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/guwu"
+            android:layout_alignTop="@+id/shucai"
+            android:background="@drawable/qinshou" />
+
+        <ImageView
+            android:id="@+id/shucai"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignStart="@+id/dounairu"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/shucai" />
+
+        <ImageView
+            android:id="@+id/shuichan"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/gandou"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/shuichan" />
+
+        <ImageView
+            android:id="@+id/shuiguoganguo"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/yaocai"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/shuiguoganguo" />
+
+        <ImageView
+            android:id="@+id/yaocai"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/shuichan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:background="@drawable/yaocai" />
+    </RelativeLayout>
+</LinearLayout>

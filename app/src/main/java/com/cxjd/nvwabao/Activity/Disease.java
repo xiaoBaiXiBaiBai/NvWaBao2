@@ -114,20 +114,44 @@ public class Disease extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
 
                 try {
+                 /*   final Runnable   runnableUi=new  Runnable(){
+                        @Override
+                        public void run() {
 
 
+                        }
+
+                    };
+                    new Thread(){
+                        public void run(){
+
+                            handler.post(runnableUi);
+                        }
+                    }.start();*/
+
+                    //更新界面
                     //String responseData = response.body().string();
                     //JSONArray jsonArray = new JSONArray(responseData);
-                    JSONObject jsonObject = new JSONObject( response.body().string());
-                   // System.out.println(jsonObject.getString("contents"));
+                    final JSONObject jsonObject = new JSONObject( response.body().string());
+                    // System.out.println(jsonObject.getString("contents"));
                     returnList.add(jsonObject.getString("partName"));
-                   // contents = jsonObject.getString("contents");
+                    // contents = jsonObject.getString("contents");
                     //System.out.println(contents);
-                    ZZexpTv1.setText(jsonObject.getString("contents"));
-                    BYexpTv2.setText(jsonObject.getString("reason"));
-                    disTitle.setText(jsonObject.getString("sicksName"));
-                    YFexpTv1.setText(jsonObject.getString("prevention"));
-                    ZLexpTv2.setText(jsonObject.getString("diagnostic"));
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                ZZexpTv1.setText(jsonObject.getString("contents"));
+                                BYexpTv2.setText(jsonObject.getString("reason"));
+                                disTitle.setText(jsonObject.getString("sicksName"));
+                                YFexpTv1.setText(jsonObject.getString("prevention"));
+                                ZLexpTv2.setText(jsonObject.getString("diagnostic"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    });
 
 
                 } catch (JSONException e) {
@@ -160,16 +184,26 @@ public class Disease extends AppCompatActivity {
 
                     //String responseData = response.body().string();
                     //JSONArray jsonArray = new JSONArray(responseData);
-                    JSONObject jsonObject = new JSONObject( response.body().string());
+                    final JSONObject jsonObject = new JSONObject( response.body().string());
                     // System.out.println(jsonObject.getString("contents"));
                     //returnList.add(jsonObject.getString("partName"));
                     // contents = jsonObject.getString("contents");
                     //System.out.println(contents);
-                    ZZexpTv1.setText(jsonObject.getString("contents"));
-                    BYexpTv2.setText(jsonObject.getString("symptom"));
-                    disTitle.setText(jsonObject.getString("sicksName"));
-                    YFexpTv1.setText(jsonObject.getString("prevention"));
-                    ZLexpTv2.setText(jsonObject.getString("cure"));
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                ZZexpTv1.setText(jsonObject.getString("contents"));
+                                BYexpTv2.setText(jsonObject.getString("symptom"));
+                                disTitle.setText(jsonObject.getString("sicksName"));
+                                YFexpTv1.setText(jsonObject.getString("prevention"));
+                                ZLexpTv2.setText(jsonObject.getString("cure"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+
 
 
                 } catch (JSONException e) {
