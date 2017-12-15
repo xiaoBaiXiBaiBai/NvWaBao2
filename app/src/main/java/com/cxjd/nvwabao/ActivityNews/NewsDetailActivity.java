@@ -62,19 +62,21 @@ public class NewsDetailActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
-        /*View view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);*/
-        webView=findViewById(R.id.webview);
+        View view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
+        webView=view.findViewById(R.id.webview);
         initMycommen();
         WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         int width = windowManager.getDefaultDisplay().getWidth();
         chooseScale(width);
         Intent intent=getIntent();
         String url=intent.getStringExtra("content")+"/"+34;
+        Log.i("tag",url);
         String pageId=intent.getStringExtra("pageId");
         commentUrl="http://192.168.31.227/user/getComments/"+901;
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
+        requestComment(commentUrl);
 
     }
     private void requestComment(String commentUrl) {
@@ -174,7 +176,7 @@ public class NewsDetailActivity extends Activity {
             }
         }));
         mListView.setAdapter(mAdapter);
-        //mListView.addHeaderView(webView);
+        mListView.addHeaderView(webView);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -201,7 +203,6 @@ public class NewsDetailActivity extends Activity {
      * webview
      */
     private void sendRequest(String url) {
-        showProgressDialog();
         HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
@@ -213,8 +214,6 @@ public class NewsDetailActivity extends Activity {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
-                        requestComment(commentUrl);
-                        closeProgressDialog();
                         }
                     });
                 } catch (JSONException e) {
@@ -225,12 +224,7 @@ public class NewsDetailActivity extends Activity {
 
             @Override
             public void onError(Exception e) {
-                 runOnUiThread(new Runnable() {
-                     @Override
-                     public void run() {
-                         closeProgressDialog();
-                     }
-                 });
+
             }
         });
     }

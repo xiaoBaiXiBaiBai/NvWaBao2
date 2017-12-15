@@ -6,21 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical">
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
-        <WebView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/webview">
-        </WebView>
+        android:layout_height="fill_parent">
         <ListView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:background="#ececec"
             android:id="@+id/list_moment"
             android:dividerHeight="1dp"
@@ -29,7 +19,6 @@
             android:layout_marginBottom="46dp"
             />
     </LinearLayout>
-    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
