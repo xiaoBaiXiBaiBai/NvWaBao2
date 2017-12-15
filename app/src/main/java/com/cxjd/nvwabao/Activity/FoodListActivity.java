@@ -10,27 +10,50 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.Fruit2Adapter;
 import com.cxjd.nvwabao.adapter.FruitAdapter;
 import com.cxjd.nvwabao.bean.Fruit;
+import com.cxjd.nvwabao.bean.Fruit2;
 import com.cxjd.nvwabao.mainActivity.MainActivity;
+import com.cxjd.nvwabao.utils.HttpUtil;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
+
 public class FoodListActivity extends AppCompatActivity {
     private List<Fruit> fruitList = new ArrayList<>();
+    private List<Fruit2> fruitList2 = new ArrayList<>();
     private FruitAdapter adapter;
+    private Fruit2Adapter adapter2;
+    private String UrlBase = "http://192.168.31.227/user/getKey/";
+    private String listName,Url;
+    private ImageView fruit_image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_list);
+        fruit_image = findViewById(R.id.fruit_image);
+        int  leixingINT =getIntent().getIntExtra("leixing",8);
+        listName = getIntent().getStringExtra("listName");
+        Url = UrlBase+listName;
 
-        int  leixingINT =getIntent().getIntExtra("leixing",0);
         switch (leixingINT){
             case 0:initshucai();
                 adapter = new FruitAdapter(FoodListActivity.this,R.layout.foot_list,fruitList);
@@ -39,6 +62,7 @@ public class FoodListActivity extends AppCompatActivity {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        //Log.e("Url","蔬菜/"+position);
                         Intent intent = new Intent(FoodListActivity.this,FoodInfoActivity.class);
                         intent.putExtra("address","蔬菜/"+position);
                         startActivity(intent);
@@ -138,6 +162,21 @@ public class FoodListActivity extends AppCompatActivity {
                     }
                 });
                 break;
+            default:Data(Url);
+                adapter2 = new Fruit2Adapter(FoodListActivity.this,R.layout.foot_list,fruitList2);
+                ListView listView8 = (ListView) findViewById(R.id.list_view);
+                listView8.setAdapter(adapter2);
+                listView8.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent intent = new Intent(FoodListActivity.this,FoodInfoActivity.class);
+                        intent.putExtra("content_url",fruitList2.get(position).getIconUrl());
+                        //intent.putExtra("address","药材/"+position);
+                        startActivity(intent);
+                    }
+                });
+                break;
         }
 
         Log.e("leixing",leixingINT+"");
@@ -158,7 +197,7 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit chenpi = new Fruit("陈皮",R.drawable.chenpi);
         fruitList.add(chenpi);
 
-        Fruit chuanbei = new Fruit("川贝",R.drawable.chuanchenzi);
+        Fruit chuanbei = new Fruit("川贝",R.drawable.chuanbei);
         fruitList.add(chuanbei);
 
         Fruit chuanchenzi = new Fruit("川楝子",R.drawable.chuanchenzi);
@@ -293,17 +332,18 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit guniangguo = new Fruit("姑娘果",R.drawable.guniangguo);
         fruitList.add(guniangguo);
 
-        Fruit ganlan = new Fruit("桂圆",R.drawable.ganlan);
+        Fruit ganlan = new Fruit("龙眼",R.drawable.longyan);
         fruitList.add(ganlan);
 
         Fruit hamigua = new Fruit("哈密瓜",R.drawable.hamigua);
         fruitList.add(hamigua);
         Fruit haitangguo = new Fruit("海棠果",R.drawable.haitangguo);
         fruitList.add(haitangguo);
+
         Fruit hetao = new Fruit("核桃",R.drawable.hetao);
         fruitList.add(hetao);
-        /*Fruit heibulin = new Fruit("黑布林",R.drawable.heibulin);
-        fruitList.add(heibulin);*/
+        Fruit heibulin = new Fruit("黑布林",R.drawable.heibulin);
+        fruitList.add(heibulin);
         Fruit heigouqi = new Fruit("黑枸杞",R.drawable.heigouqi);
         fruitList.add(heigouqi);
         Fruit heizao = new Fruit("黑枣",R.drawable.heizao);
@@ -311,8 +351,8 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit heizhima = new Fruit("黑芝麻",R.drawable.heizhima);
         fruitList.add(heizhima);
 
-        Fruit heibulin = new Fruit("红枣",R.drawable.heibulin);
-        fruitList.add(heibulin);
+        Fruit hongzao = new Fruit("红枣",R.drawable.hongzao);
+        fruitList.add(hongzao);
 
         Fruit huasheng = new Fruit("花生",R.drawable.huasheng);
         fruitList.add(huasheng);
@@ -320,14 +360,14 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(huangtao);
         Fruit huolongguo = new Fruit("火龙果",R.drawable.huolongguo);
         fruitList.add(huolongguo);
- /*       Fruit huomaren = new Fruit("火麻仁",R.drawable.huomaren);
-        fruitList.add(huomaren);*/
+        Fruit huomaren = new Fruit("火麻仁",R.drawable.huomaren);
+        fruitList.add(huomaren);
         Fruit jinju = new Fruit("金桔",R.drawable.jinju);
         fruitList.add(jinju);
         Fruit juzi = new Fruit("橘子",R.drawable.juzi);
         fruitList.add(juzi);
-        /*Fruit kafeidou = new Fruit("咖啡豆",R.drawable.kafeidou);
-        fruitList.add(kafeidou);*/
+        Fruit kafeidou = new Fruit("咖啡豆",R.drawable.kafeidou);
+        fruitList.add(kafeidou);
         Fruit kaixinguo = new Fruit("开心果",R.drawable.kaixinguo);
         fruitList.add(kaixinguo);
         Fruit kuihuazi = new Fruit("葵花子",R.drawable.kuihuazi);
@@ -385,7 +425,7 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit qianshi = new Fruit("芡实",R.drawable.qianshi);
         fruitList.add(qianshi);
 
-        Fruit qingguo = new Fruit("青果",R.drawable.qingmei);
+        Fruit qingguo = new Fruit("橄榄",R.drawable.ganlan);
         fruitList.add(qingguo);
 
         Fruit qingmei = new Fruit("青梅",R.drawable.qingmei);
@@ -393,7 +433,7 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit renshenguo = new Fruit("人参果",R.drawable.renshenguo);
         fruitList.add(renshenguo);
 
-        Fruit sangshen = new Fruit("桑葚",R.drawable.renshenguo);
+        Fruit sangshen = new Fruit("桑葚",R.drawable.sangshen);
         fruitList.add(sangshen);
 
         Fruit shaguo = new Fruit("沙果",R.drawable.shaguo);
@@ -412,8 +452,7 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(shiliu);
         Fruit shizi = new Fruit("柿子",R.drawable.shizi);
         fruitList.add(shizi);
-   /*     Fruit shuimitao = new Fruit("水蜜桃",R.drawable.shuimitao);
-        fruitList.add(shuimitao);*/
+
         Fruit songzi = new Fruit("松子",R.drawable.songzi);
         fruitList.add(songzi);
         Fruit taoren = new Fruit("桃仁",R.drawable.taoren);
@@ -428,8 +467,8 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(wuhuaguo);
         Fruit xigua = new Fruit("西瓜",R.drawable.xigua);
         fruitList.add(xigua);
-     /*   Fruit xiguazi = new Fruit("西瓜子",R.drawable.xiguazi);
-        fruitList.add(xiguazi);*/
+        Fruit xiguazi = new Fruit("西瓜子",R.drawable.xiguazi);
+        fruitList.add(xiguazi);
         Fruit ximei = new Fruit("西梅",R.drawable.ximei);
         fruitList.add(ximei);
         Fruit xiangjiao = new Fruit("香蕉",R.drawable.xiangjiao);
@@ -444,8 +483,8 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(yaoguo);
         Fruit yezi = new Fruit("椰子",R.drawable.yezi);
         fruitList.add(yezi);
-     /*   Fruit yizhi = new Fruit("益智",R.drawable.yizhi);
-        fruitList.add(yizhi);*/
+        Fruit yizhi = new Fruit("益智",R.drawable.yizhi);
+        fruitList.add(yizhi);
         Fruit yinxingren = new Fruit("银杏仁",R.drawable.yinxingren);
         fruitList.add(yinxingren);
         Fruit yingtao = new Fruit("樱桃",R.drawable.yingtao);
@@ -454,8 +493,7 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(youtao);
         Fruit youzi = new Fruit("柚子",R.drawable.youzi);
         fruitList.add(youzi);
-    /*    Fruit zao = new Fruit("枣",R.drawable.zao);
-        fruitList.add(zao);*/
+    /*    */
         Fruit zhenzi = new Fruit("榛子",R.drawable.zhenzi);
         fruitList.add(zhenzi);
     }
@@ -527,8 +565,8 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(hexia);
         Fruit hexian = new Fruit("河蚬",R.drawable.hexian);
         fruitList.add(hexian);
-     /*   Fruit heiyu = new Fruit("黑鱼",R.drawable.heiyu);
-        fruitList.add(heiyu);*/
+        Fruit heiyu = new Fruit("黑鱼",R.drawable.heiyu);
+        fruitList.add(heiyu);
         Fruit hongzunyu = new Fruit("虹鳟鱼",R.drawable.hongzunyu);
         fruitList.add(hongzunyu);
         Fruit huangshan = new Fruit("黄鳝",R.drawable.huangshan);
@@ -538,7 +576,7 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit jiayu = new Fruit("甲鱼",R.drawable.jiayu);
         fruitList.add(jiayu);
 
-        Fruit haixia = new Fruit("濑尿虾",R.drawable.haixia);
+        Fruit haixia = new Fruit("皮皮虾",R.drawable.pipixia);
         fruitList.add(haixia);
 
         Fruit liyu = new Fruit("鲤鱼",R.drawable.liyu);
@@ -575,7 +613,7 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit shadingyu = new Fruit("沙丁鱼",R.drawable.shadingyu);
         fruitList.add(shadingyu);
 
-       Fruit haixie = new Fruit("梭子蟹",R.drawable.haixie);
+       Fruit haixie = new Fruit("梭子蟹",R.drawable.suozixie);
         fruitList.add(haixie);
 
         Fruit wawayu = new Fruit("娃娃鱼",R.drawable.wawayu);
@@ -636,8 +674,8 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void initgandou() {
-        Fruit biandou = new Fruit("扁豆", R.drawable.biandou);
-        fruitList.add(biandou);
+      /*  Fruit biandou = new Fruit("扁豆", R.drawable.biandou);
+        fruitList.add(biandou);*/
         Fruit candou = new Fruit("蚕豆", R.drawable.candou);
         fruitList.add(candou);
         Fruit daodou = new Fruit("刀豆", R.drawable.daodou);
@@ -658,12 +696,14 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(lvdou);
         Fruit maodou = new Fruit("毛豆", R.drawable.maodou);
         fruitList.add(maodou);
+        Fruit meidou = new Fruit("眉豆", R.drawable.meidou);
+        fruitList.add(meidou);
         Fruit nadou = new Fruit("纳豆", R.drawable.nadou);
         fruitList.add(nadou);
         Fruit wandou = new Fruit("豌豆", R.drawable.wandou);
         fruitList.add(wandou);
-        Fruit yundou = new Fruit("芸豆", R.drawable.yundou);
-        fruitList.add(yundou);
+       /* Fruit yundou = new Fruit("芸豆", R.drawable.yundou);
+        fruitList.add(yundou);*/
     }
 
     private void initshucai() {
@@ -712,14 +752,14 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(huanggua);
         Fruit huanghuacai = new Fruit("黄花菜",R.drawable.huanghuacai);
         fruitList.add(huanghuacai);
-       /* Fruit huixiang = new Fruit("茴香",R.drawable.huixiang);
-        fruitList.add(huixiang);*/
+        Fruit huixiang = new Fruit("茴香",R.drawable.huixiang);
+        fruitList.add(huixiang);
         Fruit huoxiang = new Fruit("藿香",R.drawable.huoxiang);
         fruitList.add(huoxiang);
         Fruit jizongjun = new Fruit("鸡枞菌",R.drawable.jizongjun);
         fruitList.add(jizongjun);
 
-        Fruit jimaocai = new Fruit("鸡毛菜",R.drawable.jizongjun);
+        Fruit jimaocai = new Fruit("鸡毛菜",R.drawable.jimaocai);
         fruitList.add(jimaocai);
 
         Fruit jiaobai = new Fruit("茭白",R.drawable.jiaobai);
@@ -845,14 +885,13 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void initguwu() {
-        Fruit canmi = new Fruit("灿米",R.drawable.canmi);
-        fruitList.add(canmi);
+
         Fruit caomi = new Fruit("糙米",R.drawable.caomi);
         fruitList.add(caomi);
         Fruit damai = new Fruit("大麦",R.drawable.damai);
         fruitList.add(damai);
-        Fruit gaoliangmi = new Fruit("高粱米",R.drawable.gaoliangmi);
-        fruitList.add(gaoliangmi);
+       /* Fruit gaoliangmi = new Fruit("高粱米",R.drawable.gaoliangmi);
+        fruitList.add(gaoliangmi);*/
         Fruit heimi = new Fruit("黑米",R.drawable.heimi);
         fruitList.add(heimi);
         Fruit jingmi = new Fruit("粳米",R.drawable.jingmi);
@@ -865,6 +904,8 @@ public class FoodListActivity extends AppCompatActivity {
         fruitList.add(nuomi);
         Fruit qiaomai = new Fruit("荞麦",R.drawable.qiaomai);
         fruitList.add(qiaomai);
+        Fruit canmi = new Fruit("灿米",R.drawable.canmi);
+        fruitList.add(canmi);
         Fruit xiaomai = new Fruit("小麦",R.drawable.xiaomai);
         fruitList.add(xiaomai);
         Fruit xiaomi = new Fruit("小米",R.drawable.xiaomi);
@@ -878,9 +919,11 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void initqinchu() {
+        Fruit dilong = new Fruit("蚯蚓",R.drawable.qiuyin);
+        fruitList.add(dilong);
 
-       /* Fruit egan = new Fruit("鹅肝",R.drawable.egan);
-        fruitList.add(egan);*/
+        Fruit egan = new Fruit("鹅肝",R.drawable.egan);
+        fruitList.add(egan);
 
         Fruit erou = new Fruit("鹅肉",R.drawable.erou);
         fruitList.add(erou);
@@ -921,8 +964,8 @@ public class FoodListActivity extends AppCompatActivity {
         Fruit wuji1 = new Fruit("乌鸡",R.drawable.wuji);
         fruitList.add(wuji1);
 
-        Fruit egan = new Fruit("鸭肝",R.drawable.egan);
-        fruitList.add(egan);
+        Fruit egan1 = new Fruit("鸭肝",R.drawable.yagan);
+        fruitList.add(egan1);
 
         Fruit yarou = new Fruit("鸭肉",R.drawable.yarou);
         fruitList.add(yarou);
@@ -969,4 +1012,56 @@ public class FoodListActivity extends AppCompatActivity {
 
 
     }
+
+    private void Data(String url) {
+        HttpUtil.sendOkHttpRequest(url, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(FoodListActivity.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                try {
+                    fruitList2.clear();
+                    Log.e("Test",Url);
+                    String responseData = response.body().string();
+                    JSONArray jsonArray = new JSONArray(responseData);
+                    Fruit2 fruit2;
+                    String name,content_url,iconUrl,kind;
+                    for (int i =0;i<=jsonArray.length();i++){
+                        JSONObject jsonObject =   jsonArray.getJSONObject(i);
+                        name = jsonObject.getString("name");
+                        content_url = jsonObject.getString("content_url");
+                        iconUrl = jsonObject.getString("iconUrl");
+                        kind = jsonObject.getString("kind");
+                        Log.e("Json",name+"::"+content_url+"::"+iconUrl);
+                        fruit2 = new Fruit2(name,iconUrl,content_url,kind);
+                        fruitList2.add(fruit2);
+                    }
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            //Glide.with(FoodListActivity.this).load(imageUrl).into(bingPicImg);
+
+                        }
+                    });
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
 }

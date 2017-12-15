@@ -28,7 +28,6 @@ public class SearchMain extends AppCompatActivity {
     private com.cxjd.nvwabao.fragment.womenFHFragment womenFHFragment = new womenFHFragment();
     private ManFFFragment manFFFragment = new ManFFFragment();
     private ManFHFragment manFHFragment = new ManFHFragment();
-
     private  Fragment xingbie = womenFrontFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

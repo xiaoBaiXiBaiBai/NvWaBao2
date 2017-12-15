@@ -43,7 +43,7 @@ import okhttp3.Response;
 
 public class FoodInfoActivity extends AppCompatActivity {
     private ImageView bingPicImg;
-    private  String address,UrlBase = "http://192.168.31.227/user/getFoods/",Url;
+    private  String address = null,UrlBase = "http://192.168.31.227/user/getFoods/",Url;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private TextView infoname,infoitem1,infoitem2,infoitem3,infoitem4;
@@ -74,8 +74,13 @@ public class FoodInfoActivity extends AppCompatActivity {
         infoitem4 = findViewById(R.id.infoitem4);
         address = getIntent().getStringExtra("address");
         Url = UrlBase+address;
-        Data(Url);
+        if (address==null){
+            Url =  getIntent().getStringExtra("content_url");
+        }
 
+
+        Data(Url);
+        Log.e("Url",Url);
 
 
         mViewPager = findViewById(R.id.vp_view);
@@ -240,12 +245,14 @@ public class FoodInfoActivity extends AppCompatActivity {
                    // Log.e("jsonArray",jsonArray.getString(0));
                      imageUrl = jsonObject.getString("imageUrl");
                     Log.e("imageUrl",imageUrl);
-                    foods_name = jsonObject.getString("foods_name");
-
+                    foods_name = jsonObject.getString("name");
+                    Log.e("imageUrl",foods_name);
                     String head_array = jsonObject.getString("head_array");
                     JSONArray jsonArray = new JSONArray(head_array);
                     effects = jsonObject.getString("effects");
+                    //Log.e("imageUrl",effects);
                     warning = jsonObject.getString("warning");
+                    //Log.e("imageUrl",warning);
                     //Log.e("jsonArray",items[0]);
                      //head_array = jsonObject.getString("head_array");
                     item0 = jsonArray.getString(0);

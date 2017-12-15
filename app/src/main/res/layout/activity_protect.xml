@@ -31,17 +31,27 @@
             android:text="查 询 食 物 信 息"
             android:textColor="@color/white"
             android:textSize="10sp" />
-        <SearchView
-         android:iconifiedByDefault="false"
+     <!--   <SearchView
+
+            android:iconifiedByDefault="false"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="110dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:queryHint="请输入食品名称"
+            android:queryHint="按功效查询"
             android:id="@+id/searchView">
-        </SearchView>
+        </SearchView>-->
+        <ImageView
+            android:id="@+id/searchView"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/searchviewpng"></ImageView>
     </RelativeLayout>
 
     <RelativeLayout
