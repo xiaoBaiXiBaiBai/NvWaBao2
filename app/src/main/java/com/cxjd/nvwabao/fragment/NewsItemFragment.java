@@ -77,7 +77,7 @@ public class NewsItemFragment extends Fragment {
 
     private void requesList() {
         String address="http://192.168.31.227/user/getPosts/"+rqTitle;
-        showProgressDialog();
+        //showProgressDialog();
         HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
@@ -85,7 +85,7 @@ public class NewsItemFragment extends Fragment {
                getActivity().runOnUiThread(new Runnable() {
                    @Override
                    public void run() {
-                       closeProgressDialog();
+                      // closeProgressDialog();
                        refreshLayout.setRefreshing(false);
                    }
                });
@@ -97,7 +97,7 @@ public class NewsItemFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        closeProgressDialog();
+                       // closeProgressDialog();
                         refreshLayout.setRefreshing(false);
                     }
                 });

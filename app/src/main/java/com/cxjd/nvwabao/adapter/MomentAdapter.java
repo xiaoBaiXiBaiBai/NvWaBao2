@@ -12,6 +12,7 @@ import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.Moment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -23,35 +24,23 @@ public class MomentAdapter extends BaseAdapter {
     public static final int VIEW_MOMENT = 1;
 
 
-    private ArrayList<Moment> mList;
+    private List<Moment> mList;
     private Context mContext;
     private CustomTagHandler mTagHandler;
 
-    public MomentAdapter(Context context, ArrayList<Moment> list, CustomTagHandler tagHandler) {
+    public MomentAdapter(Context context, List<Moment> list, CustomTagHandler tagHandler) {
         mList = list;
         mContext = context;
         mTagHandler = tagHandler;
     }
-
-    @Override
-    public int getViewTypeCount() {
-        return 2;
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return position == 0 ? VIEW_HEADER : VIEW_MOMENT;
-    }
-
     @Override
     public int getCount() {
-        // heanderView
-        return mList.size() + 1;
+        return mList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return mList.get(position);
     }
 
     @Override
@@ -62,28 +51,24 @@ public class MomentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            if (position == 0) {
-                convertView = View.inflate(mContext, R.layout.item_header, null);
-            } else {
                 convertView = View.inflate(mContext, R.layout.item_moment, null);
                 ViewHolder holder = new ViewHolder();
                 holder.mCommentList = (LinearLayout) convertView.findViewById(R.id.comment_list);
                 holder.mBtnInput = convertView.findViewById(R.id.btn_input_comment);
                 holder.mContent = (TextView) convertView.findViewById(R.id.content);
+                holder.commenttime=convertView.findViewById(R.id.time);
+                holder.username=convertView.findViewById(R.id.name);
                 convertView.setTag(holder);
-            }
-        }
+       }
         //防止ListView的OnItemClick与item里面子view的点击发生冲突
         ((ViewGroup) convertView).setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
-        if (position == 0) {
-
-        } else {
-            int index = position - 1;
+            int index = position;
             ViewHolder holder = (ViewHolder) convertView.getTag();
             holder.mContent.setText(mList.get(index).mContent);
+            holder.username.setText(mList.get(index).getAuthor().getmName());
+            holder.commenttime.setText(mList.get(index).getCreate_time());
             CommentFun.parseCommentList(mContext, mList.get(index).mComment,
                     holder.mCommentList, holder.mBtnInput, mTagHandler);
-        }
         return convertView;
     }
 
@@ -91,5 +76,6 @@ public class MomentAdapter extends BaseAdapter {
         LinearLayout mCommentList;
         View mBtnInput;
         TextView mContent;
+        TextView username,commenttime;
     }
 }

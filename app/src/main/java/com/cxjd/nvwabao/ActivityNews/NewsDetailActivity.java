@@ -30,12 +30,16 @@ import com.cxjd.nvwabao.adapter.MomentAdapter;
 import com.cxjd.nvwabao.bean.Comment;
 import com.cxjd.nvwabao.bean.Moment;
 import com.cxjd.nvwabao.bean.User;
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -50,7 +54,7 @@ public class NewsDetailActivity extends Activity {
     private MomentAdapter mAdapter;
     WebView webView;
     ImageView shares,lovasave,commenmy;
-    final ArrayList<Moment> moments = new ArrayList<Moment>();
+    List<Moment> momentList;
     EditText commen;
     private String commentUrl = null;
     @Override
@@ -58,48 +62,63 @@ public class NewsDetailActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
-        View view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
-        webView=view.findViewById(R.id.webview);
+        /*View view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);*/
+        webView=findViewById(R.id.webview);
         initMycommen();
         WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         int width = windowManager.getDefaultDisplay().getWidth();
         chooseScale(width);
         Intent intent=getIntent();
-        String url=intent.getStringExtra("content");
+        String url=intent.getStringExtra("content")+"/"+34;
         String pageId=intent.getStringExtra("pageId");
         commentUrl="http://192.168.31.227/user/getComments/"+901;
         initWebview();
         sendRequest(url);
-        requestComment(commentUrl);
         mListView = (ListView) findViewById(R.id.list_moment);
-        init();
-
 
     }
-   // [{"id":4,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":-1,"reply_obj_id":901,"comments":[{"id":5,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":4,"reply_obj_id":-1,"comments":null,"replyPerson":null},{"id":6,"content":"我日你妈个皮耶","create_time":"4小时前","author_id":1,"author_name":null,"father_comment_id":4,"reply_obj_id":5,"comments":null,"replyPerson":null}],"replyPerson":null}]
-
     private void requestComment(String commentUrl) {
 
         HttpTitleUtil.sendOkHttpRequest(commentUrl, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-
+                   runOnUiThread(new Runnable() {
+                       @Override
+                       public void run() {
+                           Toast.makeText(NewsDetailActivity.this, "加载失败", Toast.LENGTH_SHORT).show();
+                       }
+                   });
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                final String comments=response.body().string();
+            public void onResponse(Call call, final Response response) throws IOException {
+                    final String requestResult=response.body().string();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Log.i("TAG",comments);
+                            momentList=handleComment(requestResult);
+                            init(momentList);
                         }
                     });
             }
         });
     }
 
+    private List<Moment> handleComment(String commentsall){
+        List<Moment> momentList=new ArrayList<>();
+        try {
+            JSONArray jsonArray=new JSONArray(commentsall);
+            for (int i=0;i<jsonArray.length();i++){
+                String comcontent=jsonArray.getJSONObject(i).toString();
+                Moment moment=new Gson().fromJson(comcontent,Moment.class);
+                momentList.add(moment);
+            }
 
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return momentList;
+    }
     private void initMycommen() {
         shares=findViewById(R.id.shares);
         lovasave=findViewById(R.id.lovesave);
@@ -112,9 +131,16 @@ public class NewsDetailActivity extends Activity {
                if(TextUtils.isEmpty(content)){
                    Toast.makeText(NewsDetailActivity.this, "评论不能为空", Toast.LENGTH_SHORT).show();
                 }else {
-                   ArrayList<Comment> comments = new ArrayList<Comment>();
-                   moments.add(new Moment(content + "", comments));
+                   final ArrayList<Comment> comments = new ArrayList<Comment>();
+                   momentList.add(new Moment(content + "", comments));
                    commen.setText("");
+                   mListView.setSelection(4);
+                   mListView.post(new Runnable() {
+                       @Override
+                       public void run() {
+                           mListView.smoothScrollToPosition(-comments.size()-1);
+                       }
+                   });
                    mAdapter.notifyDataSetChanged();
                    InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                    im.hideSoftInputFromWindow(commenmy.getWindowToken(), 0);
@@ -124,15 +150,7 @@ public class NewsDetailActivity extends Activity {
         });
     }
 
-    private void init() {
-        // 模拟数据
-        ArrayList<Comment> comments = new ArrayList<Comment>();
-
-        for (int i = 0; i < 4; i++) {
-            comments.add(new Comment(new User(i + 2, "用户" + i), "评论" + i, null));
-            comments.add(new Comment(new User(i + 100, "用户" + (i + 100)), "评论" + i, new User(i + 200, "用户" + (i + 200))));
-            moments.add(new Moment("动态 " + i, comments));
-        }
+    private void init(List<Moment> moments) {
         mAdapter = new MomentAdapter(this, moments, new CustomTagHandler(this, new CustomTagHandler.OnCommentClickListener() {
             @Override
             public void onCommentatorClick(View view, User commentator) {
@@ -156,7 +174,7 @@ public class NewsDetailActivity extends Activity {
             }
         }));
         mListView.setAdapter(mAdapter);
-        mListView.addHeaderView(webView);
+        //mListView.addHeaderView(webView);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -183,7 +201,7 @@ public class NewsDetailActivity extends Activity {
      * webview
      */
     private void sendRequest(String url) {
-      //  showProgressDialog();
+        showProgressDialog();
         HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
@@ -195,7 +213,8 @@ public class NewsDetailActivity extends Activity {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
-                    //    closeProgressDialog();
+                        requestComment(commentUrl);
+                        closeProgressDialog();
                         }
                     });
                 } catch (JSONException e) {
@@ -206,7 +225,12 @@ public class NewsDetailActivity extends Activity {
 
             @Override
             public void onError(Exception e) {
-
+                 runOnUiThread(new Runnable() {
+                     @Override
+                     public void run() {
+                         closeProgressDialog();
+                     }
+                 });
             }
         });
     }
@@ -303,9 +327,7 @@ public class NewsDetailActivity extends Activity {
                 "}" +
                 "})()");
     }
-    void commenMy(View view){
-        Toast.makeText(this, "哈哈哈", Toast.LENGTH_SHORT).show();
-    }
+
     private void showProgressDialog(){
         if (progressDialog==null){
             progressDialog=new ProgressDialog(this);

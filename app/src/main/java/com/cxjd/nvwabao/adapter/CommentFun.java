@@ -20,6 +20,7 @@ import com.cxjd.nvwabao.bean.Comment;
 import com.cxjd.nvwabao.bean.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 评论相关方法
@@ -36,7 +37,7 @@ public class CommentFun {
      * @param btnComment
      * @param tagHandler
      */
-    public static void parseCommentList(Context context, ArrayList<Comment> mCommentList, LinearLayout commentList,
+    public static void parseCommentList(Context context, List<Comment> mCommentList, LinearLayout commentList,
                                         View btnComment, Html.TagHandler tagHandler) {
         if (btnComment != null) {
             btnComment.setTag(KEY_COMMENT_SOURCE_COMMENT_LIST, mCommentList);
