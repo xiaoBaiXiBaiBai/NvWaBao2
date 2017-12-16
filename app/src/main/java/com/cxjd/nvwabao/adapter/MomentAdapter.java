@@ -1,6 +1,7 @@
 package com.cxjd.nvwabao.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -63,34 +64,29 @@ public class MomentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-          //  if (position == 0) {
-           //     convertView = View.inflate(mContext, R.layout.item_header, null);
-          //  } else {
-                convertView = View.inflate(mContext, R.layout.item_moment, null);
-                ViewHolder holder = new ViewHolder();
-                holder.mCommentList = (LinearLayout) convertView.findViewById(R.id.comment_list);
-                holder.mBtnInput = convertView.findViewById(R.id.btn_input_comment);
-                holder.mContent = (TextView) convertView.findViewById(R.id.content);
-                convertView.setTag(holder);
-         //   }
+            convertView = View.inflate(mContext, R.layout.item_moment, null);
+            ViewHolder holder = new ViewHolder();
+            holder.mCommentList = (LinearLayout) convertView.findViewById(R.id.comment_list);
+            holder.mBtnInput = convertView.findViewById(R.id.btn_input_comment);
+            holder.mContent = (TextView) convertView.findViewById(R.id.content);
+            holder.time=convertView.findViewById(R.id.time);
+            holder.name=convertView.findViewById(R.id.name);
+            convertView.setTag(holder);
        }
         //防止ListView的OnItemClick与item里面子view的点击发生冲突
         ((ViewGroup) convertView).setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
-       // if (position == 0) {
-
-      //  } else {
-            int index = position;
             ViewHolder holder = (ViewHolder) convertView.getTag();
-            holder.mContent.setText(mList.get(index).mContent);
-            CommentFun.parseCommentList(mContext, mList.get(index).mComment,
+            holder.mContent.setText(mList.get(position).mContent);
+            holder.name.setText(mList.get(position).getAuthor().getmName());
+            holder.time.setText(mList.get(position).getCreate_time());
+            CommentFun.parseCommentList(mContext, mList.get(position).mComment,
                     holder.mCommentList, holder.mBtnInput, mTagHandler);
-     //   }
         return convertView;
     }
 
     private static class ViewHolder {
         LinearLayout mCommentList;
         View mBtnInput;
-        TextView mContent;
+        TextView mContent,name,time;
     }
 }

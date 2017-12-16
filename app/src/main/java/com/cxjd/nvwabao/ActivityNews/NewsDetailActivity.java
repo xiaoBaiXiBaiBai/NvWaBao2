@@ -36,6 +36,7 @@ import com.google.gson.annotations.SerializedName;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -76,8 +77,6 @@ public class NewsDetailActivity extends Activity {
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
-        requestComment(commentUrl);
-
     }
     private void requestComment(String commentUrl) {
 
@@ -98,6 +97,7 @@ public class NewsDetailActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            Log.i("TAG",requestResult);
                             momentList=handleComment(requestResult);
                             init(momentList);
                         }
@@ -133,20 +133,24 @@ public class NewsDetailActivity extends Activity {
                if(TextUtils.isEmpty(content)){
                    Toast.makeText(NewsDetailActivity.this, "评论不能为空", Toast.LENGTH_SHORT).show();
                 }else {
+                   User user= DataSupport.findFirst(User.class);
                    final ArrayList<Comment> comments = new ArrayList<Comment>();
-                   momentList.add(new Moment(content + "", comments));
+                   Moment moment=new Moment();
+                   moment.setmContent(content);
+                   moment.setAuthor(user);
+                   moment.setCreate_time("刚刚");
+                   moment.setmComment(comments);
+                   momentList.add(moment);
                    commen.setText("");
-                   mListView.setSelection(4);
+                   InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                   im.hideSoftInputFromWindow(commenmy.getWindowToken(), 0);
+                   mAdapter.notifyDataSetChanged();
                    mListView.post(new Runnable() {
                        @Override
                        public void run() {
-                           mListView.smoothScrollToPosition(-comments.size()-1);
+                           mListView.smoothScrollToPosition(mListView.getBottom());
                        }
                    });
-                   mAdapter.notifyDataSetChanged();
-                   InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                   im.hideSoftInputFromWindow(commenmy.getWindowToken(), 0);
-
                }
             }
         });
@@ -197,12 +201,15 @@ public class NewsDetailActivity extends Activity {
                 mAdapter.notifyDataSetChanged();
             }
         });
+        InputMethodManager m=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        m.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     /**
      * webview
      */
     private void sendRequest(String url) {
+        showProgressDialog();
         HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
@@ -214,6 +221,13 @@ public class NewsDetailActivity extends Activity {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
+                            try {
+                                Thread.sleep(2000);
+                                requestComment(commentUrl);
+                                closeProgressDialog();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                         }
                     });
                 } catch (JSONException e) {

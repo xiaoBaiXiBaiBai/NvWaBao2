@@ -19,6 +19,8 @@ import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.Comment;
 import com.cxjd.nvwabao.bean.User;
 
+import org.litepal.crud.DataSupport;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,7 +91,7 @@ public class CommentFun {
     public static void inputComment(final Activity activity, final ListView listView,
                                     final View btnComment, final User receiver,
                                     final InputCommentListener listener) {
-
+         final User user= DataSupport.findFirst(User.class);
         final ArrayList<Comment> commentList = (ArrayList) btnComment.getTag(KEY_COMMENT_SOURCE_COMMENT_LIST);
 
         String hint;
@@ -119,7 +121,7 @@ public class CommentFun {
                 }
                 btn.setClickable(false);
                 final long receiverId = receiver == null ? -1 : receiver.mId;
-                Comment comment = new Comment(NewsDetailActivity.sUser, content, receiver);
+                Comment comment = new Comment(user, content, receiver);
                 commentList.add(comment);
                 if (listener != null) {
                     listener.onCommitComment(content);

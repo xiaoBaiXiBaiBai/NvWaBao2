@@ -42,24 +42,24 @@
             />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="60dp"
-            android:background="@android:drawable/ic_menu_view"
+            android:layout_marginRight="80dp"
+            android:background="@mipmap/zan"
             android:scaleType="center"
             android:id="@+id/imageView" />
 
         <ImageView
             android:id="@+id/btn_input_comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:onClick="inputComment"
-            android:background="@mipmap/comment_normal"
+            android:background="@mipmap/fayan"
             android:scaleType="center" />
     </RelativeLayout>
     <View
@@ -69,7 +69,7 @@
         android:layout_marginTop="3dp"/>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:padding="5dp"
+        android:padding="20dp"
         android:id="@+id/content"
         />
     <FrameLayout android:layout_width="match_parent" android:layout_height="1dp"
@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="20dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:visibility="gone"
         >
     </LinearLayout>
