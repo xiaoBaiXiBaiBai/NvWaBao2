@@ -58,26 +58,28 @@ public class NewsDetailActivity extends Activity {
     List<Moment> momentList;
     EditText commen;
     private String commentUrl = null;
+    int pageId;
+    View view;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
-        View view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
-        webView=view.findViewById(R.id.webview);
+        view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
+        webView=view.findViewById(R.id.webvie);
         initMycommen();
         WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         int width = windowManager.getDefaultDisplay().getWidth();
         chooseScale(width);
         Intent intent=getIntent();
         String url=intent.getStringExtra("content")+"/"+34;
-        Log.i("tag",url);
-        String pageId=intent.getStringExtra("pageId");
-        commentUrl="http://192.168.31.227/user/getComments/"+901;
+        pageId=intent.getIntExtra("pageId",-1);
+        commentUrl="http://192.168.31.227/user/getComments/"+pageId;
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
     }
+
     private void requestComment(String commentUrl) {
 
         HttpTitleUtil.sendOkHttpRequest(commentUrl, new Callback() {
@@ -151,6 +153,20 @@ public class NewsDetailActivity extends Activity {
                            mListView.smoothScrollToPosition(mListView.getBottom());
                        }
                    });
+                   String posUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"+pageId+"/"+"-1";
+                   Log.i("TAG",posUrl);
+                   HttpTitleUtil.sendOkHttpRequest(posUrl,new Callback() {
+                       @Override
+                       public void onFailure(Call call, IOException e) {
+
+                       }
+
+                       @Override
+                       public void onResponse(Call call, Response response) throws IOException {
+                             String returnconten=response.body().string();
+                             Log.i("tag",returnconten);
+                       }
+                   });
                }
             }
         });
@@ -180,7 +196,7 @@ public class NewsDetailActivity extends Activity {
             }
         }));
         mListView.setAdapter(mAdapter);
-        mListView.addHeaderView(webView);
+        mListView.addHeaderView(view);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -197,8 +213,9 @@ public class NewsDetailActivity extends Activity {
     public void inputComment(final View v, final User receiver) {
         CommentFun.inputComment(this, mListView, v, receiver, new CommentFun.InputCommentListener() {
             @Override
-            public void onCommitComment(String content) {
+            public void onCommitComment(String content,int position) {
                 mAdapter.notifyDataSetChanged();
+                Log.i("TAG",position+"");
             }
         });
         InputMethodManager m=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);

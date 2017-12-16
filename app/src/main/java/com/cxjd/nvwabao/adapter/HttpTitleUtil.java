@@ -1,5 +1,7 @@
 package com.cxjd.nvwabao.adapter;
 
+import android.util.Log;
+
 import com.cxjd.nvwabao.bean.TitleContentBean;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

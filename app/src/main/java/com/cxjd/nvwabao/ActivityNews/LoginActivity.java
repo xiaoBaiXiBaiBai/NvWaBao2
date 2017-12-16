@@ -15,10 +15,12 @@ import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.HttpTitleUtil;
+import com.cxjd.nvwabao.bean.User;
 import com.cxjd.nvwabao.fragment.MineFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
 
@@ -99,13 +101,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {
-                            String result=response.body().string();
+                            final String result=response.body().string();
                             try {
                                 JSONObject jsonObject=new JSONObject(result);
                                 final Boolean loginresl=jsonObject.getBoolean("login_in_success");
+                                JSONObject jsonuser=jsonObject.getJSONObject("user_message");
+                                final int userid=jsonuser.getInt("id");
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
+                                        User user=DataSupport.findFirst(User.class);
+                                        user.setmId(userid);
+                                        user.updateAll();
                                         closeProgressDialog();
                                         if (loginresl){
                                             Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_SHORT).show();

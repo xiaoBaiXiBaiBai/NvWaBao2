@@ -3,6 +3,7 @@ package com.cxjd.nvwabao.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +53,7 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
            final TitleContentBean titleBean=titleBeanList.get(position);
            holder.newsTitle.setText(titleBean.getTittle());
            Picasso.with(context).load(titleBean.getImageAddress()).placeholder(R.drawable.icon_test).resize(120,100).into(holder.imageView);

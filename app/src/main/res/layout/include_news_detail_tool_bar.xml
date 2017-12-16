@@ -20,7 +20,6 @@
             android:hint="@string/detail_write_comment"
             android:textColor="#ff222222"
             android:textSize="13sp"/>
-
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -29,7 +28,6 @@
                 android:id="@+id/fl_comment_icon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <ImageView
                     android:id="@+id/commenMy"
                     android:layout_width="wrap_content"
@@ -56,12 +54,12 @@
                     android:textColor="#fffafafa"
                     android:textSize="8sp"
                     android:text="123"
-                    android:visibility="gone"/>
+                    />
             </FrameLayout>
         </FrameLayout>
 
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="2"
@@ -69,17 +67,16 @@
             android:scaleType="center"
             android:src="@mipmap/new_love_tabbar"
             android:id="@+id/lovesave"
-            android:onClick="commenMy"/>
+           />
 
     <ImageView
         android:id="@+id/shares"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:layout_weight="2"
         android:background="?android:attr/actionModeShareDrawable"
         android:paddingLeft="5dip"
         android:scaleType="center"
-        android:onClick="commenMy"
         />
 </LinearLayout>

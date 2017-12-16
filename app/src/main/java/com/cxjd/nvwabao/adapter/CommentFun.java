@@ -28,6 +28,7 @@ import java.util.List;
  * 评论相关方法
  */
 public class CommentFun {
+    public  static int position1;
     public static final int KEY_COMMENT_SOURCE_COMMENT_LIST = -200162;
 
     /**
@@ -39,13 +40,14 @@ public class CommentFun {
      * @param btnComment
      * @param tagHandler
      */
-    public static void parseCommentList(Context context, List<Comment> mCommentList, LinearLayout commentList,
+    public static void parseCommentList(Context context,int position, List<Comment> mCommentList, LinearLayout commentList,
                                         View btnComment, Html.TagHandler tagHandler) {
         if (btnComment != null) {
             btnComment.setTag(KEY_COMMENT_SOURCE_COMMENT_LIST, mCommentList);
         }
         TextView textView;
         Comment comment;
+        position1=position;
         int i;
         String content;
         for (i = 0; i < mCommentList.size(); i++) {
@@ -124,7 +126,7 @@ public class CommentFun {
                 Comment comment = new Comment(user, content, receiver);
                 commentList.add(comment);
                 if (listener != null) {
-                    listener.onCommitComment(content);
+                    listener.onCommitComment(content,position1);
                 }
                 dialog.dismiss();
                 Toast.makeText(activity, "评论成功", Toast.LENGTH_SHORT).show();
@@ -149,7 +151,7 @@ public class CommentFun {
 
     public static class InputCommentListener {
         //　评论成功时调用
-        public void onCommitComment(String content) {
+        public void onCommitComment(String content,int position) {
         }
     }
 

@@ -34,17 +34,6 @@ public class MomentAdapter extends BaseAdapter {
         mContext = context;
         mTagHandler = tagHandler;
     }
-
-    /*@Override
-    public int getViewTypeCount() {
-        return 2;
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return position == 0 ? VIEW_HEADER : VIEW_MOMENT;
-    }*/
-
     @Override
     public int getCount() {
         // heanderView
@@ -79,8 +68,9 @@ public class MomentAdapter extends BaseAdapter {
             holder.mContent.setText(mList.get(position).mContent);
             holder.name.setText(mList.get(position).getAuthor().getmName());
             holder.time.setText(mList.get(position).getCreate_time());
-            CommentFun.parseCommentList(mContext, mList.get(position).mComment,
+            CommentFun.parseCommentList(mContext,position, mList.get(position).mComment,
                     holder.mCommentList, holder.mBtnInput, mTagHandler);
+
         return convertView;
     }
 

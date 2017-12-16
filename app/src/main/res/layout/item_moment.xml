@@ -10,7 +10,7 @@
     >
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -51,6 +51,13 @@
             android:scaleType="center"
             android:id="@+id/imageView" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="26dp"
+            android:text="12" />
         <ImageView
             android:id="@+id/btn_input_comment"
             android:layout_width="20dp"
