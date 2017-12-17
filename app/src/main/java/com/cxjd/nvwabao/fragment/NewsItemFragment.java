@@ -105,17 +105,4 @@ public class NewsItemFragment extends Fragment {
         });
 
     }
-    private void showProgressDialog(){
-        if (progressDialog==null){
-            progressDialog=new ProgressDialog(getContext());
-            progressDialog.setMessage("正在加载...");
-            progressDialog.setCanceledOnTouchOutside(false);
-        }
-        progressDialog.show();
-    }
-    private void closeProgressDialog(){
-        if (progressDialog!=null){
-            progressDialog.dismiss();
-        }
-    }
 }

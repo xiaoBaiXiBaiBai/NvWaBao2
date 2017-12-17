@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -20,7 +20,8 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
+
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.CommentFun;
@@ -32,12 +33,12 @@ import com.cxjd.nvwabao.bean.Moment;
 import com.cxjd.nvwabao.bean.User;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-
+import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.litepal.crud.DataSupport;
-
+import android.widget.Toast;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,12 +55,15 @@ public class NewsDetailActivity extends Activity {
     private ListView mListView;
     private MomentAdapter mAdapter;
     WebView webView;
-    ImageView shares,lovasave,commenmy;
+    ImageView hit,lovasave,commenmy;
     List<Moment> momentList;
     EditText commen;
+    TextView lovecount;
     private String commentUrl = null;
-    int pageId;
+    int pageId,count;
     View view;
+    boolean IS_hit,IS_HIT;
+    User user;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +71,7 @@ public class NewsDetailActivity extends Activity {
         setContentView(R.layout.main);
         view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
         webView=view.findViewById(R.id.webvie);
+        user=DataSupport.findFirst(User.class);
         initMycommen();
         WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         int width = windowManager.getDefaultDisplay().getWidth();
@@ -74,7 +79,8 @@ public class NewsDetailActivity extends Activity {
         Intent intent=getIntent();
         String url=intent.getStringExtra("content")+"/"+34;
         pageId=intent.getIntExtra("pageId",-1);
-        commentUrl="http://192.168.31.227/user/getComments/"+pageId;
+        User user=DataSupport.findFirst(User.class);
+        commentUrl="http://192.168.31.227/user/getComments/"+pageId+"/"+user.getmId();
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
@@ -99,7 +105,6 @@ public class NewsDetailActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Log.i("TAG",requestResult);
                             momentList=handleComment(requestResult);
                             init(momentList);
                         }
@@ -124,10 +129,11 @@ public class NewsDetailActivity extends Activity {
         return momentList;
     }
     private void initMycommen() {
-        shares=findViewById(R.id.shares);
+        hit=findViewById(R.id.hitbtn);
         lovasave=findViewById(R.id.lovesave);
         commenmy=findViewById(R.id.commenMy);
         commen=findViewById(R.id.conmm);
+        lovecount=findViewById(R.id.love_count);
         commenmy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -154,7 +160,6 @@ public class NewsDetailActivity extends Activity {
                        }
                    });
                    String posUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"+pageId+"/"+"-1";
-                   Log.i("TAG",posUrl);
                    HttpTitleUtil.sendOkHttpRequest(posUrl,new Callback() {
                        @Override
                        public void onFailure(Call call, IOException e) {
@@ -163,17 +168,72 @@ public class NewsDetailActivity extends Activity {
 
                        @Override
                        public void onResponse(Call call, Response response) throws IOException {
-                             String returnconten=response.body().string();
-                             Log.i("tag",returnconten);
                        }
                    });
                }
             }
         });
+        hit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (IS_hit == false) {
+                    hit.setImageResource(R.mipmap.zanf);
+                    Toast.makeText(NewsDetailActivity.this, "你已点赞", Toast.LENGTH_SHORT).show();
+                 } else {
+                    User user = DataSupport.findFirst(User.class);
+                    String url = "http://192.168.31.227/user/addPraise/" + pageId + "/"+ user.getmId();
+                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(NewsDetailActivity.this, "你已点赞", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    hit.setImageResource(R.mipmap.zanf);
+                                    lovecount.setText("" + count++);
+                                }
+                            });
+                        }
+                    });
+                 }
+                }
+        });
+        lovecount.setText(""+count++);
+        lovasave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "http://192.168.31.227/user/getCollection/" + pageId + "/"+ user.getmId();
+                HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+
+                    }
+
+                    @Override
+                    public void onResponse(Call call, Response response) throws IOException {
+                           runOnUiThread(new Runnable() {
+                               @Override
+                               public void run() {
+                                   Toast.makeText(NewsDetailActivity.this, "已收藏", Toast.LENGTH_SHORT).show();
+                               }
+                           });
+                    }
+                });
+            }
+        });
     }
 
     private void init(List<Moment> moments) {
-        mAdapter = new MomentAdapter(this, moments, new CustomTagHandler(this, new CustomTagHandler.OnCommentClickListener() {
+        mAdapter = new MomentAdapter(this,pageId, moments, new CustomTagHandler(this, new CustomTagHandler.OnCommentClickListener() {
             @Override
             public void onCommentatorClick(View view, User commentator) {
                 //点击评论者
@@ -189,7 +249,7 @@ public class NewsDetailActivity extends Activity {
             @Override
             public void onContentClick(View view, User commentator, User receiver) {
                 //点击评论内容
-                if (commentator != null && commentator.mId == sUser.mId) { // 不能回复自己的评论
+                if (commentator != null && commentator.mId ==user.getmId() ) { // 不能回复自己的评论
                     return;
                 }
                 inputComment(view, commentator);
@@ -197,13 +257,6 @@ public class NewsDetailActivity extends Activity {
         }));
         mListView.setAdapter(mAdapter);
         mListView.addHeaderView(view);
-
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"click"+position,Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void inputComment(final View v) {
@@ -215,7 +268,25 @@ public class NewsDetailActivity extends Activity {
             @Override
             public void onCommitComment(String content,int position) {
                 mAdapter.notifyDataSetChanged();
-                Log.i("TAG",position+"");
+                User user= DataSupport.findFirst(User.class);
+                String smallCommenUrl = null;
+                if (receiver==null){
+                    smallCommenUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"+"-1"+"/"+position;
+                }else {
+                    smallCommenUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"
+                            +receiver.getmId()+"/"+position;
+                }
+                HttpTitleUtil.sendOkHttpRequest(smallCommenUrl, new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+
+                    }
+
+                    @Override
+                    public void onResponse(Call call, Response response) throws IOException {
+
+                    }
+                });
             }
         });
         InputMethodManager m=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -234,10 +305,13 @@ public class NewsDetailActivity extends Activity {
                 try {
                     JSONObject jsonObject=new JSONObject(str);
                     string= (String) jsonObject.get("content");
+                    count= (int) jsonObject.get("praise_num");
+                    IS_hit= (boolean) jsonObject.get("is_user_praise");
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
+                            lovecount.setText(count+"");
                             try {
                                 Thread.sleep(2000);
                                 requestComment(commentUrl);
@@ -292,6 +366,8 @@ public class NewsDetailActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setBlockNetworkImage(false);
     }
+
+
     private class MyWebViewClient extends WebViewClient {
 
         @Override
@@ -366,4 +442,5 @@ public class NewsDetailActivity extends Activity {
             progressDialog.dismiss();
         }
     }
+
 }

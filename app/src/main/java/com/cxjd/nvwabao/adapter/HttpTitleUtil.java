@@ -13,6 +13,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+import javax.xml.validation.TypeInfoProvider;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 

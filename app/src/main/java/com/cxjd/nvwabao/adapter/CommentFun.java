@@ -98,7 +98,7 @@ public class CommentFun {
 
         String hint;
         if (receiver != null) {
-            if (receiver.mId == NewsDetailActivity.sUser.mId) {
+            if (receiver.mId == user.getmId()) {
                 hint = "我也说一句";
             } else {
                 hint = "回复 " + receiver.mName;

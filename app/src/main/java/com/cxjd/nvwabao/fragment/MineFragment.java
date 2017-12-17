@@ -4,28 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewStub;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cxjd.nvwabao.ActivityNews.LoginActivity;
-import com.cxjd.nvwabao.ActivityNews.RegisterActivity;
+import com.cxjd.nvwabao.ActivityNews.MycenterActivity;
 import com.cxjd.nvwabao.R;
-import com.cxjd.nvwabao.adapter.HttpTitleUtil;
-import com.cxjd.nvwabao.adapter.MycenterAdapter;
 import com.cxjd.nvwabao.bean.User;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.litepal.crud.DataSupport;
 
 import java.util.List;
@@ -42,13 +31,11 @@ public class MineFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mine, container,false);
+        View mycenter=view.findViewById(R.id.shoucang_layout);
         button=view.findViewById(R.id.login);
-        listView=view.findViewById(R.id.myCenterlistview);
         useraccount=view.findViewById(R.id.user_acc);
         usernames=view.findViewById(R.id.user_names);
         initstate();
-        listView.addHeaderView(new ViewStub(getActivity()));
-        listView.addFooterView(new ViewStub(getActivity()));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,8 +43,13 @@ public class MineFragment extends Fragment{
                 startActivity(intent);
             }
         });
-        MycenterAdapter adapter=new MycenterAdapter(getActivity(),R.layout.mycenter_layout);
-        listView.setAdapter(adapter);
+        mycenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(), MycenterActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

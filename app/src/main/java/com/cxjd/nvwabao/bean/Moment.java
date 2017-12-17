@@ -22,6 +22,24 @@ public class Moment {
     public List<Comment> mComment; // 评论列表
     private int father_comment_id;
     private String replyPerson;
+    private int praise_num;
+    private boolean is_user_praise;
+
+    public boolean isIs_user_praise() {
+        return is_user_praise;
+    }
+
+    public void setIs_user_praise(boolean is_user_praise) {
+        this.is_user_praise = is_user_praise;
+    }
+
+    public int getPraise_num() {
+        return praise_num;
+    }
+
+    public void setPraise_num(int praise_num) {
+        this.praise_num = praise_num;
+    }
 
     public int getMomentId() {
         return momentId;

@@ -34,12 +34,15 @@
         <activity
             android:name=".ActivityNews.DragActivity"
             android:theme="@style/zhou" />
-        <activity android:name=".ActivityNews.LoginActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.RegisterActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.NewsDetailActivity"
-            android:theme="@style/zhou"/>
+        <activity
+            android:name=".ActivityNews.LoginActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.RegisterActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.NewsDetailActivity"
+            android:theme="@style/zhou" />
         <activity
             android:name=".Activity.People"
             android:theme="@style/zhou" />
@@ -64,6 +67,7 @@
         <activity
             android:name=".Activity.FoodListActivity"
             android:theme="@style/zhou" />
+        <activity android:name=".ActivityNews.MycenterActivity"></activity>
     </application>
 
 </manifest>

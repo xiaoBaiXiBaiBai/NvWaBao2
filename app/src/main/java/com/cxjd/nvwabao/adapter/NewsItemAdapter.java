@@ -58,7 +58,7 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
            holder.newsTitle.setText(titleBean.getTittle());
            Picasso.with(context).load(titleBean.getImageAddress()).placeholder(R.drawable.icon_test).resize(120,100).into(holder.imageView);
            this.position=position;
-           holder.imageView.setOnClickListener(new View.OnClickListener() {
+           holder.newsTitle.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
                    Intent intent=new Intent(context, NewsDetailActivity.class);

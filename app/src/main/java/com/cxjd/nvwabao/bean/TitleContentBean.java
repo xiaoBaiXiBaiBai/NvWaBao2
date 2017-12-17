@@ -10,13 +10,42 @@ public class TitleContentBean {
     private String tittle;
     private String content;
     private String url;
+    private int praise_num;
+    private boolean is_user_praise;
+    private int scan_num;
 
-    public TitleContentBean(int id, String imageAddress, String tittle, String content, String url) {
+    public int getScan_num() {
+        return scan_num;
+    }
+
+    public void setScan_num(int scan_num) {
+        this.scan_num = scan_num;
+    }
+
+    public int getPraise_num() {
+        return praise_num;
+    }
+
+    public void setPraise_num(int praise_num) {
+        this.praise_num = praise_num;
+    }
+
+    public boolean isIs_user_praise() {
+        return is_user_praise;
+    }
+
+    public void setIs_user_praise(boolean is_user_praise) {
+        this.is_user_praise = is_user_praise;
+    }
+
+    public TitleContentBean(int id, String imageAddress, String tittle, String content, String url, int praise_num, boolean is_user_praise) {
         this.id = id;
         this.imageAddress = imageAddress;
         this.tittle = tittle;
         this.content = content;
         this.url = url;
+        this.praise_num = praise_num;
+        this.is_user_praise = is_user_praise;
     }
 
     public TitleContentBean() {
