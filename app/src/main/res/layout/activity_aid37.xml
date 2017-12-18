@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="异物卡喉"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="食物、异物卡喉常见于进食或口含异物时嬉笑、打闹或啼哭而发生，尤其多见于儿童。由于食物或异物嵌顿于声门或落入气管，造成病人窒息或严重呼吸因难，表现为突然呛咳、不能发音、喘鸣、呼吸急促、皮肤发紫，严重者可迅速出现意识丧失，甚至呼吸心跳停止。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救措施"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="遇到异物卡喉，一定要镇定，千万别拍背，这样会加重异物卡喉！学会“海姆立克急救法”！此法适用于2岁以上幼儿。\n具体步骤为：\n 1、确认患者被异物卡喉，如果还能咳嗽，就鼓励病人用力咳嗽。气道被梗阻的标准迹象是患者两手紧握喉咙，无法咳嗽，无法说话，嘴唇和指甲青紫，意识丧失，\n 2、立即叫专人呼叫120急救电话，告知病情和具体地点。\n 3、帮助患者站起来，站在病人背后；\n 4、用两手臂环绕病人腰部，一手握拳抵住肋骨下缘与肚脐之间，另一手抱住拳头辅助，用力往后冲击。如果病人是孕妇无法从腹部抱拳，则在两乳连线进行加压。\n 5、迅速用拳头向后上方挤压，就像尝试着把患者拎起离开地面，不要挤压肋骨，可能导致骨折，而且无法将异物排出。\n 6、重复上述动作，直至将异物排出。\n 7、如果异物仍然无法排出，或患者已丧失意识，迅速采取心肺复苏，直至急救人员赶到现场。\n 8、如果周围无人救援，自己也可以自救。上腹部迅速顶住硬的平台、桌面或椅背，反复用力顶压产生腹腔压力，直至将异物排出。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

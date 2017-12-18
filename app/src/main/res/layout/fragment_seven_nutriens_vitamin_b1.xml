@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素B1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素B1易溶于水，在空气和在酸性环境中较稳定，在中性和碱性环境中遇热容易破坏。因而在烹调时，食物中的维生素B1,可随着烹调温度的高低、时间的长短以及酸碱度的不同，其损失程度亦不同。
+\n\n         维生素B1可维持神经、消化、肌肉、循环系统的正常功能。维生素B1缺乏时丙酮酸不能进入三羧酸循环氧化，使组织中聚集丙酮酸、乳酸，从而影响机体的整个代谢过程。神经组织和心肌因缺乏维生素B1会影响能量供给，引起代谢和机能的紊乱。维生素B1的缺乏症是脚气病，最初的症状是疲乏、下肢无力、肌肉酸痛、头痛、失眠、烦躁、食欲减退，以后逐渐出现对称性周围神经炎。维生素B1严重缺乏者，会出现心脏病，有心悸、气急、胸闷、心动过速及水肿等症，如不及时治疗，短期内水肿迅速增加，心脏扩大，会引起急性心力衰竭甚至死亡。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         谷类、豆类和硬果类含有丰富的维生素B1。谷类的维生素B1,主要存在于谷皮和谷胚内，因而吃粗制的糙米和带麸皮的面粉能摄入较多的维生素B1。干酵母中也含丰富的维生素B1。动物内脏、瘦肉和蛋黄内维生素B1的含量也较丰富。
+\n\n         人体对维生素B1的需要量与糖代谢和热能代谢有关。每日热量需要越多，膳食中糖含量越高，则维生素B1的需要量也越多。维生素B1的供给量标准，一般按每1000千卡热量需要0.5毫克维生素B1来计算。如成年男子中等体力劳动者每日需要热量3000千卡，则维生素B1的需要量为1.5毫克。儿童、孕妇和乳母可适当增加供应量。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

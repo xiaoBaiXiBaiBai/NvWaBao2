@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="南瓜+红枣、红豆、牛肉=补脾益气、解毒止痛\n\n南瓜+莲子=通便、排毒、减肥\n\n南瓜+绿豆=保健作用\n\n南瓜+猪肉=保健，预防糖尿病\n\n鯰鱼+豆腐= 充分吸收营养\n\n牛肉+南瓜=健胃益气\n\n牛肉+生姜=驱寒、治腹痛\n\n牛肉+土豆=保护胃黏膜\n\n牛肉+香菇=易于消化和吸收\n\n糯米+红豆=改善脾虚腹泻和水肿\n\n糯米+红枣=温中祛寒\n\n藕+鳝鱼=滋阴血、健脾胃\n\n藕+猪肉=健胃、壮体\n\n啤酒+牛奶=保护肝脏\n\n苹果+茶叶=保护心脏\n\n苹果+绿茶=防癌、抗老化\n\n苹果+香蕉=防止铅中毒\n\n苹果+腌制食品=防癌\n\n苹果+银耳=润肺止咳"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

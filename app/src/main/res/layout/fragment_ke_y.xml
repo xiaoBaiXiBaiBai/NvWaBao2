@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鸭蛋+甲鱼=引起肠胃不适\n\n鸭蛋+李子=中毒\n\n鸭梨+猪肉=伤肾脏\n\n鸭肉+板栗=中毒\n\n鸭肉+鳖肉=令人阳虚、水肿腹泻\n\n羊肉+半夏=影响营养成分吸收\n\n羊肉+茶=便秘\n\n羊肉+醋=性味相反，不宜同食\n\n羊肉+豆酱=功能相反，不宜同食\n\n羊肉+南瓜=胸闷腹胀，肠胃不舒\n\n羊肉+乳酪=产生不良反应\n\n羊肉+竹笋=会引起中毒\n\n杨梅+鳗鱼=中毒\n\n杨梅+生葱=气壅胸闷\n\n杨梅+鸭肉=死亡\n\n杨梅+猪肉=降低营养价值\n\n洋葱+蜂蜜=伤眼睛\n\n油菜+胡萝卜、南瓜=降低维生素C的吸收\n\n油菜+黄瓜=降低维生素C的吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

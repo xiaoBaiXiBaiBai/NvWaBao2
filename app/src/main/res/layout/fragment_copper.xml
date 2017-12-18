@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="铜制器皿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         铜制炊具虽然光亮美观，但经常使用对人体不利。铜本身虽不会使人中毒，但它会破坏食物中的维生素，加速维生素C的氧化。另外，铜在潮湿的空气中极易与空气中的二氧化碳和水发生化学反应，在炊具表面生一层绿色的铜锈，这种物质对人体有害，人食了铜的化合物，会引起急性中毒。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="铜绿对身体的危害"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         铜在潮湿的环境中容易生成的铜绿和空气中氧化产生的绿粉都是有毒物质，另外在烹调时因摩擦产生的铜和锡，同样对人体健康有害。如：北方地区冬天人们喜欢使用铜制火锅涮羊肉，如果使用前未将铜绿清除干净，这种有毒物质就会随食物一同进入人体，使人出现恶心、呕吐、腹痛等中毒症状。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="如何清除铜绿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         清洗铜锅时用盐水泡铜锅上的污渍，再用浸有姜汁的布擦拭效果更好。如果是水管等铜制器具生锈产生铜绿，可用量筒量取20毫升浓氨水放入烧杯中，再注入40毫升蒸馏水，用玻璃棒搅拌一下，配成氨水溶液，能与铜绿发生反应，生成可溶性的蓝色铜氨络合物，从而除去铜绿。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜用铜器盛放食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         醋与铜器不宜长久接触，否则产生铜绿，用生有铜绿的铜器盛放食品，或烹炒菜肴则易中毒。铜绿中毒后表现为溶血、少尿、休克、中枢神经抑制，重者死亡。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜用铜器盛酸性饮料"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         铜与酸性饮料中的二氧化碳作用产生碱式碳酸铜，与枸橼酸作用产生枸橼酸铜，这都是有毒物质，污染饮料后，味觉苦涩。人中毒后出现舌苔变黑、恶心、呕吐等消化道症状。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

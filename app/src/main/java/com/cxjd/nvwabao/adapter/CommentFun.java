@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -18,12 +19,16 @@ import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.Comment;
 import com.cxjd.nvwabao.bean.User;
 
+import org.litepal.crud.DataSupport;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 评论相关方法
  */
 public class CommentFun {
+    public  static int position1;
     public static final int KEY_COMMENT_SOURCE_COMMENT_LIST = -200162;
 
     /**
@@ -35,13 +40,14 @@ public class CommentFun {
      * @param btnComment
      * @param tagHandler
      */
-    public static void parseCommentList(Context context, ArrayList<Comment> mCommentList, LinearLayout commentList,
+    public static void parseCommentList(Context context,int position, List<Comment> mCommentList, LinearLayout commentList,
                                         View btnComment, Html.TagHandler tagHandler) {
         if (btnComment != null) {
             btnComment.setTag(KEY_COMMENT_SOURCE_COMMENT_LIST, mCommentList);
         }
         TextView textView;
         Comment comment;
+        position1=position;
         int i;
         String content;
         for (i = 0; i < mCommentList.size(); i++) {
@@ -87,12 +93,12 @@ public class CommentFun {
     public static void inputComment(final Activity activity, final ListView listView,
                                     final View btnComment, final User receiver,
                                     final InputCommentListener listener) {
-
+         final User user= DataSupport.findFirst(User.class);
         final ArrayList<Comment> commentList = (ArrayList) btnComment.getTag(KEY_COMMENT_SOURCE_COMMENT_LIST);
 
         String hint;
         if (receiver != null) {
-            if (receiver.mId == NewsDetailActivity.sUser.mId) {
+            if (receiver.mId == user.getmId()) {
                 hint = "我也说一句";
             } else {
                 hint = "回复 " + receiver.mName;
@@ -117,10 +123,10 @@ public class CommentFun {
                 }
                 btn.setClickable(false);
                 final long receiverId = receiver == null ? -1 : receiver.mId;
-                Comment comment = new Comment(NewsDetailActivity.sUser, content, receiver);
+                Comment comment = new Comment(user, content, receiver);
                 commentList.add(comment);
                 if (listener != null) {
-                    listener.onCommitComment();
+                    listener.onCommitComment(content,position1);
                 }
                 dialog.dismiss();
                 Toast.makeText(activity, "评论成功", Toast.LENGTH_SHORT).show();
@@ -145,8 +151,7 @@ public class CommentFun {
 
     public static class InputCommentListener {
         //　评论成功时调用
-        public void onCommitComment() {
-
+        public void onCommitComment(String content,int position) {
         }
     }
 
@@ -200,5 +205,6 @@ public class CommentFun {
 
         void onDismiss();
     }
+
 
 }

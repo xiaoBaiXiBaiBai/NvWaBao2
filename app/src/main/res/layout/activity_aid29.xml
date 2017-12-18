@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="突发耳聋"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="是指突然发生的、原因不明的神经性听力损失。主要临床表现为单侧听力下降，可伴有耳鸣、耳堵塞感、眩晕、恶心、呕吐等。 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、使病人安静休息，情绪不要急躁。\n2、当疑是炎症或免疫因素造成突发性耳聋时，使用糖皮质激素。\n3、到医院进行治疗，并且要对症下药。\n4、混合氧及高压氧治疗可提高血氧分压，改善耳蜗的氧供状态。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、养成良好的生活、加强锻炼，增强体质，勿过度劳累，注意劳逸结合，保持身心愉悦。避免感冒，预防病毒性感冒。\n2、保持均衡饮食，多吃新鲜蔬果。减少烟、酒、咖啡等带来的刺激。\n3、远离噪音。噪音会损害耳朵功能，若长期处在噪音环境下，应做好耳朵的防护措施。\n4、忌挖掏耳屎（盯聍）。少量盯聍有助耳朵健康，多余的盯聍会定期随运动排出体外，所以不必经常挖掏耳朵。\n5、一侧耳聋后，特别应该保护健侧耳的听力：①避免接触噪声；②避免耳毒性药物，比如庆大霉素、链霉素和消炎痛；③避免耳外伤和耳部的感染。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

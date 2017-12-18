@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素D也是脂溶性维生素。维生素D种类繁多，其中最重要的是维生素D2和D3。
+\n\n         维生素D2是由植物油、藻类植物和酵母中的麦角固醇，经紫外线照射而形成的。
+\n\n         维生素D在人体内只有转变为活性的代谢物后才能发挥生理作用。它的主要生理功能是促进钙、磷在肠道内的吸收，有利于钙、磷的沉着，促进骨组织钙化。维生素D缺乏症主要表现为肠道吸收钙磷的能力降低，血清中碱性磷酸活性增高，钙、磷下降，致使钙、磷不能在骨骼间质中沉积，使骨样组织不易转化为骨质。儿童会出现佝偻病，成人会患软骨病，严重者血钙下降，引起手足搐搦症。
+\n\n         由于食物不是维生素D的主要来源，在一般膳食条件下，只要经常接触阳光，即不会产生维生素D的缺乏症。只有婴幼儿以及孕妇、乳母生理需要量增加时，才需另外补充维生素D。一般两岁以下的婴幼儿每天摄人量为300~400国际单位，儿童、孕妇和乳母每天需要量为400~800国际单位(1国际单位维生素D=0.025微克纯维生素D3)。长时间在地下工作的人员和北方室外活动较少的幼儿，因日照较少，易产生维生素D缺乏症，因此除给补充维生素D 外，还要经常照射紫外线。
+\n\n         人体摄人过量的维生素D,也会中毒，出现厌食、恶心、腹泻、多尿及烦渴等症状，并引起钙、磷含量增高，肾小管及其他软组织钙化和肾功能减退。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

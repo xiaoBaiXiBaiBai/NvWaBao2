@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="心脏骤停"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="心脏骤停是指心脏射血功能的突然终止，大动脉搏动与心音消失，重要器官（如脑）严重缺血、缺氧，导致生命终止。这种出乎意料的突然死亡，医学上又称猝死。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_margin="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="引起心跳骤停最常见的是心室纤维颤动。若呼唤病人无回应，胸腹部没有起伏的呼吸运动。如触颈动脉和股动脉无搏动，心前区听不到心跳，可判定病人心跳骤停。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="心脏骤停的抢救必须争分夺秒，千万不要坐等救护车到来再送医院救治。要当机立断采取以下急救措施进行心肺复苏：\n （1）胸外心脏按压：解开病人衣服暴露胸廓，按压双乳连线中间点，双手叠抠，腕肘关节伸直，垂直用力，以每分钟100-120次的速度连续按压30次；\n （2）紧接着检查口鼻异物，托下颌，压额头，使下颌上翘，头部后仰，有利于通气；迅速清除咽部呕吐物；同时嘴包嘴，做口对口人工呼吸2次。如此心脏按压和人工呼吸交替进行，直至抢救成功。\n （3）若发现病人脸色转红润，呼吸心跳恢复，能摸到脉搏跳动，瞳孔回缩正常，说明抢救有效。\n （4）头敷冰袋降温，避免大脑缺血水肿，脑神经损伤加重。\n （5）急送医院救治。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、胸廓按压速度不能低于100次/分钟，不能高于120次/分钟；\n2、胸廓按压的深度不能浅于5cm，不能深于6cm。\n3、如果现场有心脏除颤仪，需要立即除颤，不可先按压，再除颤。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="猪肉+乌梅=会引起中毒\n\n猪肉+鳖肉=引起肠胃不适\n\n猪肉+茶=易产生便秘\n\n猪肉+豆类=影响营养吸收，腹胀\n\n猪肉+鲫鱼=有损健康\n\n猪肉+田螺=易伤肠胃\n\n猪肉+羊肝=产生怪味\n\n竹笋+豆腐=易生结石\n\n竹笋+红糖=生成有害物质\n\n竹笋+山楂=破坏维生素C\n\n竹笋+鹧鸪肉=腹胀\n\n紫菜+柿子=影响钙的吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -3,7 +3,6 @@ package com.cxjd.nvwabao.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,8 @@ import com.cxjd.nvwabao.bean.ListView;
 import java.util.List;
 
 /**
+ * 24小时养生ListView适配器
+ *
  * Created by 李超 on 2017/12/3.
  */
 
@@ -39,16 +40,15 @@ public class ListViewAdapter  extends ArrayAdapter<ListView> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        //获取当前项的对象实例
         ListView listView = getItem(position);
-       // View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
-
-        View view;
+        View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
         if (convertView == null){
             view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
         } else {
             view = convertView;
         }
-        TextView itemName = view.findViewById(R.id.fragment_listview_item_name);
+        TextView itemName = (TextView) view.findViewById(R.id.fragment_listview_item_name);
         itemName.setText(listView.getName());
         return view;
     }

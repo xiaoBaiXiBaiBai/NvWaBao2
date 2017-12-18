@@ -3,6 +3,6 @@
 
     <corners android:radius="2dp" />
 
-    <solid android:color="@color/bg_focus" />
+    <solid android:color="@color/deepskyblue" />
 
 </shape>

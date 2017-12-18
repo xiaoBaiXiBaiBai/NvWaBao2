@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="食物相生相克速查表"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            />
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+
+           <ImageButton
+               android:background="@color/white"
+               android:id="@+id/imageButton_xiangsheng"
+               android:src="@drawable/xiangsheng_press"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+
+
+            <ImageButton
+            android:background="@color/white"
+            android:id="@+id/imageButton_xiangke"
+            android:src="@drawable/xiangke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/left_shengandke_fragment"
+            android:name="com.cxjd.nvwabao.fragment.findFunctions.FourAndFive.LeftFourAndFive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            />
+
+        <FrameLayout
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:id="@+id/right_shengAndKe_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="14">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

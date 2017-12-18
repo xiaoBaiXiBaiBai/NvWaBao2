@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="番茄+黄瓜=破坏维生素C\n\n番茄+南瓜=破坏维生素C\n\n番茄+鱼肉=抑制铜的释放量\n\n番茄+猪肝=破坏维生素C\n\n蜂蜜+韭菜=腹泻"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

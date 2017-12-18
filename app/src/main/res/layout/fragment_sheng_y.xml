@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鸭蛋+银耳、黑木耳=滋肾补脑\n\n鸭肉+桂花=滋阴补虚、化痰散淤、利尿消肿\n\n鸭肉+山药=补阴养肺\n\n鸭肉+酸菜=滋阴养胃、清肺补血、利尿消肿\n\n羊肉+生姜=可治腰背冷痛、四肢风湿疼痛等\n\n杨梅+盐=可使味道鲜美\n\n洋葱+大蒜=抗癌\n\n洋葱+火腿=防止有害物质生成\n\n洋葱+鸡蛋=提高人体对维生素C和维生素E的吸收率\n\n银耳+冰糖=滋补润肺\n\n油菜+豆腐=清肺止咳\n\n油菜+鸡肉=强化肝脏、美化肌肤\n\n油菜+虾仁=消肿散血、清热解毒\n\n油菜+鲜蘑=预防便秘，美容\n\n油菜+香菇=防便秘\n\n玉米+鸽肉=防治神经衰弱\n\n玉米+鸡蛋=防胆固醇过高\n\n玉米+山药=获得更多营养\n\n玉米+松仁=祛病强身，防癌、抗癌\n\n玉米+小麦、黄豆=提高对蛋白质的吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

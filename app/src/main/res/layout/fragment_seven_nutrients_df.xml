@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="膳食纤维"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         膳食纤维是一种多糖，它既不能被胃肠道消化吸收，也不能产生能量。因此，曾一度被认为是一种“无营养物质”而长期得不到足够的重视。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         然而，随着营养学和相关科学的深入发展，人们逐渐发现了膳食纤维具有相当重要的生理作用。以致于在膳食构成越来越精细的今天，膳食纤维更成为学术界和普通百姓关注的物质，并被营养学界补充认定为第七类营养素，和传统的六类营养素——蛋白质、脂肪、碳水化合物、维生素、矿物质与水并列。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="（一）分类与作用"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         根据是否溶解于水，可将膳食纤维分为两大类：膳食纤维=可溶性膳食纤维+不可溶性膳食纤维，“可溶、不可溶，作用各不同”。\n\n1.可溶性膳食纤维\n来源于果胶、藻胶、魔芋等。\n\n2.不可溶性膳食纤维\n最佳来源是全谷类粮食，其中包括麦麸、麦片、全麦粉及糙米、燕麦全谷类食物、豆类、蔬菜和水果等。\n\n3.膳食纤维\n如果将上述两者结合起来，膳食纤维的作用可列出长长的一串：\n（1）抗腹泻作用，如树胶和果胶等；\n（2）预防某些癌症，如肠癌等；\n（3）治疗便秘；\n（4）解毒；\n（5）预防和治疗肠道憩室病；\n（6）治疗胆石症；\n（7）降低血液胆固醇和甘油三酯；\n（8）控制体重等；\n（9）降低成年糖尿病患者的血糖。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="（二）膳食纤维过少与疾病"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         我国人民的膳食素以谷类食物为主，并辅以蔬菜果类，所以本无膳食纤维缺乏之虞，但随着生活水平的提高，食物精细化程度越来越高，动物性食物所占比例大为增加。一些大城市居民膳食脂肪的产热比例，已由几十年前的20%～25%增加至目前的40%～45%，而膳食纤维的摄入量却明显降低，所谓“生活越来越好，纤维越来越少”。由此导致一些所谓“现代文明病”，如肥胖症、糖尿病、高脂血症等，以及一些与膳食纤维过少有关的疾病，如肠癌、便秘、肠道息肉等发病率日渐增高。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

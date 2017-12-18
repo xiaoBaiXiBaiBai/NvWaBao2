@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="月经不调"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/onehundred_y_1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="遗精"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="阳痿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="夜盲症"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="远视眼"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="咽炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="牙周病"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="牙痛"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="咽喉肿痛"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_y_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

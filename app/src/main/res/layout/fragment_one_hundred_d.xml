@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="带下病"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/onehundred_d_1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胆石症"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_d_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="癫痫"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_d_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胆囊炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_d_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="动脉硬化"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_d_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="低血糖"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_d_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

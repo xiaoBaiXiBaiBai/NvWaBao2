@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cxjd.nvwabao.ActivityNews.DetailActivity;
 import com.cxjd.nvwabao.ActivityNews.NewsDetailActivity;
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.TitleContentBean;
@@ -54,16 +53,17 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
            final TitleContentBean titleBean=titleBeanList.get(position);
            holder.newsTitle.setText(titleBean.getTittle());
-           Picasso.with(context).load("http://"+titleBean.getImageAddress()).placeholder(R.drawable.icon_test).resize(120,100).into(holder.imageView);
+           Picasso.with(context).load(titleBean.getImageAddress()).placeholder(R.drawable.icon_test).resize(120,100).into(holder.imageView);
            this.position=position;
-           holder.imageView.setOnClickListener(new View.OnClickListener() {
+           holder.newsTitle.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
                    Intent intent=new Intent(context, NewsDetailActivity.class);
                    intent.putExtra("content",titleBean.getUrl());
+                   intent.putExtra("pageId",titleBean.getId());
                    context.startActivity(intent);
                }
            });

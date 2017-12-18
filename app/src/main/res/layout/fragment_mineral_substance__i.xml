@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="碘"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         碘是人体正常代谢中不可缺少的物质，它在人体内虽然含量只有25毫克左右，但却有很重要的生理功能。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         碘是组成甲状腺素的重要成分。甲状腺素能调节人体的热能代谢和三大营养素的合成与分解作用，促进机体的生长发育。体内缺碘，会给甲状腺素的合成带来困难，使甲状腺组织代偿性增生，出现甲状腺肿大。孕妇缺碘会使胎儿生长迟缓，造成智力低下或痴呆，甚至发生克汀病。饮食和饮水缺碘是引起地方性甲状腺肿的基本因素。饮水含碘量过高，也会引起甲状腺肿大。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体所需的碘，主要来源于饮水、食物和食盐。海洋中的海带、紫菜，海产鱼、虾、蟹和海盐都含有丰富的碘。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         一般成年人每日碘的需要量为100~ 150 微克; 孕妇、乳母和青少年供应量可适当增加。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

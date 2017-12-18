@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="指甲受挫"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="在日常生活中，常有指甲被挤伤的意外事故发生。但只要甲床完好，将伤口处理好避免感染，新的指甲能很快生长出来。 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、指甲被挤掉时，指甲如未完全脱落，不要强行将其剥离。最重要的是防止细菌感染。把受伤的手指，用纱布、绷带包扎固定，再用冰袋冷敷。然后把伤肢抬高，立即去医院救治。\n2、需要用手工作的指甲破裂者，比如文员、运动员，在治疗期间，可用指套保护手指末节，但要定期打开查看，以免引起感染。\n3、如果因外伤引起甲床下出血，血液集聚使甲床根部隆起产生巨大压力，疼痛难忍不能入睡时，可在淤血处用烧红的缝衣针扎一小孔，将积血排出，消毒后加压包扎指甲。注意：不要扎的太深，否则会破坏甲床。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、手指甲被挤掉后，如不能立即去医院治疗，须用酒精对局部进行消毒，并用清洁纱布包裹保护，不建议局部使用抗生素。这只是紧急处理，要尽快去医院诊治，等待时间不能超过8小时。\n2、指甲缝破裂出血，不建议使用蜂蜜涂抹，糖分高容易使细菌滋生。\n3、平时不要把指甲剪得太“秃”，否则会造成指甲缝破裂出血。\n4、指甲沟如果出现肉刺，直接撕掉，很容易导致甲沟感染，甚至面临拔甲的危险。应该用清洁的指甲剪去除肉刺。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="蛤蜊+橘子=气滞生痰\n\n蛤蜊+芹菜=腹泻\n\n蛤蜊+田螺=中毒\n\n黑木耳+田螺=有损肠胃\n\n胡椒+芥末=刺激眼睛，引发胃肠炎疾病\n\n胡椒+酒=导致胃肠炎\n\n胡萝卜+白萝卜=降低营养价值\n\n胡萝卜+醋=破坏胡萝卜素\n\n胡萝卜+番茄=不利于维生素吸收\n\n胡萝卜+酒=产生毒素\n\n胡萝卜+辣椒=破坏维生素C\n\n胡萝卜+山植=破坏维生素C\n\n花椒+羊肉=便秘\n\n黄豆+酸奶=影响钙的消化吸收\n\n黄豆+虾皮=影响钙的消化吸收\n\n黄瓜+菠菜=破坏维生素C\n\n黄瓜+菜花=破坏维生素C\n\n黄瓜+番茄=破坏维生素C\n\n黄瓜+花生=腹泻\n\n黄瓜+小白菜=破坏维生素C\n\n黄花菜+驴肉=引发中毒\n\n黄鱼+荞麦面=消化不良"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="人工呼吸"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="定义"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="人停止呼吸几分钟，就会死亡；大脑即使缺氧短短4分钟，也会引致永久性的损害，因此应尽快把空气送入肺内。人工呼吸是指人为地帮助伤病患者进行被动呼吸活动，使患者体内外进行气体交换，达到促使患者恢复自主呼吸的救治目的。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="口对口呼吸法：\n1、使病人仰卧，头后仰，将衣领解开，腰带放松；\n2、清除病人口鼻内的异物和污物，保持呼吸道通畅；\n3、抢救者一手放在患者前额，并用拇指和食指捏住患者的鼻孔，另一手托起颌部使患者头部尽量往后仰，保持气道开放状态，然后深吸一口气，张开口以封闭患者的嘴周围（婴幼儿可连同鼻一块包住），向患者口内连续吹气两次，每次吹气时间为1至1.5秒，吹出1/3左右的气，直到患者胸廓抬起，停止吹气，松开贴紧患者的嘴，并放松捏住鼻孔的手，将脸转向一旁，用耳听是否有气流呼出，再深吸一口新鲜空气为第二次吹气做准备，当患者呼气完毕，即开始下一次同样的吹气。\n\n口对鼻呼吸法：当患者有口腔外伤或其他原因导致口腔不能打开时，可采用口对鼻吹气。与上述方法不同的是，用手托住患者下颌并使其口唇严密封闭，用口包住患者鼻部，用力向患者鼻孔内吹气，吹气和观察方法同上。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、清除病人口、鼻内的泥、痰等肮脏异物，如有假牙亦应取出，以免假牙脱落坠入气管。\n2、仰卧人工呼吸时必须拉出患者舌头，以免舌头后缩阻塞呼吸。\n3、对怀孕女性或者胸、背部有外伤和骨折者，应选择适当姿势，防止造成新的伤害。\n4、一般情况下应就地做人工呼吸，尽量少搬动。\n5、将患者置于空气流通的场所。使其头后仰，可在肩下垫枕头或其他物品，使其气管直顺。\n6、人工呼吸要有节奏（约每分钟 20 次），并耐心地进行，直到恢复自动呼吸为止。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

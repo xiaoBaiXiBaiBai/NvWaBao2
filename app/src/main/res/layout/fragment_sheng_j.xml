@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鸡蛋+豆腐=促进钙的吸收\n\n鸡蛋+糯米酒=营养更全面\n\n鸡蛋+紫菜=有利于吸收营养\n\n鸡肉+粟子=增强人体的造血机能\n\n鸡肉+荠菜=滋阴补气、减肥美容\n\n鸡肉+豌豆=有利于吸收蛋白质\n\n鸡肉+竹笋=暖胃益气\n\n鲫鱼+花生=有利于吸收和利用鲫鱼营养\n\n鲫鱼+木耳=补充核酸，抗老化\n\n甲鱼+大米=用于阴虚痨热、脱肛、脾肿大者\n\n姜+醋=减缓恶心、呕吐症状\n\n姜+红糖=发汗祛寒\n\n姜+皮蛋=延缓老化\n\n茭白+芹菜=降血压\n\n芥末+菠菜=改善贫血\n\n芥末+海鲜=排毒养颜\n\n芥末+西芹=增强免疫力\n\n韭菜+鸡蛋=补肾，行气，止痛\n\n橘子+玉米=有利于吸收维生素\n\n蕨菜+鸡蛋、肉类=营养均衡"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="铬和镍"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         铬和镍也是人体不可缺少的微量元素，它们有激活胰岛素和降低血糖的作用。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         胰岛素能把葡萄糖转换成能量或转为贮藏形式的糖原，若体内不分泌胰岛素，糖代谢就无法进行，即可能导致糖尿病。铬和镍在大白菜、小米、玉米和南瓜中的含量都比较丰富。一般每人每日需铬约2.5 毫克，镍约0.25毫克。微量元素是人体所必需的，在人体内微量元素之间相互影响着，人体缺乏必需的微量元素会产生缺乏症,摄入量过多也会产生中毒症，因此，微量元素的摄入要适中。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

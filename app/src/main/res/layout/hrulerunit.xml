@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="3dp"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ruler"
+        />
+
+    <TextView
+        android:id="@+id/hrulerunit"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

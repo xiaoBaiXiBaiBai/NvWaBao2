@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="豌豆+富含氨基酸的食物=充分吸收豌豆的营养\n\n豌豆+红糖=健脾、通乳、利尿，补益气血\n\n豌豆+面粉=提高面粉的营养价值\n\n豌豆+蘑菇=消除油腻引起的食欲不佳\n\n豌豆+虾仁=提高营养价值\n\n莴苣+蒜苗=防治高血压\n\n乌鸡+红枣=补血"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="失血休克"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="大量失血引起的休克称为失血性休克。常见于外伤引起的出血、消化道溃疡出血、妇产科疾病所引起的出血等。短期内，丢失超过总血量的30%～35%会发生休克，大约是1000～1500ml的量，约合2～3罐可乐的量。休克典型表现是：皮肤苍白、冰凉、湿冷（常常有花斑），心跳过快或过慢，呼吸急促，颈动脉搏动减弱，尿量减少，神志改变，血压下降等。有时候，受惊吓引起的晕厥等，并不是休克。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救口诀"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、复苏心肺：有严重休克的病人，往往已经出现心跳呼吸停止，这时候需要立即开始心肺复苏。\n2、立即止血：必须立即确定出血部位，最有效的方法是压迫止血，可用清洁的棉垫或毛巾，直接压迫伤口。\n3、迅速输血：紧急处理后，需立即将病人转运到医院，最短时间内补充丢失的血液。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、在用担架或平车转运时，病人的头部应靠近后面的抬担架者，这样后面的抬担架者可以对休克病人随时密切观察，以应对病情恶化。\n2、在将病人送往医院的途中，病人头部的朝向应与交通工具(救护车、飞机等等)前进的方向相反，以免由于加速作用导致病人脑部进一步失血。\n3、失血性休克，大脑处于缺血缺氧状态，使用冰袋降低头部温度，可以有效降低大脑的损伤程度。\n4、如休克者是大月份孕妇，应让她取侧卧位，否则胎儿以及巨大的子宫会压迫血管，致使回心血量减少，加重休克。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

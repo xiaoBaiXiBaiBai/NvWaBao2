@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="塑料制品"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         名色各样的塑料制品为人们的日常生活提供了方便，但并非所有的塑料制品都能用来装食品。目前，我国使用的塑料容器，主要是聚乙烯、聚丙烯和聚氯乙烯三种，聚氯乙烯是有毒的，其氯乙烯单体易溶于水、油、酸、碱中，所以绝不能用聚氯乙烯塑料桶盛装食品。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="如何鉴别劣质塑料制品"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         不合格的食品塑料制品都有一些特点，首先就是被染色的，红色、黑色、蓝色、深色等; 再有就是有异味，是用废塑料或者用工业原料生产的，因为添加了一些化学物质，常有异味; 还有就是对着光线或阳光看里边有杂质的，废料做的通常有黑点、污点、油污等。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="塑料制品的危害性"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         虽然，并不是所有的塑料制品都含有毒物质，但是，现在很多的劣质塑料材料来源很复杂，有些是废旧塑料、医疗垃圾甚至农药瓶，消费者无法辨认，使用起来也存在很大隐患。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜用塑料桶长期盛油"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         市场上出售的塑料桶多为聚乙烯制成，虽然在试验中证明无毒，短时间盛油无害，但是聚乙烯能洛于油中，如果长期盛油，就会溶出有毒塑料单体和杂质，使塑料软化，食油变色变质，甚至出现一股刺鼻的异味。所以，不要用塑料桶长期盛油。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜用塑料桶长期盛酒"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         聚乙烯塑料有一定的透气性，用来盛酒和其他芳香类食品，时间也不宜过长，否则，会使食品的风味下降。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="不锈钢餐具"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         不锈钢是由铁铬合金再掺入其他一些微量元素而制成的。由于其金属性能良好，耐锈蚀，制成的器皿美观耐用。因此，越来越多地被用来制造厨具。但是，如果使用不当，不锈钢中的微量金属元素同样会在人体中慢慢累积，危害人体健康。所以使用不锈钢厨具、餐具时必须了解宜忌事项。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="用不锈钢炊具烹炒时不宜放酒"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         使用不锈钢炊具进行高热烹炒时使用酒料，酒中的乙醇可将铬、镍游离溶解。铬进入人体后形成的GTF具有生物活性，在胰岛素存在时，可刺激人体内的脂肪垫大量吸收葡萄糖，使二氧化碳产量增高，造成机体代谢素乱。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌长时间盛放强酸或强碱性食品"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         不可长时间盛放盐、酱油、醋、菜汤等，因为这些食品中含有很多电解质，如果长时间盛放，则不锈钢同样会像其他金属一样，与这些电解质起电化学反应，使有毒的金属元素被溶解出来。不要用不锈钢餐具长时间盛放强酸食品，如鱼、肉、海产品等，以及强碱性食品，如蔬菜、瓜果、大豆等，以防铬、镍等金属元素溶出危害健康。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用不锈钢锅煲中药"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         切忌用不锈钢锅煲中药，因为中药含有多种生物碱、有机酸等成分，特别是在加热条件下，很难避免不与之发生化学反应，而使药物失效，甚至生成某些毒性更大的络合物。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用强碱或强氧化性试剂洗涤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         切勿用强碱性或强氧化性的化学药剂如小苏打、漂白粉、次氯酸钠等进行洗涤。因为这些物质都是强电解质，会与不锈钢起电化学反应。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

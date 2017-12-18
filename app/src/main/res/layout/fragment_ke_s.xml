@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="山植+海鲜=不易消化,引起便秘、腹痛、恶心\n\n山植+黄瓜=破坏维生素C\n\n山植+南瓜=破坏维生素C\n\n鳝鱼+菠菜=腹泻\n\n鳝鱼+狗肉=易上火、旧病复发\n\n鳝鱼+金瓜=性质相克食物\n\n蒜+蜂蜜=导致便秘\n\n蒜+芒果=导致肠胃不适\n\n蒜+羊肉=导致体内燥热\n\n笋瓜+番茄=破坏维生素C\n\n笋瓜+山植=破坏维生素C"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

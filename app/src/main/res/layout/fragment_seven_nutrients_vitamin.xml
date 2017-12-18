@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素与人体健康"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素是一类低分子有机化合物，在体内含量很少。它既不是构成身体组织的原料，也不是供应能量的物质，但它却是维持机体正常生命活动所必需的营养素。有人称维生素为“生物活性物质”。当机体缺乏某种维生素时，就可能发生代谢障碍，影响人的生理功能，甚至导致疾病。长期轻度缺乏维生素，会使劳动能力下降，并对传染病的抵抗力降低。目前已知的维生素有20多种，它们多数不能在体内合成，必须由食物供给。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         按溶解性不同可将维生素分为两类:\n\n         一类是脂溶性维生素，有维生素A、D、E、K 等，它们溶于脂肪及脂肪剂，不溶于水; \n\n         另一类是水溶性维生素，主要是维生素C和维生素B族(如硫胺素、核黄素、尼克酸、叶酸和维生素等B12) 它们溶于水。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

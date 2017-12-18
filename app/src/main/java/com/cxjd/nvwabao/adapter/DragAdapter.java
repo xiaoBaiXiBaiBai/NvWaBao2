@@ -131,7 +131,7 @@ public class DragAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> i
             ((DragViewHolder) holder).tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Log.i("TAG",position+"");
+
                 }
             });
         }

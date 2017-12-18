@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="白菜+兔肉=腹泻或呕吐\n\n白果+鳗鱼=身体不适\n\n白糖+ 贝类=妨碍铜元素的吸收\n\n白糖+葡萄干=抑制铜的吸收和代谢\n\n菠菜+豆腐=不利于钙的吸收，形成肾结石\n\n菠菜+ 乳酪= 影响钙质吸收\n\n菠菜+瘦肉=影响铜的吸收\n\n菠菜+虾皮= 影响钙质吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

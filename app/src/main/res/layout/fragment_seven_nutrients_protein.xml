@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="蛋白质"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         蛋白质是我们饮食的重要组成部分。\n\n         我们的身体在生长的过程中必须制造和储存大量的蛋白质。因此在生长期，身体对蛋白质的需求量很大。即使是在非生长期，人体内每种蛋白质都是有其一定的存在期限的，必须及时得到补充。因此，人体对蛋白质的需求永无止境。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="膳食蛋白质和人体内的蛋白质"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         组成蛋白质的所有氨基酸中，有8种被认为是必需的，因为它们不能为我们人体自身所产生，而必须通过食物来获取。而其余的被认为是“非必需的”，因为如果需要的话，我们的身体可以制造足量的此类氨基酸。不过，通过多样而均衡的饮食，这些氨基酸是很容易为人体所获取的。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n         通过吃各种不同的食物，包括谷类和豆类，你可以取你所需要的所有氨基酸。有各自不同饮食文化的人们以及那些严格的素食主义者(不吃任何动物食品的人)，通过食用含有各种植物性蛋白的食物，包括豆类、玉米、大米和其他麦粮，来满足自己在数量上和种类上对蛋白质的需求。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+            android:textSize="15dp"
+            android:text="\n         如果过量食用高蛋白食品如肉类和奶制品，会使得人体在吸收蛋白质的同时吸收过量的饱和脂肪，这也就增加了冠心病和某些癌症的发病率。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n         如果摄入蛋白质太少会怎么样呢？蛋白质缺乏在成人和儿童中都有发生，但处于生长阶段的儿童更为敏感。蛋白质的缺乏常见症状是代谢率下降，对疾病抵抗力减退，易患病，远期效果是器官的损害，常见的是儿童的生长发育迟缓、营养不良、体质量下降、淡漠、易激怒、贫血以及干瘦病或水肿，并因为易感染而继发疾病。。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n         专家对蛋白质的摄入量的建议是基于人的年龄来给出的,同时，孕妇和哺乳期妇女比普通的成年人对蛋白质的需求量稍大些。专家给出的摄入量建议基本可以满足所有的健康人群对蛋白质的需求。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n         蛋白质的最佳来源是瘦肉和禽肉、鱼、低脂奶制品和鸡蛋。。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

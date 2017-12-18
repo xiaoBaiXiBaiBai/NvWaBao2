@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="西瓜+冰淇淋=腹泻\n\n西瓜+海虾=呕吐，头晕、恶心、腹痛、腹泻\n\n西瓜+羊肉=伤元气\n\n西瓜+油果子=呕吐\n\n西瓜+鱼肉=降低锌的吸收\n\n虾+金瓜=功能相克食物\n\n虾+维生素C=可致砷中毒\n\n虾等海味食品+洋葱、菠菜、竹笋=形成草酸钙结石\n\n苋菜+鳖肉=难以消化\n\n苋菜+螃蟹=引发中毒\n\n香菇+鹌鹑肉、鹌鹑蛋=面生黑斑、长痔疮\n\n香蕉+芋头=会腹胀\n\n小米+杏仁=呕吐、泄泻\n\n杏仁+板栗=胃痛\n\n杏仁+猪肉=腹痛\n\n雪里蕻+醋=破坏胡萝卜素\n\n鳕鱼+香肠=伤害肝"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

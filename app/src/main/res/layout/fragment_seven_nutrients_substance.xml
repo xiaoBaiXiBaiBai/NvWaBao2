@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+    >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="人体内矿物质"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:text="         矿物质(mineral)，又称无机盐，是人体内无机物的总称。是构成人体组织和维持正常生理功能必需的各种元素的总称，是人体必需的七大营养素之一。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:text="         矿物质和维生素一样，是人体必必需的元素，矿物质是无法自身产生、合成的，每天矿物质的摄取量也是基本确定的，但随年龄、性别、身体状况、环境、工作状况等因素有所不同。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</RelativeLayout>

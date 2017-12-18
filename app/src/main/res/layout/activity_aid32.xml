@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="爆炸伤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="定义"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="炸伤是指由于各种爆炸性物体，如炮弹、水雷、手榴弹、烟花爆竹等爆炸后对人体所产生的损伤。爆炸伤的特点是程度重、范围广泛且有方向性，兼有高温、钝器或锐器损伤的特点。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="救治原则：\n（1）快抢快救，抢种有救：对于爆炸伤的急救和其他救治不一样的是，要尽快把病人抢先脱离危险境地，同时还要进行救护，比如用湿毛巾覆盖病人鼻部避免爆炸现场的烟雾损伤。\n（2）全面检查，科学分类：爆炸会导致全身多处损伤，在混乱之中要迅速判断损伤部位、孰轻孰重，优先处理心脑肺的损伤及血管损伤。\n\n救治程序：\n（1）通气：爆炸导致的冲击波和高温烟雾甚至有毒气体，都会对肺造成严重损伤，如出现呼吸停止，立即人工呼吸。\n（2）止血：如果有出血，迅速判断出血部位，进行止血。方法参见《急救手册：出血》。\n（3）包扎：对于任何部位的伤口，去除污染物后，用无菌或洁净纱布覆盖，不可擅自涂抹药水或药膏；对于眼睛外伤，尤其不能搓揉眼睛，不能擅自点眼药水。\n（4）固定：就地采用木板条、布带等物品，对可能有骨折的肢体进行固定，可以减少出血和疼痛，避免神经外伤。\n（5）转运：病人心跳呼吸恢复后，立即进行转运，到医院救治。搬运时维持病人轴向体位，不能弯折身体，运送过程避免颠簸，以免造成二次损伤。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

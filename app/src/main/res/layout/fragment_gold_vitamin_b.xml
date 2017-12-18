@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素B（Vitamin B）旧称维他命B，是B族维生素的总称，它们常常来自于相同的食物来源，如酵母等。属于水溶性维生素。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素B可以保护饮酒者的肝脏对肝功能来说最重要的营养成分不只是蛋白质，维生素也不可或缺。在肝脏内将淀粉转化成糖时它是不可缺少的营养素，营养素重新排列，合成新的物质(这称为代谢)；另外肝脏还要分解无用的物质和毒素。这些活动主要靠酶，酶在发挥作用时依靠的是维生素。因此当维生素缺乏时，肝脏就无法正常工作了。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         B族维生素富含于动物肝脏、瘦肉、禽蛋、牛奶、豆制品、谷物、胡萝卜、鱼、蔬菜等食物中。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

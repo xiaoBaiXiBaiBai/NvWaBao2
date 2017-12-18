@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素B2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素B2又称核黄素。它在中性和酸性溶液中比较稳定，耐热。遇碱和日光紫外线会使维生素B2受到破坏。在动物肝、肾及乳类、蛋类、豆类和酵母中含量较高，谷类和蔬菜中含量较少。
+\n\n         维生素B2,是人体内许多重要辅酶组成成分，参与生物氧化酶体系。能维持机体健康，促进生长发育。人体缺乏维生素B2，会发生代谢紊乱，出现口角湿白、溃疡、唇舌发炎、角膜炎、视觉不清、白内障、脂溢性皮炎、阴囊炎、女性外阴炎等症状。
+\n\n         由于维生素B2是很多氧化还原酶的成分，且与能量代谢有关，因而人体对维生素B2的需要量和对维生素B2 的需要量一样，也按每供给1000 千卡热量需0.5 毫克维生素B2计算。儿童、孕妇和乳母应适当增加供应量。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,5 +1,7 @@
 package com.cxjd.nvwabao.adapter;
 
+import android.util.Log;
+
 import com.cxjd.nvwabao.bean.TitleContentBean;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -10,6 +12,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+
+import javax.xml.validation.TypeInfoProvider;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -43,6 +47,7 @@ public class HttpTitleUtil {
                       while((line=reader.readLine())!=null){
                           response.append(line);
                       }
+                      Thread.sleep(2000);
                       if (listener!=null){
                           listener.onFinish(response.toString());
                       }
@@ -62,9 +67,7 @@ public class HttpTitleUtil {
 
     public static void sendOkHttpRequest(String address,okhttp3.Callback callback){
           OkHttpClient client=new OkHttpClient();
-          Request request=new Request.Builder()
-                  .url(address)
-                  .build();
+          Request request=new Request.Builder().url(address).build();
           client.newCall(request).enqueue(callback);
     }
      public static List<TitleContentBean> parseJsonWithGSON(String jsonData){
@@ -72,5 +75,6 @@ public class HttpTitleUtil {
          List<TitleContentBean> titleContentBeanList=gson.fromJson(jsonData,new TypeToken<List<TitleContentBean>>(){}.getType());
          return titleContentBeanList;
      }
+
 }
 

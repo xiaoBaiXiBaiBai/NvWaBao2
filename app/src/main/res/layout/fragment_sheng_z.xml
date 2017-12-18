@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="猪肉+菜豆=提高人体对猪肉中维生素B，的吸收率\n\n猪肉+花菜=帮助人体吸收瘦肉中的蛋白质\n\n猪肉+莲子=营养丰富\n\n紫菜+甘蓝= 更好发挥功效\n\n紫菜+鸡蛋=补充维生素B12和钙质"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

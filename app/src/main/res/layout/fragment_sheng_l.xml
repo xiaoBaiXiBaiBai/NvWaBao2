@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="辣椒+墨鱼=降低胆固醇\n\n辣椒+茼蒿=预防癌症和动脉硬化\n\n老鸭+沙参=可治疗肺燥、干咳\n\n梨+蜂蜜=缓解咳嗽\n\n梨+胖大海、冬瓜子、蝉蜕、冰糖=滋润喉头，补充津液\n\n梨+猪肺=清热润肺、助消化\n\n鲤鱼+花生=有利于吸收营养\n\n鲤鱼十米醋=利湿\n\n鲤鱼+香菇=提供较全面的营养\n\n栗子+白菜=消除黑斑和黑眼圈\n\n栗子+鸡肉=补血养身\n\n莲子+猪肚=补益气血\n\n芦笋+百合、冬瓜=抗癌\n\n芦笋+色拉=排毒养颜\n\n芦笋+猪肉=有利于人体对维生素B12的吸收\n\n驴肉+山药、红枣=补体虚\n\n绿豆+燕麦=控制血糖含量\n\n萝卜+豆腐=帮助人体吸收豆腐的营养\n\n萝卜+紫菜=清肺热、治咳嗽"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

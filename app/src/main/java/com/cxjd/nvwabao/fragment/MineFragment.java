@@ -4,52 +4,73 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import com.cxjd.nvwabao.ActivityNews.RegisterActivity;
+import com.cxjd.nvwabao.ActivityNews.LoginActivity;
+import com.cxjd.nvwabao.ActivityNews.MycenterActivity;
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.bean.User;
+
+import org.litepal.crud.DataSupport;
+
+import java.util.List;
 
 /**
  * Created by 李超 on 2017/10/29.
  */
 
-public class MineFragment extends Fragment implements View.OnClickListener{
-    private EditText user_name,user_password;
-    private Button commit_btn,clear_btn1,clear_btn2;
-    private TextView foget_pass,new_user;
+public class MineFragment extends Fragment{
+    private TextView button;
+    private ListView listView;
+    TextView usernames,useraccount;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mine, container,false);
-        init(view);
+        View mycenter=view.findViewById(R.id.shoucang_layout);
+        button=view.findViewById(R.id.login);
+        useraccount=view.findViewById(R.id.user_acc);
+        usernames=view.findViewById(R.id.user_names);
+        initstate();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        mycenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(), MycenterActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
-    private void init(View view) {
-        user_name=view.findViewById(R.id.user_name);
-        user_password=view.findViewById(R.id.user_password);
-        commit_btn=view.findViewById(R.id.commit_btn);
-        clear_btn1=view.findViewById(R.id.clear_btn1);
-        clear_btn2=view.findViewById(R.id.clear_btn2);
-        foget_pass=view.findViewById(R.id.wjmm);
-        new_user=view.findViewById(R.id.tv_newuser);
-
-        new_user.setOnClickListener(this);
+    private void initstate() {
+        List<User> users= DataSupport.findAll(User.class);
+        if (!users.isEmpty()){
+            String useracco=users.get(0).getAccountNumbers();
+            String username=users.get(0).getmName();
+            useraccount.setText(useracco);
+            usernames.setText(username);
+            button.setVisibility(View.GONE);
+        }else {
+            useraccount.setVisibility(View.GONE);
+            usernames.setText("未登录");
+            button.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.tv_newuser:
-                Intent intent=new Intent(getActivity(),RegisterActivity.class);
-                startActivity(intent);
-                break;
-        }
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        initstate();
     }
 }

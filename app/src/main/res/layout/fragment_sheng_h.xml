@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="海带+豆腐=有助于维持人体的碘平衡\n\n海带+生菜=补铁\n\n海带+芝麻=美容，防衰老\n\n海蜇+荸荠=有助于治疗高血压\n\n黑豆+牛奶=更好地吸收牛奶中的维生素B12\n\n黑木耳+红枣=补血\n\n黑木耳+青笋=补血\n\n胡椒+牛肉=祛寒补血\n\n胡椒+猪肝=增强血液功能\n\n胡萝卜+蜂蜜=排毒\n\n胡萝卜+山药、猪肚、黄芪=健胃补脾\n\n胡萝卜+油=提高人体对胡萝卜素的吸收\n\n胡萝卜+圆白菜=有效减少癌细胞的产生\n\n胡萝卜+猪心=缓解神经衰弱\n\n花椒+豆腐=解毒健胃\n\n花椒+猪肉=补充铁质\n\n黄豆+牛蹄筋=防颈椎病、美容\n\n黄豆芽+黑木耳=提供全面营养\n\n黄豆芽+牛肉=预防感冒、防止中暑\n\n黄瓜+蜂蜜=润肠通便\n\n黄花菜+鸡蛋=提供丰富的营养成分\n\n黄花菜+鳝鱼=通血脉、利筋骨、去烦闷\n\n黄花菜+猪肉=提供丰富的营养成分"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

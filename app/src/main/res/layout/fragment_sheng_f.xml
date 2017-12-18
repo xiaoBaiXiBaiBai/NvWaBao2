@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="番茄+鸡蛋=有利于吸收营养\n\n番茄+芹菜=降压、健胃消食\n\n蜂蜜+甲鱼=有助于心血管疾病、胃肠疾病治疗\n\n蜂蜜+枣仁=调节心慌失眠、多梦\n\n腐竹+猪肝=可促进人体对维生素B12的吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

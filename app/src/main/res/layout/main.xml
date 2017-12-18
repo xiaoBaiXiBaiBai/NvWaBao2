@@ -5,18 +5,35 @@
     android:id="@+id/activity_scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     >
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
         <ListView android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="#ececec"
             android:id="@+id/list_moment"
-            android:dividerHeight="10dp"
+            android:dividerHeight="1dp"
             android:divider="#ececec"
             android:cacheColorHint="@android:color/transparent"
+            android:layout_marginBottom="46dp"
             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5efef"/>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            layout="@layout/include_news_detail_tool_bar"/>
     </LinearLayout>
 </RelativeLayout>
 

@@ -72,7 +72,7 @@ public class InformationFragment extends Fragment {
          *若数据库为空，则初始化
          */
         List<TitleBean> titleBeansList=DataSupport.findAll(TitleBean.class);
-        if (titleBeansList.size()<=0){
+        if (titleBeansList.size()<=0||titleBeansList.isEmpty()){
             arrayTitle=getResources().getStringArray(R.array.focusTitle);
             titleLayble=getResources().getStringArray(R.array.TitleLable);
             initTiTle();

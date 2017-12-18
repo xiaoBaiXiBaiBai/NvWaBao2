@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鹌鹑蛋+香菇=面生黑斑、长痔疮\n\n鹌鹑蛋+猪肝=面生黑斑、长痔疮\n\n鹌鹑肉+菌类=面生黑斑、长痔疮\n\n鹌鹑肉+猪肝=面生黑斑\n\n鹌鹑肉+猪肉=面生黑斑"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

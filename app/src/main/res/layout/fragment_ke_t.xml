@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="桃+白酒=昏厥\n\n桃+甲鱼=心痛\n\n土豆+番茄=导致食欲不佳，消化不良\n\n土豆+香蕉=面部生斑"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

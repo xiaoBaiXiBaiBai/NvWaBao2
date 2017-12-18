@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initTab() {
-        Tab tab_home = new Tab(R.string.home,R.drawable.selector_icon_home, HomeFragment.class);
-        Tab tab_information = new Tab(R.string.information,R.drawable.selector_icon_information, InformationFragment.class);
-        Tab tab_find = new Tab(R.string.find,R.drawable.selector_icon_find, FindFragment.class);
-        Tab tab_circle = new Tab(R.string.circle,R.drawable.selector_icon_circle, CircleFragment.class);
-        Tab tab_mine = new Tab(R.string.mine,R.drawable.selector_icon_mine, MineFragment.class);
+        Tab tab_home = new Tab(R.string.home, R.drawable.selector_icon_home, HomeFragment.class);
+        Tab tab_information = new Tab(R.string.information, R.drawable.selector_icon_information, InformationFragment.class);
+        Tab tab_find = new Tab(R.string.find, R.drawable.selector_icon_find, FindFragment.class);
+        Tab tab_circle = new Tab(R.string.circle, R.drawable.selector_icon_circle, CircleFragment.class);
+        Tab tab_mine = new Tab(R.string.mine, R.drawable.selector_icon_mine, MineFragment.class);
 
         //将实例化好的Tab添加到集合中
         mTabs.add(tab_home);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         //找到FragmentTabHost
         mTabhost = (FragmentTabHost) this.findViewById(R.id.tabhost);
         //装载Fragment
-        mTabhost.setup(this,getSupportFragmentManager(),R.id.realtabcontent);
+        mTabhost.setup(this,getSupportFragmentManager(), R.id.realtabcontent);
 
         for(Tab tab : mTabs){
             //增加TabSpec，newTabSpec中的String参数是用来区分Tab的

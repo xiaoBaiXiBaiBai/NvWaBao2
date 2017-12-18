@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胃痉挛"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="原因"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="胃痉挛即胃部肌肉抽搐，主要表现为上腹痛，呕吐等。胃痉挛本身是一种症状，出现胃痉挛时，主要对症治疗，解痉止痛止呕，如果常出现胃痉挛，应注意寻找原因，从根源上医治。胃痛的最常见但并非唯一的原因就是大吃大喝。有些人并未暴饮暴食，但也可能患胃痛，可能和吸烟或服药有关。 生气、精神紧张及压力过大等可以诱发胃痉挛。
+"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="救治方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、药物治疗：（1）间苯三酚联合兰索拉唑治疗胃痉挛疗效较好，安全性高。（2）25%葡萄糖2支，山莨菪碱（654-2）注射液2支，利多卡因1支，三者混和后口服。\n2、食疗：取生大葱去皮去叶留葱白及须根与生姜不同捣烂，加入小米干饭，放锅内炒热后洒酒翻炒至烫手取出，用布包好，外敷胃区。注意温度适宜，防止烫伤皮肤，一般用药后立即见效。\n3、中医刮痧治疗：应用刮痧疗法可疏通经络、运行气血，使胃部疼痛缓解。\n4、穴位刺激法：以指压刺激梁丘穴，朝大腿方向加压时，震动较强，可用大拇指用力地压。每次压二十秒，休息五秒再继续。如此重復数次，疼痛便可渐渐消退。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、运动前做好充份的热身活动，忌过饱，忌食豆类及地瓜、土豆等食品，少食冷饮，可预防胃痉挛的发生。\n2、当出现胃痉挛的时候，首先要让人平静下来，宜平躺床上，再用热水在上腹部热敷二十至三十分钟。 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

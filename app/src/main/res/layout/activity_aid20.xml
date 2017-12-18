@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="昏迷"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救办法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、一旦发现有人昏迷，迅速观察患者的意识状态，同时检查患者的呼吸及心跳情况，一旦发生心脏骤停或者呼吸停止，立即进行现场人工呼吸。\n2、使患者平卧，松解衣领，避免气道受压。将其头部后仰并偏向一侧，以保持患者的呼吸道通畅，及时清理呕吐及分泌物，防止窒息。\n3、如果因事故导致的昏迷，应警惕潜在危险，保持空气流通。\n4、高热伴昏迷患者可用酒精擦浴，在颈部、腋下和腹股沟等大动脉处置放冰袋、冰帽进行降温，但需用干毛巾包裹，避免冻伤。\n5、低血糖出现的昏迷，如延误治疗可能出现不可逆的脑损害。应迅速补充葡萄糖，就近取用饼干、果汁、糖果等进食可取得立竿见影的效果。\n6、对于原因不明的昏迷，或昏迷不能缓解，应立即拨打120急救电话，在专业救护人员护送下，送医院治疗。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、躁动不安的昏迷患者应有人看护，防止发生摔伤、撞伤等意外；要注意为昏迷患者保暖。\n2、不要为了弄醒病人而拍打、摇晃病人头部，不要胡乱翻转、拖拉和搬运病人。\n3、不要在病人脑后放高枕，以免阻塞呼吸道入口而出现窒息。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="南瓜+ 辣椒= 会破坏辣椒中的维生素C\n\n南瓜+ 黄瓜、番茄等=影响维生素吸收\n\n南瓜+鲤鱼=中毒\n\n南瓜+鹿肉=死亡\n\n南瓜+螃蟹、鱔鱼、带鱼=中毒\n\n南瓜+虾=痢疾\n\n南瓜+羊肉=发生黄疽和脚气\n\n牛肉+白酒=上火，易引起牙齿发炎"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

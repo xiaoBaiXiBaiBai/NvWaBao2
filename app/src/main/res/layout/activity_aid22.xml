@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="蜜蜂蜇伤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="人被蜂刺后，局部有疼痛、红肿、麻木等症状，数小时后能自愈；少数伴有全身中毒症状，刺伤处出现水疱。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1.局部处理：\n伤口残留毒刺的立即拔出或用针挑出，但勿挤压蛰伤处，以免增加毒液的吸收；也不可用嘴吸出毒素，那样可能让毒素从口腔的微小损伤进入体内。蜜蜂蛰伤，因其毒液多为酸性，可用肥皂水、3%氨水或5%碳酸氢钠液涂敷蛰伤局部；黄蜂蜂毒与蜜蜂蜂毒不一样，为弱碱性，所以局部可用食醋或1%醋酸擦洗伤处；\n2.止痛\n蛰伤局部疼痛剧烈时可在伤口近心端皮下注射盐酸吐根碱30毫克；\n3.全身症状处理\n轻者可口服抗组胺药；重者皮下注射或肌注1∶1000肾上腺素0.5～1毫升或静脉滴注氢化可的松100～200毫克或地塞米松5～10毫克。\n4、当蜂毒剧烈，一旦因过敏性休克发生心跳呼吸停止的则应立即现场进行心肺复苏；并等待急救车前来救援。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
