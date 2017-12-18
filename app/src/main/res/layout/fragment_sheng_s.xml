@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="山楂+鸡肉=促进蛋白质的吸收\n\n山植+芹菜=补血、消食、通便\n\n鳝鱼+藕=保持体内酸碱平衡\n\n生菜+豆腐=减肥健美\n\n生菜+海带=促进铁吸收\n\n生菜+鸡蛋=滋阴润燥、清热解毒\n\n生菜+猪肝=补充全面营养\n\n瘦肉+大蒜=促进血液循环，消除身体疲劳、增强体质\n\n丝瓜+鸡蛋=润肺、补肾、美肤\n\n丝瓜+ 菊花= 清热消暑，祛火解毒\n\n丝瓜+毛豆=清热祛痰，防止便秘、口臭和周身骨痛\n\n丝瓜+虾米=润肺、补肾、美肤\n\n蒜+黄瓜= 促进脂肪和胆固醇的代谢\n\n蒜+生菜=清热解毒\n\n蒜+猪肉=提高脑部发育"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="桃+牛奶=易滋养皮肤\n\n茼蒿+ 鸡蛋=帮助充分吸收维生素A\n\n茼蒿+ 肉类= 帮助充分吸收维生素A\n\n土豆+ 醋=分解有毒物质\n\n土豆+豆角=防治急性肠胃炎、呕吐、腹泻\n\n土豆+牛肉=保护胃黏膜\n\n土豆+全脂牛奶=提供全面营养素"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

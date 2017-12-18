@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="咖啡+巧克力=疏解压力\n\n苦瓜+茄子=清心明目、益气壮阳、延缓衰老\n\n苦瓜+青椒=健美、抗衰老\n\n苦瓜+瘦肉=提高人体对铁元素的吸收\n\n苦瓜+洋葱=提高机体的免疫功能\n\n苦瓜+猪肝=清热解毒、补肝明目"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

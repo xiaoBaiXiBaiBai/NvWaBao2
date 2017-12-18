@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="螃蟹+香瓜=腹泻\n\n啤酒+螃蟹=腹泻\n\n啤酒+烟熏腊肉=损害肝细胞\n\n苹果+海味=腹痛，恶心呕吐"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

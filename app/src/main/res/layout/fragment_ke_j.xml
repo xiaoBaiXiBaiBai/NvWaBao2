@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鸡蛋+茶=影响人体对蛋白质的吸收\n\n鸡蛋+大豆=降低胆固醇\n\n鸡蛋+红薯=会腹痛\n\n鸡蛋+豆浆=降低蛋白质吸收\n\n鸡蛋+甲鱼=损害健康\n\n鸡蛋+柿子=腹泻，生结石\n\n鸡蛋+味精=影响味道\n\n鸡蛋+消炎片=会中毒\n\n鸡肉+大蒜=功能相反\n\n鸡肉+芥末=同食上火\n\n鸡肉+芹菜=伤元气\n\n鲫鱼+冬瓜=使身体脱水\n\n鲫鱼+蜂蜜=同食会中毒\n\n鲫鱼+芥菜=引起水肿\n\n鲫鱼+猪肝=具有刺激作用\n\n鲫鱼+猪肉=起生化反应，不利于健康\n\n甲鱼+鸡肉=易生痈疮\n\n甲鱼+柿饼=消化不良\n\n姜+酒=损伤脾胃\n\n姜+兔肉=导致腹泻\n\n姜+蟹=杀菌、解毒\n\n茭白+豆腐=易形成结石\n\n茭白+蜂蜜=引发痼疾\n\n芥末+酒=导致上火\n\n韭菜+白酒=上火、胃肠不适\n\n韭菜+菠菜=腹泻\n\n韭菜+蜂蜜=腹泻\n\n韭菜+牛奶=影响钙吸收\n\n韭菜+牛肉=令人发热动火\n\n韭菜+虾皮= 影响营养吸收\n\n橘子+萝卜=引发甲状腺肿病\n\n橘子+牛奶=影响蛋白质的消化吸收\n\n橘子+兔肉=腹泻，损害肠胃\n\n蕨菜+大米=破坏维生素B1\n\n蕨菜+花生=破坏维生素B1\n\n蕨菜+黄豆=破坏维生素B1\n\n蕨菜+ 牛肝=破坏维生素B1\n\n蕨菜+猪肉=破坏维生素B1"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

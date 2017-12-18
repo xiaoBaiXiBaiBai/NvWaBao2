@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="咖啡+菠菜=降低铁的吸收\n\n空心菜+牛奶、酸奶、乳酪=影响钙质吸收\n\n苦瓜+排骨=妨碍钙的吸收\n\n苦瓜+滋补药= 会降低滋补效果"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

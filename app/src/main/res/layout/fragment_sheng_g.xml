@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="鸽肉+银耳=滋补健身\n\n蛤蜊+豆腐=治血气不足、皮肤粗糙\n\n桂圆+大米=补充元气\n\n桂圆+当归、构杞子、鸡肉=补血养血\n\n桂圆+鸡蛋=补血养血\n\n桂圆+人参=增强体力"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

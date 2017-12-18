@@ -1,18 +1,22 @@
 package com.cxjd.nvwabao.bean;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.cxjd.nvwabao.Activity.EatingUtensils;
 import com.cxjd.nvwabao.Activity.Find24Hours;
+import com.cxjd.nvwabao.Activity.FirstAid;
+import com.cxjd.nvwabao.Activity.FourAndFive;
+import com.cxjd.nvwabao.Activity.GoldMedalTally;
+import com.cxjd.nvwabao.Activity.OneHundred;
+import com.cxjd.nvwabao.Activity.Physical;
+import com.cxjd.nvwabao.Activity.SevenNutriens;
+import com.cxjd.nvwabao.Activity.ShengOrKe;
 import com.cxjd.nvwabao.R;
-import com.cxjd.nvwabao.fragment.FindFragment;
 
 import java.util.List;
 
@@ -70,6 +74,39 @@ public class FindFunctionAdapter extends RecyclerView.Adapter <FindFunctionAdapt
                     case 0 :
                         Intent intent = new Intent(view.getContext(), Find24Hours.class);
                         view.getContext().startActivity(intent);
+                        break;
+                    case 1 :
+                        Intent intent1 = new Intent(view.getContext(), FourAndFive.class);
+                        view.getContext().startActivity(intent1);
+                        break;
+                    case 2 :
+                        Intent intent2 = new Intent(view.getContext(), ShengOrKe.class);
+                        view.getContext().startActivity(intent2);
+                        break;
+                    case 3 :
+                        Intent intent3 = new Intent(view.getContext(), GoldMedalTally.class);
+                        view.getContext().startActivity(intent3);
+                        break;
+                    case 4 :
+                        Intent intent4 = new Intent(view.getContext(), FirstAid.class);
+                        view.getContext().startActivity(intent4);
+                        break;
+                    case 5 :
+                        Intent intent5 = new Intent(view.getContext(), Physical.class);
+                        view.getContext().startActivity(intent5);
+                        break;
+                    case 6 :
+                        Intent intent6 = new Intent(view.getContext(), EatingUtensils.class);
+                        view.getContext().startActivity(intent6);
+                        break;
+                    case 7 :
+                        Intent intent7 = new Intent(view.getContext(), SevenNutriens.class);
+                        view.getContext().startActivity(intent7);
+                        break;
+                    case 8 :
+                        Intent intent8 = new Intent(view.getContext(), OneHundred.class);
+                        view.getContext().startActivity(intent8);
+                        break;
                 }
 
 

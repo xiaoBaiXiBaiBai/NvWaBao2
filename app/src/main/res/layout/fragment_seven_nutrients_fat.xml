@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="人体内的脂类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体内的脂肪主要分布在皮下、腹腔、肌肉间隙和脏器周围常以大块脂肪形式存在，一般可达体重的10~20%。我国成年男2平均脂肪含量为13.29%，女子稍高。脂类物质在体内含量仅次于蛋白质，有着十分重要的生理功能。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="(一) 脂类的功能"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n1.储存能量     \n1克脂肪在体内彻底氧化，可以放出9.3千卡的能量，比1克糖或蛋白质放出的能量大一倍以上。人体如果摄入的糖类过多，糖类物质就会转化为脂肪。这种能量的转换和贮藏对维持人体的正常代谢有十分重要的作用。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n2.保护机体     \n脂肪在体温条件下呈液态，而且能起到保护机体和内脏器官的作用，它们如同软垫，可使内脏器官免受撞击和震动的损伤。脂肪不易导热，可以防止热量散失，对保持人的正常体温也有重要作用。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n3.调节生理功能     \n亚油酸和亚麻油酸是类脂的重要成分，也是合成前列腺素的原料，具有调节生理功能的作用。缺乏必需脂肪酸，可能会发生皮炎，使人抵抗力减弱，甚至生长停滞。必需脂肪酸还有降低血中胆固醇，防止动脉粥样硬化的作用。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n4.增进食欲      \n人体的脂肪大部分是由糖类物质转化来的，一部分直接来自食物。植物油比动物脂容易吸收，构成人体的脂肪，营养价值比动物油脂高。肥肉和鸡蛋含脂类较多，奶的脂肪易被人体吸收，黄豆、芝麻等也含油丰富。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="(二) 脂类与高血脂、胆固醇、肥胖"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n1.血脂是指血液中的脂类。     \n血脂和血糖一样在体内处于动态平衡。血脂代谢紊乱、长期摄人高脂肪的食物、很少运动、食糖过多等都有可能造成高血脂。血液中胆固醇过多，是高血脂的一种，与动脉粥样硬化关系密切。多余的胆固醇和脂肪沉积在血管壁上，日积月累，血管壁即可能发生内膜增生、变性，管壁硬化，出现斑块，失去弹性及收缩力，甚至引起管腔狭小、闭塞，心肌缺血供氧不足，心绞痛，心肌梗塞等严重症状。若发生在大脑，则可引起脑血栓等病。试验证明，血胆固醇过高的人，比正常人冠心病的发病率要高1~4倍。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n2.大部分胆固醇是由肝脏制造的     \n一般来说，每个人从食物中吸收的胆固醇，仅占人体内胆固醇量的1/3,大部分胆固醇是由肝脏制造的。胆固醇的摄人和制造可以互相补充。若小肠吸收多了，肝脏就会减少生产，反之自制工作就会加强。人若得了某些疾病，胆固醇的平衡就会遭到破坏。例如，肥胖、轻度肝炎、胰腺炎、糖尿病等都会使胆固醇升高。因此一般情况下血胆固醇的含量不会增高，即使增高也并不一定都会现冠心病。但是，长期食用高胆固醇的食物，血内含量就有可能地高，这对老年人和动脉粥样硬化者来说很不利。在这种情况下应月量少吃动物内脏、肥肉、蛋黄(蛋白几乎不含胆固醇)、鱼子、虾蟹、鱿鱼、鳝鱼等富含胆固醇的食物。另外，为了减少胆固醇的令量，在饮食上可多吃些鲜菜和水果，炒菜用植物油，这可阻止胆困醇的吸收，或加快胆固醇的排泄，减少动脉硬化症的发生。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n3.超出一定体重即视为肥胖     \n男子超过标准体重的25%，女子超过30%时，即有显著的肥胖。标准体重可以由身高(厘米)-100= 体重(公斤) 的公式简单算出。肥胖的原因很多，如进食过多，体力活动过少，内分泌障碍以及遗传等都可能造成肥胖。肥胖的人应当节制过多的摄入高能量食物，可用低热量高蛋白质的膳食。肥胖虽是因体内脂肪过多造成的，但不仅仅是和脂肪的摄取有关，主要的是和总的热量摄取有关，一般认为成年人的食物脂肪应限制在总热量的30%以下。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

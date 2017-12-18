@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="精液异常"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/onehundred_j_1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="近视眼"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="急性胰腺炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="急性阑尾炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="精神分裂症"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/orangered"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:text="甲亢"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="脚气"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_j_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

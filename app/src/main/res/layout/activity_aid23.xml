@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="抽筋"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="抽筋即肌肉痉挛，指肌肉突然不自主地强制收缩而造成肌肉僵硬疼痛的现象。腿抽筋最常见，大多是缺钙、受凉、局部神经血管受压引起。一般发生突然，而且剧烈，但是持续的时间不长，只有几分钟。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、可以帮助患者按摩或牵拉受累的肌肉，以减轻患者的疼痛。反复牵拉，一直到症状缓解；如果在游泳时突发抽筋，切不可惊慌呼叫，否则只能呛水甚至溺水！需要立即镇定，完全放松抽筋的肢体，而不是试图用力去对抗，那样只能加重抽筋和疼痛。保持漂浮状态，鼻孔浮出水面时立即吸气，沉在水面下则用嘴呼气，只要能坚持一两分钟，痉挛的肌肉可自行放松。这条经验是我的亲身体会，凡事游泳者必须要有这样的心理模拟，才能遇事不慌。\n2、抽筋缓解后，如果仍有疼痛，可在局部使用热水袋或热毛巾，或者洗热水澡。\n3、如果半夜出现小腿抽筋时，可以利用墙壁压挡脚趾，将腿部用力伸直，直到疼痛、抽筋缓解，然后进行按摩。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、平时可适量补钙，多晒太阳，注意局部保暖，多吃肉类、鸡蛋、甜食，适量摄入脂肪、蛋白质等物质，以增加体内热量，可有效减少抽筋。\n2、忌在饥饿、疲劳时游泳。在饥饿、疲劳时，肌肉遇到冷水的刺激，容易发生抽筋； 避免穿不合脚的鞋子，注意体位的变化，如坐姿睡姿，避免神经血管受压；也可做局部肌肉的热敷、按摩，加强局部的血液循环，避免抽筋。\n3、如果抽筋持续发生，原因不明，这时就需要去医院检查，以找出潜在的原因。 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="搪瓷器具"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         塘瓷器具往往以独特的外观，精美的图案，使人爱不释手，多年来一直受到人们的喜爱。但是，使用搪瓷器具时，也要注意有些食物与搪瓷外表涂层接触会产生有害物质，给人体带来伤害。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:text="不宜使用搪瓷器皿煮食物"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         不能用普通的搪瓷器皿加热烹煮食物。因为搪瓷器皿外涂有珐琅层，其中含有对人有害的毒物。在烹煮时，这种有害物质会溶解到食物中，使入侵性中毒，最终损害健康。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜使用搪瓷器皿盛放酸性食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         搪瓷制品是经过高温焙烧而成的。如果焙烧的温度过低，搪瓷制品表面会呈现一种挂釉现象，使搪瓷制品成为劣质品。如果使用这种劣质品来盛放酸性食品，那将会给人体健康带来很大危害。搪瓷器皿表面的瓷是由硅酸钠与金属盐组成的，其中铅含量很多，还含有铋、镉和锑等有毒金属元素。搪瓷器皿经4%的醋酸浸泡，即可渗出一定量的铅、镉等有害元素。经过100C温度和一定时间煮沸，也可溶出一定量的铅和镉。特别是在酸度较高的人体胃液中，其溶解度相当大。所以，不能选用那些挂釉劣质搪瓷器皿来盛放酸性食物。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

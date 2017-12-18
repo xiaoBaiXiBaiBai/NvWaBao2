@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="骨折"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="骨折，指骨的连续性中断。局部产生三种典型的体征，就可确定发生骨折：\n （1）畸形：骨折端移位可使患肢外形发生改变，主要表现为缩短、成角、延长。\n （2）异常活动：正常情况下肢体不能活动的部位，骨折后出现不正常的活动。\n （3）骨擦音或骨擦感：骨折后两骨折端相互摩擦撞击，可产生骨擦音或骨擦感。\n\n骨折还同时伴有局部肿胀疼痛，还可能出现瘀血和青紫色瘀斑。严重骨折，患者常因广泛的软组织损伤、大量出血、剧烈疼痛或并发内脏损伤等而引起休克。闭合骨折的出血属于隐形失血，主要是骨髓腔渗血，在体外看不到，千万不要掉以轻心。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救措施"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、处理伤口：如果骨折处有伤口，则立即清理污染物，并用洁净纱布覆盖；如果伤口持续出血，需要压迫止血；如果有骨头外露，更要对其进行清洁，以免今后感染引起骨髓炎。\n2、迅速复位：如果发现骨折处有畸形，特别是成角畸形，需要立即正确地进行复位，否则骨折容易将周围血管神经刺破。需要动作轻柔地沿着骨的纵轴方向牵拉骨，达到复位。切不可用蛮力，否则容易引起二次损伤。\n3、妥善固定：不要盲目移动身体，尽快把伤到的肢体用夹板固定住。夹板可用木片或折叠起来的硬纸板制成，放在受伤的肢体下面或侧面，用三角形绷带、皮带或领带缠住夹板和受伤的肢体。避免缠得太紧，避免用细绳子固定，这些都可能阻碍血液循环。\n4、正确转运：搬运骨折病人的过程中，动作要轻柔，避免产生骨折端的错位或移动；对于脊柱骨折的病人，搬运中一定多人协调，保持脊柱的轴向稳定，否则容易引起脊柱错位，损伤脊髓导致瘫痪。颈椎骨折的病人，搬运过程一定要专人负责头部和颈椎，保持和躯干平行的体位，否则容易导致四肢瘫痪甚至死亡。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、可疑发生骨折的病人，均应按骨折处理。\n2、首先抢救生命，维持心跳和呼吸的正常状态；如病人发生休克，多因失血过多导致，应采取头和躯干抬高20°～30°、下肢抬高15°～20°体位，以利于呼吸和下肢静脉回流同时保证大脑供血；注意保温，尽快送医院输血、输液。\n3、对处于昏迷的病人，应防止呕吐导致的窒息。\n4、当骨折移位，有穿破皮肤，损伤血管、神经的危险时，应尽快手法复位，然后用夹板固定。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

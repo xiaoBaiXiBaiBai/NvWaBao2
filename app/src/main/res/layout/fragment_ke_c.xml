@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="菜花+笋瓜=破坏维生素C的吸收\n\n菜花+猪肝=影响人体对微量元素的吸收\n\n茶+酒=影响肾功能\n\n橙子+牛奶=影响消化\n\n橙子+水獭肉=头晕恶心\n\n葱+豆腐=形成草酸钙结石\n\n葱+蜂蜜=腹胀、腹泻\n\n葱+鸡蛋=不利于蛋白质吸收\n\n醋+胡萝卜=破坏胡萝卜素\n\n醋十酒=引发胃炎\n\n醋+笋=筋骨酸疼"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

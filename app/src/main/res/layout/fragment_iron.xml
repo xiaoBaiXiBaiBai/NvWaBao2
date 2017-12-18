@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="铁制器皿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         很多人都知道用铁制器皿做饭可以增加食物中铁的含量，有利于人体补铁，但如果使用不当，膳食中的铁含量就会过多，反而对健康有害。因此，使用铁制器皿也要道循一定的法则。另外，有些食物宜用铁制器皿来烹调来增加食物营养，而另外一些食物用铁制器皿来烧煮时会产生对人人体有害的毒素。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="铁制器皿使用法则"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         铁制炊具较其他材料的炊具对人体有利得多，用铁锅炒菜能使菜中的含铁量增加，补充人体铁元素，对贫血等缺铁性疾病也有一定功效。成年人每的膳食中能摄入15~20毫克铁就足够了，摄入过量的铁，一是损害胰腺，引起胰岛素分泌不足，导致铁源性糖尿病；二是损害肝脏，引起锈肝病等。好的铁锅应该内外光滑，厚薄均匀，没有砂眼，锅底及锅耳平整端正。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:text="新铁锅使用前要先除怪味"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         新铁锅会把食物染黑，减少食物营养。因此，新买回的铁锅一定要除干净怪味。可在铁锅内加些盐，上火将盐炒黄，再用盐擦锅，然后用干净布把锅擦干净。最后在锅内放些水和油，煮开后，锅就好用了。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="宜用铁制器皿烧煮的食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+            android:textSize="15dp"
+            android:text="         1、洋葱\n            用铁锅煮洋葱食用，含铁量可增加2倍。因此，对于缺铁或贫血的人来说，是增加体内铁元素含量的上佳之选。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         2、            番茄\n中含有大量的番茄红素，对心脏健康有重要的保护作用。用铁制的罐子或锅烹调番茄时，能促进番茄红素被人体吸收。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         3、            青菜\n青菜宜用铁锅烧煮,这样可以促进植物性铁的吸收。此外，用铁锅烧煮青菜，还可促进叶酸和维生素C的吸收。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         4、            牛肉\n用铁锅煮牛肉，或者用铁板煎牛肉都可以使牛肉口味鲜美，里外皆嫩，铁锅还可以保持牛肉的营养成分不流失。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="铁锅容易生锈，不宜盛食物过夜"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         铁锅容易生锈，产生氧化铁，如果人体吸收过多的氧化铁，即铁锈，就会对肝脏产生危害，成为身体病变的一个隐患。因此，不宜盛食物过夜。同时，尽量不要用铁锅煮汤，以免铁锅表面保护其不生锈的食油层消失。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="铁锅不用铝铲"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         虽然铁制餐具安全性好，但若与铝制餐具搭配使用，会对人体带来更大的危害。使用铝制餐具时，往往会有铝屑脱落，遇酸或碱性物质即可形成铝离子进入食物，再随食物进入人体。研究发现，铝在人体内积累过多，可引起智力下降、记忆力衰退和老年性痴呆。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用铁制器皿烧煮的食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         1、绿豆\n             煮绿豆忌用铁锅，因为豆皮中所含的单宁质遇到铁后能发生化学反应，生成黑色的单宁铁，影响其味道及人体的消化吸收。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         2、藕\n             中含有大量的番茄红素，对心脏健康有重要的保护作用。用铁制的罐子或锅烹调番茄时，能促进番茄红素被人体吸收。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         3、山楂\n             山楂中含有果酸，遇到铁后会引起化学反应，产生低铁化合物，人吃后可能会引起中毒，出现恶心、呕吐。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="触电"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="原因"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="引起触电的原因很多，主要系缺乏安全用电知识，违章用电引起电损伤。意外事故中电源泄露，雷雨时缺乏防范被闪电击中，也可引起触电。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、现场救治应争分夺秒，火速切断电源。\n （1）关闭电源：迅速关闭电源开关、拉开电源总闸刀是最简单、安全而有效的方法。\n （2）挑开电线 ：施救者利用干燥木棒、竹杆等绝缘物品挑开接触病人的电线，使病人迅速脱离电源，并将此电线固定好，避免他人触电。\n （3）斩断电路：若在野外或远离电源开关的地方，尤其是雨天，不便接近触电者以挑开电源线时，可在现场20米以外用绝缘钳子或干燥木柄的铁锹、斧头、刀等将电线斩断。\n （4）“拉开”触电者：如患者仍在漏电的机器上，应赶快用干燥的绝缘棉衣、棉被将病人推拉开；千万别直接拉病人，否则一起触电。\n2、脱离电源后，确认触电者心跳和呼吸情况，如果停止，急救者应立即用人工呼吸和胸外心脏按压，进行心肺复苏。\n3、表电灼伤创面周围皮肤用碘伏处理后，加盖无菌敷料包扎，以减少污染。在高空高压线触电抢救中，要注意再摔伤的可能性。 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、未切断电源之前，抢救者切忌用手直接拉碰触电者，这样会导致自己也立即触电而伤，因为人体是导体，极易传电。\n2、对于触电者的急救应分秒必争。有些严重电击患者当时症状虽不重，但在1小时后可突然恶化，所以不能掉以轻心；有些患者触电后，心跳和呼吸极其微弱，甚至暂时停止，处于“假死状态”，其实正是抢救的黄金期，不可轻易放弃对触电患者的抢救。\n3、发生呼吸、心跳停止的病人，这时应一面进行心肺复苏，一面紧急联系附近医院做进一步治疗；在转送病人去医院途中，抢救工作不能中断。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

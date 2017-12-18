@@ -9,18 +9,16 @@
         <item>特殊人群</item>
         <item>禁忌</item>
         <item>心得</item>
-        <item>名人</item>
+        <item>饮食</item>
         <item>常识</item>
         <item>老年人</item>
         <item>儿童</item>
-        <item>学生</item>
         <item>孕妇</item>
         <item>高血压</item>
         <item>女性</item>
         <item>男性</item>
         <item>高血糖</item>
         <item>高血脂</item>
-        <item>壮阳</item>
         <item>月经</item>
         <item>糖尿病</item>
         <item>运动</item>
@@ -31,31 +29,29 @@
     </string-array>
     <string-array name="TitleLable">
         <item>ynsi</item>
-        <item>chun</item>
-        <item>xia</item>
-        <item>qiu</item>
-        <item>dong</item>
+        <item>cj</item>
+        <item>xj</item>
+        <item>qj</item>
+        <item>dj</item>
         <item>tsrq</item>
-        <item>jj</item>
+        <item>jinji</item>
         <item>xd</item>
-        <item>mr</item>
+        <item>ys</item>
         <item>cs</item>
-        <item>lnr</item>
-        <item>xs</item>
-        <item>rt</item>
+        <item>zln</item>
+        <item>et</item>
         <item>yf</item>
         <item>gxy</item>
         <item>nvxing</item>
         <item>nanxing</item>
         <item>gxt</item>
         <item>gxz</item>
-        <item>zy</item>
         <item>yj</item>
         <item>tnb</item>
         <item>yd</item>
         <item>jf</item>
         <item>gnq</item>
         <item>mr</item>
-        <item>jn</item>
+        <item>jl</item>
     </string-array>
 </resources>

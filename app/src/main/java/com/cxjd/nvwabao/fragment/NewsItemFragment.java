@@ -56,53 +56,72 @@ public class NewsItemFragment extends Fragment {
        refreshLayout=view.findViewById(R.id.swiperefresh);
        refreshLayout.setColorSchemeResources(R.color.colorPrimary);
        imageView=view.findViewById(R.id.icon);
-       requesList();
        titleContentBeans=new ArrayList<>();
-       titleContentBeans=listDataSave.getDataList("Simplecontent"+rqTitle,TitleContentBean.class);
-       mRecyclerView = (RecyclerView)view.findViewById(R.id.news_item_recycle_view);
-       final NewsItemAdapter adapter=new NewsItemAdapter(titleContentBeans,getContext());
-       LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-       mRecyclerView.setLayoutManager(layoutManager);
-       mRecyclerView.setAdapter(adapter);
+        mRecyclerView = (RecyclerView)view.findViewById(R.id.news_item_recycle_view);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(layoutManager);
+        requesList();
        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
            @Override
            public void onRefresh() {
                requesList();
-               titleContentBeans=listDataSave.getDataList("Simplecontent"+rqTitle,TitleContentBean.class);
-               adapter.notifyDataSetChanged();
+               titleContentBeans=listDataSave.getDataList(rqTitle,TitleContentBean.class);
+              // adapter.notifyDataSetChanged();
            }
        });
         return view;
    }
 
     private void requesList() {
-        String address="http://192.168.31.227/user/getPosts/"+rqTitle;
-        //showProgressDialog();
-        HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
-            @Override
-            public void onFinish(String response) {
-                listDataSave.setDataList("Simplecontent"+rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
-               getActivity().runOnUiThread(new Runnable() {
-                   @Override
-                   public void run() {
-                      // closeProgressDialog();
-                       refreshLayout.setRefreshing(false);
-                   }
-               });
+        titleContentBeans=listDataSave.getDataList(rqTitle,TitleContentBean.class);
+        if (titleContentBeans.size()<=0||titleContentBeans.isEmpty()) {
+            String address = "http://192.168.31.227/user/getPosts/" + rqTitle;
+            showProgressDialog();
+            HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
+                @Override
+                public void onFinish(String response) {
+                    listDataSave.setDataList(rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            titleContentBeans = listDataSave.getDataList(rqTitle, TitleContentBean.class);
+                            final NewsItemAdapter adapter = new NewsItemAdapter(titleContentBeans, getContext());
+                            mRecyclerView.setAdapter(adapter);
+                            closeProgressDialog();
+                            refreshLayout.setRefreshing(false);
+                        }
+                    });
 
-            }
+                }
 
-            @Override
-            public void onError(Exception e) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                       // closeProgressDialog();
-                        refreshLayout.setRefreshing(false);
-                    }
-                });
-            }
-        });
-
+                @Override
+                public void onError(Exception e) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            closeProgressDialog();
+                            refreshLayout.setRefreshing(false);
+                        }
+                    });
+                }
+            });
+        }else {
+            //titleContentBeans = listDataSave.getDataList(rqTitle, TitleContentBean.class);
+            final NewsItemAdapter adapter = new NewsItemAdapter(titleContentBeans, getContext());
+            mRecyclerView.setAdapter(adapter);
+        }
+    }
+    private void showProgressDialog(){
+        if (progressDialog==null){
+            progressDialog=new ProgressDialog(getContext());
+            progressDialog.setMessage("正在加载...");
+            progressDialog.setCanceledOnTouchOutside(false);
+        }
+        progressDialog.show();
+    }
+    private void closeProgressDialog(){
+        if (progressDialog!=null){
+            progressDialog.dismiss();
+        }
     }
 }

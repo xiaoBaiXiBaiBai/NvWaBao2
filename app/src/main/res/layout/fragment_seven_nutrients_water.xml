@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="水"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         作为一种基本的营养物质，水是最容易被遗忘和忽视的。然而，我们身体75%的重量来自水分，水几乎参与人体每一项功能运作。水可以保持体温的稳定、将人体化学物质保持在一个适当的密度、将营养和氧分子带到细胞、清除体内废弃物。它还是各个关节的衬垫，同时保护人体的器官和组织。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n
+
+                \n         水分摄人不足或过度丧失水分可以导致人体脱水或心力衰竭，于是会出现眩晕、呕吐、抽筋、疲乏和精神混乱等症状。所幸的是，大多数情况下，当我们几近脱水时，身体都会及时告诉我们。当我们感到口渴，我们的身体就需要水分了。但是，随着年纪变大，身体的缺水感知能力会下降，老年人甚至常常没有口渴感。由于运动量的增大，环境的变化(如炎热、温暖、干燥或寒冷的环境)，正处于怀孕或哺乳期间以及正在服用某些药品的时候，人体对水的需求量都会有所增加。营养学家们建议我们每天用容积200毫升的水杯饮用8杯或更多的水。很多水果和蔬菜中的80%~90%是水分。因此，水果和蔬菜不仅向人体提供维生素和矿物质，它们还提供了大量的水分。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

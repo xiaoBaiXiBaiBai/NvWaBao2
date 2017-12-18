@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="大米+蕨菜=降低维生素B1的消化吸收\n\n冬瓜+鲫鱼=脱水\n\n冬瓜十滋补药=会降低滋补效果\n\n豆腐+葱=影响钙质吸收\n\n豆腐十蜂蜜=腹泻，有损听力\n\n豆腐十血豆腐=破坏营养成分\n\n对虾+西瓜=人体免疫力下降"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

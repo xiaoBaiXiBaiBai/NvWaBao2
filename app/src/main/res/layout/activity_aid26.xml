@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="宠物咬伤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救办法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、如果是被无毒宠物蛇咬到，要立即处理伤口：迅速用洁净的水或肥皂水对伤口进行流水清洗，彻底清洁伤口。因为伤口像瓣膜一样多半是闭合着，所以必须掰开伤口进行冲洗。用自来水对着伤口冲洗虽然有点痛，但也要忍痛仔细地冲洗干净，这样才能尽量防止感染。对伤口不要包扎。\n2、如果被有毒的宠物咬伤（有些朋友豢养蛇或蜥蜴），同时口腔有溃疡或是炎症时，切记不要用口吸血，因为这样做毒血可能会通过你口中的溃疡处进入你体内的，防止或减少病毒随血液流入全身；可以用可以用拔火罐把毒血吸出。\n3、简单处理后，要迅速送往医院进行诊治，在24小时内注射狂犬病疫苗和破伤风抗毒素。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_margin="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="如果伤口没有破开，则侵泡10分钟左右。如果伤口处已经破开，就不可再行侵泡，以免感染。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、身上有伤口时，不要和宠物亲昵，以防宠物的唾液污染伤口。要定期给宠物注射预防狂犬病的疫苗。\n2、在注射疫苗期间，应注意不要饮酒、喝浓茶、咖啡；亦不要吃有刺激性的食物，诸如辣椒、葱、大蒜等等；同时要避免受凉、剧烈运动或过度疲劳，防止感冒。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="特别提示"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="如果不慎被人咬伤，处理方法和宠物咬伤一样，不可掉以轻心。人口腔中的细菌并不比动物的口腔少。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

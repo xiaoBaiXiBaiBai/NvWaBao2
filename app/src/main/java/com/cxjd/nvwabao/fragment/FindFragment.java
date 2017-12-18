@@ -15,7 +15,6 @@ import com.cxjd.nvwabao.bean.FindFunctionAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 
 /**
  * Created by 李超 on 2017/10/29.

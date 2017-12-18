@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="中风"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="中风本来是中医的说法，以突然昏仆、半身不遂、口舌歪斜等为主要表现的脑病。西医学将中风分为出血性和缺血性两类。高血压、动脉硬化、脑血管畸形常可导致出血中风；情绪波动、忧思恼怒、饮酒、精神过度紧张等因素可诱发中风。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、家人没有任何先兆的突发中风，家属千万不能惊慌失措，应克制情绪，立即拨打120电话请求援助。\n2、在等待救护人员时，如果病人意识清醒，应立即停止活动，避免摔伤，放置病人于平卧位，避免人员嘈杂，保持环境安静，注意安慰病人，解除其紧张情绪。\n3、若病人意识已丧失，则设法将病人抬到床上，宜有二至三人同时抬，避免损伤脊柱，避免震动损伤头部，让病人静卧，维持呼吸道通畅，及时清除分泌物，避免窒息。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、及时治疗诱发病，如动脉硬化、糖尿病、冠心病、高血脂病、高粘血症、肥胖病、颈椎病等应及早治疗。\n2、重视中风的先兆征象：留意头晕、头痛、肢体麻木、昏沉嗜睡、性格反常等先兆中风现象。一旦小中风发作，应及时到医院诊治。\n3、消除中风的诱因，如情绪波动、过度疲劳、用力过猛等。规律的生活作息，保持大便通畅，避免因用力排便而使血压急剧升高，引发脑血管病。\n4、保持结构合理的饮食，以低盐、低脂肪、低胆固醇为宜，适当多食豆制品、蔬菜和水果，戒除吸烟、酗酒等不良习惯，使血液不太容易形成凝块，进而防止脑梗塞。\n5、应逐步适应环境温度，冬天外出注意保暖。有过中风史的患者洗澡时间不宜过长等。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="烫伤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救办法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:text="一旦发生烫伤后，无论是开水烫伤还是蒸汽烫伤，应先降低烫伤皮肤温度，减少烫伤处的进一步损伤，同时用水冲洗也能减少疼痛。立即将被烫部位放置在流动的水下冲洗或是用凉毛巾冷敷，如果烫伤面积较大，伤者应该将整个身体浸泡在放满冷水的浴缸中。可以将纱布或是绷带松松地缠绕在烫伤处以保护伤口。 "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+               android:layout_margin="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="如果伤口没有破开，则侵泡10分钟左右。如果伤口处已经破开，就不可再行侵泡，以免感染。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="禁止"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="不能采用冰敷的方式治疗烫伤，冰会损伤已经破损的皮肤导致伤口恶化。不要弄破水泡，否则会留下疤痕。也不随便将抗生素药膏或油脂涂抹在伤口处，这些黏糊糊的物质很容易沾染脏东西。不要急切的脱掉衣物，当烫伤处在有衣物覆盖的地方时，不要着急脱掉衣物，以免撕裂烫伤后的水泡，可先行用水冲洗降温，再小心的去掉衣物。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="烫伤过于严重时，达到三级烫伤时应先用干净纱布覆盖或暴露，并迅速送医院治疗。二级烫伤如果面积大于手掌的话，患者也应去医院看看，专业的处理方式可以避免留下疤痕。烫伤处应避免在阳光下直射，包扎后的伤口不要触水，烫伤的部位也不要过多活动，以免伤口与纱布摩擦，增加伤口的愈合时间。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

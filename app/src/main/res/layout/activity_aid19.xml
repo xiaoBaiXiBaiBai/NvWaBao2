@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="脑溢血"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="脑溢血指非外伤性脑实质内血管破裂引起的出血。发生的原因主要与脑血管的病变有关，即与高血脂、糖尿病、高血压、血管的老化、吸烟等密切相关。脑出血的患者往往由于情绪激动、费劲用力时突然发病，早期死亡率很高，幸存者中多数留有不同程度的运动障碍、认知障碍、言语吞咽障碍等后遗症。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、突发脑溢血，家属情绪难免紧张，但一定要控制情绪，马上拨打120，切勿为了弄醒病人而大声叫喊或猛烈摇动昏迷者，否则只会使病情迅速恶化。\n2、将病人平卧于床，保持安静，避免情绪激动和血压升高。严密观察体温、脉搏、呼吸和血压等生命体征，注意瞳孔变化和意识改变。\n3、由于脑压升高，此类患者极易发生喷射性呕吐，如不及时清除呕吐物，可能导致呕吐物堵塞气道窒息而死。因此病人的头必须转向一侧，这样呕吐物就能流出口腔。\n3、可用冰袋或冷毛巾敷在病人前额，降低局部温度有收缩血管的功效，有助于止血和降低脑压。\n4、在专业救护人员的陪护下，及时送往医院就医。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

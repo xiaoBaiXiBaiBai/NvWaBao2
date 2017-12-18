@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="烧伤"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="烧伤不仅仅是火焰灼伤，一般包括所有种类的热力，包括热液（水、汤、油等）、蒸气、高温气体、火焰、炽热金属液体或固体（如钢水、钢锭）等所引起的组织损害，主要指皮肤和/或黏膜，严重者也可伤及深层的器官。重度烧伤通常需要特殊医疗，在急救后需尽快送医院。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/aid_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="急救措施"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1.热力烧伤\n包括火焰，蒸气、高温液体、金属等，常用方法如下：①尽快脱去着火或沸液浸湿的衣服，特别是化纤衣服，以免着火或衣服上的热液继续作用，使创面加深。②用水将火浇灭，或跳入附近水池、河沟内。③就地打滚压灭火焰，禁止站立或奔跑呼叫，防止头面部烧伤或吸入性损伤。④立即离开密闭和通风不良的现场，以免发生吸入性损伤和窒息。⑤用不易燃材料灭火。⑥冷疗。\n2.对于化学烧伤\n烧伤严重程度酸碱的性质、浓度及接触时间有关，因此无论何种酸碱烧伤，均因立即用大量清洁水冲洗至少30分钟以上，一方面可冲淡和清除残留的酸碱，另一方面作为冷疗的一种方式，可减轻疼痛，注意用水量应足够大，迅速将残余碱从创面冲净，头面部烧伤硬首先注意眼，尤其是角膜有无烧伤，并优先冲洗。\n3.电烧伤（点击阅读触电急救方法）\n急救时，应立即切断电源，不可在未切断电源时去接触患者，以免自身被电击伤，同时进行人工呼吸、心外按压等处理，并及时转送至就近医院进一步处理。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="“冲脱泡盖送”烧伤急救5步法"
+                android:textSize="18dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/aid_01"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、不要企图移去粘在伤处的衣物，否则会撕坏皮肤，必要时可将衣裤剪开。\n2、不可涂抹任何油膏或药剂，不可挑破水泡或在伤处吹气，以免污染伤处。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

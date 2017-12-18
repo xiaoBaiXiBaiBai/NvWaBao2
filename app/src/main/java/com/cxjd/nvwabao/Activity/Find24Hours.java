@@ -1,7 +1,6 @@
 package com.cxjd.nvwabao.Activity;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.ListViewAdapter;
@@ -39,6 +37,8 @@ public class Find24Hours extends AppCompatActivity {
 
     //用来存放所有的实例化的数据
     private List<com.cxjd.nvwabao.bean.ListView> itemList = new ArrayList<>();
+    //全局属性
+    ListView listView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,11 +46,12 @@ public class Find24Hours extends AppCompatActivity {
         setContentView(R.layout.activity_24hours);
         //初始化列表数据
         initListView();
-        ListViewAdapter adapter = new ListViewAdapter(Find24Hours.this,R.layout.listview_item,itemList);
-        ListView listView = findViewById(R.id.list_view_24);
+        ListViewAdapter adapter = new ListViewAdapter(Find24Hours.this, R.layout.listview_item,itemList);
+        listView = (ListView) findViewById(R.id.list_view_24);
         listView.setAdapter(adapter);
         //默认显示
         replaceFragment(new Find24HoursRight01());
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -99,6 +100,13 @@ public class Find24Hours extends AppCompatActivity {
         });
     }
 
+
+
+
+    /**
+     * 更换Fragment显示的页面
+     * @param fragment
+     */
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -132,8 +140,6 @@ public class Find24Hours extends AppCompatActivity {
         itemList.add(item10);
         com.cxjd.nvwabao.bean.ListView item11 = new com.cxjd.nvwabao.bean.ListView("21.00"+"\n " + "~" + "\n "+"23.00");
         itemList.add(item11);
-
-
     }
 
 

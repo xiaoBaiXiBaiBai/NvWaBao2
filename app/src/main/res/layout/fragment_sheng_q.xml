@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="芹菜+豆千=清肠排毒\n\n芹菜+核桃=润发、明目、养血，使人体\n\n获得更全面的营养\n\n芹菜+牛肉=营养瘦身\n\n芹菜+腌制食品=可防癌\n\n青椒+谷类=可防止维生素C被氧化\n\n青椒+鸡蛋=有利于维生素的吸收\n\n青椒+猪肝=补血"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

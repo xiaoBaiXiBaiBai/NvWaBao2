@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胃穿孔"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="胃穿孔主要是在胃溃疡的基础上暴饮暴食所致。典型症状：本来有胃溃疡的患者，饱食后突然发生无法忍受的剧烈腹痛，常呈刀割或烧灼样痛，一般为持续性，疼痛很快扩散至全腹部。病情发展至细菌性腹膜炎和肠麻痹，病人可出现中毒性休克。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救措施"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、不要捂着肚子乱打滚，或因疼痛难忍东倒西歪，应立即上床或平躺在地朝左侧卧。原因是穿孔部位大多位于胃部右侧，朝左卧能有效防止胃酸和食物进一步流向腹腔以致病情加剧。\n2、如果医护人员无法及时到达，但现场又有些简单医疗设备，可自行安插胃管。具体方法：将胃管插入鼻孔，至喉咙处，边哈气边用力吞咽，把胃管咽入胃中。然后用注射器抽出胃里的东西，这样能减轻腹腔的感染程度，为病人赢得治疗时间。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="预防措施"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、多补充维生素C，维生素C对胃粘膜有一定的保护作用。\n2、药物：阿司匹林、消炎痛等非甾体类抗炎药、激素药物等对胃肠有较大刺激和腐蚀作用，胃溃疡病人应该慎用。若必须应用时，应加用保护胃粘膜药物及抑酸药物。\n3、戒烟、酒：吸烟和大量饮烈酒，都容易引起胃肠黏膜血管痉挛缺血。\n4、合理饮食：少吃油炸、腌制、生硬、生冷刺激性食物，特别是坚硬食物的棱角可损伤已经溃疡的胃肠壁，直接导致胃穿孔。另外还要避免过量进食，在进食时应该注意细嚼慢咽，减轻胃部压力，加快消化。避免长时间饥饿后大量进食，极易出现胃穿孔。\n5、过度劳累和寒冷刺激可以加重胃壁血管痉挛，成为溃疡病穿孔的诱因，应该注意防范。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

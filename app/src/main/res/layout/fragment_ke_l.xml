@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="辣椒+生胡萝卜=破坏维生素C的吸收\n\n辣椒+猪肝=破坏维生素C的功效\n\n梨+开水=刺激肠胃，导致腹泻\n\n梨+螃蟹=引起腹泻，损伤肠胃\n\n鲤鱼+甘草=会引起中毒\n\n鲤鱼+狗肉=功能相反，不宜同食\n\n鲤鱼+鸡肉=功能相反，不宜同食\n\n鲤鱼+酱=易使人上火，引起口疮\n\n鲤鱼+咸菜=易造成消化道癌变\n\n栗子+牛肉=影响营养吸收，不易消化\n\n栗子+羊肉=不易消化、呕吐\n\n鲈鱼+奶酪=引发痼疾\n\n驴肉+金针菇=引发心痛\n\n驴肉+荆芥=中毒\n\n驴肉+茶=便秘\n\n绿豆+狗肉=会引起中毒\n\n绿豆芽+猪肚=降低胆固醇吸收\n\n绿豆芽+猪肝=降低营养价值\n\n萝卜+黑木耳=皮炎\n\n萝卜+橘子等水果=易诱发甲状腺肿大\n\n萝卜+人参一功能相抵，影响滋补作用\n\n螺+冰制品=消化不良或腹泻\n\n螺+蚕豆=回肠绞痛\n\n螺+蛤蜊=中毒\n\n螺+面=引起腹痛、呕吐\n\n螺+木耳=不利于消化\n\n螺+牛肉=不易消化，引发腹胀\n\n螺+香瓜=中毒\n\n螺+玉米=中毒"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="白菜+海带、海鱼等海产品防止碘不足\n\n白菜十辣椒=促进肠胃领动，帮助消化\n\n白菜+鲤鱼=改善妊娠水肿\n\n白菜十虾仁=防治牙银出血，解热除燥\n\n白莱+猪肝=滋补\n\n白莱十猪肉=补充营养、通便\n\n白糖+茶叶=影响茶叶功效的发挥\n\n白糖+红豆=预防贫血\n\n白糖+番茄=治疗胃脾虛弱\n\n百合+鸡蛋=滋阴润燥、清心安神\n\n百合+猪肉=营养丰富\n\n荸荠+核桃=有利于消化\n\n荸荠+黑木耳=补气强身、益胃助食\n\n荸荠+香菇=补气强身、益胃助食\n\n菠菜+海带=防止结石\n\n菠菜+花生=有利于维生素的吸收\n\n菠菜+鸡蛋=提高对鸡蛋中维生素B2的吸收\n\n菠菜+青椒=保护眼睛\n\n菠菜+香油=润燥通便\n\n菠菜+猪血=润肠通便、清热润燥\n\n菠菜+猪肝=防治贫血"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

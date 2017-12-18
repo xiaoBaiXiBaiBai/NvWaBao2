@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="茄子+黑鱼=有损肠胃\n\n茄子+鸡蛋=降低胆固醇的吸收\n\n茄子+鳗鱼=降低胆固醇的吸收\n\n茄子+螃蟹=伤损肠胃\n\n茄子+猪肉=降低胆固醇的吸收\n\n芹菜+黄豆=影响铁的吸收\n\n芹菜+甲鱼=中毒\n\n芹菜+牡蛎=降低锌的吸收\n\n芹菜+兔肉=伤头发\n\n青椒+黄瓜=破坏维生素C"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

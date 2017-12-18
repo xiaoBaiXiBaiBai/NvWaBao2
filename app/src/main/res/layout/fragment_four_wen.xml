@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="蔬菜类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/wen_shucai"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="6"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="水果类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_shuiguo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="6"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="菌豆类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_jundou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="肉禽蛋类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_rouqindan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="6"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="五谷、干果类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_wuguganguo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="5"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="中药材"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_zhongyaocai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="9"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="饮品类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_yinpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="5"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="水产类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_shuichan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="6"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="调味品类"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/wen_tiaoweipin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="5"
+                android:columnCount="4"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

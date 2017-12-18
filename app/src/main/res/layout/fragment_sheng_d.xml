@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="大米+胡萝卜=改善胃肠功能\n\n冬瓜+火腿=营养丰富、治疗小便不爽\n\n冬瓜+鸡肉=清热利尿、消肿轻身\n\n冬瓜+甲鱼=润肤健肤，明目、减肥\n\n冬瓜+口蘑=利小便、降血压\n\n豆腐+萝卜=有利消化\n\n豆腐+鱼=补钙"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

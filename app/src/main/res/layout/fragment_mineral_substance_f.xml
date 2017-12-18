@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="氟"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         氟是构成人体骨骼和牙齿的重要成分，正常牙齿中氟含量为11毫克。缺氟会使牙齿松软，易于发生龋齿。氟量过多，牙齿珐琅质也会被损坏，产生氟斑牙。人体中的氟主要来源于饮水。若长期饮用含氟量超过1.5毫克/ 升的水，会发生斑牙症，含量超过2.5~3.0毫克/ 升，就会发生氟骨症。长期摄人过量的氟会损伤骨骼和肾脏。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         我国规定，饮水氟化物的含量不得超过1毫克/ 升，适宜含量为0.5~1.0毫克/升。若每人从膳食中每日摄取0.8~1.6毫克的氟，饮水摄人2.5毫克(以每日饮水2500毫升计)，则每日氟的总摄人量为3.3~4.1毫克，既满足了正常需要量，又不会产生氟中毒。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

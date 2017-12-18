@@ -62,7 +62,7 @@ public class NewsDetailActivity extends Activity {
     private String commentUrl = null;
     int pageId,count;
     View view;
-    boolean IS_hit,IS_HIT;
+    boolean IS_hit;
     User user;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,8 +79,7 @@ public class NewsDetailActivity extends Activity {
         Intent intent=getIntent();
         String url=intent.getStringExtra("content")+"/"+34;
         pageId=intent.getIntExtra("pageId",-1);
-        User user=DataSupport.findFirst(User.class);
-        commentUrl="http://192.168.31.227/user/getComments/"+pageId+"/"+user.getmId();
+        commentUrl="http://192.168.31.227/user/getComments/"+pageId+"/"+0;
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);

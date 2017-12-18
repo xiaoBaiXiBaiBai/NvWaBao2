@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="镁"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         成年人体内镁的含量约为20~25 毫克，它是机体内许多代谢酶的致活剂，能参与钙和磷的代谢，维持神经的感应性。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体缺镁，会产生慢性呼吸障碍症、急性腹泻、慢性肾功能衰竭和蛋白质热能营养不良。表现为情绪不安、易于激动、肌肉震颤、手足搐搦，神经反射亢进、心跳过速和心律不齐等症状。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         小米、小麦、大麦和豆类都含有较丰富的镁，肉和动物的内脏镁的含量也比较多。奶类含量较少。一般的动、植物混合食物中，约有30~40%的镁能被吸收。成年人每日需要镁约200~300毫克，孕妇和乳母可以相应增加供应量。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

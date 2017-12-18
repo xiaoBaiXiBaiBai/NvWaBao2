@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="铝制器皿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         铝质轻、不生锈、传热快、光洁度佳，价位又便宜，因此常被作作为炊具使用。然而，近年来，医界研究报告指出，老年痴呆病患者脑组织中的铝含量高出健康者约10至30倍，这表示铝会导致脑神经退化、记忆力减退，甚至痴呆，因此，我们要从日常饮食中，防范铝摄取过量。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="铝制器皿正确使用方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         用铝制炊具应避免与其他硬物摩擦，以防铝粉铲落。炒菜不宜用铝制炊具，铝锅使用前略加热，使氧化层破损处再氧化，可减少铝渗出。铝锅烧煮食物的时间不宜超过4小时。铝制炊具用完洗净后用火烤干，保持氧化膜完整。用铝勺、铝铲刮下的食物多含铝屑，不宜食用。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用铝制器皿搅拌鸡蛋"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         蛋清遇到铝会变成灰白色，蛋黄遇到铝会变成绿色。故搅拌鸡蛋忌用铝制器皿，而用瓷制容器较为合适。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用铝制器皿存放饭菜"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         铝的化学性质非常活泼，在空气里很容易氧化，表面生成氧化铝薄膜。氧化铝薄膜不溶于水，但却能溶解于酸性或碱性溶液中。咸的菜、汤类食物如果长期存放在铝锅里，不仅会毁坏铝锅，而且汤菜里会有较多的铝，它们和食物发生化学变化，生成铝的化合物。长期吃含有大量铝和铝化合物的食物，人体会慢性中毒。因此，不能将剩饭剩菜长时间存放在铝制品里。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="忌用铝锅煮牛奶"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         煮牛奶千万不能使用铝锅，铝锅会与牛奶产生化学变化，破坏牛奶中的营养成分，不易人体消化吸收，有时还会引起肠胃不适。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

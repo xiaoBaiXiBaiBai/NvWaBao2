@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="心绞痛"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="心绞痛是冠状动脉供血不足，心肌急剧的暂时缺血与缺氧所引起的以发作性胸痛或胸部不适为主要表现的临床综合征。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_margin="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="特点为前胸阵发性、压榨性疼痛，可伴有其他症状，疼痛主要位于胸骨后部，可放射至心前区与左上肢，劳动或情绪激动时常发生，每次发作持续3～5分钟，可数日一次，也可一日数次，休息或用硝酸酯类制剂后消失。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、停止一切活动，平静心情，可就地站立休息，无须躺下，以免增加回心血量而加重心脏负担。\n2、随身携带急救药物，如：硝酸甘油片一片，嚼碎后含于舌下，通常两分钟左右疼痛即可缓解。 如果效果不佳，十分钟后可再在舌下含服一片，以加大药量。注意，无论心绞痛是否缓解，或再次发作，都不宜连续含服三片以上的硝酸甘油片。\n3、经以上治疗疼痛不能缓解或本次发作较平时重且持续时间长者，应考虑到是否有急性心肌梗死的可能，及时到医院检查治疗。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、避免进食高脂肪、高胆固醇的食物，注意降血脂治疗，避免心脏血管堵塞。\n2、多吃水果、新鲜蔬菜，避免火锅等辛辣刺激食物。适量引用红酒、苹果醋可软化血管，减少心绞痛发作。调整作息计划，应适当休息，减轻工作量。\n3、初发心绞痛的患者，往往未随身携带急救药物，避免情绪慌乱，及时到医院救治即可。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

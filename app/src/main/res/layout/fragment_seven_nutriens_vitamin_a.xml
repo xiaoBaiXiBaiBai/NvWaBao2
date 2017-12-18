@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素A是脂溶性维生素。维生素A耐热，短时间烹调对它破坏极少，但在空气中容易被氧化而失去生理作用，也能被紫外线破坏。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体若缺乏维生素A,会出现各种疾病。摄人维生素A过量，也会中毒，严重的甚至导致死亡。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="1.维生素A的生理功能有以下几个方面"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="     (1) 维持呼吸道、消化道、泌尿道以及性腺等上皮细胞组织的健康。维生素A缺乏会出现上皮组织萎缩、皮肤干燥、脱屑，毛囊角化，形成棘刺状角质毛囊丘疹使汗腺、皮脂腺菱缩，产生皮肤干燥，眼结膜上层角化，产生干眼症，甚至发生角膜软化、溃疡穿孔而失明。\n     (2) 参与视网膜内视紫质的合成，维持正常视觉，防止夜盲症。\n     (3) 促进生长发育，对胎儿和婴儿的生长发育尤为重要。\n     (4) 增强对传染病的抵抗力。\n     (5) 能够防止多种类型上皮肿瘤的发生和发展。维生素A缺乏时会增加对化学致癌物的易感性。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="2.维生素A来源"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         维生素A主要来源于动物性食物。植物性食物中的胡萝卜素被称为维生素A原。胡萝卜素在人体肝脏胡萝卜素酶作用下，转变为维生素A。动物性食品如各种动物的肝、蛋黄、乳类都含有较丰富的维生素A。植物性食品如菠菜、苜蓿、豌豆苗、胡萝卜和部分水果都含有胡萝卜素。\n\n         由于维生素A和胡萝卜素是脂溶性的，所以每餐摄入一定量的脂肪，能促进维生素A和胡萝卜素的吸收。人体对胡萝卜素的吸收利用率较差，一般吸收利用率为摄入量的1/3,而吸收后转变为维生素A的只有吸收量的1/2。可见，胡萝卜素的生理效价只相当于维生素A 的1/6。\n\n         我国成年人每日维生素A的需要供给量是0.66毫克，折合胡萝卜素为4毫克。\n\n         摄入过多的维生素A会引起中毒，中毒表现为头晕、头痛、厌食、腹泻、感觉过敏、皮肤粗糙、面部或全身发生鳞状脱皮、毛发脱落、肝脏肿大、肌肉僵硬等症状。及时停用维生素A后，症状会很快消失。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="癫痫"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="影响"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="癫痫即俗称的“羊角风”或“羊癫风”，是大脑神经元突发性异常放电，导致短暂的大脑功能障碍的一种慢性疾病；可反复发作数十年之久，给个人造成严重的不良影响。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、有发作病史的患者应及时告知家属或周围人，可尽快将患者扶至床上，也可顺势使其躺倒，防止意识突然丧失而跌伤，迅速移开周围硬物、锐器，减少发作时对身体的伤害。\n2、迅速松开患者衣领，使其头转向一侧，保持呼吸道通畅；不要向患者口中塞任何东西，不要灌药，防止窒息。\n3、抽搐发作时患者牙关紧闭，要注意咬伤舌头的可能；不要在患者抽搐期间强制性按压患者四肢，过分用力可造成骨折和肌肉拉伤，增加患者的痛苦。\n4、癫痫发作一般在5分钟之内都可以自行缓解。如果连续发作或频繁发作，一次发作的时间持续5-10分钟以上，要及时将患者送到医院继续抢救。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、癫痫的病根主要是婴幼儿时候留下的，所以预防要做到以下几点：孕期头三个月，一定要远离辐射，避免病毒和细菌感染；分娩时避免胎儿缺氧、窒息、产伤等；小儿发热时应及时就诊，避免孩子发生高热惊厥，损伤脑组织。\n2、确定有癫痫的患者需要定期门诊进行正规治疗；生活方面，要避免咖啡等辛辣刺激性饮食，戒烟、戒酒；禁止驾驶汽车；禁止在野外游泳；不宜在高空作业等。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

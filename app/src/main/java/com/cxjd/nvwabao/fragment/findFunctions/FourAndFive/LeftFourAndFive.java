@@ -1,4 +1,4 @@
-package com.cxjd.nvwabao.fragment.findFunctions;
+package com.cxjd.nvwabao.fragment.findFunctions.FourAndFive;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,16 +9,20 @@ import android.view.ViewGroup;
 
 import com.cxjd.nvwabao.R;
 
-/**
- * Created by 李超 on 2017/11/7.
- */
 
-public class FourAndFiveFragment extends Fragment {
+public class LeftFourAndFive extends Fragment {
+
+
+
+
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_find_fourandfive,container,false);
+        View view = inflater.inflate(R.layout.fragment_left_four_and_five,container,false);
         return view;
     }
+
+
 }

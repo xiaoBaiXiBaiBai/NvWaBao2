@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="糖 -- 人体能量的来源"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         糖在生物界分布极广，几乎所有的动物、植物、微生物体内都含有糖，尤以植物界最多，约占其比重的80%左右。人和动物不能像植物那样“生产”糖，人体内的糖主要是由食物提供的。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="(一) 糖类的生理功能"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="\n1.提供热能\n     人体内最主要的供能物质是糖。糖和蛋白质、脂肪虽都可以供给人体能量，但蛋白质有更重要的生理功能，脂肪是体内能量的贮备库，一般不多动用; 糖的来源丰富是供能的消耗品，但是人体内贮备的糖原很少，约为300克，仅够半天用。因此，人需要一日三餐补充能量。\n\n2.合成蛋白质\n     蛋白质、氨基酸、脂肪都是由一个个碳原子连接起来的，这些碳链都是糖类化合物分解转化来的。糖在人体内可以转化为脂肪，因此，有些吃素食的人，多余的糖会转化为脂肪，仍然会发胖。糖不能转化为蛋白质，只能转化为一些非必需氨基酸。糖摄取过多不好，太少也会影响脂肪的利用和蛋白质的生理功能。\n\n3.解毒作用\n     糖的衍生物糖苷类，具有解毒作用。很多中草药的有效成分就是糖苷。肝脏内糖原较多时，对某些化学毒物如酒精、四氯化碳、砷等的解毒能力就强，对细菌感染引起的毒血症的解毒能力也强，可以保护肝脏本身免受一些有害因素的损害。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="(二) 人体内的血糖"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         保持人体血糖浓度的相对恒定，对神经系统，特别是大脑的活动有重要作用。大脑内贮存的葡萄糖和糖原极少，仅能供其几分钟的正常活动，脑里又没有可被氧化放能的脂肪，脑功能复杂，活动频繁，需要的能量特别多，它完全靠循环血液随时供给葡萄糖，因此，必须保持血糖的平衡。这就需要合理营养和正确地膳食。糖的供给量一般认为成年人每日所需总热量的60~70%由糖来供给较为合理。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

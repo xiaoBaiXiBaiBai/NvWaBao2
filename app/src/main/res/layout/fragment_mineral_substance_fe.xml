@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="铁"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         成年人体内含铁量约为3~5 克，其中三分之二集中在血红蛋白内。铁的含量虽少，但有重要的生理作用。它是血红蛋白的重要成分，能参与体内氧和二氧化碳的运送。是细胞色素氧化酶，过氧化氢酶等组织呼吸酶的组成成分。若人体长期缺铁或铁的吸收受到限制，会产生缺铁性贫血。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         肝、肾，蛋黄，豆类和一些蔬菜里含有丰富的铁。奶里含铁量较少，长期用牛奶喂养的婴儿，应补充含铁量较丰富的食物。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体对各种食物中铁的吸收率不同，一般为1~ 30%.人对铁的吸收与磷一样，也受多种因素的影响。成年人每天铁的需要量为1毫克，少年生长期、孕妇和乳母在特殊生理期每日需铁15毫克计样的供应标准，一般的膳食可以达到。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

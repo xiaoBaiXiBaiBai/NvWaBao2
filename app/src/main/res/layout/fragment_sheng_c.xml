@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="\n\n菜花+牛肉=帮助吸收维生素B2\n\n草莓+牛奶=有利于吸收维生素B12\n\n草鱼+冬瓜=祛风、清热、平肝\n\n草鱼+豆腐=补中调胃、利尿消肿\n\n草鱼+油条、蛋、胡椒粉=益眼明目\n\n茶+番石榴=预防心血管疾病\n\n莼菜+红豆、薏米=清热消肿、解毒抗癌\n\n莼菜+黄鱼=开胃增食欲\n\n莼菜+鯽鱼=补虚、养肠胃\n\n纯菜+鲤鱼=清热消肿、解毒抗癌\n\n葱+毛豆=改善睡眠\n\n葱+兔肉=排毒养颜\n\n葱+猪肉=增强体力、预防老年痴呆症\n\n醋+骨头汤=增强钙的吸收\n\n醋+芝麻=促进铁、钙吸收"
+        android:textSize="15dp"
+        />
+    </ScrollView>
+</RelativeLayout>

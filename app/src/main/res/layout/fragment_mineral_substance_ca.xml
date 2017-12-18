@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="钙"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体中的钙99%存在于骨骼和牙齿中，是骨骼和牙齿的主要成分，能促进骨、牙的正常生长。钙是血液凝固的必须要素，是许多酶的致活剂。钙能够调节心脏和神经的活动，维持肌肉的紧张力。人体缺钙，会患佝偻病和软骨病。血浆中含钙量若低于正常量的90%，即会引起心跳加快、心率不齐，神经肌肉应激性增强，产生手足摘搦症等。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:text="         钙的来源比较丰富。动物性食物中的奶类含量丰富，每100克里含有120毫克的钙。虾、蟹、蛤蜊和蛋类也含有较多的钙。植物性食物的绿叶菜和豆类也是钙的重要来源。平时炖排骨、鱼和炖骨头汤等，也能大大增加钙的供应量。"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         人体对钙的需要量，成年人每日为600毫克，孕妇和乳母为1500~2000毫克; 青年为1000~1200毫克; 儿童为600~800毫克。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

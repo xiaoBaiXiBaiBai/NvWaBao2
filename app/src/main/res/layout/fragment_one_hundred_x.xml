@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="小儿腹泻"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/onehundred_x_1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="小儿肺炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="小儿贫血"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="小儿湿疹"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="小儿遗尿"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="虚冷症"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="胸膜炎"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="荨麻疹"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="消化不良"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/orangered"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="血小板减少性紫癜"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:layout_gravity="center"
+                android:id="@+id/onehundred_x_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="11"
+                android:columnCount="4"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/common_titile"/>
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="呼吸困难"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:text="供您参考，不能替代专业的医疗建议、诊断、治疗"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#808080"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="症状"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="成人正常呼吸频率为16-20次/分；呼吸困难是指病人主管方面感到氧气不足或呼吸费力，而客观上，呼吸的频率、深度和节律都有所改变。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="急救方法"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="1、一旦出现呼吸困难，应立即让患者就地平卧，托他的下颌让头过仰，这样可以打开气道，如有气道分泌物、口腔呕吐物或异物应及时清除。\n2、注意周围环境的安全，避免在急救时引起次生损伤；尽量使患者保持安静，避免情绪紧张导致气道痉挛，以防加重呼吸困难。\n3、如果病人呼吸困难，同时有粉红色泡沫样痰，可能是由急性心衰引起，应让他半卧位或坐位，这样可以减少肺里的充血，也可以增加腹式呼吸。\n4、如果出现呼吸心跳骤停，应立即进行人工呼吸和心脏按压；同时呼唤身边的人拨打120急救电话。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="注意事项"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="1、肺部和支气管疾病及心脏病是引起呼吸困难的最多见原因。这些病人出现症状时应保持半坐体位，使呼吸道通畅，可服用祛痰药，但不要用镇静剂以免发生危险，有条件时可吸氧，呼吸困难一般可以改善。\n2、如果在运动时出现呼吸困难，可能是由于心脏病或者是呼吸系统的疾病导致；如果在吃饭时突然发生呼吸困难，可能是由于窒息，需要紧急清理堵塞的气道。\n3、各种原因引起的中毒也可以出现呼吸困难。如果出现一氧化碳中毒，应立即将病人脱离中毒现场，或关闭气阀并保持空气流通；如果家人患有糖尿病，出现呼吸困难并呼出烂苹果气味，并出现神志问题，应该考虑糖尿病伴发的酮症酸中毒，此病凶险，要立即送医院抢救。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

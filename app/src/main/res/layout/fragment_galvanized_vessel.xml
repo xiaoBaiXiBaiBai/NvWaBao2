@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="镀锌容器"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         锌为人体必需微量元素之一，对人的生长发育、免疫系统功能、组织再生能力均有极为重要的作用。所以很多人选择镀锌容器，以为这样可以补充人体的锌元素。但是镀锌容器也有一定的使用宜忌，人体的锌元素过多也会中毒。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="锌过多的危害"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         锌摄入人体过多时，可引起急慢性中毒。急性锌中毒多因水源、空气污染，或误服锌化物所致；慢性中毒则由于长期大量服用锌剂治病或常用锌容器盛放食物、饮料引起。急性中毒表现为腹痛腹泻、呕吐、厌食等; 慢性中毒多表现为食欲缺乏、顽固性贫血、血红蛋白含量降低、血清铁降低等。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜盛放酸性食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         锌不溶于水，但易溶于酸性溶液中，即使在弱酸性溶液中亦易溶解，一般如柠檬汁、酸梅汤、醋酸对锌的溶解度相当大。锌被溶解后以有机酸盐的形式进入食品，食用后，就会中毒。禁止使用镀锌容器和工具盛放、煮制、加工、运输和保存酸性食品，如果汁、果酱、番茄酱、酸牛奶、酸菜及食醋等。用镀锌铁桶装牛奶也很危险。用镀锌容器配制酸性饮料，即制即饮用无妨，但在容器中盛放一日后再饮用即可发生程度不等的中毒症状。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:text="不宜炖煮酸性食物"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="15dp"
+                android:text="         海棠果、苹果、山里红这些水果，皆含有大量有机酸，在加热炖煮的情况下，使锌大量溶解，而混人食物中，容易引起人体中毒。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

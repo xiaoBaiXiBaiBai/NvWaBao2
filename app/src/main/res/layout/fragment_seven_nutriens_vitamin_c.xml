@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:text="维生素与人体健康"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:text="         维生素C呈酸性，能防治坏血病，易溶于水，遇热和碱会被破坏，与某些金属特别是铜接触破坏更快，因而在烹调过程中容易损失。
+\n\n         维生素C是一种活性很强的还原性物质，参与体内重要的生理氧化还原过程，是机体新陈代谢不可缺少的物质。能促进细胞间质的形成，维持牙齿、骨骼、血管、肌肉的正常功能和促进伤口愈合。能促使抗体的形成，提高白细胞的吞噬作用，增强人体的抵抗力。
+\n\n         缺乏维生素C的主要病变是出血和骨骼变化。缺乏维生素C会感到身体乏力，食欲减退，容易出血，小儿会出现生长迟缓，烦躁和消化不良，以后逐渐出现牙龈萎缩、浮肿出血。由于血管脆性增加，全身出现出血点。
+\n\n         新鲜蔬菜、水果中，尤其是绿色蔬菜、番茄和酸性水果如橘子、酸枣、山楂等都含有丰富的维生素C,豆芽也含有维生素C。需要注意的是由于黄瓜、白菜等含有较多的抗坏血酸氧化酶，能加速维生素C的氧化破坏，因而蔬菜贮存过程中，会造成维生素C的损失。
+\n\n         由于维生素C易被破坏，摄入量略高有益于健康和增强抵抗力，因而供应量应大于需要量。一般成年人每日维生素C的需要量为70~75毫克; 儿童根据不同年龄为每日30~75毫克; 青春发育期每日80~90毫克，孕妇每日100毫克; 乳母每日150毫克。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

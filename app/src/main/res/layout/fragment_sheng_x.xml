@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="虾+燕麦=可以护心、解毒\n\n苋菜+鸡蛋=增强人体免疫功能\n\n苋菜+猪肝=增强人体免疫功能\n\n香椿+鸡蛋=润肤、美腿\n\n香菇+豆腐=营养好吸收\n\n香菇+木瓜=减脂降压\n\n香蕉+牛奶=提高对维生素B12的吸收\n\n香蕉+土豆=可有效预防结肠癌\n\n香蕉+燕麦=提高血清素含量，改善睡眠\n\n小麦+鹌鹑蛋=治疗神经衰弱\n\n小麦+荞麦=营养更全面\n\n小麦+豌豆=预防结肠癌\n\n小麦+莜麦=提供全面营养\n\n小米+红糖=补虚、补血\n\n小米+鸡蛋=提高蛋白质的吸收\n\n杏仁+猪肺=润肺\n\n雪里蕻+猪肝=有助于钙的吸收"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>

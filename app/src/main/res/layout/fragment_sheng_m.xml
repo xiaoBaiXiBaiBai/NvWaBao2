@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="墨鱼+桃仁=治疗女子闭经\n\n木瓜+带鱼=补气养血\n\n木瓜十蜂胶=消炎、抗癌\n\n木瓜+蘑菇=减脂降压\n\n木瓜+牛奶=美容养颜"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+</RelativeLayout>
