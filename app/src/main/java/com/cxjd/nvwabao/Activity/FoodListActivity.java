@@ -163,9 +163,11 @@ public class FoodListActivity extends AppCompatActivity {
                 });
                 break;
             default:Data(Url);
+                Log.e("aaaaaa", "=================");
                 adapter2 = new Fruit2Adapter(FoodListActivity.this,R.layout.foot_list,fruitList2);
                 ListView listView8 = (ListView) findViewById(R.id.list_view);
                 listView8.setAdapter(adapter2);
+                //Data(Url);
                 listView8.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -1036,26 +1038,44 @@ public class FoodListActivity extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(responseData);
                     Fruit2 fruit2;
                     String name,content_url,iconUrl,kind;
-                    for (int i =0;i<=jsonArray.length();i++){
-                        JSONObject jsonObject =   jsonArray.getJSONObject(i);
-                        name = jsonObject.getString("name");
-                        content_url = jsonObject.getString("content_url");
-                        iconUrl = jsonObject.getString("iconUrl");
-                        kind = jsonObject.getString("kind");
-                        Log.e("Json",name+"::"+content_url+"::"+iconUrl);
-                        fruit2 = new Fruit2(name,iconUrl,content_url,kind);
-                        fruitList2.add(fruit2);
-                    }
+                    if (jsonArray.length()==0){
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(FoodListActivity.this,"未找到此类食品",Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
-                    runOnUiThread(new Runnable() {
+                    }else {
+                        for (int i =0;i<jsonArray.length();i++){
+                            JSONObject jsonObject =   jsonArray.getJSONObject(i);
+                            name = jsonObject.getString("name");
+                            content_url = jsonObject.getString("content_url");
+                            iconUrl = jsonObject.getString("iconUrl");
+                            kind = jsonObject.getString("kind");
+                            Log.e("Json",name+"::"+content_url+"::"+iconUrl);
+                            fruit2 = new Fruit2(name,iconUrl,content_url,kind);
+                            fruitList2.add(fruit2);
+                        }
+                        Log.e("Next","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                        Log.e("aaaaaa", fruitList2.get(0).getIconUrl());
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                adapter2 = new Fruit2Adapter(FoodListActivity.this,R.layout.foot_list,fruitList2);
+                                ListView listView8 = (ListView) findViewById(R.id.list_view);
+                                listView8.setAdapter(adapter2);
+                            }
+                        });
+
+
+                    }
+             /*       runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            //Glide.with(FoodListActivity.this).load(imageUrl).into(bingPicImg);
-
+                          adapter2.notifyDataSetChanged();
                         }
-                    });
-
-
+                    });*/
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -56,7 +56,7 @@ public class FoodInfoActivity extends AppCompatActivity {
    private List<View> mViewList = new ArrayList<>();//页卡视图集合
 
 
-    private String imageUrl,foods_name,item0,item1,item2,item3,effects,warning;
+    private String imageUrl,foods_name,item0,item1,item2,item3,effects,warning,storage;
     private WebView webView1;
     private WebView webView2;
     private WebView webView3;
@@ -66,12 +66,12 @@ public class FoodInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_info);
 
-        bingPicImg = findViewById(R.id.bing_pic_img);
-        infoname = findViewById(R.id.infoname);
-        infoitem1 = findViewById(R.id.infoitem1);
-        infoitem2 = findViewById(R.id.infoitem2);
-        infoitem3 = findViewById(R.id.infoitem3);
-        infoitem4 = findViewById(R.id.infoitem4);
+        bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
+        infoname = (TextView) findViewById(R.id.infoname);
+        infoitem1 = (TextView) findViewById(R.id.infoitem1);
+        infoitem2 = (TextView) findViewById(R.id.infoitem2);
+        infoitem3 = (TextView) findViewById(R.id.infoitem3);
+        infoitem4 = (TextView) findViewById(R.id.infoitem4);
         address = getIntent().getStringExtra("address");
         Url = UrlBase+address;
         if (address==null){
@@ -83,7 +83,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         Log.e("Url",Url);
 
 
-        mViewPager = findViewById(R.id.vp_view);
+        mViewPager = (ViewPager) findViewById(R.id.vp_view);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
 
         mInflater = LayoutInflater.from(this);
@@ -104,7 +104,7 @@ public class FoodInfoActivity extends AppCompatActivity {
        // webSettings.setUseWideViewPort(true);
      //   webSettings.setLoadWithOverviewMode(true);
         //webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-   //     webView1.getSettings().setSupportZoom(true);
+   //   webView1.getSettings().setSupportZoom(true);
        // webView1.getSettings().setBuiltInZoomControls(true);
        // webView1.getSettings().setSupportZoom(true);
       /*  WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
@@ -114,7 +114,8 @@ public class FoodInfoActivity extends AppCompatActivity {
         webView2.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
       // webSettings2.setUseWideViewPort(true); //将图片调整到适合webview的大小
         //webSettings2.setLoadWithOverviewMode(true); // 缩放至屏幕的大小
-
+        WebSettings webSettings3 = webView3.getSettings();
+        webView3.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         //添加页卡视图
         mViewList.add(view1);
         mViewList.add(view2);
@@ -137,7 +138,8 @@ public class FoodInfoActivity extends AppCompatActivity {
 
         MyPagerAdapter mAdapter = new MyPagerAdapter(mViewList);
         mViewPager.setAdapter(mAdapter);//给ViewPager设置适配器
-        mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来。
+        mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来
+        //mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);//设置可以滑动
         mTabLayout.setTabsFromPagerAdapter(mAdapter);//给Tabs设置适配器
 
 
@@ -252,6 +254,7 @@ public class FoodInfoActivity extends AppCompatActivity {
                     effects = jsonObject.getString("effects");
                     //Log.e("imageUrl",effects);
                     warning = jsonObject.getString("warning");
+                    storage = jsonObject.getString("storage");
                     //Log.e("imageUrl",warning);
                     //Log.e("jsonArray",items[0]);
                      //head_array = jsonObject.getString("head_array");
@@ -279,6 +282,10 @@ public class FoodInfoActivity extends AppCompatActivity {
                             webView2.loadDataWithBaseURL("", warning, "text/html", "utf-8", null);
                             webView2.getSettings().setJavaScriptEnabled(true);
                             webView2.setWebChromeClient(new WebChromeClient());
+
+                            webView3.loadDataWithBaseURL("", storage, "text/html", "utf-8", null);
+                            webView3.getSettings().setJavaScriptEnabled(true);
+                            webView3.setWebChromeClient(new WebChromeClient());
                         }
                     });
                   //  Glide.with(FoodInfoActivity.this).load(imageUrl).into(bingPicImg);

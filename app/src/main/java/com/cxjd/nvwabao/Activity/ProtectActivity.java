@@ -15,13 +15,15 @@ public class ProtectActivity extends AppCompatActivity {
     private ImageView  guwu,dounairu,gandou,qinshou,shucai,shuichan,shuiguoganguo,yaocai;
     private MyDatabaseHelper dbHelper;
     private ImageView searchView;
+   //private SearchView searchView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_protect);
-        dbHelper = new MyDatabaseHelper(this,"BookStore.db",null,1);
-        dbHelper.getWritableDatabase();
+      /*  dbHelper = new MyDatabaseHelper(this,"BookStore.db",null,1);
+        dbHelper.getWritableDatabase();*/
         searchView = (ImageView) findViewById(R.id.searchView);
+        //searchView = (SearchView) findViewById(R.id.searchView);
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

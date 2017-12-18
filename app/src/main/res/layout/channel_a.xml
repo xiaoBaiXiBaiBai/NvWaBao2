@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cxjd.nvwabao.Activity.ChannelActivity"
+    android:orientation="vertical"
+    android:background="#F2F2F2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="常用频道:点击查询详情"/>
+
+                <com.cxjd.nvwabao.fragment.DragGridLayout
+                    android:id="@+id/dgl_main_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.cxjd.nvwabao.fragment.DragGridLayout>
+
+            </LinearLayout>
+
+            <!--     <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+
+                         android:text="频道管理"/>
+
+                     <com.cxjd.nvwabao.fragment.DragGridLayout
+                         android:id="@+id/dgl_main_bottom"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                     </com.cxjd.nvwabao.fragment.DragGridLayout>
+
+                 </LinearLayout>-->
+        </ScrollView>
+    </RelativeLayout>
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         >
+
+     </RelativeLayout>-->
+
+
+</LinearLayout>
