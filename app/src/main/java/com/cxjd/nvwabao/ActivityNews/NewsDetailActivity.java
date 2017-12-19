@@ -50,7 +50,6 @@ import okhttp3.Response;
 public class NewsDetailActivity extends Activity {
     String str;
     String string;
-    public static User sUser = new User(1, "走向远方"); // 当前登录用户
     private ProgressDialog progressDialog;
     private ListView mListView;
     private MomentAdapter mAdapter;

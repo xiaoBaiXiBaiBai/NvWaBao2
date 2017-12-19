@@ -83,6 +83,11 @@ public class MomentAdapter extends BaseAdapter {
             holder.name.setText(mList.get(position).getAuthor().getmName());
             holder.time.setText(mList.get(position).getCreate_time());
             holder.love_count.setText(mList.get(position).getPraise_num()+"");
+            if (mList.get(position).isIs_user_praise()==true){
+                holder.imagHit.setImageResource(R.mipmap.zan);
+            }else {
+                holder.imagHit.setImageResource(R.mipmap.zanf);
+            }
             holder.imagHit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -90,6 +95,7 @@ public class MomentAdapter extends BaseAdapter {
                         String url="http://47.94.145.225/user/addCommentPraise/"+mList.get(position).getMomentId()+"/"+user.getmId();
                         smallHit(url);
                         holder.love_count.setText("");
+                        holder.imagHit.setImageResource(R.mipmap.zan);
                         int i=mList.get(position).getPraise_num();
                         i++;
                         holder.love_count.setText(i+"");
