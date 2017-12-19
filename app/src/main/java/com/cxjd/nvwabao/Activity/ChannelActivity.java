@@ -1,6 +1,8 @@
 package com.cxjd.nvwabao.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -27,7 +29,7 @@ public class ChannelActivity extends AppCompatActivity {
     private List<View> mViewList = new ArrayList<>();//页卡视图集合
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
-
+    private TextView tx ;
 
 
 
@@ -192,7 +194,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutA.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -231,7 +234,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutB.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -262,7 +266,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutC.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -281,7 +286,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutD.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -300,7 +306,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutE.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -344,7 +351,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutF.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -363,7 +371,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutG.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -388,7 +397,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutH.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -407,7 +417,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutI.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -439,7 +450,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutJ.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -468,7 +480,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutK.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -486,7 +499,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutL.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -508,7 +522,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutM.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -526,7 +541,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutN.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -544,7 +560,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutO.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -564,7 +581,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutP.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -590,7 +608,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutQ.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -609,7 +628,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutR.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -629,7 +649,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutS.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -656,7 +677,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutT.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -674,7 +696,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutU.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -692,7 +715,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutV.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -711,7 +735,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutW.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -733,7 +758,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutX.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -757,7 +783,8 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutY.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
@@ -789,11 +816,14 @@ public class ChannelActivity extends AppCompatActivity {
         showGridLayoutZ.setOnItemClickListener(new DragGridLayout.OnItemClickListener() {
             @Override
             public void onItemClick(TextView tv) {
-
+                //tv.setTextColor(Color.parseColor("#00bfff"));
+                tx = tv;
+                tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
                 Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
+
             }
         });
     }
@@ -830,6 +860,15 @@ public class ChannelActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             return mTitleList.get(position);//页卡标题
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (tx!=null){
+            tx.setTextColor(Color.parseColor("#808080"));
         }
 
     }

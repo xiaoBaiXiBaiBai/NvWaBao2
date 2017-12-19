@@ -114,9 +114,10 @@ public class DragGridLayout extends GridLayout {
             setOnDragListener(null);
         }
     }
-
+   // public static TextView tv;
     //定义接口回调
     public interface OnItemClickListener {
+
         public void onItemClick(TextView tv);
     }
 
