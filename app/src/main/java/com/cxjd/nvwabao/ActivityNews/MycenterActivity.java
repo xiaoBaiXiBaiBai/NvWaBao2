@@ -42,7 +42,7 @@ public class MycenterActivity extends AppCompatActivity {
     }
 
     private void requesList() {
-        String url="http://192.168.31.227/user/getCollection/"+34;
+        String url="http://47.94.145.225/user/getCollection/"+34;
         HttpTitleUtil.sendHttpRequest(url, new HttpTitleUtil.HttpCallbackListener() {
             @Override
             public void onFinish(String response) {

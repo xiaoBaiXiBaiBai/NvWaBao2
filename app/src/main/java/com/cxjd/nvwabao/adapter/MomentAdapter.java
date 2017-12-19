@@ -87,7 +87,7 @@ public class MomentAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View view) {
                     if (mList.get(position).isIs_user_praise()==false){
-                        String url="http://192.168.31.227/user/addCommentPraise/"+mList.get(position).getMomentId()+"/"+user.getmId();
+                        String url="http://47.94.145.225/user/addCommentPraise/"+mList.get(position).getMomentId()+"/"+user.getmId();
                         smallHit(url);
                         holder.love_count.setText("");
                         int i=mList.get(position).getPraise_num();

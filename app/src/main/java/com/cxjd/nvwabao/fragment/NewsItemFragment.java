@@ -21,6 +21,7 @@ import com.cxjd.nvwabao.adapter.ListDataSave;
 import com.cxjd.nvwabao.adapter.NewsItemAdapter;
 import com.cxjd.nvwabao.bean.TitleContentBean;
 import com.cxjd.nvwabao.bean.TitleLable;
+import com.cxjd.nvwabao.fragment.findFunctions.OneHundred.S;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,11 +76,12 @@ public class NewsItemFragment extends Fragment {
     private void requesList() {
         titleContentBeans=listDataSave.getDataList(rqTitle,TitleContentBean.class);
         if (titleContentBeans.size()<=0||titleContentBeans.isEmpty()) {
-            String address = "http://192.168.31.227/user/getPosts/" + rqTitle;
+            String address = "http://47.94.145.225/user/getPosts/" + rqTitle;
             showProgressDialog();
             HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
+                    String st=response.toString();
                     listDataSave.setDataList(rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
                     getActivity().runOnUiThread(new Runnable() {
                         @Override

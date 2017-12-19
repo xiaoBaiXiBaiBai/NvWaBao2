@@ -21,8 +21,8 @@
                />
         <CheckBox
             android:id="@+id/item_state"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_margin="16dp"
             android:button="@drawable/state_select"

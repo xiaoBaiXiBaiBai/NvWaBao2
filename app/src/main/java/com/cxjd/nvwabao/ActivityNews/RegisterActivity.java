@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity{
             userpass_model.findFocus();
         } else {
             showProgressDialog();
-            String url = "http://192.168.31.227/user/addUsers/"+username+"/"+userpassword+"/"+usercount;
+            String url = "http://47.94.145.225/user/addUsers/"+username+"/"+userpassword+"/"+usercount;
             HttpTitleUtil.sendOkHttpRequest(url,new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {

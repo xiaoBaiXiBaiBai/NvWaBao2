@@ -62,7 +62,7 @@ public class NewsDetailActivity extends Activity {
     private String commentUrl = null;
     int pageId,count;
     View view;
-    boolean IS_hit;
+    boolean IS_hit,IS_COLLECT;
     User user;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,7 +79,7 @@ public class NewsDetailActivity extends Activity {
         Intent intent=getIntent();
         String url=intent.getStringExtra("content")+"/"+34;
         pageId=intent.getIntExtra("pageId",-1);
-        commentUrl="http://192.168.31.227/user/getComments/"+pageId+"/"+0;
+        commentUrl="http://47.94.145.225/user/getComments/"+pageId+"/"+0;
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
@@ -158,7 +158,7 @@ public class NewsDetailActivity extends Activity {
                            mListView.smoothScrollToPosition(mListView.getBottom());
                        }
                    });
-                   String posUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"+pageId+"/"+"-1";
+                   String posUrl="http://47.94.145.225/user/addComments/"+content+"/"+user.getmId()+"/"+pageId+"/"+"-1";
                    HttpTitleUtil.sendOkHttpRequest(posUrl,new Callback() {
                        @Override
                        public void onFailure(Call call, IOException e) {
@@ -175,19 +175,18 @@ public class NewsDetailActivity extends Activity {
         hit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (IS_hit == false) {
-                    hit.setImageResource(R.mipmap.zanf);
-                    Toast.makeText(NewsDetailActivity.this, "你已点赞", Toast.LENGTH_SHORT).show();
+                if (IS_hit == true) {
+                    Toast.makeText(NewsDetailActivity.this, "你已点过赞", Toast.LENGTH_SHORT).show();
                  } else {
                     User user = DataSupport.findFirst(User.class);
-                    String url = "http://192.168.31.227/user/addPraise/" + pageId + "/"+ user.getmId();
+                    String url = "http://47.94.145.225/user/addPraise/" + pageId + "/"+ user.getmId();
                     HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(NewsDetailActivity.this, "你已点赞", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(NewsDetailActivity.this, "点赞失败", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -198,7 +197,10 @@ public class NewsDetailActivity extends Activity {
                                 @Override
                                 public void run() {
                                     hit.setImageResource(R.mipmap.zanf);
-                                    lovecount.setText("" + count++);
+                                    count++;
+                                    lovecount.setText("" + count);
+                                    Toast.makeText(NewsDetailActivity.this, "点赞成功", Toast.LENGTH_SHORT).show();
+                                    IS_hit=true;
                                 }
                             });
                         }
@@ -206,27 +208,51 @@ public class NewsDetailActivity extends Activity {
                  }
                 }
         });
-        lovecount.setText(""+count++);
         lovasave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "http://192.168.31.227/user/getCollection/" + pageId + "/"+ user.getmId();
-                HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
+                if (IS_COLLECT == false) {
+                    String url = "http://47.94.145.225/user/getCollection/" + pageId + "/" + user.getmId() + "/add";
+                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                           runOnUiThread(new Runnable() {
-                               @Override
-                               public void run() {
-                                   Toast.makeText(NewsDetailActivity.this, "已收藏", Toast.LENGTH_SHORT).show();
-                               }
-                           });
-                    }
-                });
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    lovasave.setImageResource(R.mipmap.issave);
+                                    Toast.makeText(NewsDetailActivity.this, "已收藏", Toast.LENGTH_SHORT).show();
+                                    IS_COLLECT=true;
+                                }
+                            });
+                        }
+                    });
+                }else {
+                    String url = "http://47.94.145.225/user/getCollection/" + pageId + "/"+ user.getmId()+"/del";
+                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+
+                        }
+
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    lovasave.setImageResource(R.mipmap.nsave);
+                                    Toast.makeText(NewsDetailActivity.this, "已取消收藏", Toast.LENGTH_SHORT).show();
+                                    IS_COLLECT=false;
+                                }
+                            });
+                        }
+                    });
+
+                }
             }
         });
     }
@@ -270,9 +296,9 @@ public class NewsDetailActivity extends Activity {
                 User user= DataSupport.findFirst(User.class);
                 String smallCommenUrl = null;
                 if (receiver==null){
-                    smallCommenUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"+"-1"+"/"+position;
+                    smallCommenUrl="http://47.94.145.225/user/addComments/"+content+"/"+user.getmId()+"/"+"-1"+"/"+position;
                 }else {
-                    smallCommenUrl="http://192.168.31.227/user/addComments/"+content+"/"+user.getmId()+"/"
+                    smallCommenUrl="http://47.94.145.225/user/addComments/"+content+"/"+user.getmId()+"/"
                             +receiver.getmId()+"/"+position;
                 }
                 HttpTitleUtil.sendOkHttpRequest(smallCommenUrl, new Callback() {
@@ -306,11 +332,22 @@ public class NewsDetailActivity extends Activity {
                     string= (String) jsonObject.get("content");
                     count= (int) jsonObject.get("praise_num");
                     IS_hit= (boolean) jsonObject.get("is_user_praise");
+                    IS_COLLECT= (boolean) jsonObject.get("is_user_collect");
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                         webView.loadDataWithBaseURL(null,string,"text/html", "utf-8",null);
                             lovecount.setText(count+"");
+                            if (IS_COLLECT==true){
+                                lovasave.setImageResource(R.mipmap.issave);
+                            }else {
+                                lovasave.setImageResource(R.mipmap.nsave);
+                            }
+                            if (IS_hit==true){
+                                hit.setImageResource(R.mipmap.zanf);
+                            }else {
+                                hit.setImageResource(R.mipmap.zan);
+                            }
                             try {
                                 Thread.sleep(2000);
                                 requestComment(commentUrl);

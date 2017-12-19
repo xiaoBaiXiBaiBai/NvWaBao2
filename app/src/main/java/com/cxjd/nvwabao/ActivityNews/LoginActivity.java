@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(this, "密码不能为空", Toast.LENGTH_SHORT).show();
                 }else {
                     showProgressDialog();
-                    String url = "http://192.168.31.227/user/checkUsers/"+useraccount+"/"+password;
+                    String url = "http://47.94.145.225/user/checkUsers/"+useraccount+"/"+password;
                     HttpTitleUtil.sendOkHttpRequest(url.trim(), new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {

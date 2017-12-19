@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
     private void requesList() {
-        String address="http://192.168.31.227/user/getIndexPage";
+        String address="http://47.94.145.225/user/getIndexPage";
         //showProgressDialog();
         HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
             @Override
