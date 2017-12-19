@@ -42,7 +42,7 @@ public class FoodListActivity extends AppCompatActivity {
     private List<Fruit2> fruitList2 = new ArrayList<>();
     private FruitAdapter adapter;
     private Fruit2Adapter adapter2;
-    private String UrlBase = "http://192.168.31.227/user/getKey/";
+    private String UrlBase = "http://47.94.145.225/user/getKey/";
     private String listName,Url;
     private ImageView fruit_image;
     @Override

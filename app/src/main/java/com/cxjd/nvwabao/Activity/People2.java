@@ -34,7 +34,7 @@ public class People2 extends AppCompatActivity {
     private List<String> maxList,minList,neikeSonList;
     private ArrayAdapter<String> maxAdapter,minAdapter,neikeSonAdapter;
    // private  String UrlBase = "http://192.168.31.227/user/getParts/";
-    private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
+    private  String UrlBase = "http://47.94.145.225/user/getCrowdSick/";
     private int fPosition;
     private SelectAdapter adapter;
     @Override

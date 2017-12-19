@@ -34,7 +34,7 @@ public class People extends AppCompatActivity {
     private ListView maxlv,minlv;
     private List<String> maxList,minList;
     private ArrayAdapter<String> maxAdapter,minAdapter;
-    private  String UrlBase = "http://192.168.31.227/user/getParts/";
+    private  String UrlBase = "http://47.94.145.225/user/getParts/";
     //private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
     private int fPosition;
     private SelectAdapter adapter;

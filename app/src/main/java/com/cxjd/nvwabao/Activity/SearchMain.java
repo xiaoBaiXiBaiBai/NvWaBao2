@@ -123,7 +123,7 @@ public class SearchMain extends AppCompatActivity {
         });
 
 
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/", new Callback() {
+        HttpUtil.sendOkHttpRequest("http://47.94.145.225/user/getDepartments/", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -134,7 +134,7 @@ public class SearchMain extends AppCompatActivity {
 
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/0", new Callback() {
+        HttpUtil.sendOkHttpRequest("http://47.94.145.225/user/getDepartments/0", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -145,7 +145,7 @@ public class SearchMain extends AppCompatActivity {
 
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getCrowdSick/", new Callback() {
+        HttpUtil.sendOkHttpRequest("http://47.94.145.225/user/getCrowdSick/", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -156,7 +156,7 @@ public class SearchMain extends AppCompatActivity {
 
             }
         });
-        HttpUtil.sendOkHttpRequest("http://192.168.31.227/user/getDepartments/", new Callback() {
+        HttpUtil.sendOkHttpRequest("http://47.94.145.225/user/getDepartments/", new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 

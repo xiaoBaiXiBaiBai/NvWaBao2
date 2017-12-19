@@ -34,9 +34,9 @@ public class Room extends AppCompatActivity {
     private ListView neikelv,waikelv,fuchankelv, xiaoerkelv, wuguankelv, nankelv, chuanrankelv, pifukelv, xingbingkelv, jingshenxinlikelv, zhongliukelv, buyunbuyukelv, minlv;
     private List<String> leftList, minList,neikeList,waikeList,fuchankeList, xiaoerkeList, wuguankeList, nankeList, chuanrankeList, pifukeList, xingbingkeList, jingshenxinlikeList, zhongliukeList, buyunbuyukeList;
     private ArrayAdapter<String> arr_adapter,arr_adapter1,arr_adapter2,arr_adapter3,arr_adapter4,arr_adapter5,arr_adapter6,arr_adapter7,arr_adapter8,arr_adapter9,arr_adapter10,arr_adapter11, minAdapter;
-    private  String UrlBase = "http://192.168.31.227/user/getDepartments/";
+    private  String UrlBase = "http://47.94.145.225/user/getDepartments/";
     private Handler handl=null;
-    private String Url="http://192.168.31.227/user/getDepartments/0/0";
+    private String Url="http://47.94.145.225/user/getDepartments/0/0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

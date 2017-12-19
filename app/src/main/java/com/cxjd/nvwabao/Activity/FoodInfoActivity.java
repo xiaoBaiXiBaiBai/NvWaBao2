@@ -43,7 +43,7 @@ import okhttp3.Response;
 
 public class FoodInfoActivity extends AppCompatActivity {
     private ImageView bingPicImg;
-    private  String address = null,UrlBase = "http://192.168.31.227/user/getFoods/",Url;
+    private  String address = null,UrlBase = "http://47.94.145.225/user/getFoods/",Url;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private TextView infoname,infoitem1,infoitem2,infoitem3,infoitem4;
