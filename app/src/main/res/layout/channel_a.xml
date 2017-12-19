@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:text="常用频道:点击查询详情"/>
+                    android:text="常用频道  按字母查询详情"/>
 
                 <com.cxjd.nvwabao.fragment.DragGridLayout
                     android:id="@+id/dgl_main_show"
