@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:maxWidth="20dp"
-            android:layout_alignStart="@+id/imagehit"
+            android:layout_alignStart="@id/imagehit"
             android:layout_centerVertical="true"
             android:layout_marginStart="26dp"
             android:text="12" />

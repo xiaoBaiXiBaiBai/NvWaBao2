@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.bean.Moment;
 import com.cxjd.nvwabao.bean.User;
+import com.cxjd.nvwabao.fragment.findFunctions.OneHundred.U;
 
 import org.litepal.crud.DataSupport;
 
@@ -31,6 +32,7 @@ import okhttp3.Response;
  */
 public class MomentAdapter extends BaseAdapter {
     private User user= DataSupport.findFirst(User.class);
+    List<User> userList=DataSupport.findAll(User.class);
     public static final int VIEW_HEADER = 0;
     public static final int VIEW_MOMENT = 1;
 
@@ -91,20 +93,24 @@ public class MomentAdapter extends BaseAdapter {
             holder.imagHit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (mList.get(position).isIs_user_praise()==false){
-                        String url="http://47.94.145.225/user/addCommentPraise/"+mList.get(position).getMomentId()+"/"+user.getmId();
-                        smallHit(url);
-                        holder.love_count.setText("");
-                        holder.imagHit.setImageResource(R.mipmap.zan);
-                        int i=mList.get(position).getPraise_num();
-                        i++;
-                        holder.love_count.setText(i+"");
-                        Toast.makeText(mContext, "点赞成功", Toast.LENGTH_SHORT).show();
-                        mList.get(position).setIs_user_praise(true);
-                        mList.get(position).setPraise_num(i);
-                        notifyDataSetChanged();
+                    if (justIsLogin()==false){
+                        Toast.makeText(mContext, "请先登录", Toast.LENGTH_SHORT).show();
                     }else {
-                       Toast.makeText(mContext, "你已经点过赞了", Toast.LENGTH_SHORT).show();
+                        if (mList.get(position).isIs_user_praise() == false) {
+                            String url = "http://47.94.145.225/user/addCommentPraise/" + mList.get(position).getMomentId() + "/" + user.getmId();
+                            smallHit(url);
+                            holder.love_count.setText("");
+                            holder.imagHit.setImageResource(R.mipmap.zan);
+                            int i = mList.get(position).getPraise_num();
+                            i++;
+                            holder.love_count.setText(i + "");
+                            Toast.makeText(mContext, "点赞成功", Toast.LENGTH_SHORT).show();
+                            mList.get(position).setIs_user_praise(true);
+                            mList.get(position).setPraise_num(i);
+                            notifyDataSetChanged();
+                        } else {
+                            Toast.makeText(mContext, "你已经点过赞了", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             });
@@ -132,5 +138,12 @@ public class MomentAdapter extends BaseAdapter {
             public void onResponse(Call call, Response response) throws IOException {
             }
         });
+    }
+    private boolean justIsLogin() {
+        if (userList.isEmpty()||userList.size()<=0){
+            return false;
+        }else {
+            return true;
+        }
     }
 }
