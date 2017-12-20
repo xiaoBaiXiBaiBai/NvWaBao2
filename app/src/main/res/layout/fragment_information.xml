@@ -32,11 +32,12 @@
 
             <ImageButton
                 android:id="@+id/titleManager"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="match_parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_margin="3dp"
-                android:background="@android:drawable/ic_input_add"
+                android:background="@mipmap/addmore"
                 android:scaleType="center"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:theme="@style/ButtonTheme"
                 />

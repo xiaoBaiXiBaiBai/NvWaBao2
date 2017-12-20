@@ -40,6 +40,8 @@
             android:theme="@style/zhou"/>
         <activity android:name=".ActivityNews.MycenterActivity"
             android:theme="@style/zhou"/>
+        <activity android:name=".ActivityNews.LoginActivity"
+            android:theme="@style/zhou"/>
         <activity
             android:name=".Activity.People"
             android:theme="@style/zhou" />
@@ -66,6 +68,78 @@
             android:theme="@style/zhou" />
         <activity android:name=".Activity.ChannelActivity"
             android:theme="@style/zhou"></activity>
+
+        <!-- find中的24小时养生 -->
+        <activity android:name=".Activity.Find24Hours" />
+
+        <!-- find中的急救手册 -->
+        <activity android:name=".Activity.FirstAid" />
+        <!-- find急救手册中的各个页面 -->
+        <activity android:name=".FirstAid.Aid01" />
+        <activity android:name=".FirstAid.Aid02" />
+        <activity android:name=".FirstAid.Aid03" />
+        <activity android:name=".FirstAid.Aid04" />
+        <activity android:name=".FirstAid.Aid05" />
+        <activity android:name=".FirstAid.Aid06" />
+        <activity android:name=".FirstAid.Aid07" />
+        <activity android:name=".FirstAid.Aid08" />
+        <activity android:name=".FirstAid.Aid09" />
+        <activity android:name=".FirstAid.Aid10" />
+        <activity android:name=".FirstAid.Aid11" />
+        <activity android:name=".FirstAid.Aid12" />
+        <activity android:name=".FirstAid.Aid13" />
+        <activity android:name=".FirstAid.Aid14" />
+        <activity android:name=".FirstAid.Aid15" />
+        <activity android:name=".FirstAid.Aid16" />
+        <activity android:name=".FirstAid.Aid17" />
+        <activity android:name=".FirstAid.Aid18" />
+        <activity android:name=".FirstAid.Aid19" />
+        <activity android:name=".FirstAid.Aid20" />
+        <activity android:name=".FirstAid.Aid21" />
+        <activity android:name=".FirstAid.Aid22" />
+        <activity android:name=".FirstAid.Aid23" />
+        <activity android:name=".FirstAid.Aid24" />
+        <activity android:name=".FirstAid.Aid25" />
+        <activity android:name=".FirstAid.Aid26" />
+        <activity android:name=".FirstAid.Aid27" />
+        <activity android:name=".FirstAid.Aid28" />
+        <activity android:name=".FirstAid.Aid29" />
+        <activity android:name=".FirstAid.Aid30" />
+        <activity android:name=".FirstAid.Aid31" />
+        <activity android:name=".FirstAid.Aid32" />
+        <activity android:name=".FirstAid.Aid33" />
+        <activity android:name=".FirstAid.Aid34" />
+        <activity android:name=".FirstAid.Aid35" />
+        <activity android:name=".FirstAid.Aid36" />
+        <activity android:name=".FirstAid.Aid37" />
+        <activity android:name=".FirstAid.Aid38" />
+        <activity android:name=".FirstAid.Aid39" />
+        <activity android:name=".FirstAid.Aid40" />
+        <activity android:name=".FirstAid.Aid41" />
+        <activity android:name=".FirstAid.Aid42" />
+        <activity android:name=".FirstAid.Aid43" />
+        <activity android:name=".FirstAid.Aid44" />
+
+        <!-- find四性五味 -->
+        <activity android:name=".Activity.FourAndFive" />
+
+        <!-- find营养素金牌榜 -->
+        <activity android:name=".Activity.GoldMedalTally" />
+
+        <!-- find食物相生相克 -->
+        <activity android:name=".Activity.ShengOrKe" />
+
+        <!-- find饮食餐具使用禁忌 -->
+        <activity android:name=".Activity.EatingUtensils" />
+
+        <!--  find100种病症不宜食物 -->
+        <activity android:name=".Activity.OneHundred"/>
+
+        <!-- find七大营养素 -->
+        <activity android:name=".Activity.SevenNutriens"/>
+
+        <!-- find体格检测 -->
+        <activity android:name=".Activity.Physical"/>
     </application>
 
 </manifest>
