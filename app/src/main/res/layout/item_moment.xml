@@ -41,13 +41,13 @@
             />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="80dp"
-            android:background="@mipmap/zan"
             android:scaleType="center"
+            android:src="@mipmap/zan"
             android:id="@+id/imagehit"
             />
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:maxWidth="20dp"
-            android:layout_alignStart="@+id/imagehit"
+            android:layout_alignStart="@id/imagehit"
             android:layout_centerVertical="true"
             android:layout_marginStart="26dp"
             android:text="12" />

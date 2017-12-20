@@ -50,7 +50,6 @@ import okhttp3.Response;
 public class NewsDetailActivity extends Activity {
     String str;
     String string;
-    public static User sUser = new User(1, "走向远方"); // 当前登录用户
     private ProgressDialog progressDialog;
     private ListView mListView;
     private MomentAdapter mAdapter;
@@ -64,6 +63,7 @@ public class NewsDetailActivity extends Activity {
     View view;
     boolean IS_hit,IS_COLLECT;
     User user;
+    List<User> userList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +72,9 @@ public class NewsDetailActivity extends Activity {
         view= LayoutInflater.from(this).inflate(R.layout.webview_layout,null);
         webView=view.findViewById(R.id.webvie);
         user=DataSupport.findFirst(User.class);
+        userList=new ArrayList<>();
+        userList=DataSupport.findAll(User.class);
+
         initMycommen();
         WindowManager windowManager= (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         int width = windowManager.getDefaultDisplay().getWidth();
@@ -83,6 +86,14 @@ public class NewsDetailActivity extends Activity {
         initWebview();
         sendRequest(url);
         mListView = (ListView) findViewById(R.id.list_moment);
+    }
+
+    private boolean justIsLogin() {
+        if (userList.isEmpty()||userList.size()<=0){
+            return false;
+        }else {
+            return true;
+        }
     }
 
     private void requestComment(String commentUrl) {
@@ -136,122 +147,135 @@ public class NewsDetailActivity extends Activity {
         commenmy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               String content=commen.getText().toString();
-               if(TextUtils.isEmpty(content)){
-                   Toast.makeText(NewsDetailActivity.this, "评论不能为空", Toast.LENGTH_SHORT).show();
+                if (justIsLogin()==false){
+                    Toast.makeText(NewsDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
                 }else {
-                   User user= DataSupport.findFirst(User.class);
-                   final ArrayList<Comment> comments = new ArrayList<Comment>();
-                   Moment moment=new Moment();
-                   moment.setmContent(content);
-                   moment.setAuthor(user);
-                   moment.setCreate_time("刚刚");
-                   moment.setmComment(comments);
-                   momentList.add(moment);
-                   commen.setText("");
-                   InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                   im.hideSoftInputFromWindow(commenmy.getWindowToken(), 0);
-                   mAdapter.notifyDataSetChanged();
-                   mListView.post(new Runnable() {
-                       @Override
-                       public void run() {
-                           mListView.smoothScrollToPosition(mListView.getBottom());
-                       }
-                   });
-                   String posUrl="http://47.94.145.225/user/addComments/"+content+"/"+user.getmId()+"/"+pageId+"/"+"-1";
-                   HttpTitleUtil.sendOkHttpRequest(posUrl,new Callback() {
-                       @Override
-                       public void onFailure(Call call, IOException e) {
+                    String content = commen.getText().toString();
+                    if (TextUtils.isEmpty(content)) {
+                        Toast.makeText(NewsDetailActivity.this, "评论不能为空", Toast.LENGTH_SHORT).show();
+                    } else {
+                        User user = DataSupport.findFirst(User.class);
+                        final ArrayList<Comment> comments = new ArrayList<Comment>();
+                        Moment moment = new Moment();
+                        moment.setmContent(content);
+                        moment.setAuthor(user);
+                        moment.setCreate_time("刚刚");
+                        moment.setmComment(comments);
+                        momentList.add(moment);
+                        commen.setText("");
+                        InputMethodManager im = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        im.hideSoftInputFromWindow(commenmy.getWindowToken(), 0);
+                        mAdapter.notifyDataSetChanged();
+                        mListView.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mListView.smoothScrollToPosition(mListView.getBottom());
+                            }
+                        });
+                        String posUrl = "http://47.94.145.225/user/addComments/" + content + "/" + user.getmId() + "/" + pageId + "/" + "-1";
+                        HttpTitleUtil.sendOkHttpRequest(posUrl, new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
 
-                       }
+                            }
 
-                       @Override
-                       public void onResponse(Call call, Response response) throws IOException {
-                       }
-                   });
-               }
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                            }
+                        });
+                    }
+                }
             }
         });
+
         hit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (IS_hit == true) {
-                    Toast.makeText(NewsDetailActivity.this, "你已点过赞", Toast.LENGTH_SHORT).show();
-                 } else {
-                    User user = DataSupport.findFirst(User.class);
-                    String url = "http://47.94.145.225/user/addPraise/" + pageId + "/"+ user.getmId();
-                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
-                        @Override
-                        public void onFailure(Call call, IOException e) {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Toast.makeText(NewsDetailActivity.this, "点赞失败", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        }
+                if (justIsLogin()==false){
+                    Toast.makeText(NewsDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+                }else {
+                    if (IS_hit == true) {
+                        Toast.makeText(NewsDetailActivity.this, "你已点过赞", Toast.LENGTH_SHORT).show();
+                    } else {
+                        User user = DataSupport.findFirst(User.class);
+                        String url = "http://47.94.145.225/user/addPraise/" + pageId + "/" + user.getmId();
+                        HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(NewsDetailActivity.this, "点赞失败", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
 
-                        @Override
-                        public void onResponse(Call call, Response response) throws IOException {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    hit.setImageResource(R.mipmap.zanf);
-                                    count++;
-                                    lovecount.setText("" + count);
-                                    Toast.makeText(NewsDetailActivity.this, "点赞成功", Toast.LENGTH_SHORT).show();
-                                    IS_hit=true;
-                                }
-                            });
-                        }
-                    });
-                 }
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        hit.setImageResource(R.mipmap.zanf);
+                                        count++;
+                                        lovecount.setText("" + count);
+                                        Toast.makeText(NewsDetailActivity.this, "点赞成功", Toast.LENGTH_SHORT).show();
+                                        IS_hit = true;
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
                 }
         });
         lovasave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (IS_COLLECT == false) {
-                    String url = "http://47.94.145.225/user/getCollection/" + pageId + "/" + user.getmId() + "/add";
-                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
-                        @Override
-                        public void onFailure(Call call, IOException e) {
-
-                        }
-
-                        @Override
-                        public void onResponse(Call call, Response response) throws IOException {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    lovasave.setImageResource(R.mipmap.issave);
-                                    Toast.makeText(NewsDetailActivity.this, "已收藏", Toast.LENGTH_SHORT).show();
-                                    IS_COLLECT=true;
-                                }
-                            });
-                        }
-                    });
+                if (justIsLogin()==false){
+                    Toast.makeText(NewsDetailActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
                 }else {
-                    String url = "http://47.94.145.225/user/getCollection/" + pageId + "/"+ user.getmId()+"/del";
-                    HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
-                        @Override
-                        public void onFailure(Call call, IOException e) {
+                    if (IS_COLLECT == false) {
+                        String url = "http://47.94.145.225/user/getCollection/" + pageId + "/" + user.getmId() + "/add";
+                        HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
 
-                        }
+                            }
 
-                        @Override
-                        public void onResponse(Call call, Response response) throws IOException {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    lovasave.setImageResource(R.mipmap.nsave);
-                                    Toast.makeText(NewsDetailActivity.this, "已取消收藏", Toast.LENGTH_SHORT).show();
-                                    IS_COLLECT=false;
-                                }
-                            });
-                        }
-                    });
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        lovasave.setImageResource(R.mipmap.issave);
+                                        Toast.makeText(NewsDetailActivity.this, "已收藏", Toast.LENGTH_SHORT).show();
+                                        IS_COLLECT = true;
+                                    }
+                                });
+                            }
+                        });
+                    } else {
+                        String url = "http://47.94.145.225/user/getCollection/" + pageId + "/" + user.getmId() + "/del";
+                        HttpTitleUtil.sendOkHttpRequest(url, new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
 
+                            }
+
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        lovasave.setImageResource(R.mipmap.nsave);
+                                        Toast.makeText(NewsDetailActivity.this, "已取消收藏", Toast.LENGTH_SHORT).show();
+                                        IS_COLLECT = false;
+                                    }
+                                });
+                            }
+                        });
+
+                    }
                 }
             }
         });
