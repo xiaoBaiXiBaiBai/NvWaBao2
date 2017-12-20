@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/bing_pic_img"
             android:layout_width="match_parent"
-            android:layout_height="187dp"
+            android:layout_height="185dp"
 
            />
 
@@ -36,13 +36,14 @@
             android:background="#8000"
 
             android:layout_alignParentRight="true"
-            android:layout_marginTop="85dp"
+
+            android:layout_marginTop="75dp"
             android:id="@+id/linearLayout">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="2dp">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -58,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="阿萨啊啊啊啊"
+
                 />
             </LinearLayout>
         <LinearLayout
@@ -81,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="5dp"
-                android:text="阿萨啊啊啊啊"
+
                 android:textColor="@color/white" />
         </LinearLayout>
         <LinearLayout
@@ -104,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="阿萨啊啊啊啊"
+
                />
         </LinearLayout>
         <LinearLayout
@@ -112,7 +113,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="2dp">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -129,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="阿萨啊啊啊啊"
+
               />
         </LinearLayout>
         </LinearLayout>
