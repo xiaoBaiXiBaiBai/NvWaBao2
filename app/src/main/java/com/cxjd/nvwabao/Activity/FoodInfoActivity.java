@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.fragment.ManFFFragment;
 import com.cxjd.nvwabao.fragment.ManFHFragment;
@@ -267,7 +268,9 @@ public class FoodInfoActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Glide.with(FoodInfoActivity.this).load(imageUrl).into(bingPicImg);
+                            Glide.with(FoodInfoActivity.this).load(imageUrl)
+                                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                    .into(bingPicImg);
                             infoname.setText(foods_name);
                             infoitem1.setText(item0);
                             infoitem2.setText(item1);
