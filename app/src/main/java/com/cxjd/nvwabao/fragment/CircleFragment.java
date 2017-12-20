@@ -20,8 +20,7 @@ public class CircleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_circle,container,false);
         TextView textView = view.findViewById(R.id.fragment_title);
-        textView.setText("此功能暂未开放");
-        textView.setTextColor(getResources().getColor(R.color.red));
+        textView.setText(R.string.circle);
         return view;
     }
 
