@@ -126,7 +126,7 @@ public class FoodInfoActivity extends AppCompatActivity {
         //添加页卡标题
         mTitleList.add("营养功效");
         mTitleList.add("注意事项");
-        mTitleList.add("食用方法");
+        mTitleList.add("存储方法");
 
 
 
