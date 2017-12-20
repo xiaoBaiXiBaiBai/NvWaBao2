@@ -116,10 +116,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         closeProgressDialog();
                                         if (loginresl){
                                             Toast.makeText(LoginActivity.this, "login success", Toast.LENGTH_SHORT).show();
+                                            closeProgressDialog();
                                             Intent intent1=new Intent(LoginActivity.this,MineFragment.class);
                                             startActivity(intent1);
                                             finish();
                                         }else {
+                                            closeProgressDialog();
                                             Toast.makeText(LoginActivity.this, "login faild", Toast.LENGTH_SHORT).show();
                                         }
                                     }
