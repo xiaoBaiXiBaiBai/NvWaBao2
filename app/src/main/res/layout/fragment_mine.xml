@@ -79,6 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:cardCornerRadius="4dp"
+        android:layout_marginTop="6dp"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:background="#dcd2d2">
