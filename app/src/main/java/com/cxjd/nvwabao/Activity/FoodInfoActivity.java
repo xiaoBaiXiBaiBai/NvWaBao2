@@ -269,7 +269,7 @@ public class FoodInfoActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             Glide.with(FoodInfoActivity.this).load(imageUrl)
-                                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                                   // .diskCacheStrategy(DiskCacheStrategy.ALL)
                                     .into(bingPicImg);
                             infoname.setText(foods_name);
                             infoitem1.setText(item0);
