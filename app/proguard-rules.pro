@@ -64,6 +64,6 @@
 #-keep class com.google.gson.stream.** { *; }
 
 # Application classes that will be serialized/deserialized over Gson
--keep class com.cxjd.nvwabao.bean { *; }
+-keep class com.cxjd.nvwabao.bean.** { *; }
 
 ##---------------End: proguard configuration for Gson  ----------

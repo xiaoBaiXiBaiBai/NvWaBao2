@@ -82,19 +82,20 @@ public class NewsItemFragment extends Fragment {
             HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
-                    Log.e("response",response);
+                  //  Log.e("response",response);
                     String st=response.toString();
-                    Log.e("st",st);
+                   // Log.e("st",st);
+                   // Log.e("rqTitle",rqTitle);
                     listDataSave.setDataList(rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             titleContentBeans = listDataSave.getDataList(rqTitle, TitleContentBean.class);
-                            Log.e("titleBean.getTittle()",titleContentBeans.get(0).getTittle());
+                           // Log.e("titleBean.getTittle()",titleContentBeans.get(0).getTittle());
                             final NewsItemAdapter adapter = new NewsItemAdapter(titleContentBeans, getContext());
 
                             mRecyclerView.setAdapter(adapter);
-                            Log.e("st","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                            //Log.e("st","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                             closeProgressDialog();
                             refreshLayout.setRefreshing(false);
                         }
