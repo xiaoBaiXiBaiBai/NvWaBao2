@@ -77,18 +77,24 @@ public class NewsItemFragment extends Fragment {
         titleContentBeans=listDataSave.getDataList(rqTitle,TitleContentBean.class);
         if (titleContentBeans.size()<=0||titleContentBeans.isEmpty()) {
             String address = "http://47.94.145.225/user/getPosts/" + rqTitle;
+            Log.e("address",address);
             showProgressDialog();
             HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
                 @Override
                 public void onFinish(String response) {
+                    Log.e("response",response);
                     String st=response.toString();
+                    Log.e("st",st);
                     listDataSave.setDataList(rqTitle, HttpTitleUtil.parseJsonWithGSON(response.toString()));
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             titleContentBeans = listDataSave.getDataList(rqTitle, TitleContentBean.class);
+                            Log.e("titleBean.getTittle()",titleContentBeans.get(0).getTittle());
                             final NewsItemAdapter adapter = new NewsItemAdapter(titleContentBeans, getContext());
+
                             mRecyclerView.setAdapter(adapter);
+                            Log.e("st","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                             closeProgressDialog();
                             refreshLayout.setRefreshing(false);
                         }

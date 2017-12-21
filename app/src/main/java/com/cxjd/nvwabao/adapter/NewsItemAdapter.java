@@ -55,6 +55,7 @@ public class NewsItemAdapter extends RecyclerView.Adapter<NewsItemAdapter.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
            final TitleContentBean titleBean=titleBeanList.get(position);
+//        Log.e("titleBean.getTittle()",titleBean.getTittle());
            holder.newsTitle.setText(titleBean.getTittle());
            Picasso.with(context).load(titleBean.getImageAddress()).placeholder(R.mipmap.ic_nvwa).resize(120,100).into(holder.imageView);
            this.position=position;
