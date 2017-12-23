@@ -397,7 +397,7 @@ public class NewsDetailActivity extends Activity {
     private void chooseScale(int width) {
         if(width > 650)
         {
-            this.webView.setInitialScale(320);
+            this.webView.setInitialScale(315);
         }else if(width > 520)
         {
             this.webView.setInitialScale(180);
@@ -415,7 +415,7 @@ public class NewsDetailActivity extends Activity {
     private void initWebview() {
         webView.setWebViewClient(new MyWebViewClient());
         webView.addJavascriptInterface(new JavaScriptInterface(this), "imagelistner");//这个是给图片设置点击监听的，如果
-        webView.getSettings().setTextSize(WebSettings.TextSize.NORMAL);
+        webView.getSettings().setTextSize(WebSettings.TextSize.SMALLER);
         WebSettings webSettings = webView.getSettings();//获取webview设置属性
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);//把html中的内容放大webview等宽的一列中
         webSettings.setJavaScriptEnabled(true);//支持js

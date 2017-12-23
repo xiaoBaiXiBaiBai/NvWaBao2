@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
     private void initTab() {
         Tab tab_home = new Tab(R.string.home, R.drawable.selector_icon_home, HomeFragment.class);
         Tab tab_information = new Tab(R.string.information, R.drawable.selector_icon_information, InformationFragment.class);
