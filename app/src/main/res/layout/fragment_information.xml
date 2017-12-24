@@ -32,12 +32,12 @@
 
             <ImageButton
                 android:id="@+id/titleManager"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="3dp"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
                 android:background="@mipmap/addmore"
-                android:scaleType="center"
-                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:theme="@style/ButtonTheme"
                 />
