@@ -11,7 +11,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:scrollbarSize="50dp"
-            app:tabMaxWidth="35dp"
+            app:tabMaxWidth="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@color/skyblue"

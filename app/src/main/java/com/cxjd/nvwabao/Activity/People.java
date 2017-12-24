@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.Select2Adapter;
 import com.cxjd.nvwabao.adapter.SelectAdapter;
 import com.cxjd.nvwabao.utils.HttpUtil;
 
@@ -37,7 +38,7 @@ public class People extends AppCompatActivity {
     private  String UrlBase = "http://47.94.145.225/user/getParts/";
     //private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
     private int fPosition;
-    private SelectAdapter adapter;
+    private Select2Adapter adapter;
     private int buwei;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +61,14 @@ public class People extends AppCompatActivity {
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
 
-        adapter = new SelectAdapter(this,maxList);
+        adapter = new Select2Adapter(this,maxList);
         maxlv.setAdapter(adapter);
 //        maxAdapter.notifyDataSetChanged();
         adapter.setDefSelect(buwei);//设置默认选中第一项
         maxlv.setSelection(buwei);
 
         minList = new ArrayList<>();
+        fPosition=buwei;
         minList = minlistData(UrlBase+buwei,minList);
         minlv = (ListView) findViewById(R.id.min_item);
 
@@ -187,7 +189,9 @@ public class People extends AppCompatActivity {
 
     }
     private List<String> minlistData(String url, final List<String> list) {
+        Log.e("Url",url);
         HttpUtil.sendOkHttpRequest(url, new Callback() {
+
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();

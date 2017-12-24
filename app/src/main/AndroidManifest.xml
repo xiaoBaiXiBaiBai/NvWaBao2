@@ -34,14 +34,18 @@
         <activity
             android:name=".ActivityNews.DragActivity"
             android:theme="@style/zhou" />
-        <activity android:name=".ActivityNews.RegisterActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.NewsDetailActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.MycenterActivity"
-            android:theme="@style/zhou"/>
-        <activity android:name=".ActivityNews.LoginActivity"
-            android:theme="@style/zhou"/>
+        <activity
+            android:name=".ActivityNews.RegisterActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.NewsDetailActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.MycenterActivity"
+            android:theme="@style/zhou" />
+        <activity
+            android:name=".ActivityNews.LoginActivity"
+            android:theme="@style/zhou" />
         <activity
             android:name=".Activity.People"
             android:theme="@style/zhou" />
@@ -66,8 +70,9 @@
         <activity
             android:name=".Activity.FoodListActivity"
             android:theme="@style/zhou" />
-        <activity android:name=".Activity.ChannelActivity"
-            android:theme="@style/zhou"></activity>
+        <activity
+            android:name=".Activity.ChannelActivity"
+            android:theme="@style/zhou" />
 
         <!-- find中的24小时养生 -->
         <activity android:name=".Activity.Find24Hours" />
@@ -132,14 +137,19 @@
         <!-- find饮食餐具使用禁忌 -->
         <activity android:name=".Activity.EatingUtensils" />
 
-        <!--  find100种病症不宜食物 -->
-        <activity android:name=".Activity.OneHundred"/>
+        <!-- find100种病症不宜食物 -->
+        <activity android:name=".Activity.OneHundred" />
 
         <!-- find七大营养素 -->
-        <activity android:name=".Activity.SevenNutriens"/>
+        <activity android:name=".Activity.SevenNutriens" />
 
         <!-- find体格检测 -->
-        <activity android:name=".Activity.Physical"/>
+        <activity android:name=".Activity.Physical" />
+        <activity
+            android:name=".Activity.FoodList2Activity"
+            android:theme="@style/zhou" />
+        <activity android:name=".Activity.FoodList3Activity"
+            android:theme="@style/zhou"></activity>
     </application>
 
 </manifest>

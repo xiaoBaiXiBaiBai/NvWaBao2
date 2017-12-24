@@ -197,7 +197,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -237,7 +237,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -269,7 +269,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -289,7 +289,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -309,7 +309,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -354,7 +354,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -374,7 +374,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -400,7 +400,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -420,7 +420,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -453,7 +453,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -483,7 +483,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -502,7 +502,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -525,7 +525,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -544,7 +544,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -563,7 +563,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -584,7 +584,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -611,7 +611,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -631,7 +631,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -652,7 +652,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -680,7 +680,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -699,7 +699,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -718,7 +718,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -738,7 +738,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -761,7 +761,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -786,7 +786,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
             }
@@ -820,7 +820,7 @@ public class ChannelActivity extends AppCompatActivity {
                 tx = tv;
                 tx.setTextColor(Color.parseColor("#00bfff"));
                 Log.e("TextView",tv.getText().toString());
-                Intent intent = new Intent(ChannelActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(ChannelActivity.this,FoodList3Activity.class);
                 intent.putExtra("listName",tv.getText().toString());
                 startActivity(intent);
 

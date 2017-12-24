@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.adapter.Select2Adapter;
 import com.cxjd.nvwabao.adapter.SelectAdapter;
 import com.cxjd.nvwabao.utils.HttpUtil;
 
@@ -36,7 +37,7 @@ public class People2 extends AppCompatActivity {
    // private  String UrlBase = "http://192.168.31.227/user/getParts/";
     private  String UrlBase = "http://47.94.145.225/user/getCrowdSick/";
     private int fPosition;
-    private SelectAdapter adapter;
+    private Select2Adapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,7 @@ public class People2 extends AppCompatActivity {
         maxlv = (ListView) findViewById(R.id.max_item);
     //    maxAdapter = new ArrayAdapter<String>(People2.this, R.layout.list_item, maxList);
        // maxlv.setAdapter(maxAdapter);
-        adapter = new SelectAdapter(this,maxList);
+        adapter = new Select2Adapter(this,maxList);
         maxlv.setAdapter(adapter);
         adapter.setDefSelect(0);
 

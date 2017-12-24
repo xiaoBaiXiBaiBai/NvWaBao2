@@ -21,7 +21,7 @@
            android:textSize="27sp"
            android:id="@+id/textView3" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_marginTop="43dp"
             android:text="查 询 食 物 信 息"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="10sp" />-->
      <!--   <SearchView
 
             android:iconifiedByDefault="false"
@@ -43,17 +43,18 @@
             android:queryHint="按功效查询"
             android:id="@+id/searchView">
         </SearchView>-->
-        <ImageView
-            android:id="@+id/searchView"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignEnd="@+id/textView3"
-            android:layout_below="@+id/textView2"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/searchviewpng"></ImageView>
-    </RelativeLayout>
 
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_below="@+id/textView2"
+
+        android:background="@drawable/searchviewpng">
+
+    </ImageView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -71,7 +72,7 @@
         <ImageView
             android:id="@+id/guwu"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignStart="@+id/yaocai"
             android:layout_alignTop="@+id/shuichan"
             android:background="@drawable/guwu" />
@@ -79,7 +80,7 @@
         <ImageView
             android:id="@+id/dounairu"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignStart="@+id/shuiguoganguo"
             android:layout_alignTop="@+id/guwu"
             android:background="@drawable/dounairu" />
@@ -87,7 +88,7 @@
         <ImageView
             android:id="@+id/gandou"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
 
             android:layout_alignStart="@+id/shuichan"
             android:layout_alignTop="@+id/qinshou"
@@ -96,7 +97,7 @@
         <ImageView
             android:id="@+id/qinshou"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignStart="@+id/guwu"
             android:layout_alignTop="@+id/shucai"
             android:background="@drawable/qinshou" />
@@ -104,7 +105,7 @@
         <ImageView
             android:id="@+id/shucai"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignStart="@+id/dounairu"
             android:layout_below="@+id/textView"
             android:layout_marginTop="26dp"
@@ -113,29 +114,29 @@
         <ImageView
             android:id="@+id/shuichan"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/gandou"
-            android:layout_marginEnd="37dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="26dp"
             android:background="@drawable/shuichan" />
 
         <ImageView
             android:id="@+id/shuiguoganguo"
             android:layout_width="60dp"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/yaocai"
-            android:layout_marginStart="40dp"
+            android:layout_below="@+id/dounairu"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/shuiguoganguo" />
 
         <ImageView
             android:id="@+id/yaocai"
             android:layout_width="60dp"
-            android:layout_height="65dp"
-            android:layout_below="@+id/shuichan"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/shuiguoganguo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="37dp"
             android:background="@drawable/yaocai" />
     </RelativeLayout>
 </LinearLayout>

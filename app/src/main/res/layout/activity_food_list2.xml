@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#1C86EE"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/nav_button"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/disTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分类名称"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="点击查看注意事项"/>
+    <TextView
+        android:id="@+id/text_shucai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=" --  蔬菜 -- "
+        android:textSize="20dp"/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_shucai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_xuqin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  畜禽  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_xuqin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_gandou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  干豆  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_gandou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_dannairu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  蛋、奶乳  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_dannairu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_guwu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  谷物  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_guwu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_shuichan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  水产  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_shuichan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_shuiguoganguo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  水果干果  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_shuiguoganguo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_yaocao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text=" --  药材  -- "/>
+
+    <com.cxjd.nvwabao.fragment.DragGridLayout
+        android:id="@+id/dgl_yaocai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.cxjd.nvwabao.fragment.DragGridLayout>
+
+</LinearLayout>
