@@ -62,19 +62,21 @@
 
         <TextView
 
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:gravity="center_horizontal"
             android:text="食物分类"
-            android:textColor="@color/viewfinder_mask"
-            android:id="@+id/textView" />
+            android:textColor="@color/viewfinder_mask" />
 
         <ImageView
             android:id="@+id/guwu"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignStart="@+id/yaocai"
-            android:layout_alignTop="@+id/shuichan"
+            android:layout_alignTop="@+id/dounairu"
             android:background="@drawable/guwu" />
 
         <ImageView
@@ -82,7 +84,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignStart="@+id/shuiguoganguo"
-            android:layout_alignTop="@+id/guwu"
+            android:layout_below="@+id/shucai"
+            android:layout_marginTop="13dp"
             android:background="@drawable/dounairu" />
 
         <ImageView
@@ -108,17 +111,16 @@
             android:layout_height="60dp"
             android:layout_alignStart="@+id/dounairu"
             android:layout_below="@+id/textView"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="17dp"
             android:background="@drawable/shucai" />
 
         <ImageView
             android:id="@+id/shuichan"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/gandou"
-            android:layout_marginEnd="35dp"
-            android:layout_marginTop="26dp"
+            android:layout_alignTop="@+id/guwu"
+            android:layout_marginStart="41dp"
+            android:layout_toEndOf="@+id/guwu"
             android:background="@drawable/shuichan" />
 
         <ImageView
@@ -127,8 +129,8 @@
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/dounairu"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/shuiguoganguo" />
 
         <ImageView
@@ -138,5 +140,32 @@
             android:layout_alignTop="@+id/shuiguoganguo"
             android:layout_centerHorizontal="true"
             android:background="@drawable/yaocai" />
+        <ImageView
+            android:id="@+id/tiaoweipin"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/shuichan"
+            android:layout_alignTop="@+id/yaocai"
+            android:background="@drawable/tiaoweipin" />
+        <ImageView
+            android:id="@+id/huahuilei"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/shuiguoganguo"
+            android:layout_below="@+id/shuiguoganguo"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/huahuilei" />
+        <ImageView
+            android:id="@+id/chalei"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignStart="@+id/yaocai"
+            android:layout_alignTop="@+id/huahuilei"
+            android:background="@drawable/chalei" />
+
+
+
+
+
     </RelativeLayout>
 </LinearLayout>

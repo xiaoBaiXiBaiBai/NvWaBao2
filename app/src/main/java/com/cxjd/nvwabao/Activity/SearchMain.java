@@ -44,7 +44,8 @@ public class SearchMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 button.setBackgroundColor(Color.parseColor("#1aaee1"));
-                Intent intent = new Intent(SearchMain.this,People.class);
+                Intent intent = new Intent(SearchMain.this,PeopleActivity.class);
+                intent.putExtra("xingbie","Woman");
                 startActivity(intent);
             }
         });

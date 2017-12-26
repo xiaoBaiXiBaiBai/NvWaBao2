@@ -13,6 +13,7 @@ import com.cxjd.nvwabao.helper.MyDatabaseHelper;
 
 public class ProtectActivity extends AppCompatActivity {
     private ImageView  guwu,dounairu,gandou,qinshou,shucai,shuichan,shuiguoganguo,yaocai;
+    private ImageView tiaoweipin,huahuilei,chalei;
     private MyDatabaseHelper dbHelper;
     private ImageView searchView;
    //private SearchView searchView;
@@ -97,6 +98,30 @@ public class ProtectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tiaoweipin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProtectActivity.this,FoodListActivity.class);
+                intent.putExtra("leixing",8);
+                startActivity(intent);
+            }
+        });
+        huahuilei.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProtectActivity.this,FoodListActivity.class);
+                intent.putExtra("leixing",9);
+                startActivity(intent);
+            }
+        });
+        chalei.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProtectActivity.this,FoodListActivity.class);
+                intent.putExtra("leixing",10);
+                startActivity(intent);
+            }
+        });
     }
 
     private void init() {
@@ -108,6 +133,8 @@ public class ProtectActivity extends AppCompatActivity {
         shuichan = (ImageView) findViewById(R.id.shuichan);
         shuiguoganguo = (ImageView) findViewById(R.id.shuiguoganguo);
         yaocai = (ImageView) findViewById(R.id.yaocai);
-
+        tiaoweipin = (ImageView) findViewById(R.id.tiaoweipin);
+        huahuilei = (ImageView) findViewById(R.id.huahuilei);
+        chalei = (ImageView) findViewById(R.id.chalei);
     }
 }

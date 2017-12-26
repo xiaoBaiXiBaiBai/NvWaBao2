@@ -244,26 +244,6 @@
              <TextView
                  android:layout_marginTop="2dp"
                  android:textColor="@color/black"
-                 android:id="@+id/zhongliuke"
-                 android:layout_width="match_parent"
-                 android:layout_height="35sp"
-                 android:text="肿瘤科"
-                 android:gravity="center"/>
-
-
-             <ListView
-                 android:background="#DEDEDE"
-                 android:id="@+id/zhongliukels"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:listSelector="@color/white"
-                 android:visibility="gone">
-
-             </ListView>
-
-             <TextView
-                 android:layout_marginTop="2dp"
-                 android:textColor="@color/black"
                  android:id="@+id/buyunbuyuke"
                  android:layout_width="match_parent"
                  android:layout_height="35sp"
@@ -274,6 +254,26 @@
              <ListView
                  android:background="#DEDEDE"
                  android:id="@+id/buyunbuyukels"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:listSelector="@color/white"
+                 android:visibility="gone">
+
+             </ListView>
+
+             <TextView
+                 android:layout_marginTop="2dp"
+                 android:textColor="@color/black"
+                 android:id="@+id/zhongliuke"
+                 android:layout_width="match_parent"
+                 android:layout_height="35sp"
+                 android:text="肿瘤科"
+                 android:gravity="center"/>
+
+
+             <ListView
+                 android:background="#DEDEDE"
+                 android:id="@+id/zhongliukels"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:listSelector="@color/white"

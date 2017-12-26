@@ -1,7 +1,6 @@
 package com.cxjd.nvwabao.Activity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,8 +14,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cxjd.nvwabao.R;
-import com.cxjd.nvwabao.adapter.Select2Adapter;
 import com.cxjd.nvwabao.adapter.SelectAdapter;
+import com.cxjd.nvwabao.bean.People;
 import com.cxjd.nvwabao.utils.HttpUtil;
 
 import org.json.JSONArray;
@@ -30,16 +29,21 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class People extends AppCompatActivity {
+public class PeopleActivity extends AppCompatActivity {
 
     private ListView maxlv,minlv;
-    private List<String> maxList,minList;
+    private List<String> minList;
+    private List<com.cxjd.nvwabao.bean.People> maxList;
     private ArrayAdapter<String> maxAdapter,minAdapter;
-    private  String UrlBase = "http://47.94.145.225/user/getParts/";
+    private  String UrlBase = "http://47.94.145.225/user/getPartForSex/";
+    private  String UrlBase2 = "http://47.94.145.225/user/getParts/";
     //private  String UrlBase = "http://192.168.31.227/user/getCrowdSick/";
     private int fPosition;
-    private Select2Adapter adapter;
+  //  private Select2Adapter adapter;
+   private SelectAdapter adapter;
     private int buwei;
+    private  String xingbie;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +57,7 @@ public class People extends AppCompatActivity {
         });
 
 
-
+        xingbie = getIntent().getStringExtra("xingbie");
         buwei = getIntent().getIntExtra("buwei",0);
         maxList = new ArrayList<>();
 
@@ -61,7 +65,7 @@ public class People extends AppCompatActivity {
         MaxData();
         maxlv = (ListView) findViewById(R.id.max_item);
 
-        adapter = new Select2Adapter(this,maxList);
+        adapter = new SelectAdapter(this,maxList);
         maxlv.setAdapter(adapter);
 //        maxAdapter.notifyDataSetChanged();
         adapter.setDefSelect(buwei);//设置默认选中第一项
@@ -69,10 +73,10 @@ public class People extends AppCompatActivity {
 
         minList = new ArrayList<>();
         fPosition=buwei;
-        minList = minlistData(UrlBase+buwei,minList);
+        minList = minlistData(UrlBase+buwei+"/"+xingbie,minList);
         minlv = (ListView) findViewById(R.id.min_item);
 
-        minAdapter = new ArrayAdapter<String>(People.this,android.R.layout.simple_list_item_1, minList);
+        minAdapter = new ArrayAdapter<String>(PeopleActivity.this,android.R.layout.simple_list_item_1, minList);
         minlv.setAdapter(minAdapter);
 
 
@@ -81,7 +85,7 @@ public class People extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 adapter.setDefSelect(position);
                 fPosition = position;
-                minList = minlistData(UrlBase+position,minList);
+                minList = minlistData(UrlBase+position+"/"+xingbie,minList);
                 Message message = new Message();
                 handler.sendMessage(message);
             }
@@ -90,8 +94,8 @@ public class People extends AppCompatActivity {
         minlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intentDis = new Intent(People.this, Disease.class);
-                intentDis.putExtra("xq", UrlBase+fPosition+"/"+position);
+                Intent intentDis = new Intent(PeopleActivity.this, Disease.class);
+                intentDis.putExtra("xq", UrlBase2+fPosition+"/"+position);
                 intentDis.putExtra("what","1");
                 startActivity(intentDis);
             }
@@ -117,7 +121,47 @@ public class People extends AppCompatActivity {
     };
     public void MaxData(){
       //  listData(UrlBase);
-        maxList.add("头部");
+        People people0 = new People("头部",R.drawable.biebu_fan_qian);
+        maxList.add(people0);
+        People people1 = new People("头",R.drawable.biebu_fan_qian);
+        maxList.add(people1);
+        People people2 = new People("眼",R.drawable.biebu_fan_qian);
+        maxList.add(people2);
+        People people3 = new People("耳",R.drawable.biebu_fan_qian);
+        maxList.add(people3);
+        People people4 = new People("鼻",R.drawable.biebu_fan_qian);
+        maxList.add(people4);
+        People people5 = new People("口",R.drawable.biebu_fan_qian);
+        maxList.add(people5);
+        People people6 = new People("眉",R.drawable.biebu_fan_qian);
+        maxList.add(people6);
+        People people7 = new People("牙",R.drawable.biebu_fan_qian);
+        maxList.add(people7);
+        People people8 = new People("胸部",R.drawable.biebu_fan_qian);
+        maxList.add(people8);
+        People people9 = new People("腹部",R.drawable.biebu_fan_qian);
+        maxList.add(people9);
+        People people10 = new People("四肢",R.drawable.biebu_fan_qian);
+        maxList.add(people10);
+        People people11 = new People("上肢",R.drawable.biebu_fan_qian);
+        maxList.add(people11);
+        People people12 = new People("下肢",R.drawable.biebu_fan_qian);
+        maxList.add(people12);
+        People people13 = new People("颈部",R.drawable.biebu_fan_qian);
+        maxList.add(people13);
+        People people14 = new People("腰部",R.drawable.biebu_fan_qian);
+        maxList.add(people14);
+        People people15 = new People("背部",R.drawable.biebu_fan_qian);
+        maxList.add(people15);
+        People people16 = new People("臀部",R.drawable.biebu_fan_qian);
+        maxList.add(people16);
+        People people17 = new People("生殖部位",R.drawable.biebu_fan_qian);
+        maxList.add(people17);
+        People people18 = new People("男性生殖部位",R.drawable.biebu_fan_qian);
+        maxList.add(people18);
+        People people19 = new People("女性生殖部位",R.drawable.biebu_fan_qian);
+        maxList.add(people19);
+/*        maxList.add("头部");
         maxList.add("头");
         maxList.add("眼");
         maxList.add("耳");
@@ -138,7 +182,7 @@ public class People extends AppCompatActivity {
         maxList.add("全身");
         maxList.add("生殖部位");
         maxList.add("男性生殖部位");
-        maxList.add("女性生殖部位");
+        maxList.add("女性生殖部位");*/
 
     }
 
@@ -153,7 +197,7 @@ public class People extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(People.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PeopleActivity.this, "获取数据失败", Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -169,7 +213,7 @@ public class People extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(responseData);
 
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        maxList.add(jsonArray.getString(i));
+                        //maxList.add(jsonArray.getString(i));
 
                     }
                 /*    runOnUiThread(new Runnable() {
@@ -198,7 +242,7 @@ public class People extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(People.this, "获取数据失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PeopleActivity.this, "获取数据失败", Toast.LENGTH_SHORT).show();
 
                     }
                 });

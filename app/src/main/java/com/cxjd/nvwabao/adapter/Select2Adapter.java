@@ -52,7 +52,7 @@ public class Select2Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-       // People people = (People) getItem(position);
+       // PeopleActivity people = (PeopleActivity) getItem(position);
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.list_parent_item, null);
             holder = new ViewHolder();

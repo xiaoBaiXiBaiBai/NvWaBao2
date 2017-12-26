@@ -162,13 +162,55 @@ public class FoodListActivity extends AppCompatActivity {
                     }
                 });
                 break;
+            case 8: inittiaoweipin();
+                adapter = new FruitAdapter(FoodListActivity.this,R.layout.foot_list,fruitList);
+                ListView listView8 = (ListView) findViewById(R.id.list_view);
+                listView8.setAdapter(adapter);
+                listView8.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent intent = new Intent(FoodListActivity.this,FoodInfoActivity.class);
+                        intent.putExtra("address","调味品/"+position);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 9: inithuahui();
+                adapter = new FruitAdapter(FoodListActivity.this,R.layout.foot_list,fruitList);
+                ListView listView9 = (ListView) findViewById(R.id.list_view);
+                listView9.setAdapter(adapter);
+                listView9.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent intent = new Intent(FoodListActivity.this,FoodInfoActivity.class);
+                        intent.putExtra("address","花卉/"+position);
+                        startActivity(intent);
+                    }
+                });
+                break;
+            case 10: initchalei();
+                adapter = new FruitAdapter(FoodListActivity.this,R.layout.foot_list,fruitList);
+                ListView listView10 = (ListView) findViewById(R.id.list_view);
+                listView10.setAdapter(adapter);
+                listView10.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        Intent intent = new Intent(FoodListActivity.this,FoodInfoActivity.class);
+                        intent.putExtra("address","茶类/"+position);
+                        startActivity(intent);
+                    }
+                });
+                break;
             default:Data(Url);
                 Log.e("aaaaaa", "=================");
                 adapter2 = new Fruit2Adapter(FoodListActivity.this,R.layout.foot_list,fruitList2);
-                ListView listView8 = (ListView) findViewById(R.id.list_view);
-                listView8.setAdapter(adapter2);
+                ListView listView11 = (ListView) findViewById(R.id.list_view);
+                listView11.setAdapter(adapter2);
                 //Data(Url);
-                listView8.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listView11.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -183,6 +225,78 @@ public class FoodListActivity extends AppCompatActivity {
 
         Log.e("leixing",leixingINT+"");
 
+    }
+
+    private void inittiaoweipin() {
+        Fruit bajiaohuixiang = new Fruit("八角茴香",R.drawable.tiaoweipin);
+        fruitList.add(bajiaohuixiang);
+        Fruit 白糖 = new Fruit("白糖",R.drawable.tiaoweipin);
+        fruitList.add(白糖);
+        Fruit 菜籽油 = new Fruit("菜籽油",R.drawable.tiaoweipin);
+        fruitList.add(菜籽油);
+        Fruit 醋 = new Fruit("醋",R.drawable.tiaoweipin);
+        fruitList.add(醋);
+        Fruit 大蒜 = new Fruit("大蒜",R.drawable.tiaoweipin);
+        fruitList.add(大蒜);
+        Fruit 红糖 = new Fruit("红糖",R.drawable.tiaoweipin);
+        fruitList.add(红糖);
+        Fruit 胡椒 = new Fruit("胡椒",R.drawable.tiaoweipin);
+        fruitList.add(胡椒);
+        Fruit 花椒 = new Fruit("花椒",R.drawable.tiaoweipin);
+        fruitList.add(花椒);
+        Fruit 酱油 = new Fruit("酱油",R.drawable.tiaoweipin);
+        fruitList.add(酱油);
+        Fruit 芥末 = new Fruit("芥末",R.drawable.tiaoweipin);
+        fruitList.add(芥末);
+        Fruit 咖喱 = new Fruit("咖喱",R.drawable.tiaoweipin);
+        fruitList.add(咖喱);
+        Fruit 生姜 = new Fruit("生姜",R.drawable.tiaoweipin);
+        fruitList.add(生姜);
+        Fruit 食盐 = new Fruit("食盐",R.drawable.tiaoweipin);
+        fruitList.add(食盐);
+        Fruit 小茴香 = new Fruit("小茴香",R.drawable.tiaoweipin);
+        fruitList.add(小茴香);
+        Fruit 枣花蜜 = new Fruit("枣花蜜",R.drawable.tiaoweipin);
+        fruitList.add(枣花蜜);
+
+
+    }
+
+    private void inithuahui() {
+        Fruit 百合 = new Fruit("百合",R.drawable.huahuilei);
+        fruitList.add(百合);
+        Fruit 菜花 = new Fruit("菜花",R.drawable.huahuilei);
+        fruitList.add(菜花);
+
+        Fruit 桂花 = new Fruit("桂花",R.drawable.huahuilei);
+        fruitList.add(桂花);
+
+        Fruit 槐花 = new Fruit("槐花",R.drawable.huahuilei);
+        fruitList.add(槐花);
+
+        Fruit 金针菜 = new Fruit("金针菜",R.drawable.huahuilei);
+        fruitList.add(金针菜);
+
+        Fruit 菊花 = new Fruit("菊花",R.drawable.huahuilei);
+        fruitList.add(菊花);
+        Fruit 玫瑰花 = new Fruit("玫瑰花",R.drawable.huahuilei);
+        fruitList.add(玫瑰花);
+        Fruit 茉莉花 = new Fruit("茉莉花",R.drawable.huahuilei);
+        fruitList.add(茉莉花);
+        Fruit 木槿花 = new Fruit("木槿花",R.drawable.huahuilei);
+        fruitList.add(木槿花);
+        Fruit 栀子花 = new Fruit("栀子花",R.drawable.huahuilei);
+        fruitList.add(栀子花);
+
+    }
+
+    private void initchalei() {
+        Fruit 碧螺春 = new Fruit("碧螺春",R.drawable.chalei);
+        fruitList.add(碧螺春);
+        Fruit 茶叶 = new Fruit("茶叶",R.drawable.chalei);
+        fruitList.add(茶叶);
+        Fruit 铁观音 = new Fruit("铁观音",R.drawable.chalei);
+        fruitList.add(铁观音);
     }
 
     private void inityaocai() {

@@ -47,7 +47,7 @@
             android:name=".ActivityNews.LoginActivity"
             android:theme="@style/zhou" />
         <activity
-            android:name=".Activity.People"
+            android:name=".Activity.PeopleActivity"
             android:theme="@style/zhou" />
         <activity
             android:name=".Activity.People2"

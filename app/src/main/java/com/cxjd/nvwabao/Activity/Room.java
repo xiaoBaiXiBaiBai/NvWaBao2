@@ -37,6 +37,8 @@ public class Room extends AppCompatActivity {
     private  String UrlBase = "http://47.94.145.225/user/getDepartments/";
     private Handler handl=null;
     private String Url="http://47.94.145.225/user/getDepartments/0/0";
+    private String xingbie;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +54,7 @@ public class Room extends AppCompatActivity {
 
 
 
-
+        //xingbie = getIntent().getStringExtra("xingbie");
         //leftList = new ArrayList<>();
         //listData(UrlBase+"0",leftList);
         init();
@@ -174,7 +176,7 @@ public class Room extends AppCompatActivity {
         zhongliuke = (TextView) findViewById(R.id.zhongliuke);
        // zhongliukeList =  listData(UrlBase+"10", leftList);
         zhongliukeList = new ArrayList<>();
-        listData10(UrlBase+"10");
+        listData10(UrlBase+"11");
         arr_adapter10 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, zhongliukeList);
         zhongliukelv.setAdapter(arr_adapter10);
         listSet(zhongliuke,zhongliukelv,zhongliukeList,10);
@@ -183,7 +185,7 @@ public class Room extends AppCompatActivity {
         buyunbuyuke = (TextView) findViewById(R.id.buyunbuyuke);
        // buyunbuyukeList =  listData(UrlBase+"11", leftList);
         buyunbuyukeList = new ArrayList<>();
-        listData11(UrlBase+"11");
+        listData11(UrlBase+"10");
         arr_adapter11 = new ArrayAdapter<String>(Room.this, android.R.layout.simple_list_item_1, buyunbuyukeList);
         buyunbuyukelv.setAdapter(arr_adapter11);
         listSet(buyunbuyuke,buyunbuyukelv,buyunbuyukeList,11);
@@ -201,8 +203,8 @@ public class Room extends AppCompatActivity {
         listSetChange(pifukelv,7);
         listSetChange(xingbingkelv,8);
         listSetChange(jingshenxinlikelv,9);
-        listSetChange(zhongliukelv,10);
-        listSetChange(buyunbuyukelv,11);
+        listSetChange(zhongliukelv,11);
+        listSetChange(buyunbuyukelv,10);
     }
     private void listSet(TextView textView, final ListView listView , final List<String> list, final int id) {
         final ListView finalListView = listView;
@@ -245,6 +247,7 @@ public class Room extends AppCompatActivity {
                 }
 
             }).start();*/
+
                 Url = UrlBase+Fp+"/" + position;
                 minList =  listData(UrlBase+Fp+"/" + position,minList);
 

@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.cxjd.nvwabao.Activity.People;
+import com.cxjd.nvwabao.Activity.PeopleActivity;
 import com.cxjd.nvwabao.R;
 
 /**
@@ -35,8 +34,9 @@ public class womenFrontFragment extends Fragment {
            public void onClick(View v) {
                if (head.getVisibility()==View.INVISIBLE){
                    head.setVisibility(View.VISIBLE);
-                   Intent intent = new Intent(getActivity(),People.class);
+                   Intent intent = new Intent(getActivity(),PeopleActivity.class);
                    intent.putExtra("buwei",0);
+                   intent.putExtra("xingbie","Woman");
                    startActivity(intent);
                }else {
                    head.setVisibility(View.INVISIBLE);
@@ -49,8 +49,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (jingbu_hou.getVisibility()==View.INVISIBLE){
                     jingbu_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",13);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     jingbu_hou.setVisibility(View.INVISIBLE);
@@ -63,8 +64,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (xiongbu_hou.getVisibility()==View.INVISIBLE){
                     xiongbu_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",8);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     xiongbu_hou.setVisibility(View.INVISIBLE);
@@ -77,8 +79,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (zuoshoubi_hou.getVisibility()==View.INVISIBLE){
                     zuoshoubi_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",11);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     zuoshoubi_hou.setVisibility(View.INVISIBLE);
@@ -91,8 +94,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (jian_hou.getVisibility()==View.INVISIBLE){
                     jian_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",13);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     jian_hou.setVisibility(View.INVISIBLE);
@@ -105,8 +109,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (youshoubi_hou.getVisibility()==View.INVISIBLE){
                     youshoubi_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",11);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     youshoubi_hou.setVisibility(View.INVISIBLE);
@@ -119,8 +124,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (yaobu_hou.getVisibility()==View.INVISIBLE){
                     yaobu_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",14);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     yaobu_hou.setVisibility(View.INVISIBLE);
@@ -133,8 +139,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (fubu_hou.getVisibility()==View.INVISIBLE){
                     fubu_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",9);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     fubu_hou.setVisibility(View.INVISIBLE);
@@ -147,8 +154,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (shengzhiqi_hou.getVisibility()==View.INVISIBLE){
                     shengzhiqi_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
-                    intent.putExtra("buwei",21);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
+                    intent.putExtra("buwei",19);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     shengzhiqi_hou.setVisibility(View.INVISIBLE);
@@ -161,8 +169,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (tuibu_hou.getVisibility()==View.INVISIBLE){
                     tuibu_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",12);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     tuibu_hou.setVisibility(View.INVISIBLE);
@@ -175,8 +184,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (zuoshou_hou.getVisibility()==View.INVISIBLE){
                     zuoshou_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",11);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     zuoshou_hou.setVisibility(View.INVISIBLE);
@@ -189,8 +199,9 @@ public class womenFrontFragment extends Fragment {
             public void onClick(View v) {
                 if (youshou_hou.getVisibility()==View.INVISIBLE){
                     youshou_hou.setVisibility(View.VISIBLE);
-                    Intent intent = new Intent(getActivity(),People.class);
+                    Intent intent = new Intent(getActivity(),PeopleActivity.class);
                     intent.putExtra("buwei",11);
+                    intent.putExtra("xingbie","Woman");
                     startActivity(intent);
                 }else {
                     youshou_hou.setVisibility(View.INVISIBLE);
