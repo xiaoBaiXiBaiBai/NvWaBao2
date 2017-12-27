@@ -136,7 +136,7 @@ public class InformationFragment extends Fragment {
             }else {
                 focusTitle.setTitleCategery(titleLayble[i]);
                 focusTitle.setTitleLable("DATA");
-                if (i<6){
+                if (i<8){
                     focusTitle.setTitle_check(1);
                 }
                 else{
