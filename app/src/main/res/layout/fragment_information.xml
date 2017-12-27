@@ -34,7 +34,7 @@
                 android:id="@+id/titleManager"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_margin="10dp"
                 android:background="@mipmap/addmore"
                 android:scaleType="fitXY"
                 android:layout_gravity="center"
