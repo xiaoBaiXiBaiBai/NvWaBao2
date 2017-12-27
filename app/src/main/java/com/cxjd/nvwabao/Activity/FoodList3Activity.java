@@ -49,12 +49,12 @@ public class FoodList3Activity extends AppCompatActivity {
     private List<Fruit> fruitList = new ArrayList<>();
     private List<Fruit2> fruitList2 = new ArrayList<>();
     private FruitAdapter adapter;
-    private Fruit3Adapter adapter0,adapter1,adapter2,adapter3,adapter4,adapter5,adapter6,adapter7;
+    private Fruit3Adapter adapter0,adapter1,adapter2,adapter3,adapter4,adapter5,adapter6,adapter7,adapter8,adapter9,adapter10;
     private String UrlBase = "http://47.94.145.225/user/getKey/";
     private String listName,Url;
     private ImageView fruit_image;
-    private TextView disTitle,text_shucai,text_xuqin,text_gandou,text_dannairu,text_guwu,text_shuichan,text_shuiguoganguo,text_yaocao;
-    private RecyclerView dgl_shucai,dgl_xuqin,dgl_gandou,dgl_dannairu,dgl_guwu,dgl_shuichan,dgl_shuiguoganguo,dgl_yaocao;
+    private TextView disTitle,text_shucai,text_xuqin,text_gandou,text_dannairu,text_guwu,text_shuichan,text_shuiguoganguo,text_yaocao,text_chalei,text_huahui,text_tiaoweiji;
+    private RecyclerView dgl_shucai,dgl_xuqin,dgl_gandou,dgl_dannairu,dgl_guwu,dgl_shuichan,dgl_shuiguoganguo,dgl_yaocao,dgl_chalei,dgl_huahui,dgl_tiaoweiji;
     private TextView tx;
     private List<Fruit2> shucai_items = new ArrayList<>();
     private List<Fruit2> xuqin_items = new ArrayList<>();
@@ -64,9 +64,12 @@ public class FoodList3Activity extends AppCompatActivity {
     private List<Fruit2> shuichan_items = new ArrayList<>();
     private List<Fruit2> shuiguoganguo_items = new ArrayList<>();
     private List<Fruit2> yaocai_items = new ArrayList<>();
+    private List<Fruit2> chalei_items = new ArrayList<>();
+    private List<Fruit2> huahui_items = new ArrayList<>();
+    private List<Fruit2> tiaoweiji_items = new ArrayList<>();
     //private  Fruit2 fruit2;
     //private LinearLayoutManager layoutManager0,layoutManager1,layoutManager2,layoutManager3,layoutManager4,layoutManager5,layoutManager6,layoutManager7;
-    private StaggeredGridLayoutManager layoutManager0,layoutManager1,layoutManager2,layoutManager3,layoutManager4,layoutManager5,layoutManager6,layoutManager7;
+    private StaggeredGridLayoutManager layoutManager0,layoutManager1,layoutManager2,layoutManager3,layoutManager4,layoutManager5,layoutManager6,layoutManager7,layoutManager8,layoutManager9,layoutManager10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +107,9 @@ public class FoodList3Activity extends AppCompatActivity {
         text_shuichan= findViewById(R.id.text_shuichan);
         text_shuiguoganguo= findViewById(R.id.text_shuiguoganguo);
         text_yaocao= findViewById(R.id.text_yaocao);
+        text_chalei= findViewById(R.id.text_chalei);
+        text_huahui= findViewById(R.id.text_huahui);
+        text_tiaoweiji= findViewById(R.id.text_tiaoweiji);
 
 
      /*   layoutManager0 = new LinearLayoutManager(this);
@@ -122,6 +128,9 @@ public class FoodList3Activity extends AppCompatActivity {
         layoutManager5 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         layoutManager6 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         layoutManager7 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        layoutManager8 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        layoutManager9 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        layoutManager10 = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         dgl_shucai=findViewById(R.id.dgl_shucai);
         dgl_shucai.setNestedScrollingEnabled(false);
         dgl_xuqin=findViewById(R.id.dgl_xuqin);
@@ -138,6 +147,14 @@ public class FoodList3Activity extends AppCompatActivity {
         dgl_shuiguoganguo.setNestedScrollingEnabled(false);
         dgl_yaocao=findViewById(R.id.dgl_yaocai);
         dgl_yaocao.setNestedScrollingEnabled(false);
+
+        dgl_chalei= findViewById(R.id.dgl_chalei);
+        dgl_chalei.setNestedScrollingEnabled(false);
+        dgl_huahui= findViewById(R.id.dgl_huahui);
+        dgl_huahui.setNestedScrollingEnabled(false);
+        dgl_tiaoweiji= findViewById(R.id.dgl_tiaoweiji);
+        dgl_tiaoweiji.setNestedScrollingEnabled(false);
+
     }
 
 
@@ -209,6 +226,15 @@ public class FoodList3Activity extends AppCompatActivity {
                                     break;
                                 case "蛋奶乳":  fruit2 = new Fruit2(name,iconUrl,content_url,kind);
                                     dannairu_items.add(fruit2);
+                                    break;
+                                case "调味品":  fruit2 = new Fruit2(name,iconUrl,content_url,kind);
+                                    tiaoweiji_items.add(fruit2);
+                                    break;
+                                case "花卉":  fruit2 = new Fruit2(name,iconUrl,content_url,kind);
+                                    huahui_items.add(fruit2);
+                                    break;
+                                case "茶类":  fruit2 = new Fruit2(name,iconUrl,content_url,kind);
+                                    chalei_items.add(fruit2);
                                     break;
                                 default:break;
 
@@ -318,6 +344,53 @@ public class FoodList3Activity extends AppCompatActivity {
                                 }else {
                                     text_yaocao.setVisibility(View.GONE);
                                     dgl_yaocao.setVisibility(View.GONE);
+
+                                }
+
+
+
+
+
+
+
+
+
+
+
+                                if (chalei_items.size()>0){
+                                    dgl_chalei.setLayoutManager(layoutManager8);
+                                    text_chalei.setVisibility(View.VISIBLE);
+                                    dgl_chalei.setVisibility(View.VISIBLE);
+                                    adapter8 = new Fruit3Adapter(chalei_items);
+                                    dgl_chalei.setAdapter(adapter8);
+
+                                }else {
+                                    text_chalei.setVisibility(View.GONE);
+                                    dgl_chalei.setVisibility(View.GONE);
+
+                                }
+                                if (huahui_items.size()>0){
+                                    dgl_huahui.setLayoutManager(layoutManager9);
+                                    text_huahui.setVisibility(View.VISIBLE);
+                                    dgl_huahui.setVisibility(View.VISIBLE);
+                                    adapter9 = new Fruit3Adapter(huahui_items);
+                                    dgl_huahui.setAdapter(adapter9);
+
+                                }else {
+                                    text_huahui.setVisibility(View.GONE);
+                                    dgl_huahui.setVisibility(View.GONE);
+
+                                }
+                                if (tiaoweiji_items.size()>0){
+                                    dgl_tiaoweiji.setLayoutManager(layoutManager10);
+                                    text_tiaoweiji.setVisibility(View.VISIBLE);
+                                    dgl_tiaoweiji.setVisibility(View.VISIBLE);
+                                    adapter10 = new Fruit3Adapter(tiaoweiji_items);
+                                    dgl_tiaoweiji.setAdapter(adapter10);
+
+                                }else {
+                                    text_tiaoweiji.setVisibility(View.GONE);
+                                    dgl_tiaoweiji.setVisibility(View.GONE);
 
                                 }
 

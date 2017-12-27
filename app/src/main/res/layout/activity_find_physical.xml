@@ -6,12 +6,12 @@
     android:background="@color/white"
     >
 
-        <android.support.v7.widget.Toolbar
-          android:id="@+id/toolbar_fragment_home"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:background="@color/colorPrimary"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
         >
 
         <TextView
@@ -25,163 +25,308 @@
 
     </android.support.v7.widget.Toolbar>
 
-         <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical" >
+    <TabHost
+        android:id="@+id/physical_tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:id="@+id/user_weight"
+                    android:id="@+id/tab_01"
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="7"
-                    android:orientation="horizontal" >
+                    android:layout_height="match_parent">
+
 
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical" >
+                        android:id="@+id/user_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="7"
+                        android:orientation="horizontal" >
 
-                        <TextView
-                            android:id="@+id/user_height_value"
-                            android:layout_width="fill_parent"
-                            android:layout_height="40dp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="20sp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
 
-                        <ImageView
-                            android:id="@+id/user"
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="10dp"
-                            android:background="@null"
-                            android:contentDescription="@null"
-                            android:src="@drawable/physical_boy_jishou" />
+                            <TextView
+                                android:id="@+id/user_height_value"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/user"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@null"
+                                android:contentDescription="@null"
+                                android:src="@drawable/physical_boy_jishou" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/v_ruler"
+                                android:layout_width="50dp"
+                                android:layout_height="fill_parent"
+                                android:background="@drawable/height_ruler" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:contentDescription="@null"
+                                    android:src="#ff0000" />
+
+                                <ScrollView
+                                    android:id="@+id/vruler"
+                                    android:layout_width="65dp"
+                                    android:layout_height="fill_parent"
+                                    android:scrollbars="none" >
+
+                                    <LinearLayout
+                                        android:id="@+id/vruler_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical" >
+                                    </LinearLayout>
+                                </ScrollView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" >
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
 
                         <RelativeLayout
-                            android:id="@+id/v_ruler"
-                            android:layout_width="80dp"
-                            android:layout_height="fill_parent"
-                            android:background="@drawable/height_ruler" >
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="2dp"
-                                android:layout_centerVertical="true"
-                                android:background="@null"
-                                android:contentDescription="@null"
-                                android:src="#ff0000" />
+                            >
 
-                            <ScrollView
-                                android:id="@+id/vruler"
-                                android:layout_width="80dp"
-                                android:layout_height="fill_parent"
-                                android:scrollbars="none" >
+                            <LinearLayout
+                                android:id="@+id/two"
+                                android:paddingLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
 
-                                <LinearLayout
-                                    android:id="@+id/vruler_layout"
+                                <TextView
+                                    android:layout_marginTop="5dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="体重（kg）"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorPrimary"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/user_birth_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:text="60"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    />
+                            </LinearLayout>
+
+                            <HorizontalScrollView
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/birthruler"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/two"
+                                android:background="@drawable/layout_ruler"
+                                android:scrollbars="none"
+                                >
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:id="@+id/ruler_layout"
+                                    android:layout_width="wrap_content"
                                     android:gravity="center_vertical"
-                                    android:orientation="vertical" >
+                                    android:layout_height="match_parent">
+
                                 </LinearLayout>
-                            </ScrollView>
+                            </HorizontalScrollView>
+
+
                         </RelativeLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:text="BMI     :      "
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                            <TextView
+                                android:id="@+id/bmi_value"
+                                android:textSize="30dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="BMI：目前国际上常用的衡量人体胖瘦程度以及是否健康的一个标准，是用体重公斤数除以身高米数平方得出的数字，正常值为18.5-23.9"
+                            />
+
+
+
                     </LinearLayout>
 
                 </LinearLayout>
 
-             <LinearLayout
-                 android:orientation="vertical"
-                 android:layout_width="match_parent"
-                 android:layout_height="0dp"
-                 android:layout_weight="1"
-                 >
 
-                 <RelativeLayout
-                     android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                     android:layout_marginLeft="15dp"
-                     android:layout_marginRight="15dp"
+                <LinearLayout
+                    android:id="@+id/tab_02"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                     >
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="身体脂肪量和体重的比值，其评定标准如下："/>
 
-                     <LinearLayout
-                         android:id="@+id/two"
-                         android:paddingLeft="10dp"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         >
+                    <TextView
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="身体脂肪比例（%）"
+                        />
 
-                         <TextView
-                             android:layout_marginTop="5dp"
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:layout_gravity="center_horizontal"
-                             android:text="体重（kg）"
-                             android:textStyle="bold"
-                             android:textSize="16sp"
-                             android:textColor="@color/colorPrimary"
-                             />
-
-                         <TextView
-                             android:id="@+id/user_birth_value"
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:layout_gravity="center_horizontal"
-                             android:layout_marginTop="5dp"
-                             android:text="1994"
-                             android:textColor="@color/colorPrimary"
-                             android:textSize="18sp"
-                             android:textStyle="bold"
-                             />
-                     </LinearLayout>
-
-                     <HorizontalScrollView
-                         android:id="@+id/birthruler"
-                         android:layout_width="match_parent"
-                         android:layout_height="60dp"
-                         android:layout_centerVertical="true"
-                         android:layout_marginLeft="5dp"
-                         android:layout_toRightOf="@+id/two"
-                         android:background="@drawable/layout_ruler"
-                         android:scrollbars="none"
-                         >
-
-                         <LinearLayout
-                             android:orientation="horizontal"
-                             android:id="@+id/ruler_layout"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:layout_height="match_parent">
-
-                         </LinearLayout>
-                     </HorizontalScrollView>
+                    <GridLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/physical_gridlayout01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="2"
+                        android:columnCount="3"
+                        />
 
 
-                 </RelativeLayout>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/tab_03"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="腰围和臀围的比值，其评定标准如下："/>
 
+                    <TextView
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="腰臀围比"
+                        />
 
-             </LinearLayout>
+                    <GridLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/physical_gridlayout02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="3"
+                        android:columnCount="3"
+                        />
 
+                </LinearLayout>
 
+            </FrameLayout>
 
+        </LinearLayout>
 
-         </LinearLayout>
-
+    </TabHost>
 
 </LinearLayout>
