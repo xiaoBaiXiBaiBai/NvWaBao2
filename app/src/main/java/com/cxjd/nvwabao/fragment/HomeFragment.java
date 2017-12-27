@@ -45,6 +45,7 @@ public class HomeFragment extends Fragment {
         icon_search_food = view.findViewById(R.id.home_search_food);
         icon_search_heathy = view.findViewById(R.id.home_search_healthy);
         recyclerView=view.findViewById(R.id.home_recycler_view);
+        recyclerView.scrollTo(0,-200);
         requesList();
         listDataSave=new ListDataSave(getContext(),"Titlecontent");
         titleContentBeans=new ArrayList<>();
@@ -69,6 +70,7 @@ public class HomeFragment extends Fragment {
         final NewsItemAdapter adapter=new NewsItemAdapter(titleContentBeans,getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.scrollToPosition(-10);
         recyclerView.setAdapter(adapter);
         initSlider();
 
