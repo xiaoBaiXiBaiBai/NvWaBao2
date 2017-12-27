@@ -1,19 +1,25 @@
 package com.cxjd.nvwabao.Activity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.cxjd.nvwabao.R;
+import com.cxjd.nvwabao.bean.Tab;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -50,13 +56,77 @@ public class Physical extends AppCompatActivity {
     //人体图片
     private ImageView imageView ;
 
+    //bmi数值
+    private TextView bmi_value;
+
+    //网格布局
+    GridLayout gridLayout01 ;
+    GridLayout gridLayout02 ;
+
+    //fat表格
+    String[] fat = {"分类","男性","女性","正常范围","10%~20%","18%~28%"};
+    //臀围表格
+    String[] tunWei = {"分类","男性","女性","正常范围","0.75~0.85","0.70~0.80","腹部肥胖",">0.90",">0.85"};
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_physical);
         initView();
+
+        gridLayout01 = findViewById(R.id.physical_gridlayout01);
+        gridLayout02 = findViewById(R.id.physical_gridlayout02);
+
+        //设置TabHost组件
+        final TabHost tabHost = findViewById(R.id.physical_tabhost);
+        //初始化TabHost容器
+        tabHost.setup();
+
+        //创建第一个Tab页面
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("tab1").setIndicator("体制指数").setContent(R.id.tab_01);
+        //添加第一个标签页
+        tabHost.addTab(tab1);
+        //创建第二个Tab页面
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("tab2").setIndicator("脂肪比例").setContent(R.id.tab_02);
+        //添加第二个Tab页面
+        tabHost.addTab(tab2);
+        //创建第三个Tab页面
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("tab3").setIndicator("腰臀围比").setContent(R.id.tab_03);
+        //添加第三个Tab页面
+        tabHost.addTab(tab3);
+
+        //表格的初始化
+        initGridLayout();
+
+        //选择监听
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                for(int i = 0; i < tabHost.getTabWidget().getChildCount(); i++){
+                    //获得当选中的选项卡对象
+                    View view = tabHost.getTabWidget().getChildAt(i);
+                    TextView tv = view.findViewById(android.R.id.title);
+                    //选中
+                    if(tabHost.getCurrentTab() == i){
+                        tv.setTextSize(18);
+                        //设置字体和风格
+                        tv.setTypeface(Typeface.SANS_SERIF,5);
+                        tv.setTextColor(getResources().getColor(R.color.colorPrimary));
+                    }else {
+                        //不选中
+                        tv.setTextSize(15);
+                        //设置字体和风格
+                        tv.setTypeface(Typeface.DEFAULT);
+                        tv.setTextColor(getResources().getColor(R.color.black));
+                    }
+                }
+            }
+        });
+
         imageView = findViewById(R.id.user);
+        bmi_value = findViewById(R.id.bmi_value);
         user_birth_value = findViewById(R.id.user_birth_value);
+
         user_birth_value.setText("160");
         ruler = findViewById(R.id.birthruler);
         rulerlayout = findViewById(R.id.ruler_layout);
@@ -67,17 +137,19 @@ public class Physical extends AppCompatActivity {
                 int action = event.getAction();
                 weight = beginYear +  (int)Math.ceil((ruler.getScrollX())/20);
                 user_birth_value.setText(String.valueOf(weight));
+                bmi_value.setText(String.format("%.1f",bmi));
                 initImage();
                 switch (action){
                     case MotionEvent.ACTION_DOWN:
                     case MotionEvent.ACTION_MOVE:
                         break;
                     case MotionEvent.ACTION_UP:
-                        new Handler().postDelayed(new Runnable() {
+                        new android.os.Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 weight = beginYear  +  (int)Math.ceil((ruler.getScrollX())/20);
                                 user_birth_value.setText(String.valueOf(weight ));
+                                bmi_value.setText(String.format("%.1f",bmi));
                                 initImage();
                                 birthYear = String.valueOf((int)(beginYear +  Math.ceil((ruler.getScrollX())/20) ));
                                 try {
@@ -92,6 +164,50 @@ public class Physical extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private void initGridLayout() {
+        for(int i = 0; i < fat.length; i++){
+            TextView textView = new TextView(this);
+            if(i==0||i==1||i==2){
+                textView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                textView.setTypeface(Typeface.SANS_SERIF,5);
+            }
+            textView.setBackground(getResources().getDrawable(R.drawable.textview_fourandfive_background));
+            //居中显示
+            textView.setGravity(Gravity.CENTER);
+            textView.setPadding(65,35,65,35);
+            textView.setText(fat[i]);
+            //指定该组件所在的行
+            GridLayout.Spec rowSpec = GridLayout.spec(i/3);
+            //指定该组件所在的列
+            GridLayout.Spec columnSpec = GridLayout.spec(i%3);
+            GridLayout.LayoutParams params = new GridLayout.LayoutParams(rowSpec,columnSpec);
+            //指定该组件占满父容器
+            params.setGravity(Gravity.FILL);
+            gridLayout01.addView(textView, params);
+        }
+
+        for(int i = 0; i < tunWei.length; i++){
+            TextView textView = new TextView(this);
+            if(i==0||i==1||i==2){
+                textView.setTextColor(getResources().getColor(R.color.colorPrimary));
+                textView.setTypeface(Typeface.SANS_SERIF,5);
+            }
+            textView.setText(tunWei[i]);
+            textView.setBackground(getResources().getDrawable(R.drawable.textview_fourandfive_background));
+            //居中显示
+            textView.setGravity(Gravity.CENTER);
+            textView.setPadding(65,35,65,35);
+            //指定该组件所在的行
+            GridLayout.Spec rowSpec = GridLayout.spec(i/3);
+            //指定该组件所在的列
+            GridLayout.Spec columnSpec = GridLayout.spec(i%3);
+            GridLayout.LayoutParams params = new GridLayout.LayoutParams(rowSpec,columnSpec);
+            //指定该组件占满父容器
+            params.setGravity(Gravity.FILL);
+            gridLayout02.addView(textView, params);
+        }
     }
 
     private void initImage() {
@@ -120,7 +236,7 @@ public class Physical extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        new Handler().postDelayed(new Runnable() {
+        new android.os.Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 scroll();
@@ -165,6 +281,7 @@ public class Physical extends AppCompatActivity {
                 user_height_value.setText("身高是: "
                         + String.valueOf(height)
                         + " CM");
+                bmi_value.setText(String.format("%.1f",bmi));
                 initImage();
                 switch (action) {
                     case MotionEvent.ACTION_DOWN:
@@ -178,6 +295,7 @@ public class Physical extends AppCompatActivity {
                                     .getScrollY()) / 10);
                             user_height_value.setText("身高是: "
                                     + String.valueOf(height) + " CM");
+                            bmi_value.setText(String.format("%.1f",bmi));
                             initImage();
                         }
                         }, 1000);
