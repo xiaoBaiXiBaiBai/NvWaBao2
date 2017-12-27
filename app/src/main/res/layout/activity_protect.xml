@@ -45,16 +45,18 @@
         </SearchView>-->
 
     </RelativeLayout>
+
     <ImageView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignEnd="@+id/textView3"
-        android:layout_below="@+id/textView2"
 
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:background="@drawable/searchviewpng">
 
     </ImageView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -73,99 +75,188 @@
 
         <ImageView
             android:id="@+id/guwu"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/yaocai"
-            android:layout_alignTop="@+id/dounairu"
+            android:layout_below="@+id/qinshou"
+            android:layout_marginTop="114dp"
             android:background="@drawable/guwu" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView12"
+            android:layout_alignBottom="@+id/textView12"
+            android:layout_alignStart="@+id/dounairu"
+            android:text="蔬菜" />
         <ImageView
             android:id="@+id/dounairu"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/shuiguoganguo"
-            android:layout_below="@+id/shucai"
-            android:layout_marginTop="13dp"
+            android:layout_alignTop="@+id/yaocai"
             android:background="@drawable/dounairu" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView10"
+            android:layout_alignBottom="@+id/textView10"
+            android:layout_alignStart="@+id/textView7"
+            android:text="蛋、奶乳" />
         <ImageView
             android:id="@+id/gandou"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
 
             android:layout_alignStart="@+id/shuichan"
             android:layout_alignTop="@+id/qinshou"
             android:background="@drawable/gandou" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/gandou"
+            android:layout_below="@+id/gandou"
+            android:layout_marginTop="5dp"
+            android:text="干豆"
+            android:id="@+id/textView11" />
         <ImageView
             android:id="@+id/qinshou"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/guwu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/yaocai"
             android:layout_alignTop="@+id/shucai"
             android:background="@drawable/qinshou" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView11"
+            android:layout_alignBottom="@+id/textView11"
+            android:layout_alignStart="@+id/textView10"
+            android:text="畜禽"
+            android:id="@+id/textView12" />
         <ImageView
             android:id="@+id/shucai"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/dounairu"
             android:layout_below="@+id/textView"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/shucai" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView9"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignStart="@+id/textView6"
+            android:text="药材"
+            android:id="@+id/textView10" />
         <ImageView
             android:id="@+id/shuichan"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignTop="@+id/guwu"
-            android:layout_marginStart="41dp"
-            android:layout_toEndOf="@+id/guwu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/gandou"
+            android:layout_marginEnd="56dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/shuichan" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignLeft="@+id/tiaoweipin"
+            android:layout_below="@+id/dounairu"
+            android:text="水产"
+            android:id="@+id/textView9" />
         <ImageView
             android:id="@+id/shuiguoganguo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/dounairu"
-            android:layout_marginStart="39dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/guwu"
+            android:layout_marginEnd="56dp"
+            android:layout_toStartOf="@+id/guwu"
             android:background="@drawable/shuiguoganguo" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView8"
+            android:layout_alignBottom="@+id/textView8"
+            android:layout_alignStart="@+id/textView5"
+            android:text="水果干果" />
 
         <ImageView
             android:id="@+id/yaocai"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignTop="@+id/shuiguoganguo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/shuichan"
             android:layout_centerHorizontal="true"
             android:background="@drawable/yaocai" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView7"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignStart="@+id/textView4"
+            android:text="谷物" />
         <ImageView
             android:id="@+id/tiaoweipin"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/shuichan"
-            android:layout_alignTop="@+id/yaocai"
+            android:layout_alignTop="@+id/guwu"
             android:background="@drawable/tiaoweipin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tiaoweipin"
+            android:layout_alignLeft="@+id/tiaoweipin"
+            android:text="调味品"
+            android:id="@+id/textView8" />
         <ImageView
             android:id="@+id/huahuilei"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/shuiguoganguo"
-            android:layout_below="@+id/shuiguoganguo"
-            android:layout_marginTop="12dp"
+            android:layout_alignTop="@+id/chalei"
             android:background="@drawable/huahuilei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/huahuilei"
+            android:layout_alignEnd="@+id/huahuilei"
+            android:text="花卉类"
+            android:id="@+id/textView5" />
+
         <ImageView
             android:id="@+id/chalei"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/yaocai"
-            android:layout_alignTop="@+id/huahuilei"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/guwu"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/shuiguoganguo"
             android:background="@drawable/chalei" />
 
-
-
-
-
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chalei"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="茶类" />
     </RelativeLayout>
 </LinearLayout>

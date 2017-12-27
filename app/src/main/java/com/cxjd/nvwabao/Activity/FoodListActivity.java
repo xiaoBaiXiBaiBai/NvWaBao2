@@ -228,74 +228,74 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void inittiaoweipin() {
-        Fruit bajiaohuixiang = new Fruit("八角茴香",R.drawable.tiaoweipin);
+        Fruit bajiaohuixiang = new Fruit("角茴香",R.drawable.jiaohuixiang);
         fruitList.add(bajiaohuixiang);
-        Fruit 白糖 = new Fruit("白糖",R.drawable.tiaoweipin);
+        Fruit 白糖 = new Fruit("白糖",R.drawable.baitang);
         fruitList.add(白糖);
-        Fruit 菜籽油 = new Fruit("菜籽油",R.drawable.tiaoweipin);
+        Fruit 菜籽油 = new Fruit("菜籽油",R.drawable.caiziyou);
         fruitList.add(菜籽油);
-        Fruit 醋 = new Fruit("醋",R.drawable.tiaoweipin);
+        Fruit 醋 = new Fruit("醋",R.drawable.cu);
         fruitList.add(醋);
-        Fruit 大蒜 = new Fruit("大蒜",R.drawable.tiaoweipin);
+        Fruit 大蒜 = new Fruit("蒜",R.drawable.suan);
         fruitList.add(大蒜);
-        Fruit 红糖 = new Fruit("红糖",R.drawable.tiaoweipin);
+        Fruit 红糖 = new Fruit("红糖",R.drawable.hongtang);
         fruitList.add(红糖);
-        Fruit 胡椒 = new Fruit("胡椒",R.drawable.tiaoweipin);
+        Fruit 胡椒 = new Fruit("胡椒",R.drawable.hujiao);
         fruitList.add(胡椒);
-        Fruit 花椒 = new Fruit("花椒",R.drawable.tiaoweipin);
+        Fruit 花椒 = new Fruit("花椒",R.drawable.huajiao);
         fruitList.add(花椒);
-        Fruit 酱油 = new Fruit("酱油",R.drawable.tiaoweipin);
+        Fruit 酱油 = new Fruit("酱油",R.drawable.jiangyou);
         fruitList.add(酱油);
-        Fruit 芥末 = new Fruit("芥末",R.drawable.tiaoweipin);
+        Fruit 芥末 = new Fruit("芥末",R.drawable.jiemo);
         fruitList.add(芥末);
-        Fruit 咖喱 = new Fruit("咖喱",R.drawable.tiaoweipin);
+        Fruit 咖喱 = new Fruit("咖喱",R.drawable.gali);
         fruitList.add(咖喱);
-        Fruit 生姜 = new Fruit("生姜",R.drawable.tiaoweipin);
+        Fruit 生姜 = new Fruit("生姜",R.drawable.shengjiang);
         fruitList.add(生姜);
-        Fruit 食盐 = new Fruit("食盐",R.drawable.tiaoweipin);
+        Fruit 食盐 = new Fruit("食盐",R.drawable.shiyan);
         fruitList.add(食盐);
-        Fruit 小茴香 = new Fruit("小茴香",R.drawable.tiaoweipin);
+        Fruit 小茴香 = new Fruit("小茴香",R.drawable.xiaohuixiang);
         fruitList.add(小茴香);
-        Fruit 枣花蜜 = new Fruit("枣花蜜",R.drawable.tiaoweipin);
-        fruitList.add(枣花蜜);
+     /*   Fruit 枣花蜜 = new Fruit("枣花蜜",R.drawable.tiaoweipin);
+        fruitList.add(枣花蜜);*/
 
 
     }
 
     private void inithuahui() {
-        Fruit 百合 = new Fruit("百合",R.drawable.huahuilei);
+        Fruit 百合 = new Fruit("百合",R.drawable.haihe);
         fruitList.add(百合);
-        Fruit 菜花 = new Fruit("菜花",R.drawable.huahuilei);
+        Fruit 菜花 = new Fruit("菜花",R.drawable.caihua);
         fruitList.add(菜花);
 
-        Fruit 桂花 = new Fruit("桂花",R.drawable.huahuilei);
+        Fruit 桂花 = new Fruit("桂花",R.drawable.guihua);
         fruitList.add(桂花);
 
-        Fruit 槐花 = new Fruit("槐花",R.drawable.huahuilei);
+        Fruit 槐花 = new Fruit("槐花",R.drawable.kuihua);
         fruitList.add(槐花);
 
-        Fruit 金针菜 = new Fruit("金针菜",R.drawable.huahuilei);
+        Fruit 金针菜 = new Fruit("金针菜",R.drawable.jinzhengu);
         fruitList.add(金针菜);
 
-        Fruit 菊花 = new Fruit("菊花",R.drawable.huahuilei);
+        Fruit 菊花 = new Fruit("菊花",R.drawable.juhua);
         fruitList.add(菊花);
-        Fruit 玫瑰花 = new Fruit("玫瑰花",R.drawable.huahuilei);
+        Fruit 玫瑰花 = new Fruit("玫瑰",R.drawable.meigui);
         fruitList.add(玫瑰花);
-        Fruit 茉莉花 = new Fruit("茉莉花",R.drawable.huahuilei);
+        Fruit 茉莉花 = new Fruit("茉莉花",R.drawable.moli);
         fruitList.add(茉莉花);
-        Fruit 木槿花 = new Fruit("木槿花",R.drawable.huahuilei);
+        Fruit 木槿花 = new Fruit("木槿",R.drawable.mujin);
         fruitList.add(木槿花);
-        Fruit 栀子花 = new Fruit("栀子花",R.drawable.huahuilei);
+        Fruit 栀子花 = new Fruit("栀子花",R.drawable.zhizihua);
         fruitList.add(栀子花);
 
     }
 
     private void initchalei() {
-        Fruit 碧螺春 = new Fruit("碧螺春",R.drawable.chalei);
+        Fruit 碧螺春 = new Fruit("碧螺春",R.drawable.biluochun);
         fruitList.add(碧螺春);
-        Fruit 茶叶 = new Fruit("茶叶",R.drawable.chalei);
+        Fruit 茶叶 = new Fruit("茶叶",R.drawable.chaye);
         fruitList.add(茶叶);
-        Fruit 铁观音 = new Fruit("铁观音",R.drawable.chalei);
+        Fruit 铁观音 = new Fruit("铁观音",R.drawable.teiguanyin);
         fruitList.add(铁观音);
     }
 
