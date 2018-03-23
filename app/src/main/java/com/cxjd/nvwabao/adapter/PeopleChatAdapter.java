@@ -3,6 +3,7 @@ package com.cxjd.nvwabao.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +27,8 @@ public class PeopleChatAdapter extends ArrayAdapter<PeopleChat> {
 
 
 
-    public PeopleChatAdapter(Context context, int resource, int textViewResourceId, List<PeopleChat> objects) {
-        super(context, resource, textViewResourceId, objects);
+    public PeopleChatAdapter(Context context,int textViewResourceId, List<PeopleChat> objects) {
+        super(context,textViewResourceId, objects);
 
         resourceId = textViewResourceId;//获取子布局
     }
@@ -41,8 +42,7 @@ public class PeopleChatAdapter extends ArrayAdapter<PeopleChat> {
 
         if(convertView==null){
             viewHolder=new ViewHolder();
-            view = LayoutInflater.from(getContext()).inflate(
-                    resourceId, null);
+            view = LayoutInflater.from(getContext()).inflate(resourceId, null);
             viewHolder.ivImage = (ImageView) view.findViewById(R.id.ivImage);//获取控件,只需要调用一遍，调用过后保存在ViewHolder中
             viewHolder.tvName = (TextView) view.findViewById(R.id.tvName);   //获取控件
             view.setTag(viewHolder);
@@ -55,6 +55,8 @@ public class PeopleChatAdapter extends ArrayAdapter<PeopleChat> {
 
         viewHolder.ivImage.setImageResource(peopleChat.getImageId());
         viewHolder.tvName.setText(peopleChat.getChat());
+
+        System.out.println("尝试获取text"+peopleChat.getChat());
 
         return view;
     }
