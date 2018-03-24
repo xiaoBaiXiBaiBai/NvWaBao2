@@ -1,9 +1,14 @@
 package com.cxjd.nvwabao.Activity;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.transition.Fade;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView.OnItemClickListener;
@@ -26,8 +31,12 @@ import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.support.v4.app.ActivityOptionsCompat.makeSceneTransitionAnimation;
+
 /**
  * Created by 白 on 2018/3/20.
+ *
+ * 与PeopleChatActivity2 互相刷新跳转
  */
 
 public class PeopleChatActivity extends Activity implements View.OnClickListener {
@@ -46,6 +55,9 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a1_activity_people_chat_item);
+
+        getWindow().setEnterTransition(new Fade().setDuration(1000));
+        getWindow().setExitTransition(new Fade().setDuration(1000));
 
         lvPeopleChat = (ListView) findViewById(R.id.lvPeopleChat);
         //读取 或 初始化 数据
@@ -162,6 +174,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
+        Handler handler=new Handler();
         switch (view.getId()) {
             case R.id.people_zan_add:
 
@@ -172,23 +185,29 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
                 PeopleChat pUpdate = new PeopleChat();
                 pUpdate.setZan(zan);
                 pUpdate.updateAll("peopleId = ?", id);
-               // onCreate(null);
-                Toast.makeText(PeopleChatActivity.this, "点赞成功!", Toast.LENGTH_SHORT).show();
-                refresh();
+
+                ProgressDialog progressDialog = new ProgressDialog(PeopleChatActivity.this);
+                progressDialog.setTitle("点赞成功....");
+                progressDialog.setMessage("Loading.....");
+                progressDialog.setCancelable(true); //可按返回取消
+                progressDialog.show();
+
+
+                refresh(view);
                 break;
         }
 
     }
 
     //刷新页面
-    private void refresh() {
+    private void refresh(View view) {
         finish();
         Intent add = new Intent(PeopleChatActivity.this, PeopleChatActivity.class);
         String id = peopleChat.getPeopleId() + "";
         Bundle bundle=new Bundle();
         bundle.putString("id",id);
         add.putExtras(bundle);
-        startActivity(add);
+        startActivity(add,ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 
 }
