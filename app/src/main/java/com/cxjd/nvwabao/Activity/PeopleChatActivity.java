@@ -7,31 +7,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.transition.Fade;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView.OnItemClickListener;
 import com.cxjd.nvwabao.R;
 
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cxjd.nvwabao.adapter.PeopleChatAdapter;
-import com.cxjd.nvwabao.bean.People;
 import com.cxjd.nvwabao.bean.PeopleChat;
 import com.cxjd.nvwabao.bean.PeopleReturn;
-import com.cxjd.nvwabao.fragment.CircleFragment;
 
 import org.litepal.crud.DataSupport;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.support.v4.app.ActivityOptionsCompat.makeSceneTransitionAnimation;
 
 /**
  * Created by 白 on 2018/3/20.
@@ -51,11 +43,14 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     private int peopleId;
 
+    private ProgressDialog progressDialog;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a1_activity_people_chat_item);
 
+        //淡入淡出需要
         getWindow().setEnterTransition(new Fade().setDuration(1000));
         getWindow().setExitTransition(new Fade().setDuration(1000));
 
@@ -81,6 +76,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
         ImageView imageView = (ImageView) findViewById(R.id.people_image);
         imageView.setImageResource(peopleChat.getImageId());
+
         TextView people_name = (TextView) findViewById(R.id.people_name);
         people_name.setText(peopleChat.getName());
         TextView people_chat = (TextView) findViewById(R.id.people_chat);
@@ -92,6 +88,10 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         ImageView peopleZanAdd = (ImageView) findViewById(R.id.people_zan_add);
         peopleZanAdd.setOnClickListener(this);
 
+        ImageView ask = (ImageView) findViewById(R.id.ask);
+        ask.setOnClickListener(this);
+
+
 
 
 
@@ -100,6 +100,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
         lvPeopleChat.setAdapter(peopleChatAdapter);  //绑定数据和适配器
 
+        //  列表 单项点击按钮  可直接使用
         /*lvPeopleChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -174,7 +175,6 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-        Handler handler=new Handler();
         switch (view.getId()) {
             case R.id.people_zan_add:
 
@@ -186,15 +186,20 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
                 pUpdate.setZan(zan);
                 pUpdate.updateAll("peopleId = ?", id);
 
-                ProgressDialog progressDialog = new ProgressDialog(PeopleChatActivity.this);
+                progressDialog = new ProgressDialog(PeopleChatActivity.this);
                 progressDialog.setTitle("点赞成功....");
                 progressDialog.setMessage("Loading.....");
                 progressDialog.setCancelable(true); //可按返回取消
                 progressDialog.show();
 
-
                 refresh(view);
                 break;
+            case R.id.ask:
+                Intent returnPeople = new Intent(PeopleChatActivity.this, PeopleChatOneActivity.class);
+                returnPeople.putExtra("id", peopleId);
+                startActivity(returnPeople);
+                break;
+
         }
 
     }
@@ -208,6 +213,15 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         bundle.putString("id",id);
         add.putExtras(bundle);
         startActivity(add,ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+
     }
 
+    //销毁进度条 Dialog
+    @Override
+    protected void onDestroy() {
+        if(progressDialog != null) {
+            progressDialog.dismiss();
+        }
+        super.onDestroy();
+    }
 }
