@@ -22,11 +22,14 @@ import com.cxjd.nvwabao.bean.PeopleReturn;
 
 import org.litepal.crud.DataSupport;
 
+import java.security.interfaces.DSAKey;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by 白 on 2018/3/20.
+ *
+ * 回复列表
  *
  * 与PeopleChatActivity2 互相刷新跳转
  */
@@ -43,7 +46,11 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     private int peopleId;
 
+    private PeopleChatAdapter peopleChatAdapter;
+
+    //进度条
     private ProgressDialog progressDialog;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,9 +61,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         getWindow().setEnterTransition(new Fade().setDuration(1000));
         getWindow().setExitTransition(new Fade().setDuration(1000));
 
-        lvPeopleChat = (ListView) findViewById(R.id.lvPeopleChat);
-        //读取 或 初始化 数据
-        getData();
+
 
 
         Intent intent = getIntent();
@@ -71,9 +76,37 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         System.out.println("编号"+peopleId);
         System.out.println("ssssssssssssss"+peopleChat.getPeopleId()+"----"+peopleChat.getChat());
 
+        initview();
 
 
 
+
+        //  列表 单项点击按钮  可直接使用
+        /*lvPeopleChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                PeopleReturn peopleChat = peopleReturnList.get(position); //获取点击行数
+
+                Intent intent = new Intent(PeopleChatActivity.this, PeopleChatOneActivity.class);
+                intent.putExtra("chat", peopleChat.getReturnChat());
+
+                startActivity(intent);
+            }
+        });*/
+
+    }
+
+    private void initview(){
+
+        if (selectList != null&&selectList.isEmpty()) {
+            selectList.clear();
+        }
+
+        //读取 或 初始化 数据
+        getData();
+        //病人收到的回复集合 获取
+        select(peopleId);
+        //个人 帖子加载
         ImageView imageView = (ImageView) findViewById(R.id.people_image);
         imageView.setImageResource(peopleChat.getImageId());
 
@@ -91,27 +124,12 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         ImageView ask = (ImageView) findViewById(R.id.ask);
         ask.setOnClickListener(this);
 
-
-
-
-
+        //回复帖子列表加载
         //关联数据和子布局
-        PeopleChatAdapter peopleChatAdapter = new PeopleChatAdapter(this, R.layout.a1_people_chat_item, selectList);
+        lvPeopleChat = (ListView) findViewById(R.id.lvPeopleChat);
+        peopleChatAdapter = new PeopleChatAdapter(this, R.layout.a1_people_chat_item, selectList);
 
         lvPeopleChat.setAdapter(peopleChatAdapter);  //绑定数据和适配器
-
-        //  列表 单项点击按钮  可直接使用
-        /*lvPeopleChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                PeopleReturn peopleChat = peopleReturnList.get(position); //获取点击行数
-
-                Intent intent = new Intent(PeopleChatActivity.this, PeopleChatOneActivity.class);
-                intent.putExtra("chat", peopleChat.getReturnChat());
-
-                startActivity(intent);
-            }
-        });*/
 
     }
 
@@ -120,17 +138,17 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         peopleReturnList = DataSupport.findAll(PeopleReturn.class);
 
         if (peopleReturnList.size() < 5) {
-            int[] returnIds = {1,2,3,4,5,6,7,8,9,10,11,12};
-            int[] peopleIds = {1,2,2,2,3,4,5,5,2,2,1,7};
-            int[] imageIds = {R.drawable.a1_people,R.drawable.a1_people ,R.drawable.a1_people,R.drawable.a1_people
-                    ,R.drawable.a1_people,R.drawable.a1_people,R.drawable.a1_people,R.drawable.a1_people
-                    ,R.drawable.a1_people,R.drawable.a1_people,R.drawable.a1_people,R.drawable.a1_people};   //图片存储
-            String[] returnChats = { "ssssss", "dddddd","肝炎","心脏病","fsdsds","dsasassd","ssssss", "dddddd","肝炎","心脏病","fsdsds","dsasassd" };
-            String[] returnNames = {"asss","烦烦烦","水水","顶顶"
-                    ,"匹配","搜搜","啊啊","版本"
-                    ,"啊啊啊","你你你","密码","阿奇"};
+            int[] returnIds = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+            int[] peopleIds = {1, 2, 2, 2, 3, 4, 5, 5, 2, 2, 1, 7};
+            int[] imageIds = {R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people
+                    , R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people
+                    , R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people};   //图片存储
+            String[] returnChats = {"ssssss", "dddddd", "肝炎", "心脏病", "fsdsds", "dsasassd", "ssssss", "dddddd", "肝炎", "心脏病", "fsdsds", "dsasassd"};
+            String[] returnNames = {"asss", "烦烦烦", "水水", "顶顶"
+                    , "匹配", "搜搜", "啊啊", "版本"
+                    , "啊啊啊", "你你你", "密码", "阿奇"};
 
-            for(int i=0;i<imageIds.length;i++){                  //将数据添加到集合中
+            for (int i = 0; i < imageIds.length; i++) {                  //将数据添加到集合中
 
                 //peopleChatList.add(new PeopleChat(imageIds[i],names[i]));  //将图片id和对应的name存储到一起
                 PeopleReturn peopleReturn = new PeopleReturn();
@@ -142,6 +160,10 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
                 peopleReturnList.add(peopleReturn);
                 peopleReturn.save();
             }
+        } else {
+
+           /* DataSupport.deleteAll(PeopleReturn.class);
+            System.out.println("已删除所有回复");*/
         }
 
     }
@@ -206,13 +228,13 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     //刷新页面
     private void refresh(View view) {
-        finish();
         Intent add = new Intent(PeopleChatActivity.this, PeopleChatActivity.class);
         String id = peopleChat.getPeopleId() + "";
         Bundle bundle=new Bundle();
         bundle.putString("id",id);
         add.putExtras(bundle);
         startActivity(add,ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        finish();
 
     }
 
@@ -223,5 +245,18 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
             progressDialog.dismiss();
         }
         super.onDestroy();
+    }
+
+    //刷新
+ /*   protected void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+        initview();
+    }*/
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initview();
     }
 }
