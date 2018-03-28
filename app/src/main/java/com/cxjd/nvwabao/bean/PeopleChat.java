@@ -10,23 +10,26 @@ import org.litepal.crud.DataSupport;
 
 public class PeopleChat extends DataSupport{
 
-    private int id;
+    private int peopleId;
     private String name;        //名称
     private int imageId;        //个人图片
     private String chat;        //病情描述
     private String info;        //个人信息
     private int coldImage;      //病情图片
 
+    private int zan;            //点赞数量
+
     public PeopleChat() {
 
     }
 
-    public int getId() {
-        return id;
+
+    public int getPeopleId() {
+        return peopleId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPeopleId(int peopleId) {
+        this.peopleId = peopleId;
     }
 
     public PeopleChat(int imageId, String chat) {
@@ -74,5 +77,26 @@ public class PeopleChat extends DataSupport{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getZan() {
+        return zan;
+    }
+
+    public void setZan(int zan) {
+        this.zan = zan;
+    }
+
+    @Override
+    public String toString() {
+        return "PeopleChat{" +
+                "peopleId=" + peopleId +
+                ", name='" + name + '\'' +
+                ", imageId=" + imageId +
+                ", chat='" + chat + '\'' +
+                ", info='" + info + '\'' +
+                ", coldImage=" + coldImage +
+                ", zan=" + zan +
+                '}';
     }
 }

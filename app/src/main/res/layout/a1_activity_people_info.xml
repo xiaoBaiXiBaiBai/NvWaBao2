@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#1AAEE1"
+        android:id="@+id/login_toobar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人中心"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="2dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@mipmap/iconbg"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/head_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/userpic"
+                />
+            <TextView
+                android:id="@+id/people_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:background="#F0F0F0"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"/>
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="个人简介"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <TextView
+        android:background="#F0F0F0"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"/>
+    <TextView
+        android:id="@+id/people_info_info"
+        android:text="这个人很懒，什么也没写 ԾㅂԾ"
+        android:textColor="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    
+</LinearLayout>

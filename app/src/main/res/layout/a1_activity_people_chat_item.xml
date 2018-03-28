@@ -14,17 +14,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/a1_activity_peoplc_chat_title"
-            android:id="@+id/title_chat1"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"/>
+
+        <include layout="@layout/a1_activity_peoplc_chat_title" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
-                android:id="@+id/image_1"
+                android:id="@+id/people_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -33,7 +32,7 @@
                 />
             <TextView
                 android:text="ssssssssss"
-                android:id="@+id/people_1"
+                android:id="@+id/people_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
@@ -44,7 +43,7 @@
 
         </RelativeLayout>
         <TextView
-            android:id="@+id/chat_1"
+            android:id="@+id/people_chat"
             android:text="waite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,15 +60,36 @@
             android:background="#F0F0F0" />
 
 
-        <ImageView
-            android:id="@+id/ask"
-            android:src="@drawable/a1_ask"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ask"
+                android:src="@drawable/a1_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <ImageView
+                android:id="@+id/people_zan_add"
+                android:src="@drawable/a1_hand"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="7dp"
+                />
+            <TextView
+                android:id="@+id/people_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:text="0"/>
+        </RelativeLayout>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -80,20 +100,13 @@
 
         <!--回复列表-->
         <ListView
-            android:layout_below="@id/title_chat1"
+            android:layout_below="@+id/title_chat1"
             android:id="@+id/lvPeopleChat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
         </ListView>
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 </RelativeLayout>
