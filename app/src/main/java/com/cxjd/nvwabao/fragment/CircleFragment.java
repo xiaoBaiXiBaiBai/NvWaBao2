@@ -121,15 +121,21 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
                     "一个多月的婴儿！之前医生说是肺炎！现在炎症好了！", "牙齿上面的肉里面长了一块一块的黑色的东西，在肉里面", "九个月小孩能吃抗病毒糖浆吗？说明书上写的孕妇哺乳期妇女禁用",
                     "慢性食管炎怎么治疗食管炎停了药就发作", "老年人糖尿病9天没拉大便", "小孩一个月都会有几次偶尔脚手发麻是什么原因引起的",
                     "婴儿小腿肚肌肉有硬块怎么回事阿？？？宝宝刚出生21天。谢谢", "紫钉这个病怎么治我想知道。"};
-            int[] imagesIds = {R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.people4, R.drawable.people5,
-                    R.drawable.a1_people, R.drawable.people1, R.drawable.a1_people, R.drawable.people2, R.drawable.a1_people
-                    , R.drawable.a1_people, R.drawable.a1_people, R.drawable.people3, R.drawable.a1_people, R.drawable.a1_people};
+            int[] imagesIds = {R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people
+                    , R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people
+                    , R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people, R.drawable.a1_people};
 
             int[] zans = {1, 2, 1, 1, 1, 2, 3, 1, 4, 1, 1, 2, 3, 1, 5};
 
             String[] infos = {"还好咯","去死吧","222","333",""
                     ,"aa","vv","ssss","mmm","杀杀杀"
                     ,"啊啊啊","买买买","来来来","方法","试试"};
+            String[] address = {"合肥市","长春市","南京市","杭州市","沈阳市"
+                    ,"福州市","杭州市","南昌市","广安市","青岛市"
+                    ,"聊城市","","福州市","西安市","大庆市"};
+
+            String[] from = {""};
+
             for (int i = 0; i < chats.length; i++) {
                 PeopleChat peopleChat = new PeopleChat();
                 System.out.println(ids[i]);
@@ -139,6 +145,9 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
                 peopleChat.setImageId(imagesIds[i]);
                 peopleChat.setZan(zans[i]);
                 peopleChat.setInfo(infos[i]);
+                peopleChat.setAddress(address[i]);
+                peopleChat.setFrom("就医帮帮团");
+                peopleChat.setZanAble(true);
                 peopleChat.save();
                 peopleChatList.add(peopleChat);
                 System.out.println(peopleChat.getPeopleId());
@@ -150,7 +159,6 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
             /*DataSupport.deleteAll(PeopleChat.class, "id < ?", "10000");
             System.out.println("进入删除");*/
             Collections.reverse(peopleChatList);
-
             /*for (int i = 0;i<peopleChatList.size();i++) {
                 System.out.println("id循环+"+peopleChatList.get(i).getPeopleId());
             }*/

@@ -29,10 +29,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <!--<ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/send"
+            android:layout_marginRight="75dp"
+            android:layout_alignParentRight="true"/>-->
+
         <TextView
             android:id="@+id/send_text"
             android:text="发送"
-            android:textSize="27dp"
+            android:textSize="20dp"
             android:textColor="@color/colorPrimary"
             android:gravity="center"
 
@@ -41,5 +48,10 @@
             android:layout_height="wrap_content" />
 
     </RelativeLayout>
+    <TextView
+        android:background="#F0F0F0"
+        android:layout_width="fill_parent"
+        android:text=""
+        android:layout_height="3dp"/>
 
 </LinearLayout>

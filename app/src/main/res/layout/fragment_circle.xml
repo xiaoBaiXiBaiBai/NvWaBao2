@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical"
 android:layout_width="match_parent"
-android:layout_height="match_parent">
+android:layout_height="match_parent"
+    android:background="@color/white">
 
     <include layout="@layout/common_titile"
         />
@@ -30,6 +31,7 @@ android:layout_height="match_parent">
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <!--第一个标签页  动态-->
+
                 <LinearLayout
                     android:orientation="vertical" android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -44,33 +46,17 @@ android:layout_height="match_parent">
                                 android:layout_height="5dp"
                                 android:background="#F0F0F0"
                                 />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="2dp">
-                                <ImageView
-                                    android:id="@+id/circle_send_tie"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_width="40dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/a1_sendtie"
-                                    android:layout_marginBottom="5dp"/>
-                                <TextView
-                                    android:gravity="center"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="30dp"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="发帖"/>
-
-                            </LinearLayout>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="8dp"
-                                android:background="#F0F0F0"
-                                />
-
 
                         </LinearLayout>
+                        <ImageView
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="right"
+                            android:id="@+id/circle_send_tie"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/a1_sendtie"
+                            android:layout_marginBottom="5dp"/>
+
                         <LinearLayout
                             android:orientation="vertical"
                             android:layout_width="match_parent"

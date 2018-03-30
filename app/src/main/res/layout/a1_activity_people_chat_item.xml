@@ -40,6 +40,21 @@
                 android:textSize="20dp"
                 android:textColor="#84C1FF"
                 />
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/cir_pinglun_address"
+                />
+            <TextView
+                android:id="@+id/people_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="98dp"
+                android:layout_marginTop="52dp"
+                android:text="正在加载"
+                android:textSize="10dp"/>
 
         </RelativeLayout>
         <TextView
@@ -75,7 +90,7 @@
                 />
             <ImageView
                 android:id="@+id/people_zan_add"
-                android:src="@drawable/a1_hand"
+                android:src="@drawable/a1_hand2"
                 android:layout_width="21dp"
                 android:layout_height="21dp"
                 android:layout_marginLeft="70dp"
@@ -90,12 +105,12 @@
                 android:text="0"/>
         </RelativeLayout>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="#F0F0F0"
             />
+
 
 
         <!--回复列表-->

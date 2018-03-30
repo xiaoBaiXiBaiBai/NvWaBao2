@@ -10,19 +10,22 @@ import org.litepal.crud.DataSupport;
 
 public class PeopleChat extends DataSupport{
 
-    private int peopleId;
+    private int peopleId;       //实际作为 帖子主键  并非用户主键
     private String name;        //名称
     private int imageId;        //个人图片
     private String chat;        //病情描述
     private String info;        //个人信息
     private int coldImage;      //病情图片
-
     private int zan;            //点赞数量
+    private String address;     //地址
+    private Boolean zanAble;    //是否可以点赞
+
+    private String from;        //来自那个圈子
+
 
     public PeopleChat() {
 
     }
-
 
     public int getPeopleId() {
         return peopleId;
@@ -87,16 +90,28 @@ public class PeopleChat extends DataSupport{
         this.zan = zan;
     }
 
-    @Override
-    public String toString() {
-        return "PeopleChat{" +
-                "peopleId=" + peopleId +
-                ", name='" + name + '\'' +
-                ", imageId=" + imageId +
-                ", chat='" + chat + '\'' +
-                ", info='" + info + '\'' +
-                ", coldImage=" + coldImage +
-                ", zan=" + zan +
-                '}';
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Boolean getZanAble() {
+        return zanAble;
+    }
+
+    public void setZanAble(Boolean zanAble) {
+        this.zanAble = zanAble;
+    }
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
     }
 }

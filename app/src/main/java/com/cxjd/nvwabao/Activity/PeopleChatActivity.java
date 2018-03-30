@@ -1,13 +1,10 @@
 package com.cxjd.nvwabao.Activity;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.transition.Fade;
 import android.view.Menu;
 import android.view.View;
 import com.cxjd.nvwabao.R;
@@ -22,7 +19,6 @@ import com.cxjd.nvwabao.bean.PeopleReturn;
 
 import org.litepal.crud.DataSupport;
 
-import java.security.interfaces.DSAKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,18 +53,13 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a1_activity_people_chat_item);
 
-        //淡入淡出需要
+/*        //淡入淡出需要
         getWindow().setEnterTransition(new Fade().setDuration(1000));
-        getWindow().setExitTransition(new Fade().setDuration(1000));
-
-
-
+        getWindow().setExitTransition(new Fade().setDuration(1000));*/
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        String id =bundle.getString("id");
-        System.out.println("id为+++++++++++++++++++++"+id);
-        peopleId = Integer.parseInt(id);
+        peopleId =bundle.getInt("id");
 
         //病人收到的回复
         select(peopleId);
@@ -78,10 +69,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
         initview();
 
-
-
-
-        //  列表 单项点击按钮  可直接使用
+        //  列表 单项点击按钮
         /*lvPeopleChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -98,10 +86,9 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     private void initview(){
 
-        if (selectList != null&&selectList.isEmpty()) {
+        if (selectList != null||!selectList.isEmpty()) {
             selectList.clear();
         }
-
         //读取 或 初始化 数据
         getData();
         //病人收到的回复集合 获取
@@ -117,12 +104,15 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         TextView peple_zan = (TextView) findViewById(R.id.people_zan);
         String zan = peopleChat.getZan() + "";
         peple_zan.setText(zan);
+        TextView peopleAddress = (TextView) findViewById(R.id.people_address);
+        peopleAddress.setText(peopleChat.getAddress());
 
         ImageView peopleZanAdd = (ImageView) findViewById(R.id.people_zan_add);
         peopleZanAdd.setOnClickListener(this);
 
         ImageView ask = (ImageView) findViewById(R.id.ask);
         ask.setOnClickListener(this);
+
 
         //回复帖子列表加载
         //关联数据和子布局
@@ -162,7 +152,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
             }
         } else {
 
-           /* DataSupport.deleteAll(PeopleReturn.class);
+            /*DataSupport.deleteAll(PeopleReturn.class);
             System.out.println("已删除所有回复");*/
         }
 
@@ -181,11 +171,9 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         ForA:  for (int i=0;i<peopleChats.size();i++) {
                if (peopleId == peopleChats.get(i).getPeopleId()) {
                    peopleChat = peopleChats.get(i);
-                   System.out.println("找到了水水水水水水水水水水水水水水水水水水水"+peopleChat.getZan());
                     break ForA;
                  }
                 }
-        System.out.println("找到了咩咩咩咩咩咩咩咩咩咩咩咩");
     }
 
     @Override
@@ -212,9 +200,18 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
                 progressDialog.setTitle("点赞成功....");
                 progressDialog.setMessage("Loading.....");
                 progressDialog.setCancelable(true); //可按返回取消
+                progressDialog.setProgress(100);
+                progressDialog.setButton(ProgressDialog.BUTTON_NEGATIVE, "确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog.dismiss();
+                    }
+                });
                 progressDialog.show();
 
-                refresh(view);
+               // refresh(view);
+                //刷新使用
+                onResume();
                 break;
             case R.id.ask:
                 Intent returnPeople = new Intent(PeopleChatActivity.this, PeopleChatOneActivity.class);
@@ -226,17 +223,7 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
 
     }
 
-    //刷新页面
-    private void refresh(View view) {
-        Intent add = new Intent(PeopleChatActivity.this, PeopleChatActivity.class);
-        String id = peopleChat.getPeopleId() + "";
-        Bundle bundle=new Bundle();
-        bundle.putString("id",id);
-        add.putExtras(bundle);
-        startActivity(add,ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-        finish();
 
-    }
 
     //销毁进度条 Dialog
     @Override
@@ -247,16 +234,23 @@ public class PeopleChatActivity extends Activity implements View.OnClickListener
         super.onDestroy();
     }
 
-    //刷新
- /*   protected void onResume() {
-        // TODO Auto-generated method stub
-        super.onResume();
-        initview();
-    }*/
 
+
+    //新刷新方法
     @Override
     protected void onResume() {
         super.onResume();
         initview();
     }
+    /*    //刷新页面 废弃
+    private void refresh(View view) {
+        Intent add = new Intent(PeopleChatActivity.this, PeopleChatActivity.class);
+        String id = peopleChat.getPeopleId() + "";
+        Bundle bundle=new Bundle();
+        bundle.putString("id",id);
+        add.putExtras(bundle);
+        startActivity(add,ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        finish();
+
+    }*/
 }

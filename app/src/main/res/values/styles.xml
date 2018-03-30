@@ -11,6 +11,10 @@
         <!-- 改变menu的背景颜色 -->
         <item name="android:itemBackground">@color/white</item>
         <item name="android:textColor">@color/black</item>
+
+        <!-- 允许使用transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -30,4 +34,5 @@
         <item name="colorButtonNormal">#b7e46f</item><!--正常状态下的颜色  -->
         <item name="colorControlHighlight">#22a7e614</item><!--覆盖色，按下的颜色  -->
     </style>
+
 </resources>

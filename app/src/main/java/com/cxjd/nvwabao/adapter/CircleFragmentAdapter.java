@@ -57,6 +57,7 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
             viewHolder.name_people = (TextView) view.findViewById(R.id.name_people);   //获取控件
             viewHolder.chat_people = (TextView) view.findViewById(R.id.chat_people);
             viewHolder.go_people = (ImageView) view.findViewById(R.id.go_people);
+            viewHolder.address_people = (TextView) view.findViewById(R.id.address_people);
 
             view.setTag(viewHolder);
         }else{
@@ -69,6 +70,7 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
         viewHolder.image_people.setImageResource(peopleChat.getImageId());
         viewHolder.name_people.setText(peopleChat.getName());
         viewHolder.chat_people.setText(peopleChat.getChat());
+        viewHolder.address_people.setText(peopleChat.getAddress());
 
         //positionBB = position;
 
@@ -147,6 +149,7 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
         TextView name_people;
         TextView chat_people;
         ImageView go_people;
+        TextView address_people;
     }
 
 }
