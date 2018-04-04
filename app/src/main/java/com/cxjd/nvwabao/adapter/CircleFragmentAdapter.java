@@ -58,6 +58,8 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
             viewHolder.chat_people = (TextView) view.findViewById(R.id.chat_people);
             viewHolder.go_people = (ImageView) view.findViewById(R.id.go_people);
             viewHolder.address_people = (TextView) view.findViewById(R.id.address_people);
+            viewHolder.from_people = (TextView) view.findViewById(R.id.from_people);
+
 
             view.setTag(viewHolder);
         }else{
@@ -71,6 +73,7 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
         viewHolder.name_people.setText(peopleChat.getName());
         viewHolder.chat_people.setText(peopleChat.getChat());
         viewHolder.address_people.setText(peopleChat.getAddress());
+        viewHolder.from_people.setText(peopleChat.getFrom());
 
         //positionBB = position;
 
@@ -109,40 +112,9 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
            }
        });
 
-
-        System.out.println("进入遍历------------------------"+peopleChat.getName());
-
         return view;
 
     }
-
-/*    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.image_people:
-                Bundle bundle2 = new Bundle();
-                PeopleChat peopleChat2 = peopleChatList.get(positionBB);
-                Intent intent2 = new Intent(mContext, PeopleInfoActivity.class);
-                bundle2.putInt("id", peopleChat2.getPeopleId());
-                intent2.putExtras(bundle2);
-                mContext.startActivity(intent2);
-                break;
-            case R.id.chat_people:
-                Bundle bundle = new Bundle();
-                PeopleChat peopleChat = peopleChatList.get(positionBB);
-                Intent intent = new Intent(mContext, PeopleChatActivity.class);
-                bundle.putInt("id", peopleChat.getPeopleId());
-                intent.putExtras(bundle);
-                mContext.startActivity(intent);
-                break;
-            case R.id.go_people:
-
-                break;
-
-        }
-
-    }*/
 
     class ViewHolder{ //当布局加载过后，保存获取到的控件信息
         ImageView image_people;
@@ -150,6 +122,8 @@ public class CircleFragmentAdapter extends ArrayAdapter<PeopleChat>  {
         TextView chat_people;
         ImageView go_people;
         TextView address_people;
+        TextView from_people;
+
     }
 
 }

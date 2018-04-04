@@ -79,6 +79,7 @@ public class RegisterActivity extends AppCompatActivity{
             userpass_model.findFocus();
         } else {
             showProgressDialog();
+            Log.i("regist", "registCommit: 信息获取"+username+"++"+userpassword+"---"+usercount);
             String url = "http://47.94.145.225/user/addUsers/"+username+"/"+userpassword+"/"+usercount;
             HttpTitleUtil.sendOkHttpRequest(url,new Callback() {
                 @Override
@@ -88,6 +89,7 @@ public class RegisterActivity extends AppCompatActivity{
                         public void run() {
                             closeProgressDialog();
                             Toast.makeText(RegisterActivity.this, "注册失败", Toast.LENGTH_SHORT).show();
+                            Log.i("regist", "run: 注册失败");
                         }
                     });
                 }
@@ -108,6 +110,8 @@ public class RegisterActivity extends AppCompatActivity{
                             resultcontent="账号已注册";
                         }else if (regisuc){
                             resultcontent="注册成功";
+                            Log.i("regist", "onResponse: 注册成功");
+
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {

@@ -12,20 +12,22 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/activity_horizontal_margin"
         android:gravity="center"
-        android:text="不戳戳猫咪老师吗。。挨饿(〃'▽'〃)" />
+        android:text="不戳戳猫咪老师吗。。挨饿Σ( ° △ °|||)" />
+
+
     <TextView
         android:id="@+id/tv_reveal2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         android:padding="@dimen/activity_vertical_margin"
-        android:text="那个。。我想把挨饿注释在每一片代码里哦 ,,ԾㅂԾ,,挨饿什么的最棒了"
-
+        android:text="鲁迅先生说过 []~(￣▽￣)~*　挨饿什么的最棒了"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="15dp"
         android:gravity="center"
         android:visibility="gone"
-         />
+        />
+
     <!--android:visibility="gone"-->
     <ImageView
         android:id="@+id/img_green"

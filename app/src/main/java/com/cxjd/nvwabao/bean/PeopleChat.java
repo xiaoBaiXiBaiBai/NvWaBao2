@@ -20,7 +20,7 @@ public class PeopleChat extends DataSupport{
     private String address;     //地址
     private Boolean zanAble;    //是否可以点赞
 
-    private String from;        //来自那个圈子
+    private String from;        //来自哪个圈子
 
 
     public PeopleChat() {

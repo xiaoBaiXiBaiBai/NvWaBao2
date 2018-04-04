@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,9 +36,9 @@ public class PeopleSendTieActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a1_say);
 
-        TextView send_text = (TextView) findViewById(R.id.send_text);
+        Button sendButton = (Button) findViewById(R.id.send_button);
         initDate();
-        send_text.setOnClickListener(this);
+        sendButton.setOnClickListener(this);
 
     }
 
@@ -46,28 +47,41 @@ public class PeopleSendTieActivity extends AppCompatActivity implements View.OnC
     // peopleId 实际上默认为 帖子主键  同一个用户可以有多个 帖子peopleId
     private void initDate() {
         List<User> users= DataSupport.findAll(User.class);
-        username=users.get(0).getmName();
-        Log.i("i", "用户名 "+username);
+
+        if (users != null && !users.isEmpty()) {
+            username=users.get(users.size()-1).getmName();
+        }else {
+            User user = new User();
+            user.setmName("游客账号");
+            user.setPassword("666");
+            user.save();
+            username = "游客账号";
+        }
+
+        Log.i("sendtie", "用户名 "+username);
+
 
         List<PeopleChat> peopleChatList = null;
         try {
-            peopleChatList = DataSupport.where("peopleName = ?",username).find(PeopleChat.class);
+            peopleChatList = DataSupport.where("name = ?",username).find(PeopleChat.class);
             int id  = peopleChatList.get(peopleChatList.size() - 1).getPeopleId();
             peopleId = id + 1;
         } catch (Exception e) {
             peopleId = 100;
             e.printStackTrace();
         }
+        Log.i("sendtie", "帖子id "+peopleId);
     }
+
 
     @Override
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.send_text:
+            case R.id.send_button:
 
                 EditText editText = (EditText) findViewById(R.id.say_text);
-                String chat = editText.getText().toString().trim();
+                String chat = editText.getText().toString().replace(" ", "");
 
                 if (TextUtils.isEmpty(chat)) {
                     Toast.makeText(this, "不可为空", Toast.LENGTH_SHORT).show();
@@ -81,7 +95,8 @@ public class PeopleSendTieActivity extends AppCompatActivity implements View.OnC
                     peopleChat.setChat(chat);
                     peopleChat.setImageId(R.drawable.a1_people);
                     peopleChat.setInfo("这个人很懒，什么也没写 ԾㅂԾ");
-                    peopleChat.setAddress("哈尔滨市");
+                    peopleChat.setAddress("咸宁市");
+                    peopleChat.setFrom("就医帮帮团");
                     peopleChat.save();
 
                     Toast.makeText(this, "发帖成功！", Toast.LENGTH_SHORT).show();

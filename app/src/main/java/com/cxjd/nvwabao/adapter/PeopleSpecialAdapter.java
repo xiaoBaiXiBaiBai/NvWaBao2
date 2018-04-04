@@ -37,7 +37,7 @@ public class PeopleSpecialAdapter extends AppCompatActivity implements View.OnCl
     private void initview() {
         imageView = (ImageView) findViewById(R.id.flower);
         TextView textView = (TextView) findViewById(R.id.fragment_title);
-        textView.setText("愚者之华");
+        textView.setText("(=￣ω￣=)");
 
         com.cxjd.nvwabao.bean.ExplosionField explosionField = new com.cxjd.nvwabao.bean.ExplosionField(this);
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ProgressBar
+        android:indeterminateDrawable="@drawable/zhuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progress="30"
+        android:id="@+id/progressBar"
+        />
+
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在玩命加载中"
+        android:id="@+id/loading_text"
+        />
+
+</LinearLayout>

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,8 +50,8 @@ public class PeopleChatOneActivity extends AppCompatActivity implements View.OnC
 
 
 
-        TextView send_text = (TextView) findViewById(R.id.send_text);
-        send_text.setOnClickListener(this);
+        Button sendButton = (Button) findViewById(R.id.send_button);
+        sendButton.setOnClickListener(this);
 
     }
 
@@ -59,7 +60,7 @@ public class PeopleChatOneActivity extends AppCompatActivity implements View.OnC
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.send_text:
+            case R.id.send_button:
                 EditText editText = (EditText) findViewById(R.id.say_text);
                 returnChat = editText.getText().toString().trim();
                 if (TextUtils.isEmpty(returnChat)) {
@@ -76,15 +77,9 @@ public class PeopleChatOneActivity extends AppCompatActivity implements View.OnC
                     peopleReturn.setImageId(R.drawable.a1_people);
                     peopleReturn.save();
 
-                    /*Intent intent = new Intent(this, PeopleChatActivity.class);
-
-                    Bundle bundle = new Bundle();
-                    bundle.putString("id",peopleId+"");
-                    intent.putExtras(bundle);*/
 
                     Toast.makeText(this, "回复成功！", Toast.LENGTH_SHORT).show();
 
-                    //startActivity(intent);
                     finish();
                 }
                 break;

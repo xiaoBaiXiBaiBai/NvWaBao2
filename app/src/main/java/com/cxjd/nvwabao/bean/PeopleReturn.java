@@ -53,4 +53,15 @@ public class PeopleReturn extends DataSupport{
     public void setImageId(int imageId) {
         this.imageId = imageId;
     }
+
+    @Override
+    public String toString() {
+        return "PeopleReturn{" +
+                "returnId=" + returnId +
+                ", peopleId=" + peopleId +
+                ", returnName='" + returnName + '\'' +
+                ", returnChat='" + returnChat + '\'' +
+                ", imageId=" + imageId +
+                '}';
+    }
 }

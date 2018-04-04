@@ -30,6 +30,8 @@ public class PeopleSendTestActivity extends AppCompatActivity {
         relativeLayout = (RelativeLayout) findViewById(R.id.ll_container);
         textView = (TextView) findViewById(R.id.tv_reveal);
         textview2 = (TextView) findViewById(R.id.tv_reveal2);
+
+
         findViewById(R.id.img_green).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
