@@ -31,35 +31,35 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-     private SliderLayout mSliderLayout;
-     private ImageView icon_search_food;
-     private ImageView icon_search_heathy;
-     private RecyclerView recyclerView;
+    private SliderLayout mSliderLayout;
+    private ImageView icon_search_food;
+    private ImageView icon_search_heathy;
+    private RecyclerView recyclerView;
     ListDataSave listDataSave;
     List<TitleContentBean> titleContentBeans;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         Toolbar toolbar = view.findViewById(R.id.toolbar_fragment_home);
         icon_search_food = view.findViewById(R.id.home_search_food);
         icon_search_heathy = view.findViewById(R.id.home_search_healthy);
-        recyclerView=view.findViewById(R.id.home_recycler_view);
-        recyclerView.scrollTo(0,-200);
+        recyclerView = view.findViewById(R.id.home_recycler_view);
+        recyclerView.scrollTo(0, -200);
         requesList();
-        listDataSave=new ListDataSave(getContext(),"Titlecontent");
-        titleContentBeans=new ArrayList<>();
-        titleContentBeans=listDataSave.getDataList("NewsCommand",TitleContentBean.class);
+        listDataSave = new ListDataSave(getContext(), "Titlecontent");
+        titleContentBeans = new ArrayList<>();
+        titleContentBeans = listDataSave.getDataList("NewsCommand", TitleContentBean.class);
         toolbar.inflateMenu(R.menu.main);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
 
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.share_item:
-                          Toast.makeText(getActivity(),"本功能占未开放",Toast.LENGTH_SHORT).show();
-                          break;
+                        Toast.makeText(getActivity(), "本功能占未开放", Toast.LENGTH_SHORT).show();
+                        break;
                 }
                 return true;
             }
@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
 
         //广告图片轮播效果
         mSliderLayout = view.findViewById(R.id.slider);
-        final NewsItemAdapter adapter=new NewsItemAdapter(titleContentBeans,getContext());
+        final NewsItemAdapter adapter = new NewsItemAdapter(titleContentBeans, getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.scrollToPosition(-10);
@@ -79,8 +79,9 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
     private void requesList() {
-        String address="http://47.94.145.225/user/getIndexPage";
+        String address = "http://47.94.145.225/user/getIndexPage";
         //showProgressDialog();
         HttpTitleUtil.sendHttpRequest(address, new HttpTitleUtil.HttpCallbackListener() {
             @Override
@@ -99,7 +100,7 @@ public class HomeFragment extends Fragment {
         icon_search_food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),ProtectActivity.class);
+                Intent intent = new Intent(getActivity(), ProtectActivity.class);
                 startActivity(intent);
             }
         });
@@ -107,7 +108,7 @@ public class HomeFragment extends Fragment {
         icon_search_heathy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),SearchMain.class);
+                Intent intent = new Intent(getActivity(), SearchMain.class);
                 startActivity(intent);
             }
         });
@@ -115,50 +116,50 @@ public class HomeFragment extends Fragment {
     }
 
     /**
-     *  轮播初始化
+     * 轮播初始化
      */
-    private void initSlider(){
+    private void initSlider() {
         TextSliderView textSliderView0 = new TextSliderView(this.getActivity());
         textSliderView0
-                .description("如何吃")
+                .description("女娲宝，你的健康小管家")
                 .image(R.drawable.carousel_1);
         textSliderView0.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView slider) {
-                Toast.makeText(HomeFragment.this.getActivity(),"如何吃，找女娲",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeFragment.this.getActivity(), "生病了，就上女娲宝", Toast.LENGTH_SHORT).show();
             }
         });
 
         TextSliderView textSliderView1 = new TextSliderView(this.getActivity());
         textSliderView1
-                .description("怎么喝")
+                .description("女娲宝，你的健康小管家")
                 .image(R.drawable.carousel_2);
         textSliderView1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView slider) {
-                Toast.makeText(HomeFragment.this.getActivity(),"喝什么，找女娲",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeFragment.this.getActivity(), "生病了，就上女娲宝", Toast.LENGTH_SHORT).show();
             }
         });
 
         TextSliderView textSliderView2 = new TextSliderView(this.getActivity());
         textSliderView2
-                .description("养生之道")
+                .description("女娲宝，你的健康小管家")
                 .image(R.drawable.carousel_4);
         textSliderView2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView slider) {
-                Toast.makeText(HomeFragment.this.getActivity(),"如何养生，找女娲",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeFragment.this.getActivity(), "生病了，就上女娲宝", Toast.LENGTH_SHORT).show();
             }
         });
 
         TextSliderView textSliderView3 = new TextSliderView(this.getActivity());
         textSliderView3
-                .description("女娲宝告诉你")
+                .description("女娲宝，你的健康小管家")
                 .image(R.drawable.carousel_3);
         textSliderView3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView slider) {
-                Toast.makeText(HomeFragment.this.getActivity(),"女娲宝，你的养生小管家",Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeFragment.this.getActivity(), "生病了，就上女娲宝", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -172,8 +173,6 @@ public class HomeFragment extends Fragment {
         mSliderLayout.setCustomAnimation(new DescriptionAnimation());
         mSliderLayout.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mSliderLayout.setDuration(3000);
-
-
 
 
     }

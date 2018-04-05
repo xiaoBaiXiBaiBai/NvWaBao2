@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< Updated upstream
 android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
@@ -13,23 +14,45 @@ android:layout_height="match_parent"
         android:id="@+id/cr_tabhost"
         android:layout_weight="1">
 
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_titile"></include>
+
+    <TabHost
+        android:id="@+id/cr_tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+>>>>>>> Stashed changes
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+<<<<<<< Updated upstream
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </TabWidget>
+=======
+            <!--选项卡标题条,id固定-->
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+>>>>>>> Stashed changes
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+<<<<<<< Updated upstream
                 <!--第一个标签页  动态-->
 
                 <LinearLayout
@@ -70,6 +93,31 @@ android:layout_height="match_parent"
                 </LinearLayout>
 
                 <!--第二个标签页   圈子-->
+=======
+
+                <LinearLayout
+                    android:id="@+id/cr_tab_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/cir_srl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ListView
+                            android:id="@+id/list_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </ListView>
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                </LinearLayout>
+
+>>>>>>> Stashed changes
 
                 <LinearLayout
                     android:id="@+id/cr_tab_02"
@@ -78,13 +126,31 @@ android:layout_height="match_parent"
                     android:orientation="vertical">
 
 
+<<<<<<< Updated upstream
+=======
+                            <ListView
+                                android:id="@+id/cir_lv_circle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </ListView>
+
+>>>>>>> Stashed changes
                 </LinearLayout>
 
             </FrameLayout>
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         </LinearLayout>
 
 
     </TabHost>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 </LinearLayout>

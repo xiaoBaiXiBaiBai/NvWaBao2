@@ -52,10 +52,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'com.android.support:recyclerview-v7:26.0.0-beta1'
+<<<<<<< Updated upstream
     compile 'com.jakewharton:butterknife:8.6.0'
     //爆裂魔法
     compile 'tyrantgit:explosionfield:1.0.1'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
     //加载 悬浮窗需要的远程库
     compile 'com.android.support:design:26.1.0'
+=======
+
+>>>>>>> Stashed changes
 }

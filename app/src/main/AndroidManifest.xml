@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -153,6 +154,7 @@
         <activity android:name=".Activity.FoodList3Activity"
             android:theme="@style/zhou"></activity>
 
+<<<<<<< Updated upstream
        <!--动态回贴详细-->
         <activity android:name=".Activity.PeopleChatActivity" />
         <!--编辑回帖页面-->
@@ -163,6 +165,13 @@
         <!--发帖界面-->
         <activity android:name=".Activity.PeopleSendTieActivity" />
 
+=======
+        <activity android:name=".Activity.CirclesMainPage"/>
+
+        <activity android:name=".Activity.TieZiXiangQing"/>
+
+        <activity android:name=".Activity.CirPingLun"/>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

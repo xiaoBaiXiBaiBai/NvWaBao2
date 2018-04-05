@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cir_main_pinglun"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@mipmap/userpic"
+            android:id="@+id/iv_cr_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cr_pinglun_name"
+                android:text="红娘子"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="6dp"
+                android:paddingTop="12dp"
+                android:textSize="17dp"
+                android:textColor="@color/colorPrimary"
+                 />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:src="@drawable/cir_pinglun_address"
+                    android:layout_width="20dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="6dp"
+                    />
+
+                <TextView
+                    android:id="@+id/cr_pinglun_address"
+                    android:text="河南省黄岩县"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/cir_tv_pinglun"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    android:background="#efefef" />
+
+
+</LinearLayout>
