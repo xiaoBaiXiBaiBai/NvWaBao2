@@ -67,8 +67,18 @@ public class PeopleChatOneActivity extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "不可为空", Toast.LENGTH_SHORT).show();
                 } else {
                     List<User> users= DataSupport.findAll(User.class);
-                    String username=users.get(0).getmName();
 
+                    String username;
+
+                    if (users != null && !users.isEmpty()) {
+                         username=users.get(users.size()-1).getmName();
+                    }else {
+                        User user = new User();
+                        user.setmName("游客账号");
+                        user.setPassword("666");
+                        user.save();
+                        username = "游客账号";
+                    }
                     PeopleReturn peopleReturn = new PeopleReturn();
                     peopleReturn.setPeopleId(peopleId);
                     peopleReturn.setReturnChat(returnChat);

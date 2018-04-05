@@ -418,7 +418,6 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
                 peopleChat.setZanAble(true);
                 peopleChat.save();
                 peopleChatList.add(peopleChat);
-                System.out.println(peopleChat.getPeopleId());
             }
 
             Collections.reverse(peopleChatList);
@@ -438,9 +437,6 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
             }
             for (int i = 0;i<=peopleChatList.size()-11;i++) {
                 someList.add(peopleChatList.get(i));
-            }
-            for (int i = 0;i<peopleChatList.size();i++) {
-                System.out.println("id循环+"+peopleChatList.get(i).getPeopleId());
             }
         }
     }
