@@ -190,6 +190,9 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
          */
         TextView textView = view.findViewById(R.id.fragment_title);
         textView.setText(R.string.circle);
+
+        initListView(view);
+        initCircles();
         /**超尾巴
          */
 
