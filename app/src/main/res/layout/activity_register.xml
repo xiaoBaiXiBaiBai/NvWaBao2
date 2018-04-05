@@ -67,14 +67,16 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginLeft="50dp"
-            android:maxLength="10"
             android:layout_marginRight="50dp"
             android:layout_marginTop="20dp"
-            android:inputType="textPassword"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/register_commit"
             android:background="@drawable/selector_edit_frame"
             android:hint="用户密码：请输入密码"
-            android:padding="10dp"
-            />
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:padding="10dp" />
+
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -99,5 +101,7 @@
         android:layout_alignParentBottom="true"
         android:paddingBottom="20dp"
         android:text="—用上女娲宝，你的健康我做主—" />
+
+
     </RelativeLayout>
 </LinearLayout>

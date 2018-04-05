@@ -27,21 +27,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/head_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
-        android:src="@mipmap/ic_nvwa" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#1AA1EE"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        android:text="女娲宝"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/ic_nvwa" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#1AA1EE"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:text="女娲宝"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -136,14 +136,14 @@
             android:layout_below="@id/usercode_layut"
             android:layout_marginTop="6dp"
             android:layout_centerHorizontal="true">
-        <Button
-            android:id="@+id/commit_btn"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#9fd2f2"
-            android:textSize="16dp"
-            android:text="登陆"/>
+            <Button
+                android:id="@+id/commit_btn"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9fd2f2"
+                android:textSize="16dp"
+                android:text="登陆"/>
         </FrameLayout>
     </RelativeLayout>
     <RelativeLayout

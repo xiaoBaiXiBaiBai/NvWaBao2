@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         //准备LayoutInflater
         mInflater = LayoutInflater.from(this);
         //找到FragmentTabHost
-        mTabhost = (FragmentTabHost) this.findViewById(R.id.tabhost);
+        mTabhost = this.findViewById(R.id.tabhost);
         //装载Fragment
         mTabhost.setup(this,getSupportFragmentManager(), R.id.realtabcontent);
 

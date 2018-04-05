@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/common_titile"></include>
+
+    <EditText
+        android:id="@+id/pinglun_say_text"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="top"
+        android:hint="请输入内容！"
+        android:textColorHint="#c0c0c0"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/send"
+            android:layout_marginRight="75dp"
+            android:layout_alignParentRight="true"/>-->
+
+        <Button
+            android:id="@+id/cir_send_button"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="发送"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btnshape"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
