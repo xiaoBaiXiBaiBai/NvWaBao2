@@ -86,10 +86,7 @@ public class PeopleChatOneActivity extends AppCompatActivity implements View.OnC
                     peopleReturn.setReturnName(username);
                     peopleReturn.setImageId(R.drawable.a1_people);
                     peopleReturn.save();
-
-
                     Toast.makeText(this, "回复成功！", Toast.LENGTH_SHORT).show();
-
                     finish();
                 }
                 break;
