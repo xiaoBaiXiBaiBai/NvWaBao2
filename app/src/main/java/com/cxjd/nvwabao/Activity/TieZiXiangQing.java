@@ -47,7 +47,7 @@ public class TieZiXiangQing extends AppCompatActivity {
     private List<PingLunPeople> listPingLun = new ArrayList<PingLunPeople>();
 
     private String[][] huifu = {{"可以找一下北京协和医院赵春刚医生", "这种问题需要谨慎，推荐哈尔滨第四附属医院李镇江医生", "北京地坛医院刘鹏医生",
-            "极力推荐河北胜利医院王太利院长"}, {"求医这种问题，还是先百度一下吧", "建议你不要网上找，登门拜访比较靠谱", "李医生，18845143397", "我也有相同的问题同求",
+            "极力推荐河北胜利医院王太利院长","求医这种问题，还是先百度一下吧", "建议你不要网上找，登门拜访比较靠谱", "李医生，18845143397", "我也有相同的问题同求",
             "找到了告诉我一下哈", "您可以到医院问一下，毕竟本地的方便", "河南同仁堂马海峰医生", "山西人民医院董建刚医生相当负责"},
 
             {"美貌是一生的财富，建议咨询专业医师", "我也遇到了相关的问题", "解决了么？求分享啊", "可以试一下\"太太安\"", "我老婆也有这些问题，咋办",
@@ -236,7 +236,7 @@ public class TieZiXiangQing extends AppCompatActivity {
         //帖子详情评论ListView
         pingLunListView = findViewById(R.id.cir_main_lv_pinglun_huifu);
         //评论适配器
-        CircleAdapter adapterPing = new CircleAdapter(this, R.layout.cir_main_huifu_item, listPingLun);
+        CircleAdapter adapterPing = new CircleAdapter(this, R.layout.cir_main_huifu_item, listPingLun,2);
         //绑定适配器
         pingLunListView.setAdapter(adapterPing);
     }
@@ -254,6 +254,8 @@ public class TieZiXiangQing extends AppCompatActivity {
                 //设置赞的数值加一
                 int i = Integer.parseInt(zanCount.getText().toString()) + 1;
                 zanCount.setText(i + "");
+                cirPingLun.setZans(i+"");
+                cirPingLun.save();
                 isClickZanEd = true;
                 isClickZan = false;
             } else if (isClickZanEd == true && isNewPingLun==false) {

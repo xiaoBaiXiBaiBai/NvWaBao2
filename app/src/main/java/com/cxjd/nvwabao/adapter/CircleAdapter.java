@@ -29,11 +29,13 @@ import java.util.List;
  */
 public class CircleAdapter extends ArrayAdapter<Object>{
 
+    private int ii;
     private int resourceId;
 
-    public CircleAdapter(@NonNull Context context, int textViewResourceId, List objects) {
+    public CircleAdapter(@NonNull Context context, int textViewResourceId, List objects,int i) {
         super(context, textViewResourceId, objects);
         resourceId = textViewResourceId;
+        ii = i;
     }
 
     @NonNull
@@ -46,7 +48,7 @@ public class CircleAdapter extends ArrayAdapter<Object>{
             view = convertView;
         }
 
-        if(resourceId == 2130968680){
+        if(ii == 0){
             Circles circles = (Circles) getItem(position); //获取当前的
             ImageView headImage = view.findViewById(R.id.iv_cr_head);
             TextView titles = view.findViewById(R.id.cr_tv_title);
@@ -56,7 +58,7 @@ public class CircleAdapter extends ArrayAdapter<Object>{
             titles.setText(circles.getTitle());
             chengYuan.setText("成员  "+circles.getChengYuan());
             tieZi.setText("帖子  "+circles.getTieZi());
-        }  else if (resourceId == 2130968681){
+        }  else if (ii == 1){
             CirPingLun pingLun = (CirPingLun) getItem(position);
             TextView name = view.findViewById(R.id.cr_pinglun_name);
             TextView address = view.findViewById(R.id.cr_pinglun_address);
@@ -64,8 +66,7 @@ public class CircleAdapter extends ArrayAdapter<Object>{
             name.setText(pingLun.getName());
             address.setText(pingLun.getAddress());
             pinglun.setText(pingLun.getPinglun());
-        } else {
-            Log.i("res",resourceId+"");
+        } else if (ii == 2){
             PingLunPeople pingLunPeople = (PingLunPeople) getItem(position);
             TextView name = view.findViewById(R.id.cr_tv_huifu_name);
             TextView data = view.findViewById(R.id.cr_pinglun_data);

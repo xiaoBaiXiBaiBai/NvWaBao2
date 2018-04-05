@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/common_titile"/>
+    <include layout="@layout/common_titile"></include>
+
     <TabHost
         android:id="@+id/cr_tabhost"
         android:layout_width="match_parent"
@@ -27,47 +27,18 @@ android:layout_height="match_parent"
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <!--第一个标签页  动态-->
 
                 <LinearLayout
-                    android:orientation="vertical"
+                    android:id="@+id/cr_tab_01"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/cr_tab_01"
-                    >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp"
-                            android:background="#F0F0F0"
-                            />
+                    android:orientation="vertical">
 
-                    </LinearLayout>
-                    <ImageView
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="right"
-                        android:id="@+id/circle_send_tie"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/a1_sendtie"
-                        android:layout_marginBottom="5dp"/>
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ListView
-                            android:id="@+id/list_people"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
 
-                    </LinearLayout>
                 </LinearLayout>
 
-                <!--第二个标签页   圈子-->
+
                 <LinearLayout
                     android:id="@+id/cr_tab_02"
                     android:layout_width="match_parent"
@@ -85,6 +56,7 @@ android:layout_height="match_parent"
                 </LinearLayout>
 
             </FrameLayout>
+
 
         </LinearLayout>
 

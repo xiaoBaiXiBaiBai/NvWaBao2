@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <litepal>
     <dbname value="TitleContent"></dbname>
-    <version value="8"></version>
+    <version value="11"></version>
     <list>
         <mapping class="com.cxjd.nvwabao.bean.TitleBean"></mapping>
         <mapping class="com.cxjd.nvwabao.bean.TitleLable"></mapping>

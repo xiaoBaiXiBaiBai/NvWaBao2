@@ -70,6 +70,11 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
 
     //用户评论集合
     private List<CirPingLun> listQuan = new ArrayList<>();
+    //新的
+    private List<CirPingLun> newList = new ArrayList<>();
+    //热门
+    private List<CirPingLun> remenList = new ArrayList<>();
+
     //第一次刷新之后增加出来的部分
     private List<CirPingLun> listQuan01 = new ArrayList<>();
     //第二次刷新后增加出来的部分
@@ -163,10 +168,7 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
 
     private void initListView02() {
         ListView listViewNew = findViewById(R.id.cir_new_list);
-        final List<CirPingLun> newList = DataSupport.where("from = ?",circles.getTitle()).where("liuYanShu = 0").find(CirPingLun.class);
-
-
-        CircleAdapter adapter02 = new CircleAdapter(this,R.layout.cir_circles_main_item,newList);
+        CircleAdapter adapter02 = new CircleAdapter(this,R.layout.cir_circles_main_item,newList,1);
         listViewNew.setAdapter(adapter02);
         listViewNew.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -179,11 +181,11 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
                 startActivity(intent);
             }
         });
+
     }
 
     private void initListView01() {
-        final List<CirPingLun> remenList = DataSupport.where("from = ?",circles.getTitle()).where("liuYanShu = 7").find(CirPingLun.class);
-        CircleAdapter adapter01 = new CircleAdapter(this,R.layout.cir_circles_main_item,remenList);
+        CircleAdapter adapter01 = new CircleAdapter(this,R.layout.cir_circles_main_item,remenList,1);
         ListView listView = findViewById(R.id.cir_remen_list);
         listView.setAdapter(adapter01);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -197,6 +199,7 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
                 startActivity(intent);
             }
         });
+
     }
 
 
@@ -326,6 +329,8 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
 //        //删除数据库
 //        DataSupport.deleteAll(CirPingLun.class);
 
+
+
         //创建数据库
         Connector.getDatabase();
 
@@ -394,10 +399,12 @@ public class CirclesMainPage extends AppCompatActivity implements AbsListView.On
             }
         }
         listQuan = DataSupport.where("from = ?",circles.getTitle()).limit(5).offset(0).find(CirPingLun.class);
-    }
+        newList = DataSupport.where("from = ?",circles.getTitle()).limit(3).offset(0).find(CirPingLun.class);
+        remenList = DataSupport.where("from = ?",circles.getTitle()).limit(7).offset(18).find(CirPingLun.class);
+   }
 
     private void initListView() {
-        adapter = new CircleAdapter(this,R.layout.cir_circles_main_item,listQuan);
+        adapter = new CircleAdapter(this,R.layout.cir_circles_main_item,listQuan,1);
         listViewQuan = findViewById(R.id.cir_main_list);
         //listView底部刷新布局
         footerView = getLayoutInflater().inflate(R.layout.loading_layout,null);
