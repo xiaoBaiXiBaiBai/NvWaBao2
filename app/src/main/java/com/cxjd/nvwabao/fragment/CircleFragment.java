@@ -331,6 +331,6 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
         list_people.addFooterView(footer);
     }
 
-}
+    /*合并准备*/}
 
 
