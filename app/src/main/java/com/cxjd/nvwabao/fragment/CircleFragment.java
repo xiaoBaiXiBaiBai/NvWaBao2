@@ -3,21 +3,18 @@ package com.cxjd.nvwabao.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-<<<<<<< Updated upstream
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-=======
+
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
->>>>>>> Stashed changes
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-<<<<<<< Updated upstream
+
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -34,27 +31,18 @@ import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-=======
 import android.widget.AdapterView;
-import android.widget.TabHost;
-import android.widget.TextView;
 
 import com.cxjd.nvwabao.Activity.CirclesMainPage;
-import com.cxjd.nvwabao.R;
 import com.cxjd.nvwabao.adapter.CircleAdapter;
 import com.cxjd.nvwabao.bean.Circles;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
->>>>>>> Stashed changes
 
 /**
  * Created by 李超 on 2017/10/29.
  */
 
-<<<<<<< Updated upstream
-public class CircleFragment extends Fragment implements View.OnClickListener {
+public class CircleFragment extends Fragment implements AbsListView.OnScrollListener ,View.OnClickListener{
 
     private List<PeopleChat> peopleChatList = new ArrayList<>(); //总数据
     private List<PeopleChat> someList = new ArrayList<>();      //取部分数据  每次刷新都增加
@@ -63,14 +51,11 @@ public class CircleFragment extends Fragment implements View.OnClickListener {
 
     private View footer;    //底部刷新
 
-    private ProgressBar footProgressBar;
-
     //是否加载标示
     int isLoading = 1;
 
     TextView loading_text;
-=======
-public class CircleFragment extends Fragment implements AbsListView.OnScrollListener {
+
     //fragment视图
     private View view;
 
@@ -123,19 +108,16 @@ public class CircleFragment extends Fragment implements AbsListView.OnScrollList
             }
         }
     };
->>>>>>> Stashed changes
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-<<<<<<< Updated upstream
+
         View view = inflater.inflate(R.layout.fragment_circle,container,false);
 
         //设置病人信息
         setDate(view);
 
-=======
         if (view == null){
             view = inflater.inflate(R.layout.fragment_circle,container,false);
             //初始化页面
@@ -147,76 +129,8 @@ public class CircleFragment extends Fragment implements AbsListView.OnScrollList
             //设置刷新
             initSwipeRefreshLayout(view);
         }
-        return view;
-    }
 
-    private void initSwipeRefreshLayout(View view) {
-        //刷新
-        mySRL = view.findViewById(R.id.cir_srl);
-        mySRL.setColorSchemeResources(android.R.color.holo_blue_bright,android.R.color.holo_green_light,
-                android.R.color.holo_orange_light, android.R.color.holo_red_light);
-        mySRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                listView.removeFooterView(footerView);
-            }
-        });
-
-    }
-
-
-
-    private void initListView(View view) {
-        adapter = new CircleAdapter(getContext(),R.layout.cir_circles_item,circlesList);
-        listView = view.findViewById(R.id.cir_lv_circle);
-        footerView = getLayoutInflater().inflate(R.layout.loading_layout,null);
-        listView.addFooterView(footerView);
-        listView.setOnScrollListener(this);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Circles circles = circlesList.get(position);
-                Intent intent = new Intent(getContext(), CirclesMainPage.class);
-                Bundle mBundle = new Bundle();
-                mBundle.putSerializable("circles",circles);
-                intent.putExtras(mBundle);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void initView(View view) {
-        //设置圈子标题
-        TextView textView = view.findViewById(R.id.fragment_title);
-        textView.setText(R.string.circle);
->>>>>>> Stashed changes
-        //设置TabHost组件
-        final TabHost tabHost = view.findViewById(R.id.cr_tabhost);
-        //初始化TabHost容器
-        tabHost.setup();
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-        //创建第一个Tab页面
-        TabHost.TabSpec tab1 = tabHost.newTabSpec("tab1").setIndicator("动态").setContent(R.id.cr_tab_01);
-        //添加第一个标签页
-        tabHost.addTab(tab1);
-        //创建第二个Tab页面
-        TabHost.TabSpec tab2 = tabHost.newTabSpec("tab2").setIndicator("圈子").setContent(R.id.cr_tab_02);
-        //添加第二个Tab页面
-        tabHost.addTab(tab2);
-<<<<<<< Updated upstream
-
-
-
-        //list_people.setOnItemClickListener(this);//废弃点击事件  换为adapter中 item内部多个点击事件
-
-
-        System.out.println("数量为---------------------------------"+peopleChatList.size());
-
-        initview(view);
+        initView(view);
 
         //加底部刷新
         addListViewFooterView();
@@ -318,7 +232,74 @@ public class CircleFragment extends Fragment implements AbsListView.OnScrollList
         });
 
         return view;
-=======
+    }
+
+    private void initSwipeRefreshLayout(View view) {
+        //刷新
+        mySRL = view.findViewById(R.id.cir_srl);
+        mySRL.setColorSchemeResources(android.R.color.holo_blue_bright,android.R.color.holo_green_light,
+                android.R.color.holo_orange_light, android.R.color.holo_red_light);
+        mySRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                listView.removeFooterView(footerView);
+            }
+        });
+
+    }
+
+
+
+    private void initListView(View view) {
+        adapter = new CircleAdapter(getContext(),R.layout.cir_circles_item,circlesList);
+        listView = view.findViewById(R.id.cir_lv_circle);
+        footerView = getLayoutInflater().inflate(R.layout.loading_layout,null);
+        listView.addFooterView(footerView);
+        listView.setOnScrollListener(this);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Circles circles = circlesList.get(position);
+                Intent intent = new Intent(getContext(), CirclesMainPage.class);
+                Bundle mBundle = new Bundle();
+                mBundle.putSerializable("circles",circles);
+                intent.putExtras(mBundle);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initView(View view) {
+        //设置圈子标题
+        TextView textView = view.findViewById(R.id.fragment_title);
+        textView.setText(R.string.circle);
+        //设置TabHost组件
+        final TabHost tabHost = view.findViewById(R.id.cr_tabhost);
+        //初始化TabHost容器
+        tabHost.setup();
+
+        //创建第一个Tab页面
+        TabHost.TabSpec tab1 = tabHost.newTabSpec("tab1").setIndicator("动态").setContent(R.id.cr_tab_01);
+        //添加第一个标签页
+        tabHost.addTab(tab1);
+        //创建第二个Tab页面
+        TabHost.TabSpec tab2 = tabHost.newTabSpec("tab2").setIndicator("圈子").setContent(R.id.cr_tab_02);
+        //添加第二个Tab页面
+        tabHost.addTab(tab2);
+
+        //镇江
+        ImageView sendTie =  view.findViewById(R.id.circle_send_tie);
+        sendTie.setOnClickListener(this);
+
+        loading_text =  view.findViewById(R.id.loading_text);
+
+        list_people = view.findViewById(R.id.list_people);
+
+        //关联数据和子布局
+        circleFragmentAdapter = new CircleFragmentAdapter(getActivity(), R.layout.fragment_circle_context, someList);
+        //绑定数据和适配器
+        list_people.setAdapter(circleFragmentAdapter);
     }
 
 
@@ -364,41 +345,8 @@ public class CircleFragment extends Fragment implements AbsListView.OnScrollList
             //通过handler发送一个更新数据的标题
             refreshHandler.sendEmptyMessage(0x101);
         }
->>>>>>> Stashed changes
     }
 
-    private void initview(View view) {
-        TextView titile = (TextView) view.findViewById(R.id.fragment_title);
-        titile.setText("动态");
-
-        ImageView sendTie = (ImageView) view.findViewById(R.id.circle_send_tie);
-        sendTie.setOnClickListener(this);
-
-        loading_text = (TextView) view.findViewById(R.id.loading_text);
-
-        list_people = (ListView)view.findViewById(R.id.list_people);
-
-        //关联数据和子布局
-        circleFragmentAdapter = new CircleFragmentAdapter(getActivity(), R.layout.fragment_circle_context, someList);
-        //绑定数据和适配器
-        list_people.setAdapter(circleFragmentAdapter);
-
-    }
-
-
-    //废弃点击事件  换为adapter中 item内部多个点击事件
-/*    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        PeopleChat peopleChat = peopleChatList.get(position);
-
-        Intent intent = new Intent(getActivity(), PeopleChatActivity.class);
-        Bundle bundle = new Bundle();
-
-        bundle.putInt("id", peopleChat.getPeopleId());
-        intent.putExtras(bundle);
-
-        startActivity(intent);
-    }*/
 
 
     //设置病人头像和各种信息
@@ -508,7 +456,7 @@ public class CircleFragment extends Fragment implements AbsListView.OnScrollList
     public void onResume() {
         super.onResume();
         setDate(getView());
-        initview(getView());
+        initView(getView());
         isLoading = 1;
     }
 
